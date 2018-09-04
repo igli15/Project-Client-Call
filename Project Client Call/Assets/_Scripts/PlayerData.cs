@@ -22,5 +22,11 @@ public class PlayerData : MonoBehaviour
         if (OnMovementSpeedChanged != null) OnMovementSpeedChanged(this);
         movementSpeed += value;
     }
-
+    
+    
+    //Getters
+    public float MovementSpeed()
+    {
+        return movementSpeed;
+    }
 }
