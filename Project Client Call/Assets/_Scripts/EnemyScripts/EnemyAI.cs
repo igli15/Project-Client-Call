@@ -4,16 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyMovement))]
+[RequireComponent(typeof(EnemyRangedAttack))]
 
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] 
+    private GameObject player;
+
     private Transform playerTransform;
-    
     private EnemyMovement enemyMovement;
     private EnemyRangedAttack enemyRangedAttack;
-    void Start()
+    private void Start()
     {
+        playerTransform = player.transform;
         enemyRangedAttack = GetComponent<EnemyRangedAttack>();
         enemyMovement = GetComponent<EnemyMovement>();
     }
@@ -21,7 +24,7 @@ public class EnemyAI : MonoBehaviour
     private void FixedUpdate()
     {
         enemyRangedAttack.ShootTo(playerTransform.position);
-        //Avoid(playerTransform);
+        //Follow(playerTransform);
     }
 
     private float GetHorizontalDirectionTo(Transform targetTransform)
