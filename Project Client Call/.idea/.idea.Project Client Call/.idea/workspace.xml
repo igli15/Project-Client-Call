@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/RotateWithMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/RotateWithMouse.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,13 +33,13 @@
       <file leaf-file-name="RotateWithMouse.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/RotateWithMouse.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="330">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
-                <marker date="1536056961981" expanded="false" signature="6:78" ph="..." />
-                <marker date="1536056961981" expanded="true" signature="125:251" ph="{...}" />
-                <marker date="1536056961981" expanded="true" signature="176:185" ph="{...}" />
-                <marker date="1536056961981" expanded="true" signature="240:249" ph="{...}" />
+                <marker date="1536060856665" expanded="false" signature="6:78" ph="..." />
+                <marker date="1536060856665" expanded="true" signature="124:474" ph="{...}" />
+                <marker date="1536060856665" expanded="true" signature="200:209" ph="{...}" />
+                <marker date="1536060856665" expanded="true" signature="264:466" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -151,12 +151,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536053435996</updated>
       <workItem from="1536053440190" duration="25000" />
-      <workItem from="1536053511004" duration="2359000" />
+      <workItem from="1536053511004" duration="4268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2384000" />
+    <option name="totallyTimeSpent" value="4293000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -245,13 +245,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/RotateWithMouse.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="330">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
-            <marker date="1536056961981" expanded="false" signature="6:78" ph="..." />
-            <marker date="1536056961981" expanded="true" signature="125:251" ph="{...}" />
-            <marker date="1536056961981" expanded="true" signature="176:185" ph="{...}" />
-            <marker date="1536056961981" expanded="true" signature="240:249" ph="{...}" />
+            <marker date="1536060856665" expanded="false" signature="6:78" ph="..." />
+            <marker date="1536060856665" expanded="true" signature="124:474" ph="{...}" />
+            <marker date="1536060856665" expanded="true" signature="200:209" ph="{...}" />
+            <marker date="1536060856665" expanded="true" signature="264:466" ph="{...}" />
           </folding>
         </state>
       </provider>
