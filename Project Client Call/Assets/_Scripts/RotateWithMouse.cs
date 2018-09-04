@@ -26,15 +26,15 @@ public class RotateWithMouse : MonoBehaviour
 	void Update () 
 	{
 		
-
 		Vector2 distanceFromMouse = Input.mousePosition - Camera.main.WorldToScreenPoint(target.position);
-
+		
 		Vector2 dir = distanceFromMouse.normalized * radiusOfRotation;
 	
 		transform.position = target.position + new Vector3(dir.x,dir.y,0);
-		
-		transform.rotation = Quaternion.FromToRotation(Vector3.right, distanceFromMouse);
-		
+
+		//LookAt2D(transform,dir,transform.right); //Quaternion.FromToRotation(Vector3.right, distanceFromMouse);
+		transform.right = dir.normalized;
+
 
 	}
 	

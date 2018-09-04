@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 //Needs to use playerdata values....
@@ -9,8 +10,25 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+	[SerializeField]
+	private float fallMultiplier = 2.5f;
+
+	[SerializeField] 
+	private float lowJumpMultiplier = 2f;
+	
+	[SerializeField] 
+	private Transform feetPos;
+
+	[SerializeField] 
+	private LayerMask whatIsGround;
+	
+	[SerializeField] 
+	private float checkGroundRadius;
+	
 	private PlayerData playerData;
 	private Rigidbody2D rb;
+	private bool isGrounded;
+
 
 	// Use this for initialization
 	void Start ()
@@ -24,10 +42,20 @@ public class PlayerMovement : MonoBehaviour
 	private void FixedUpdate()
 	{
 		float _horizontal = Input.GetAxis("Horizontal");
+		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed() * Time.fixedDeltaTime, rb.velocity.y); 
 		
-		Vector2 _movementVec = new Vector2(_horizontal,0); // Y is 0 for now..
-
-		rb.velocity = _movementVec * playerData.MovementSpeed() * Time.fixedDeltaTime;
+		
+		if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+		{
+			rb.velocity = Vector2.up * playerData.JumpSpeed();
+		}
 	
+		
+
+	}
+
+	private void Update()
+	{
+		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);
 	}
 }

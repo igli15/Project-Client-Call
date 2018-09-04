@@ -20,10 +20,6 @@ public class EnemyRangedAttack : MonoBehaviour
         lastTimeShot = 0;
     }
 
-    private void FixedUpdate()
-    {
-    }
-
     public void ShootTo(Vector3 targetPosition)
     {
         if (Time.time < lastTimeShot + reloadTime) return;
@@ -32,7 +28,13 @@ public class EnemyRangedAttack : MonoBehaviour
         directionToShoot.Normalize();
 
         GameObject newBullet = Instantiate(bullet, transform.position+ directionToShoot, transform.rotation, null);
-        newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed;
+        newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed ;
+    }
+
+
+    public float GetBulletSpeed()
+    {
+        return bulletSpeed;
     }
 }
 

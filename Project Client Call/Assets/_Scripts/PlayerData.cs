@@ -15,6 +15,9 @@ public class PlayerData : MonoBehaviour
     [SerializeField]
     private float movementSpeed = 2;
 
+    [SerializeField] 
+    private float jumpSpeed = 5;
+
     public static Action<PlayerData> OnMovementSpeedChanged;
 
     public void ChangeMovementSpeed(int value)
@@ -28,5 +31,10 @@ public class PlayerData : MonoBehaviour
     public float MovementSpeed()
     {
         return movementSpeed;
+    }
+    
+    public float JumpSpeed()
+    {
+        return jumpSpeed;
     }
 }

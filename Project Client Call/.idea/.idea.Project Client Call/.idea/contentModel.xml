@@ -5,6 +5,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_Scripts" t="Include">
+          <e p="BulletCollision.cs" t="Include" />
           <e p="BulletScripts" t="Include">
             <e p="BulletBehaviour.cs" t="Include" />
           </e>
@@ -34,6 +35,7 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="TimeManager.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
