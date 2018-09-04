@@ -15,11 +15,14 @@ public class RotateWithMouse : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition)
-
-		transform.position = (transform.localPosition - Camera.main.ScreenToWorldPoint(Input.mousePosition)).normalized;
+		
 
 		
+
+		Vector2 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+
+
+		transform.position = dir.normalized;
 
 	}
 	
