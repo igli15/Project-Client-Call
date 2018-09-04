@@ -6,6 +6,12 @@ public class RotateWithMouse : MonoBehaviour
 {
 	private Rigidbody2D rb;
 
+	[SerializeField]
+	private float radiusOfRotation = 1;
+
+	[SerializeField] 
+	private Transform target;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -17,15 +23,24 @@ public class RotateWithMouse : MonoBehaviour
 	{
 		
 
+		Vector2 distanceFromMouse = Input.mousePosition - Camera.main.WorldToScreenPoint(target.position);
+
+		Vector2 dir = distanceFromMouse.normalized * radiusOfRotation;
+	
+		transform.position = target.position + new Vector3(dir.x,dir.y,0);
 		
-
-		Vector2 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-
-
-		transform.position = dir.normalized;
+		LookAt2D(transform,distanceFromMouse,Vector3.forward);
 
 	}
 	
+	
+	
+	public void LookAt2D(Transform transform,Vector2 dir,Vector3 axis)
+	{
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+		
+		transform.rotation = Quaternion.AngleAxis(angle, axis);
+	}
 	
 	
 }
