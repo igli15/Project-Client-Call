@@ -12,10 +12,13 @@ public class RotateWithMouse : MonoBehaviour
 	[SerializeField] 
 	private Transform target;
 
+	[HideInInspector]
+	public Vector3 initialDistanceFromPlayer;
+
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
-		
+		initialDistanceFromPlayer = transform.position - transform.parent.position;
 	}
 	
 	// Update is called once per frame
