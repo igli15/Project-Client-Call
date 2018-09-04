@@ -15,6 +15,14 @@
           <e p="PlayerMovement.cs" t="Include" />
           <e p="RotateWithMouse.cs" t="Include" />
         </e>
+        <e p="Demigiant" t="Include">
+          <e p="DOTween" t="Include">
+            <e p="DOTween43.xml" t="Include" />
+            <e p="DOTween46.xml" t="Include" />
+            <e p="DOTween50.xml" t="Include" />
+            <e p="readme.txt" t="Include" />
+          </e>
+        </e>
         <e p="PlayerDeflectionState.cs" t="Include" />
         <e p="PlayerNormalState.cs" t="Include" />
       </e>

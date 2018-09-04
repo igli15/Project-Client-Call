@@ -25,10 +25,7 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 		base.Exit(pAgent);
 		rotateWithMouse.gameObject.transform.position = rotateWithMouse.initialDistanceFromPlayer + transform.position;
 		rotateWithMouse.gameObject.transform.rotation = Quaternion.identity;
+
 	}
 
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
