@@ -19,6 +19,7 @@ public class RotateWithMouse : MonoBehaviour
 	void Start ()
 	{
 		initialDistanceFromPlayer = transform.position - transform.parent.position;
+		rb = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -32,7 +33,8 @@ public class RotateWithMouse : MonoBehaviour
 	
 		transform.position = target.position + new Vector3(dir.x,dir.y,0);
 		
-		LookAt2D(transform,distanceFromMouse,Vector3.forward);
+		transform.rotation = Quaternion.FromToRotation(Vector3.right, distanceFromMouse);
+		
 
 	}
 	
