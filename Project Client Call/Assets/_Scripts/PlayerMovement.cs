@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
 	private bool isGrounded;
 
 
+
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -45,17 +47,24 @@ public class PlayerMovement : MonoBehaviour
 		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed() * Time.fixedDeltaTime, rb.velocity.y); 
 		
 		
-		if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
-		{
-			rb.velocity = Vector2.up * playerData.JumpSpeed();
-		}
-	
-		
-
 	}
 
 	private void Update()
 	{
 		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);
+		
+		if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+		{
+			rb.velocity = Vector2.up * playerData.JumpSpeed();
+		}
+
+		if (rb.velocity.y < 0)
+		{
+			rb.velocity += Vector2.up * (fallMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
+		}
+		else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.UpArrow))
+		{
+			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
+		}
 	}
 }
