@@ -7,13 +7,9 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField]
-    PlayerData playerData;
-
-    private Transform playerTransform
-    {
-        get { return playerData.transform; }
-    }
+    [SerializeField] 
+    private Transform playerTransform;
+    
     private EnemyMovement enemyMovement;
     private EnemyRangedAttack enemyRangedAttack;
     void Start()
