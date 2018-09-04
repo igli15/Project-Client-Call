@@ -28,6 +28,12 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
