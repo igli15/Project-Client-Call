@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  timeDownScaleSpeed: 1.5
+  timeDownScaleSpeed: 1
   timeUpScalespeed: 1
 --- !u!212 &212081365006187944
 SpriteRenderer:

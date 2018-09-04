@@ -26,7 +26,9 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 		rotateWithMouse.enabled = true;
 		
 		DOTween.To(x => Time.timeScale  = x, Time.timeScale , 0.3f, timeDownScaleSpeed);
-
+		Time.fixedDeltaTime = 0.02f * Time.timeScale;
+		
+		
 	}
 
 	public override void Exit(IAgent pAgent)
@@ -38,7 +40,7 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 
 		DOTween.KillAll();
 		Time.timeScale = 1;
-		
+		Time.fixedDeltaTime = 0.02f;
 	}
 
 }
