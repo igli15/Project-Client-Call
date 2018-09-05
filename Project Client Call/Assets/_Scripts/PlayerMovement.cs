@@ -83,7 +83,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		float _horizontal = Input.GetAxis("Horizontal");
 		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed() * Time.fixedDeltaTime, rb.velocity.y); 
-
-
 	}
+
 }

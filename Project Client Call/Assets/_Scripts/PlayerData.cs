@@ -34,13 +34,10 @@ public class PlayerData : MonoBehaviour
         movementSpeed += value;
     }
 
-    /*public void TweenSlide(float timeToslowDown,float timeToSpeedUp ,float movementSpeedAddition)
+    public void SlowDownMovementSpeed(float timeToslowDown)
     {
-        Sequence sequence = DOTween.Sequence();
-        sequence.Append(DOTween.To(x => movementSpeed = x, movementSpeed, movementSpeed + movementSpeedAddition, 0.2f));
-        sequence.Append(DOTween.To(x => movementSpeed = x, movementSpeed, 0, timeToslowDown));
- 
-    }*/
+        DOTween.To(x => movementSpeed = x, movementSpeed, 0, timeToslowDown).SetId("SlowMovementSpeedTween");
+    }
 
     public void ResetMovementSpeed()
     {
