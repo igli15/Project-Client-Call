@@ -20,6 +20,8 @@ public class RotateWithMouse : MonoBehaviour
 
 	private Vector2 dir;
 
+	private bool joystickUsed = false;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -43,52 +45,7 @@ public class RotateWithMouse : MonoBehaviour
 		transform.right = dir.normalized;*/
 		 /*Vector2FromAngle(45).normalized * radiusOfRotation;*/
 
-		if (Input.GetKeyDown(KeyCode.D))
-		{
-			dir = Vector2FromAngle(0).normalized;
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
-		}
-		else if (Input.GetKeyDown(KeyCode.E))
-		{
-			dir = Vector2FromAngle(45).normalized;
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
-		}
-		else if (Input.GetKeyDown(KeyCode.W))
-		{
-			dir = Vector2FromAngle(90).normalized;
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
-		}
-		else if (Input.GetKeyDown(KeyCode.Q))
-		{
-			dir = Vector2FromAngle(135).normalized;
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
-		}
-		else if (Input.GetKeyDown(KeyCode.A))
-		{
-			dir = Vector2FromAngle(180).normalized;
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
-		}
-		else if (Input.GetKeyDown(KeyCode.Z))
-		{
-			dir = Vector2FromAngle(225).normalized;
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
-		}
-
-		else if (Input.GetKeyDown(KeyCode.X))
-		{
-			dir = Vector2FromAngle(270).normalized;
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
-		}
-		else if (Input.GetKeyDown(KeyCode.C))
-		{
-			dir = Vector2FromAngle(315).normalized;
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
-		}
-		else if (!Input.anyKey)
-		{
-			dir = Vector2FromAngle(0).normalized;
-			swordCollider.SetActive(false);
-		}
+		CheckForJoyStickInput();
 
 		dir *= radiusOfRotation;
 		transform.position = target.position + new Vector3(dir.x,dir.y,0);
@@ -103,6 +60,66 @@ public class RotateWithMouse : MonoBehaviour
 	{
 		a *= Mathf.Deg2Rad;
 		return new Vector2(Mathf.Cos(a), Mathf.Sin(a));
+	}
+
+	public void CheckForJoyStickInput()
+	{
+		if (Input.GetKey(KeyCode.D))
+		{
+			dir = Vector2FromAngle(0).normalized;
+			joystickUsed = true;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else if (Input.GetKey(KeyCode.E))
+		{
+			dir = Vector2FromAngle(45).normalized;
+			joystickUsed = true;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else if (Input.GetKey(KeyCode.W))
+		{
+			dir = Vector2FromAngle(90).normalized;
+			joystickUsed = true;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else if (Input.GetKey(KeyCode.Q))
+		{
+			dir = Vector2FromAngle(135).normalized;
+			joystickUsed = true;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else if (Input.GetKey(KeyCode.A))
+		{
+			dir = Vector2FromAngle(180).normalized;
+			joystickUsed = true;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else if (Input.GetKey(KeyCode.Z))
+		{
+			dir = Vector2FromAngle(225).normalized;
+			joystickUsed = true;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+
+		else if (Input.GetKey(KeyCode.X))
+		{
+			dir = Vector2FromAngle(270).normalized;
+			joystickUsed = true;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else if (Input.GetKey(KeyCode.C))
+		{
+			dir = Vector2FromAngle(315).normalized;
+			joystickUsed = true;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else if (joystickUsed == false)
+		{
+			dir = Vector2FromAngle(0).normalized;
+			swordCollider.SetActive(false);
+		}
+
+		joystickUsed = false;
 	}
 	
 	
