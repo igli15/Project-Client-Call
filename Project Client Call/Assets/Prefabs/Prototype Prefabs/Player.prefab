@@ -143,9 +143,9 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 8
+  m_GravityScale: 4
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 200
-  jumpSpeed: 10
+  jumpSpeed: 12
 --- !u!114 &114606844980696984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05053d2b07bc04d138e5968185ae5b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  fallMultiplier: -2
+  lowJumpMultiplier: 5
   feetPos: {fileID: 4368673513171454}
   whatIsGround:
     serializedVersion: 2
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  timeDownScaleSpeed: 1
+  timeDownScaleSpeed: 0
   timeUpScalespeed: 1
 --- !u!212 &212081365006187944
 SpriteRenderer:

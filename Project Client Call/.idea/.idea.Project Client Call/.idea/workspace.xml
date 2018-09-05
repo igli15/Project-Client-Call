@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerMovement.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +18,7 @@
       <file leaf-file-name="PlayerMovement.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="829">
+            <state relative-caret-position="1216">
               <caret line="64" column="100" selection-start-line="64" selection-start-column="100" selection-end-line="64" selection-end-column="100" />
               <folding>
                 <marker date="1536135370883" expanded="true" signature="6:97" ph="..." />
@@ -248,7 +249,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21901000" />
+    <option name="totallyTimeSpent" value="22079000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -718,7 +719,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
+        <state relative-caret-position="1216">
           <caret line="64" column="100" selection-start-line="64" selection-start-column="100" selection-end-line="64" selection-end-column="100" />
           <folding>
             <marker date="1536135370883" expanded="true" signature="6:97" ph="..." />
