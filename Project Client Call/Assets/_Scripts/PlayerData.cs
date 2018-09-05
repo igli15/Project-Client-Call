@@ -9,6 +9,7 @@ using UnityEngine;
  *  All fields are private and can be changed by setters only.
  *  No behaviour/functions go here expept setting the player values.
  *  Look At movement speed as an exmaple.
+ *  All the usage of the fields goes into the controllers!
  */
 
 public class PlayerData : MonoBehaviour
@@ -19,39 +20,36 @@ public class PlayerData : MonoBehaviour
     [SerializeField] 
     private float jumpSpeed = 5;
 
-    private float inititalMovementSpeed;
-
-    public static Action<PlayerData> OnMovementSpeedChanged;
 
     private void Start()
     {
-        inititalMovementSpeed = movementSpeed;
+    
     }
 
-    public void ChangeMovementSpeed(int value)
-    {    
-        if (OnMovementSpeedChanged != null) OnMovementSpeedChanged(this);
-        movementSpeed += value;
-    }
-
-    public void SlowDownMovementSpeed(float timeToslowDown)
-    {
-        DOTween.To(x => movementSpeed = x, movementSpeed, 0, timeToslowDown).SetId("SlowMovementSpeedTween");
-    }
-
-    public void ResetMovementSpeed()
-    {
-        movementSpeed = inititalMovementSpeed;
-    }
     
     //Getters
-    public float MovementSpeed()
+    public float MovementSpeed
     {
-        return movementSpeed;
+        get
+        {
+            return movementSpeed;
+        }
+        set
+        {
+            movementSpeed = value;
+        }
     }
     
-    public float JumpSpeed()
+    public float JumpSpeed
     {
-        return jumpSpeed;
+        get
+        {
+            return jumpSpeed;
+        }
+        set
+        {
+            jumpSpeed = value;
+        }
     }
+
 }

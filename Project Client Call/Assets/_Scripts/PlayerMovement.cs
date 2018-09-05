@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody2D rb;
 	private bool isGrounded;
 
-	
+	private float inititalMovementSpeed;
 
 
 	// Use this for initialization
@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>();
 		playerData = GetComponent<PlayerData>();
+		
+		inititalMovementSpeed = playerData.MovementSpeed;
 	}
 	
 	
@@ -66,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 1)
 		{
 			jumpCount -= 1;
-			rb.velocity = Vector2.up * playerData.JumpSpeed();
+			rb.velocity = Vector2.up * playerData.JumpSpeed;
 		}
 
 		if (rb.velocity.y < 0)
@@ -78,11 +80,21 @@ public class PlayerMovement : MonoBehaviour
 			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
 		}
 	}
+	
+	public void SlowDownMovementSpeed(float timeToslowDown)
+	{
+		DOTween.To(x => playerData.MovementSpeed = x, playerData.MovementSpeed, 0, timeToslowDown).SetId("SlowMovementSpeedTween");
+	}
+
+	public void ResetMovementSpeed()
+	{
+		playerData.MovementSpeed = inititalMovementSpeed;
+	}
 
 	private void MoveHorizontaly()
 	{
 		float _horizontal = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed() * Time.fixedDeltaTime, rb.velocity.y); 
+		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y); 
 	}
 
 }

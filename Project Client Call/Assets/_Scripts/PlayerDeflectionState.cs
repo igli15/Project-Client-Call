@@ -18,7 +18,7 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 	[SerializeField] 
 	private Slider slowMoSlider;
 	
-	private PlayerData playerData;
+	private PlayerMovement playerMovement;
 
 	private bool spendslowMoEnergy = false;
 
@@ -27,7 +27,7 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 	void Start ()
 	{
 		slowMoSlider.onValueChanged.AddListener(CheckIfSloMoFinished);
-		playerData = GetComponent<PlayerData>();
+		playerMovement = GetComponent<PlayerMovement>();
 
 		slowMoConsumeRate /= 10;
 
@@ -40,7 +40,7 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 				
 		DOTween.To(x => Time.timeScale  = x, Time.timeScale , 0.3f, timeDownScaleSpeed).SetId("SlowTimeSpeedTween");
 		spendslowMoEnergy = true;
-		playerData.SlowDownMovementSpeed(1f);
+		playerMovement.SlowDownMovementSpeed(1f);
 		
 		Time.fixedDeltaTime = 0.02f * Time.timeScale;
 		
@@ -66,7 +66,7 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 		DOTween.Kill("SlowTimeSpeedTween");
 		DOTween.Kill("SlowMovementSpeedTween");
 	
-		playerData.ResetMovementSpeed();
+		playerMovement.ResetMovementSpeed();
 		
 		Time.timeScale = 1;
 		Time.fixedDeltaTime = 0.02f;
