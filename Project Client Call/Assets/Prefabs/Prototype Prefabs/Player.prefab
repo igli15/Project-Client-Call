@@ -377,7 +377,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
-  checkGroundRadius: 0.1
+  checkGroundRadius: 0.3
+  jumpCount: 2
 --- !u!114 &114685993903421844
 MonoBehaviour:
   m_ObjectHideFlags: 1

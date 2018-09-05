@@ -24,12 +24,15 @@ public class PlayerMovement : MonoBehaviour
 	
 	[SerializeField] 
 	private float checkGroundRadius;
+
+	[SerializeField]
+	private int jumpCount = 2;
 	
 	private PlayerData playerData;
 	private Rigidbody2D rb;
 	private bool isGrounded;
 
-
+	
 
 
 	// Use this for initialization
@@ -54,9 +57,15 @@ public class PlayerMovement : MonoBehaviour
 	private void Jump()
 	{
 		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);
-		
-		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+
+		if (isGrounded && jumpCount != 2)
 		{
+			jumpCount = 2;
+		}
+		
+		if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 1)
+		{
+			jumpCount -= 1;
 			rb.velocity = Vector2.up * playerData.JumpSpeed();
 		}
 
