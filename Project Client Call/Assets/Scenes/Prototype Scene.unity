@@ -398,6 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6cf26d06b854087a7fd0f0e6d73c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeDownScaleSpeed: 0.8
 --- !u!4 &588887162
 Transform:
   m_ObjectHideFlags: 0
@@ -618,8 +619,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1388502885}
   - component: {fileID: 1388502886}
+  - component: {fileID: 1388502887}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SlowMoSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,6 +695,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1388502887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388502884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45d50ebdf5a384ea296411abd68c6593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowMoConsumeRate: 6
+  slowMoChargeRate: 2
 --- !u!1 &1645704969 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1664043145904872, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,

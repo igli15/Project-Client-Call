@@ -7,13 +7,6 @@ using UnityEngine.UI;
 
 public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 {
-	
-
-	[SerializeField] 
-	private float timeDownScaleSpeed = 1.5f;
-
-	[SerializeField] 
-	private float slowMoConsumeRate = 3f;
 
 	[SerializeField] 
 	private Slider slowMoSlider;
@@ -22,6 +15,9 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 
 	private bool spendslowMoEnergy = false;
 
+	public static Action<PlayerDeflectionState> OnDeflectionStateEntered;
+	public static Action<PlayerDeflectionState> OnDeflectionStateExit;
+
 	
 	// Use this for initialization
 	void Start ()
@@ -29,30 +25,22 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 		slowMoSlider.onValueChanged.AddListener(CheckIfSloMoFinished);
 		playerMovement = GetComponent<PlayerMovement>();
 
-		slowMoConsumeRate /= 10;
-
 	}
 
 
 	public override void Enter(IAgent pAgent)
 	{
 		base.Enter(pAgent);
-				
-		DOTween.To(x => Time.timeScale  = x, Time.timeScale , 0.3f, timeDownScaleSpeed).SetId("SlowTimeSpeedTween");
-		spendslowMoEnergy = true;
+
+		if (OnDeflectionStateEntered != null) OnDeflectionStateEntered(this);
+		
 		playerMovement.SlowDownMovementSpeed(1f);
-		
-		Time.fixedDeltaTime = 0.02f * Time.timeScale;
-		
 		
 	}
 
 	private void Update()
 	{
-		if (spendslowMoEnergy)
-		{
-			slowMoSlider.value -= slowMoConsumeRate * Time.deltaTime;
-		}
+
 	}
 
 	public override void Exit(IAgent pAgent)
@@ -60,16 +48,13 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 
 		base.Exit(pAgent);
 
-		spendslowMoEnergy = false;
 		
+		if (OnDeflectionStateExit != null) OnDeflectionStateExit(this);
 		
-		DOTween.Kill("SlowTimeSpeedTween");
 		DOTween.Kill("SlowMovementSpeedTween");
 	
 		playerMovement.ResetMovementSpeed();
-		
-		Time.timeScale = 1;
-		Time.fixedDeltaTime = 0.02f;
+	
 	}
 
 	public void CheckIfSloMoFinished(float value)
