@@ -19,7 +19,7 @@ public class BulletCollision : MonoBehaviour
 	{
 		if (other.CompareTag("Sword Collider"))
 		{
-			rb.velocity = other.transform.right * enemyRangedAttack.GetBulletSpeed() * TimeManager.timeSlowScale ;
+			rb.velocity = other.transform.parent.right * enemyRangedAttack.GetBulletSpeed() * TimeManager.timeSlowScale ;
 		}
 
 		if (other.transform.CompareTag("Player"))

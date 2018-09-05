@@ -20,7 +20,7 @@ public class RotateWithMouse : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		initialDistanceFromPlayer = transform.position - transform.parent.position;
+		//initialDistanceFromPlayer = transform.position - target.transform.position;
 		rb = GetComponent<Rigidbody2D>();
 
 		dir = Vector2FromAngle(0);
