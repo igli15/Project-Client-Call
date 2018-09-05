@@ -18,12 +18,12 @@ public class PlayerFsmController : MonoBehaviour,IAgent
 
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.F))
 		{
 			fsm.ChangeState<PlayerDeflectionState>();
 		}
 
-		if (Input.GetKeyUp(KeyCode.Space))
+		if (Input.GetKeyUp(KeyCode.F))
 		{
 			fsm.ChangeState<PlayerNormalState>();
 		}

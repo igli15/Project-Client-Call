@@ -43,17 +43,19 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		float _horizontal = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed() * Time.fixedDeltaTime, rb.velocity.y); 
-		
-		
+		MoveHorizontaly();
 	}
 
 	private void Update()
 	{
+		Jump();
+	}
+
+	private void Jump()
+	{
 		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);
 		
-		if ((Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown(KeyCode.W)) && isGrounded)
+		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
 		{
 			rb.velocity = Vector2.up * playerData.JumpSpeed();
 		}
@@ -62,9 +64,17 @@ public class PlayerMovement : MonoBehaviour
 		{
 			rb.velocity += Vector2.up * (fallMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
 		}
-		else if (rb.velocity.y > 0 && (!Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.W)))
+		else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
 		{
 			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
 		}
+	}
+
+	private void MoveHorizontaly()
+	{
+		float _horizontal = Input.GetAxis("Horizontal");
+		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed() * Time.fixedDeltaTime, rb.velocity.y); 
+
+
 	}
 }

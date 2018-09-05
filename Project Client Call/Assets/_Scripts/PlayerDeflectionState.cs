@@ -23,7 +23,7 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 	public override void Enter(IAgent pAgent)
 	{
 		base.Enter(pAgent);
-		rotateWithMouse.enabled = true;
+		//rotateWithMouse.enabled = true;
 		
 		DOTween.To(x => Time.timeScale  = x, Time.timeScale , 0.3f, timeDownScaleSpeed);
 		Time.fixedDeltaTime = 0.02f * Time.timeScale;
@@ -35,8 +35,8 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 	{
 
 		base.Exit(pAgent);
-		rotateWithMouse.gameObject.transform.position = rotateWithMouse.initialDistanceFromPlayer + transform.position;
-		rotateWithMouse.gameObject.transform.rotation = Quaternion.identity;
+		//rotateWithMouse.gameObject.transform.position = rotateWithMouse.initialDistanceFromPlayer + transform.position;
+		//rotateWithMouse.gameObject.transform.rotation = Quaternion.identity;
 
 		DOTween.KillAll();
 		Time.timeScale = 1;
