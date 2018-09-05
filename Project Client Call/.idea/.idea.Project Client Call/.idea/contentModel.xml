@@ -21,11 +21,12 @@
             <e p="IAgent.cs" t="Include" />
           </e>
           <e p="PlayerData.cs" t="Include" />
-          <e p="PlayerDeflectionState.cs" t="Include" />
           <e p="PlayerFsmController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerNormalState.cs" t="Include" />
+          <e p="PlayerSlowMotionState.cs" t="Include" />
           <e p="RotateWithMouse.cs" t="Include" />
+          <e p="TimeManager.cs" t="Include" />
         </e>
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
@@ -35,7 +36,7 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
-        <e p="TimeManager.cs" t="Include" />
+        <e p="SlowMotionSlider.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />

@@ -18,14 +18,19 @@ public class PlayerFsmController : MonoBehaviour,IAgent
 
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.F))
 		{
-			fsm.ChangeState<PlayerDeflectionState>();
+			if (fsm.GetCurrentState() is PlayerSlowMotionState)
+			{
+				fsm.ChangeState<PlayerNormalState>();
+				Debug.Log("1");
+			}
+			else
+			{
+				fsm.ChangeState<PlayerSlowMotionState>();
+				Debug.Log("2");
+			}
 		}
 
-		if (Input.GetKeyUp(KeyCode.Space))
-		{
-			fsm.ChangeState<PlayerNormalState>();
-		}
 	}
 }
