@@ -21,10 +21,10 @@
             <e p="IAgent.cs" t="Include" />
           </e>
           <e p="PlayerData.cs" t="Include" />
-          <e p="PlayerDeflectionState.cs" t="Include" />
           <e p="PlayerFsmController.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PlayerNormalState.cs" t="Include" />
+          <e p="PlayerSlowMotionState.cs" t="Include" />
           <e p="RotateWithMouse.cs" t="Include" />
           <e p="TimeManager.cs" t="Include" />
         </e>

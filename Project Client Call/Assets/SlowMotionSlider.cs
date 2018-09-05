@@ -28,8 +28,8 @@ public class SlowMotionSlider : MonoBehaviour
 		PlayerNormalState.OnNormalStateEntered += StartRefilling;
 		PlayerNormalState.OnNormalStateExit += StopRefilling;
 
-		PlayerDeflectionState.OnDeflectionStateEntered += StartConsuming;
-		PlayerDeflectionState.OnDeflectionStateExit += StopConsuming;
+		PlayerSlowMotionState.OnDeflectionStateEntered += StartConsuming;
+		PlayerSlowMotionState.OnDeflectionStateExit += StopConsuming;
 	}
 	
 	// Update is called once per frame
@@ -55,12 +55,12 @@ public class SlowMotionSlider : MonoBehaviour
 		refillSlider = false;
 	}
 	
-	public void StartConsuming(PlayerDeflectionState playerDeflectionState)
+	public void StartConsuming(PlayerSlowMotionState playerSlowMotionState)
 	{
 		consumeSlider = true;
 	}
 	
-	public void StopConsuming(PlayerDeflectionState playerDeflectionState)
+	public void StopConsuming(PlayerSlowMotionState playerSlowMotionState)
 	{
 		consumeSlider = false;
 	}
@@ -70,7 +70,7 @@ public class SlowMotionSlider : MonoBehaviour
 		PlayerNormalState.OnNormalStateEntered -= StartRefilling;
 		PlayerNormalState.OnNormalStateExit -= StopRefilling;
 
-		PlayerDeflectionState.OnDeflectionStateEntered -= StartConsuming;
-		PlayerDeflectionState.OnDeflectionStateExit -= StopConsuming;
+		PlayerSlowMotionState.OnDeflectionStateEntered -= StartConsuming;
+		PlayerSlowMotionState.OnDeflectionStateExit -= StopConsuming;
 	}
 }

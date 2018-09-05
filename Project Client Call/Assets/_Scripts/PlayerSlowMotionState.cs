@@ -5,7 +5,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerDeflectionState : AbstractState<PlayerFsmController>
+public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 {
 
 	[SerializeField] 
@@ -15,8 +15,8 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 
 	private bool spendslowMoEnergy = false;
 
-	public static Action<PlayerDeflectionState> OnDeflectionStateEntered;
-	public static Action<PlayerDeflectionState> OnDeflectionStateExit;
+	public static Action<PlayerSlowMotionState> OnDeflectionStateEntered;
+	public static Action<PlayerSlowMotionState> OnDeflectionStateExit;
 
 	
 	// Use this for initialization

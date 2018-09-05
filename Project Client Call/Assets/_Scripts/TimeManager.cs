@@ -15,8 +15,8 @@ public class TimeManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		PlayerDeflectionState.OnDeflectionStateEntered += StartSlowMo;
-		PlayerDeflectionState.OnDeflectionStateExit += StopSlowMo;
+		PlayerSlowMotionState.OnDeflectionStateEntered += StartSlowMo;
+		PlayerSlowMotionState.OnDeflectionStateExit += StopSlowMo;
 	}
 	
 	// Update is called once per frame
@@ -25,13 +25,13 @@ public class TimeManager : MonoBehaviour
 		
 	}
 
-	public void StartSlowMo(PlayerDeflectionState sender)
+	public void StartSlowMo(PlayerSlowMotionState sender)
 	{
 		DOTween.To(x => Time.timeScale  = x, Time.timeScale , 0.3f, timeDownScaleSpeed).SetId("SlowTimeSpeedTween"); 
 		Time.fixedDeltaTime = 0.02f * Time.timeScale;
 	}
 
-	public void StopSlowMo(PlayerDeflectionState sender)
+	public void StopSlowMo(PlayerSlowMotionState sender)
 	{
 		DOTween.Kill("SlowTimeSpeedTween");
 		Time.timeScale = 1;
@@ -40,7 +40,7 @@ public class TimeManager : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		PlayerDeflectionState.OnDeflectionStateEntered -= StartSlowMo;
-		PlayerDeflectionState.OnDeflectionStateExit -= StopSlowMo;
+		PlayerSlowMotionState.OnDeflectionStateEntered -= StartSlowMo;
+		PlayerSlowMotionState.OnDeflectionStateExit -= StopSlowMo;
 	}
 }
