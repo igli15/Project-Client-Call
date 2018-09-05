@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);
 		
-		if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+		if ((Input.GetKeyDown(KeyCode.UpArrow)||Input.GetKeyDown(KeyCode.W)) && isGrounded)
 		{
 			rb.velocity = Vector2.up * playerData.JumpSpeed();
 		}
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			rb.velocity += Vector2.up * (fallMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
 		}
-		else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.UpArrow))
+		else if (rb.velocity.y > 0 && (!Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.W)))
 		{
 			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
 		}

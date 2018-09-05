@@ -462,7 +462,7 @@ Prefab:
     - target: {fileID: 50531710017888534, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
         type: 2}
       propertyPath: m_GravityScale
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 114172608397966066, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
         type: 2}
@@ -477,7 +477,12 @@ Prefab:
     - target: {fileID: 114643214586053868, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
         type: 2}
       propertyPath: fallMultiplier
-      value: 3
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114685993903421844, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+        type: 2}
+      propertyPath: timeDownScaleSpeed
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
