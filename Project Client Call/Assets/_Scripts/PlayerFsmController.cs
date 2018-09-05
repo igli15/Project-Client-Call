@@ -20,12 +20,17 @@ public class PlayerFsmController : MonoBehaviour,IAgent
 	{
 		if (Input.GetKeyDown(KeyCode.F))
 		{
-			fsm.ChangeState<PlayerDeflectionState>();
+			if (fsm.GetCurrentState() is PlayerDeflectionState)
+			{
+				fsm.ChangeState<PlayerNormalState>();
+				Debug.Log("1");
+			}
+			else
+			{
+				fsm.ChangeState<PlayerDeflectionState>();
+				Debug.Log("2");
+			}
 		}
 
-		if (Input.GetKeyUp(KeyCode.F))
-		{
-			fsm.ChangeState<PlayerNormalState>();
-		}
 	}
 }

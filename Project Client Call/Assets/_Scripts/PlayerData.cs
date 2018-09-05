@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 /*
@@ -18,14 +19,33 @@ public class PlayerData : MonoBehaviour
     [SerializeField] 
     private float jumpSpeed = 5;
 
+    private float inititalMovementSpeed;
+
     public static Action<PlayerData> OnMovementSpeedChanged;
 
-    public void ChangeMovementSpeed(int value)
+    private void Start()
     {
+        inititalMovementSpeed = movementSpeed;
+    }
+
+    public void ChangeMovementSpeed(int value)
+    {    
         if (OnMovementSpeedChanged != null) OnMovementSpeedChanged(this);
         movementSpeed += value;
     }
-    
+
+    /*public void TweenSlide(float timeToslowDown,float timeToSpeedUp ,float movementSpeedAddition)
+    {
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(DOTween.To(x => movementSpeed = x, movementSpeed, movementSpeed + movementSpeedAddition, 0.2f));
+        sequence.Append(DOTween.To(x => movementSpeed = x, movementSpeed, 0, timeToslowDown));
+ 
+    }*/
+
+    public void ResetMovementSpeed()
+    {
+        movementSpeed = inititalMovementSpeed;
+    }
     
     //Getters
     public float MovementSpeed()

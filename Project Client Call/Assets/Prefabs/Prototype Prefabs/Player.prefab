@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 1502036799614530}
   m_LocalRotation: {x: -0, y: -0.8801365, z: -0, w: -0.4747208}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.08157483, y: 0.118343055, z: 0.47394827}
+  m_LocalScale: {x: 0.08157483, y: 0.20213786, z: 0.47394827}
   m_Children: []
   m_Father: {fileID: 4825908393460644}
   m_RootOrder: 0
@@ -224,7 +224,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -334,6 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radiusOfRotation: 1
   target: {fileID: 4541075305813766}
+  swordCollider: {fileID: 1502036799614530}
   initialDistanceFromPlayer: {x: 0, y: 0, z: 0}
 --- !u!114 &114172608397966066
 MonoBehaviour:
@@ -391,8 +392,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  timeDownScaleSpeed: 0
-  timeUpScalespeed: 1
+  speedUpTime: 1.5
+  slowDownTime: 2.5
+  addedSpeedAmount: 320
+  timeDownScaleSpeed: 0.8
 --- !u!212 &212021633265890250
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -6,26 +6,28 @@ using UnityEngine;
 
 public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 {
-
-
-	private RotateWithMouse rotateWithMouse;
-
+	
+	[Header("Slow Mo Time Values")]
 	[SerializeField] private float timeDownScaleSpeed = 1.5f;
-	[SerializeField] private float timeUpScalespeed = 1;
+
+	
+	private PlayerData playerData;
+
 	
 	// Use this for initialization
 	void Start ()
 	{
-		rotateWithMouse = GetComponentInChildren<RotateWithMouse>();
+		playerData = GetComponent<PlayerData>();
 	}
 
 
 	public override void Enter(IAgent pAgent)
 	{
 		base.Enter(pAgent);
-		//rotateWithMouse.enabled = true;
+				
+		DOTween.To(x => Time.timeScale  = x, Time.timeScale , 0.3f, timeDownScaleSpeed).SetId("SlowTime");
 		
-		DOTween.To(x => Time.timeScale  = x, Time.timeScale , 0.3f, timeDownScaleSpeed);
+		
 		Time.fixedDeltaTime = 0.02f * Time.timeScale;
 		
 		
@@ -35,10 +37,11 @@ public class PlayerDeflectionState : AbstractState<PlayerFsmController>
 	{
 
 		base.Exit(pAgent);
-		//rotateWithMouse.gameObject.transform.position = rotateWithMouse.initialDistanceFromPlayer + transform.position;
-		//rotateWithMouse.gameObject.transform.rotation = Quaternion.identity;
 
-		DOTween.KillAll();
+		int i = DOTween.Kill("SlowTime");
+		Debug.Log(i);
+		/*DOTween.KillAll();*/
+		
 		Time.timeScale = 1;
 		Time.fixedDeltaTime = 0.02f;
 	}
