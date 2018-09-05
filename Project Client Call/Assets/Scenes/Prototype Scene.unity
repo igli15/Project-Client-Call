@@ -294,6 +294,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.20213786
       objectReference: {fileID: 0}
+    - target: {fileID: 114082767556087786, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+        type: 2}
+      propertyPath: swordCollider
+      value: 
+      objectReference: {fileID: 595128394}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_IsPrefabParent: 0
@@ -337,6 +342,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &595128394 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1502036799614530, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 329570606}
 --- !u!1001 &832175825
 Prefab:
   m_ObjectHideFlags: 0

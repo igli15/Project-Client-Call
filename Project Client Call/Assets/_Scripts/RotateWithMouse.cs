@@ -12,6 +12,9 @@ public class RotateWithMouse : MonoBehaviour
 	[SerializeField] 
 	private Transform target;
 
+	[SerializeField] 
+	private GameObject swordCollider;
+
 	[HideInInspector]
 	public Vector3 initialDistanceFromPlayer;
 
@@ -43,35 +46,48 @@ public class RotateWithMouse : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.D))
 		{
 			dir = Vector2FromAngle(0).normalized;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKeyDown(KeyCode.E))
 		{
 			dir = Vector2FromAngle(45).normalized;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKeyDown(KeyCode.W))
 		{
 			dir = Vector2FromAngle(90).normalized;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKeyDown(KeyCode.Q))
 		{
 			dir = Vector2FromAngle(135).normalized;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKeyDown(KeyCode.A))
 		{
 			dir = Vector2FromAngle(180).normalized;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKeyDown(KeyCode.Z))
 		{
 			dir = Vector2FromAngle(225).normalized;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 
 		else if (Input.GetKeyDown(KeyCode.X))
 		{
 			dir = Vector2FromAngle(270).normalized;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKeyDown(KeyCode.C))
 		{
 			dir = Vector2FromAngle(315).normalized;
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else if (!Input.anyKey)
+		{
+			dir = Vector2FromAngle(0).normalized;
+			swordCollider.SetActive(false);
 		}
 
 		dir *= radiusOfRotation;
