@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerFsmController : MonoBehaviour,IAgent
 {
 
 	[HideInInspector] 
 	public Fsm<PlayerFsmController> fsm;
+
+	public Slider slowMoSlider;
+	
 	
 	void Start () 
 	{
@@ -24,12 +28,10 @@ public class PlayerFsmController : MonoBehaviour,IAgent
 			if (fsm.GetCurrentState() is PlayerSlowMotionState)
 			{
 				fsm.ChangeState<PlayerNormalState>();
-				Debug.Log("1");
 			}
-			else
+			else if(slowMoSlider.value >= 1)
 			{
 				fsm.ChangeState<PlayerSlowMotionState>();
-				Debug.Log("2");
 			}
 		}
 

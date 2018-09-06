@@ -400,6 +400,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114060324664719480, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+        type: 2}
+      propertyPath: slowMoSlider
+      value: 
+      objectReference: {fileID: 1388502886}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_IsPrefabParent: 0
