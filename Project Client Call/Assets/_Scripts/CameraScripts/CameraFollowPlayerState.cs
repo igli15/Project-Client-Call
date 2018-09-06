@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 
 
 public class CameraFollowPlayerState : AbstractState<CameraFsmController>
@@ -28,14 +29,24 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	{
 		base.Enter(pAgent);
 		init = false;
+		
+		if (targetToFollow.transform.position.x >= transform.position.x && !init)
+		{
+
+
+			transform.DOLocalMoveX(transform.position.x + (targetToFollow.transform.position.x - transform.position.x),0.2f);			
+			followPlayer = true;
+			init = true;
+
+		}
 	}
 
 	private void LateUpdate()
 	{
 		if (targetToFollow.transform.position.x >= transform.position.x && !init)
 		{
-			followPlayer = true;
 			offset = transform.position - targetToFollow.position;
+			followPlayer = true;
 			init = true;
 
 		}
@@ -57,5 +68,7 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	public override void Exit(IAgent pAgent)
 	{
 		base.Exit(pAgent);
+		followPlayer = false;
+		init = false;
 	}
 }

@@ -18,6 +18,19 @@ public class CameraFsmController : MonoBehaviour,IAgent
 	
 	}
 
+
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.G))
+		{
+			GoToArenaMode();
+		}
+		if (Input.GetKeyDown(KeyCode.H))
+		{
+			GoToFollowPlayerMode();
+		}
+	}
+
 	void Start () 
 	{
 		GoToFollowPlayerMode();

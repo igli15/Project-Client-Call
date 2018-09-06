@@ -286,7 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   targetToFollow: {fileID: 1645704970}
-  smoothedSpeed: 10
+  smoothedSpeed: 12
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -359,6 +359,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  zOffset: 6
+  offsetTime: 0.8
 --- !u!1001 &329570606
 Prefab:
   m_ObjectHideFlags: 0
