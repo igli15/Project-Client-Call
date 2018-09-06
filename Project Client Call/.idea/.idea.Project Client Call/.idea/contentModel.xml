@@ -9,6 +9,11 @@
           <e p="BulletScripts" t="Include">
             <e p="BulletBehaviour.cs" t="Include" />
           </e>
+          <e p="CameraScripts" t="Include">
+            <e p="CameraArenaState.cs" t="Include" />
+            <e p="CameraFollowPlayerState.cs" t="Include" />
+            <e p="CameraFsmController.cs" t="Include" />
+          </e>
           <e p="EnemyScripts" t="Include">
             <e p="EnemyAI.cs" t="Include" />
             <e p="EnemyData.cs" t="Include" />
@@ -20,16 +25,17 @@
             <e p="Fsm.cs" t="Include" />
             <e p="IAgent.cs" t="Include" />
           </e>
-          <e p="PlayerData.cs" t="Include" />
-          <e p="PlayerFsmController.cs" t="Include" />
-          <e p="PlayerMovement.cs" t="Include" />
-          <e p="PlayerNormalState.cs" t="Include" />
-          <e p="PlayerSlowMotionState.cs" t="Include" />
+          <e p="PlayerScripts" t="Include">
+            <e p="PlayerData.cs" t="Include" />
+            <e p="PlayerFsmController.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerNormalState.cs" t="Include" />
+            <e p="PlayerSlowMotionState.cs" t="Include" />
+          </e>
           <e p="RotateWithMouse.cs" t="Include" />
           <e p="SlowMotionSlider.cs" t="Include" />
           <e p="TimeManager.cs" t="Include" />
         </e>
-        <e p="CameraFollowPlayer.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
             <e p="DOTween43.xml" t="Include" />
