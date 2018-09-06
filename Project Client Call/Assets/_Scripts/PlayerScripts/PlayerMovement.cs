@@ -27,12 +27,17 @@ public class PlayerMovement : MonoBehaviour
 
 	[SerializeField]
 	private int jumpCount = 2;
+
+	[SerializeField] 
+	private float swordSprite;
 	
 	private PlayerData playerData;
 	private Rigidbody2D rb;
 	private bool isGrounded;
 
 	private float inititalMovementSpeed;
+
+	private Vector3 initForwardVec;
 
 
 	// Use this for initialization
@@ -42,13 +47,15 @@ public class PlayerMovement : MonoBehaviour
 		playerData = GetComponent<PlayerData>();
 		
 		inititalMovementSpeed = playerData.MovementSpeed;
+
+		initForwardVec = transform.right;
 	}
 	
 	
 
 	private void FixedUpdate()
 	{
-		MoveHorizontaly();
+		MoveHorizontally();
 	}
 
 	private void Update()
@@ -87,10 +94,25 @@ public class PlayerMovement : MonoBehaviour
 		playerData.MovementSpeed = inititalMovementSpeed;
 	}
 
-	private void MoveHorizontaly()
+	private void MoveHorizontally()
 	{
 		float _horizontal = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y); 
+		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y);
+		
+		CheckFlipHorizontally();
+	}
+
+	public void CheckFlipHorizontally()
+	{
+		if (rb.velocity.x < 0 && transform.right.Equals(initForwardVec))
+		{
+			transform.right = -transform.right;
+		
+		}
+		else if(rb.velocity.x > 0 && !transform.right.Equals(initForwardVec))
+		{
+			transform.right = -transform.right;
+		}
 	}
 
 }

@@ -70,6 +70,21 @@ public class RotateWithMouse : MonoBehaviour
 		{
 			//joystickUsed = true;
 			dir = Vector2FromAngle(angle);
+			Debug.Log(angle);
+			
+			if (angle > 90 || angle < -90)
+			{
+				
+				if(GetComponentInChildren<SpriteRenderer>() != null)
+				
+				GetComponentInChildren<SpriteRenderer>().flipY = true;
+			}
+			else
+			{
+				if(GetComponentInChildren<SpriteRenderer>() != null)
+				GetComponentInChildren<SpriteRenderer>().flipY = false;
+			}
+			 
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else
