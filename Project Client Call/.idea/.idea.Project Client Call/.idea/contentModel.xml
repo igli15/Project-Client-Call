@@ -29,6 +29,7 @@
           <e p="SlowMotionSlider.cs" t="Include" />
           <e p="TimeManager.cs" t="Include" />
         </e>
+        <e p="CameraFollowPlayer.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
             <e p="DOTween43.xml" t="Include" />
