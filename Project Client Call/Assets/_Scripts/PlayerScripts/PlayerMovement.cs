@@ -81,10 +81,6 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 	
-	public void SlowDownMovementSpeed(float timeToslowDown)
-	{
-		DOTween.To(x => playerData.MovementSpeed = x, playerData.MovementSpeed, 0, timeToslowDown).SetId("SlowMovementSpeedTween");
-	}
 
 	public void ResetMovementSpeed()
 	{

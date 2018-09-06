@@ -31,8 +31,6 @@ public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 
 		if (OnDeflectionStateEntered != null) OnDeflectionStateEntered(this);
 		
-		playerMovement.SlowDownMovementSpeed(1f);
-		
 	}
 
 	private void Update()
@@ -45,12 +43,8 @@ public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 
 		base.Exit(pAgent);
 
-		
 		if (OnDeflectionStateExit != null) OnDeflectionStateExit(this);
-		
-		DOTween.Kill("SlowMovementSpeedTween");
-	
-		playerMovement.ResetMovementSpeed();
+
 	
 	}
 
