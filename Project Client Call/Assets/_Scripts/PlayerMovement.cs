@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 			jumpCount = 2;
 		}
 		
-		if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 1)
+		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button5)) && jumpCount > 1)
 		{
 			jumpCount -= 1;
 			rb.velocity = Vector2.up * playerData.JumpSpeed;
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			rb.velocity += Vector2.up * (fallMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
 		}
-		else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.Space))
+		else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.Space)||Input.GetKeyDown(KeyCode.Joystick1Button5)))
 		{
 			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
 		}

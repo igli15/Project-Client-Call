@@ -19,7 +19,7 @@ public class PlayerFsmController : MonoBehaviour,IAgent
 	private void Update()
 	{
 		
-		if (Input.GetKeyDown(KeyCode.F))
+		if (Input.GetKeyDown(KeyCode.F ) ||  Input.GetKeyDown(KeyCode.Joystick1Button4))
 		{
 			if (fsm.GetCurrentState() is PlayerSlowMotionState)
 			{

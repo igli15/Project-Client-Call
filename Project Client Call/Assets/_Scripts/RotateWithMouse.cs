@@ -22,6 +22,9 @@ public class RotateWithMouse : MonoBehaviour
 
 	private bool joystickUsed = false;
 
+	[SerializeField]
+	private bool useController = true;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -34,23 +37,46 @@ public class RotateWithMouse : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
-		/*Vector2 distanceFromMouse = Input.mousePosition - Camera.main.WorldToScreenPoint(target.position);
-		
-		Vector2 dir = distanceFromMouse.normalized * radiusOfRotation;
-	
-		transform.position = target.position + new Vector3(dir.x,dir.y,0);
 
 		
-		transform.right = dir.normalized;*/
-		 /*Vector2FromAngle(45).normalized * radiusOfRotation;*/
-
-		CheckForJoyStickInput();
+		//CheckForJoyStickInput();
+		if (useController)
+		{
+			CheckForControllerInput();
+		}
+		else
+		{
+			MouseInput();
+		}
 
 		dir *= radiusOfRotation;
 		transform.position = target.position + new Vector3(dir.x,dir.y,0);
 		transform.right = dir.normalized;
 
+		
+	}
+
+	public void CheckForControllerInput()
+	{
+		float verticalPos = Input.GetAxis("VerticalJoy");
+		float horizontalPos = Input.GetAxis("HorizontalJoy");
+		
+		Vector2 joyPos = new Vector2(horizontalPos,verticalPos);
+
+		float angle = Mathf.Atan2(verticalPos, horizontalPos) * Mathf.Rad2Deg;
+
+
+		if (joyPos.magnitude > 0.2f)
+		{
+			//joystickUsed = true;
+			dir = Vector2FromAngle(angle);
+			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+		}
+		else
+		{
+			swordCollider.SetActive(false);
+		}
+		
 		
 	}
 	
@@ -121,6 +147,13 @@ public class RotateWithMouse : MonoBehaviour
 
 		joystickUsed = false;
 	}
-	
+
+	public void MouseInput()
+	{
+		Vector2 distanceFromMouse = Input.mousePosition - Camera.main.WorldToScreenPoint(target.position);
+		
+		 dir = distanceFromMouse.normalized * radiusOfRotation;
+		
+	}
 	
 }
