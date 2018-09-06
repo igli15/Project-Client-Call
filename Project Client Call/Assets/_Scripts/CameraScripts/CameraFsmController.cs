@@ -9,18 +9,28 @@ public class CameraFsmController : MonoBehaviour,IAgent
 	public Fsm<CameraFsmController> fsm;
 	
 	// Use this for initialization
+	private void Awake()
+	{
+		if (fsm == null)
+		{
+			fsm = new Fsm<CameraFsmController>(this);
+		}
+	
+	}
+
 	void Start () 
 	{
-		fsm = new Fsm<CameraFsmController>(this);
+		GoToFollowPlayerMode();
 	}
 
 	public void GoToArenaMode()
 	{
-		
+		fsm.ChangeState<CameraArenaState>();
 	}
 
 	public void GoToFollowPlayerMode()
 	{
+		fsm.ChangeState<CameraFollowPlayerState>();
 		
 	}
 }

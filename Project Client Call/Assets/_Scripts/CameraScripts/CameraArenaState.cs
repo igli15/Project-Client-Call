@@ -2,15 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraArenaState : MonoBehaviour {
+public class CameraArenaState : AbstractState<CameraFsmController> 
+{
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	public override void Enter(IAgent pAgent)
+	{
+		base.Enter(pAgent);
 		
+	}
+
+	// Update is called once per frame
+	void Update () 
+	{
+		
+	}
+
+	public override void Exit(IAgent pAgent)
+	{
+		base.Exit(pAgent);
 	}
 }
