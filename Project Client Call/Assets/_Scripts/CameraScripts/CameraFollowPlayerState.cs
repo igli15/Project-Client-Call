@@ -33,11 +33,11 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 		if (targetToFollow.transform.position.x >= transform.position.x && !init)
 		{
 
+			Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+			transform.DOLocalMoveX((transform.position.x + (targetToFollow.transform.position.x - transform.position.x)) + (targetToFollow.position.x -stageDimensions.x - 0.5f),0.2f);			
 
-			transform.DOLocalMoveX(transform.position.x + (targetToFollow.transform.position.x - transform.position.x),0.2f);			
-			followPlayer = true;
 			init = true;
-
+			Invoke("InvokeFollowPlayer",1.5f);
 		}
 	}
 
@@ -63,6 +63,13 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 		}
 		
 		
+	}
+
+	private void InvokeFollowPlayer()
+	{
+		offset = Vector3.zero;
+		offset = transform.position - targetToFollow.position;
+		followPlayer = true;
 	}
 
 	public override void Exit(IAgent pAgent)
