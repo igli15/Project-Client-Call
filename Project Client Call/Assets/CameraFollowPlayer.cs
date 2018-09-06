@@ -12,25 +12,42 @@ public class CameraFollowPlayer : MonoBehaviour
 	private float smoothedSpeed = 10f;
 
 	private Vector3 offset;
-	
+
+	private Camera camera;
+
+	private bool followPlayer = false;
+
+	private bool init = false;
 	// Use this for initialization
 	void Start ()
 	{
-		offset = transform.position - target.position;
+	
+		camera = GetComponent<Camera>();
+		init = false;
 	}
 
 	private void LateUpdate()
 	{
-		/*Vector3 desiredPos = target.position + offset;
 
-		Vector3 smoothedPos  = Vector3.Lerp(transform.position, desiredPos, smoothedSpeed * Time.deltaTime);*/
-		
-		float desiredPos = target.position.x + offset.x;
+		if (target.transform.position.x >= transform.position.x && !init)
+		{
+			followPlayer = true;
+			offset = transform.position - target.position;
+			init = true;
 
-		Vector3 smoothedPos  = Vector3.Lerp(transform.position, new Vector3(desiredPos,transform.position.y,transform.position.z), 
+		}
+
+		if (followPlayer)
+		{
+			float desiredPos = target.position.x + offset.x;
+
+			Vector3 smoothedPos = Vector3.Lerp(transform.position,
+			new Vector3(desiredPos, transform.position.y, transform.position.z),
 			smoothedSpeed * Time.deltaTime);
 
-		transform.position = smoothedPos;
+			transform.position = smoothedPos;
+		}
+		
 		
 	}
 }
