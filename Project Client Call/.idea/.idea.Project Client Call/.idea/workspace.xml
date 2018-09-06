@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CameraFollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CameraFollowPlayer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype Scene.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BulletCollision.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BulletCollision.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/BulletCollision.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="396">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding>
                 <marker date="1536185902783" expanded="false" signature="6:78" ph="..." />
                 <marker date="1536185902783" expanded="true" signature="124:720" ph="{...}" />
@@ -122,16 +122,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraFollowPlayer.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CameraFollowPlayer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/CameraFollowPlayer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+            <state relative-caret-position="660">
+              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
               <folding>
-                <marker date="1536229440569" expanded="false" signature="6:97" ph="..." />
-                <marker date="1536229440569" expanded="true" signature="146:615" ph="{...}" />
-                <marker date="1536229440569" expanded="true" signature="325:380" ph="{...}" />
-                <marker date="1536229440569" expanded="true" signature="409:613" ph="{...}" />
+                <marker date="1536231941749" expanded="true" signature="6:97" ph="..." />
+                <marker date="1536231941749" expanded="true" signature="146:830" ph="{...}" />
+                <marker date="1536231941749" expanded="true" signature="325:380" ph="{...}" />
+                <marker date="1536231941749" expanded="true" signature="408:828" ph="{...}" />
+                <marker date="1536231941749" expanded="true" signature="414:568" ph="/* Vector3 desiredPos = target.position + offset; ... */" />
               </folding>
             </state>
           </provider>
@@ -343,7 +344,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40072000" />
+    <option name="totallyTimeSpent" value="40822000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -859,10 +860,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/CameraFollowPlayer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding>
+            <marker date="1536231941749" expanded="true" signature="6:97" ph="..." />
+            <marker date="1536231941749" expanded="true" signature="146:830" ph="{...}" />
+            <marker date="1536231941749" expanded="true" signature="325:380" ph="{...}" />
+            <marker date="1536231941749" expanded="true" signature="408:828" ph="{...}" />
+            <marker date="1536231941749" expanded="true" signature="414:568" ph="/* Vector3 desiredPos = target.position + offset; ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/BulletCollision.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="396">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
           <folding>
             <marker date="1536185902783" expanded="false" signature="6:78" ph="..." />
             <marker date="1536185902783" expanded="true" signature="124:720" ph="{...}" />
@@ -871,19 +886,6 @@
             <marker date="1536185902783" expanded="true" signature="459:580" ph="{...}" />
             <marker date="1536185902783" expanded="true" signature="625:657" ph="{...}" />
             <marker date="1536185902783" expanded="true" signature="709:718" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/CameraFollowPlayer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-          <folding>
-            <marker date="1536229440569" expanded="false" signature="6:97" ph="..." />
-            <marker date="1536229440569" expanded="true" signature="146:615" ph="{...}" />
-            <marker date="1536229440569" expanded="true" signature="325:380" ph="{...}" />
-            <marker date="1536229440569" expanded="true" signature="409:613" ph="{...}" />
           </folding>
         </state>
       </provider>
