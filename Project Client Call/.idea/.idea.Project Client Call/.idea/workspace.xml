@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/CameraFollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CameraFollowPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Prototype Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Prototype Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Prototype Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Prototype Scene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,15 +122,15 @@
       <file leaf-file-name="CameraFollowPlayer.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/CameraFollowPlayer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="541">
-              <caret line="32" column="85" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="85" />
+            <state relative-caret-position="396">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
-                <marker date="1536233932503" expanded="true" signature="6:97" ph="..." />
-                <marker date="1536233932503" expanded="true" signature="146:1042" ph="{...}" />
-                <marker date="1536233932503" expanded="true" signature="385:476" ph="{...}" />
-                <marker date="1536233932503" expanded="true" signature="504:1040" ph="{...}" />
-                <marker date="1536233932503" expanded="true" signature="510:664" ph="/* Vector3 desiredPos = target.position + offset; ... */" />
-                <marker date="1536233932503" expanded="true" signature="766:1031" ph="{...}" />
+                <marker date="1536234083365" expanded="true" signature="6:97" ph="..." />
+                <marker date="1536234083365" expanded="true" signature="146:969" ph="{...}" />
+                <marker date="1536234083365" expanded="true" signature="414:473" ph="{...}" />
+                <marker date="1536234083365" expanded="true" signature="501:967" ph="{...}" />
+                <marker date="1536234083365" expanded="true" signature="573:672" ph="{...}" />
+                <marker date="1536234083365" expanded="true" signature="693:958" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -346,7 +342,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41377000" />
+    <option name="totallyTimeSpent" value="41660000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,15 +876,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/CameraFollowPlayer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="32" column="85" selection-start-line="32" selection-start-column="85" selection-end-line="32" selection-end-column="85" />
+        <state relative-caret-position="396">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
-            <marker date="1536233932503" expanded="true" signature="6:97" ph="..." />
-            <marker date="1536233932503" expanded="true" signature="146:1042" ph="{...}" />
-            <marker date="1536233932503" expanded="true" signature="385:476" ph="{...}" />
-            <marker date="1536233932503" expanded="true" signature="504:1040" ph="{...}" />
-            <marker date="1536233932503" expanded="true" signature="510:664" ph="/* Vector3 desiredPos = target.position + offset; ... */" />
-            <marker date="1536233932503" expanded="true" signature="766:1031" ph="{...}" />
+            <marker date="1536234083365" expanded="true" signature="6:97" ph="..." />
+            <marker date="1536234083365" expanded="true" signature="146:969" ph="{...}" />
+            <marker date="1536234083365" expanded="true" signature="414:473" ph="{...}" />
+            <marker date="1536234083365" expanded="true" signature="501:967" ph="{...}" />
+            <marker date="1536234083365" expanded="true" signature="573:672" ph="{...}" />
+            <marker date="1536234083365" expanded="true" signature="693:958" ph="{...}" />
           </folding>
         </state>
       </provider>
