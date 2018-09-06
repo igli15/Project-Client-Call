@@ -19,12 +19,15 @@ public class EnemyMovement : MonoBehaviour
 
     public void Move(float _horizontal,float _vertical)
     {
-        Vector2 _movementVec = new Vector2(_horizontal, _vertical); 
-
+        Vector2 _movementVec = new Vector2(_horizontal, _vertical);
+        _movementVec.Normalize();
         rb.velocity = _movementVec * enemyData.MovementSpeed() * Time.fixedDeltaTime;
     }
 
-
-
+    public void Move(Vector2 _movementVec)
+    {
+        _movementVec.Normalize();
+        rb.velocity = _movementVec * enemyData.MovementSpeed() * Time.fixedDeltaTime;
+    }
 
 }
