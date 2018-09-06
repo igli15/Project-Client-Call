@@ -21,13 +21,13 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector2 _movementVec = new Vector2(_horizontal, _vertical);
         _movementVec.Normalize();
-        rb.velocity = _movementVec * enemyData.MovementSpeed() * Time.fixedDeltaTime;
+        rb.velocity = _movementVec * enemyData.MovementSpeed * Time.fixedDeltaTime;
     }
 
     public void Move(Vector2 _movementVec)
     {
         _movementVec.Normalize();
-        rb.velocity = _movementVec * enemyData.MovementSpeed() * Time.fixedDeltaTime;
+        rb.velocity = _movementVec * enemyData.MovementSpeed * Time.fixedDeltaTime;
     }
 
 }

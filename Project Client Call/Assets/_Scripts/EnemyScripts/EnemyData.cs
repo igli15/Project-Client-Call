@@ -8,19 +8,16 @@ public class EnemyData : MonoBehaviour
 {
     [SerializeField]
     private float movementSpeed = 2;
+    [SerializeField]
+    private GameObject player;
 
-     static Action<EnemyData> OnMovementSpeedChanged;
-
-    public void ChangeMovementSpeed(int value)
+    public float MovementSpeed
     {
-        if (OnMovementSpeedChanged != null) OnMovementSpeedChanged(this);
-        movementSpeed += value;
+        get { return movementSpeed; }
+        set { movementSpeed = value; }
     }
-
-
-    //Getters
-    public float MovementSpeed()
+    public GameObject Player
     {
-        return movementSpeed;
+        get { return player; }
     }
 }

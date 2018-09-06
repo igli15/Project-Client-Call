@@ -7,6 +7,7 @@ public class EnemyFsmController : MonoBehaviour, IAgent
 
     [HideInInspector]
     public Fsm<EnemyFsmController> fsm;
+    private EnemyData enemyData;
 
     void Start()
     {
@@ -15,18 +16,11 @@ public class EnemyFsmController : MonoBehaviour, IAgent
             fsm = new Fsm<EnemyFsmController>(this);
         }
         fsm.ChangeState<EnemyPatrollingState>();
+        enemyData = GetComponent<EnemyData>();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            //fsm.ChangeState<PlayerDeflectionState>();
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            //fsm.ChangeState<PlayerNormalState>();
-        }
+        
     }
 }
