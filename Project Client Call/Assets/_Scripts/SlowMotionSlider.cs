@@ -13,6 +13,9 @@ public class SlowMotionSlider : MonoBehaviour
 	[SerializeField] 
 	private float slowMoChargeRate = 2f;
 
+	[SerializeField] 
+	private PlayerFsmController playerFsmController;
+
 	private Slider slowMoSlider;
 	private bool refillSlider = false;
 	private bool consumeSlider = false;
@@ -21,6 +24,9 @@ public class SlowMotionSlider : MonoBehaviour
 	void Start ()
 	{
 		slowMoSlider = GetComponent<Slider>();
+		
+		
+		slowMoSlider.onValueChanged.AddListener(CheckIfSloMoFinished);
 
 		slowMoChargeRate /= 10;
 		slowMoConsumeRate /= 10;
@@ -72,5 +78,14 @@ public class SlowMotionSlider : MonoBehaviour
 
 		PlayerSlowMotionState.OnDeflectionStateEntered -= StartConsuming;
 		PlayerSlowMotionState.OnDeflectionStateExit -= StopConsuming;
+	}
+	
+	public void CheckIfSloMoFinished(float value)
+	{
+		if (value <= 0)
+		{
+			playerFsmController.fsm.ChangeState<PlayerNormalState>();
+		}
+			
 	}
 }

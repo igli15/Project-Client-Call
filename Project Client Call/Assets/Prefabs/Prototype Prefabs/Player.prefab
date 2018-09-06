@@ -361,8 +361,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  slowMoSlider: {fileID: 0}
-  slowMoChargeRate: 2
 --- !u!114 &114643214586053868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -394,9 +392,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  timeDownScaleSpeed: 0.8
-  slowMoConsumeRate: 6
-  slowMoSlider: {fileID: 0}
 --- !u!212 &212021633265890250
 SpriteRenderer:
   m_ObjectHideFlags: 1

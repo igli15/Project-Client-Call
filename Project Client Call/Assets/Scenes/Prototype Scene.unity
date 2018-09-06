@@ -358,16 +358,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114685993903421844, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
-        type: 2}
-      propertyPath: slowMoSlider
-      value: 
-      objectReference: {fileID: 1388502886}
-    - target: {fileID: 114606844980696984, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
-        type: 2}
-      propertyPath: slowMoSlider
-      value: 
-      objectReference: {fileID: 1388502886}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_IsPrefabParent: 0
@@ -708,11 +698,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowMoConsumeRate: 6
   slowMoChargeRate: 2
+  playerFsmController: {fileID: 1645704971}
 --- !u!1 &1645704969 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1664043145904872, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
     type: 2}
   m_PrefabInternal: {fileID: 329570606}
+--- !u!114 &1645704971 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114060324664719480, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 329570606}
+  m_Script: {fileID: 11500000, guid: ff06bcb8c572c4ddc8c540d46db1c206, type: 3}
 --- !u!1 &1728289902
 GameObject:
   m_ObjectHideFlags: 0

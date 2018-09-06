@@ -18,6 +18,7 @@ public class PlayerFsmController : MonoBehaviour,IAgent
 
 	private void Update()
 	{
+		
 		if (Input.GetKeyDown(KeyCode.F))
 		{
 			if (fsm.GetCurrentState() is PlayerSlowMotionState)

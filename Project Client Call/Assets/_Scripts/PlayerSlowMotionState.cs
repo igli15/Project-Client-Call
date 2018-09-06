@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 {
 
-	[SerializeField] 
-	private Slider slowMoSlider;
 	
 	private PlayerMovement playerMovement;
 
@@ -22,7 +20,6 @@ public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 	// Use this for initialization
 	void Start ()
 	{
-		slowMoSlider.onValueChanged.AddListener(CheckIfSloMoFinished);
 		playerMovement = GetComponent<PlayerMovement>();
 
 	}
@@ -57,12 +54,4 @@ public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 	
 	}
 
-	public void CheckIfSloMoFinished(float value)
-	{
-		if (value <= 0)
-		{
-			target.fsm.ChangeState<PlayerNormalState>();
-		}
-			
-	}
 }
