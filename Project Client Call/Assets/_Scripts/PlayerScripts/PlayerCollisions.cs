@@ -12,15 +12,37 @@ public class PlayerCollisions : MonoBehaviour
 		mainCam = Camera.main;
 	}
 
-	private void OnTriggerEnter2D(Collider2D other)
+	/*private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("ArenaExitTrigger"))
 		{
 			mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraFollowPlayerState>();
+		
 		}
 		if (other.CompareTag("ArenaEnterTrigger"))
 		{
 			mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraArenaState>();
+		}
+	}*/
+	
+	private void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.CompareTag("ArenaExitTrigger"))
+		{
+			if (transform.position.x > other.transform.position.x)
+			{
+				mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraFollowPlayerState>();
+				other.isTrigger = false;
+			}
+			
+		}
+		if (other.CompareTag("ArenaEnterTrigger"))
+		{
+			if (transform.position.x > other.transform.position.x)
+			{
+				mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraArenaState>();
+				other.isTrigger = false;
+			}
 		}
 	}
 }
