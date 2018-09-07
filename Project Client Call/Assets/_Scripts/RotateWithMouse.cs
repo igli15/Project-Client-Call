@@ -90,7 +90,7 @@ public class RotateWithMouse : MonoBehaviour
 			
 			float angleBetweenSwordAndPlayerDown = Vector3.Angle(new Vector3(joyPos.x, joyPos.y, 0), -playerRb.transform.up);
 
-			if(Input.GetKeyDown(KeyCode.C))
+			if(Input.GetKeyDown(KeyCode.C)) //Just for Debugging remove if needed
 			Debug.Log(angleBetweenSwordAndPlayer);
 			
 			if (angleBetweenSwordAndPlayer > 90) canRotate = false;
@@ -98,8 +98,7 @@ public class RotateWithMouse : MonoBehaviour
 			else canRotate = true;
 			
 			dir = Vector2FromAngle(angle);
-			
-			//Debug.Log(angle);
+
 
 			if (canRotate)						// Only compute if we can rotate
 			{
