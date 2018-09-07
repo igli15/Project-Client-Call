@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Sword Collider
   - Enemy
+  - ArenaEnterTrigger
+  - ArenaExitTrigger
   layers:
   - Default
   - TransparentFX
