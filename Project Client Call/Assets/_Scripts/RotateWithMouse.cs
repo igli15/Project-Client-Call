@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RotateWithMouse : MonoBehaviour
 {
-	private Rigidbody2D rb;
 
 	[SerializeField]
 	private float radiusOfRotation = 1;
@@ -18,20 +17,33 @@ public class RotateWithMouse : MonoBehaviour
 	[HideInInspector]
 	public Vector3 initialDistanceFromPlayer;
 
+	[SerializeField]
+	private bool useController = true;
+
+	[SerializeField] 
+	private Rigidbody2D playerRb;
+
+	[SerializeField] 
+	private SpriteRenderer spriteRenderer;
+	
 	private Vector2 dir;
 
 	private bool joystickUsed = false;
 
-	[SerializeField]
-	private bool useController = true;
+	private Vector3 initialPlayerForward;
+
+	private bool canRotate = true;
+	
 
 	// Use this for initialization
 	void Start ()
 	{
-		//initialDistanceFromPlayer = transform.position - target.transform.position;
-		rb = GetComponent<Rigidbody2D>();
-
+		initialPlayerForward = playerRb.transform.right;
+		
+		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+		
 		dir = Vector2FromAngle(0);
+
 	}
 	
 	// Update is called once per frame
@@ -49,11 +61,15 @@ public class RotateWithMouse : MonoBehaviour
 			MouseInput();
 		}
 
-		dir *= radiusOfRotation;
-		transform.position = target.position + new Vector3(dir.x,dir.y,0);
-		transform.right = dir.normalized;
+		if (canRotate)
+		{
+			dir *= radiusOfRotation;
 
-		
+			transform.position = target.position + new Vector3(dir.x, dir.y, 0);
+			transform.right = dir.normalized;
+		}
+
+
 	}
 
 	public void CheckForControllerInput()
@@ -68,23 +84,44 @@ public class RotateWithMouse : MonoBehaviour
 
 		if (joyPos.magnitude > 0.2f)
 		{
-			//joystickUsed = true;
-			dir = Vector2FromAngle(angle);
-			Debug.Log(angle);
+
+			float angleBetweenSwordAndPlayer =
+				Vector3.Angle(new Vector3(joyPos.x, joyPos.y, 0), playerRb.transform.right);
 			
-			if (angle > 90 || angle < -90)
+			float angleBetweenSwordAndPlayerDown = Vector3.Angle(new Vector3(joyPos.x, joyPos.y, 0), -playerRb.transform.up);
+
+			if(Input.GetKeyDown(KeyCode.C))
+			Debug.Log(angleBetweenSwordAndPlayer);
+			
+			if (angleBetweenSwordAndPlayer > 90) canRotate = false;
+			else if (angleBetweenSwordAndPlayerDown < 60) canRotate = false;
+			else canRotate = true;
+			
+			dir = Vector2FromAngle(angle);
+			
+			//Debug.Log(angle);
+
+			if (canRotate)						// Only compute if we can rotate
 			{
-				
-				if(GetComponentInChildren<SpriteRenderer>() != null)
-				
-				GetComponentInChildren<SpriteRenderer>().flipY = true;
+				if (angle > 90 || angle < -90)    // Check if should flip Y Dir or not
+				{
+
+					if (spriteRenderer!= null)
+
+						spriteRenderer.flipY = true;
+				}
+				else
+				{
+					if (spriteRenderer != null)
+						spriteRenderer.flipY = false;
+				}
+
+				if (angleBetweenSwordAndPlayer == 0)   // If the angle is exactly 0 then we don't need to flip again 
+				{
+					spriteRenderer.flipY = false;
+				}
 			}
-			else
-			{
-				if(GetComponentInChildren<SpriteRenderer>() != null)
-				GetComponentInChildren<SpriteRenderer>().flipY = false;
-			}
-			 
+
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else
