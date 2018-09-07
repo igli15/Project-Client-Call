@@ -59,17 +59,17 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		MoveHorizontally();
+		MoveHorizontally(); 
 	}
 
 	private void Update()
 	{
-		Jump();
+		Jump();  //Jump is in update, just trust me works better :P
 	}
 
 	private void Jump()
 	{
-		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);
+		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);  //Check if we touched the ground
 		
 		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button5)) && jumpCount > 1)
 		{
@@ -77,21 +77,26 @@ public class PlayerMovement : MonoBehaviour
 			rb.velocity = Vector2.up * playerData.JumpSpeed;
 		}
 		
-		if (isGrounded && jumpCount != 2)
+		if (isGrounded && jumpCount != 2)   //If we grounded then set jump count back to 0
 		{
 			jumpCount = 2;
 		}
 
-		if (jumpCount == 2 && isGrounded == false) playerData.JumpSpeed = playerData.SecondJumpSpeed;  //Check if we are in second jump and decrease speed
+		if (jumpCount == 2 && isGrounded == false)  //Check if we are in second jump and decrease speed
+		{
+			playerData.JumpSpeed = playerData.SecondJumpSpeed;
+		} 
 		else playerData.JumpSpeed = initialJumpSpeed;   //else set it back
 
-		if (rb.velocity.y < 0)
+		//Apply the multipliers for a better jump
+		if (rb.velocity.y < 0)                       //Check if we are falling
 		{
-			rb.velocity += Vector2.up * (fallMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
+			rb.velocity += Vector2.up * (fallMultiplier - 1) * Physics2D.gravity * Time.deltaTime;  //apply fall multiplier
+																									//make it negative if you want a slower fall
 		}
-		else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.Space)||Input.GetKeyDown(KeyCode.Joystick1Button5)))
+		else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.Space)||Input.GetKeyDown(KeyCode.Joystick1Button5)))  //check if we jumping but button is pressed easily
 		{
-			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;
+			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;   //apply low jump multiplier
 		}
 	}
 	
@@ -104,14 +109,14 @@ public class PlayerMovement : MonoBehaviour
 	private void MoveHorizontally()
 	{
 		float _horizontal = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y);
+		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y);  //Move horizontally
 		
-		CheckFlipHorizontally();
+		CheckFlipHorizontally();  //basic flip
 	}
 
 	public void CheckFlipHorizontally()
 	{
-		if (rb.velocity.x < 0 && transform.right.Equals(initForwardVec))
+		if (rb.velocity.x < 0 && transform.right.Equals(initForwardVec))  //flip only if we haven't already flipped :P
 		{
 			transform.right = -transform.right;
 		

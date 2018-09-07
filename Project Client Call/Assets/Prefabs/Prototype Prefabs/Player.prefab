@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4074990366497966}
   - component: {fileID: 212434969709853530}
-  - component: {fileID: 60519665112512086}
+  - component: {fileID: 61423522008083744}
   m_Layer: 0
   m_Name: Representation
   m_TagString: Sword Collider
@@ -118,13 +118,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1502036799614530}
-  m_LocalRotation: {x: -0, y: -0.03562209, z: -0, w: -0.9993653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.34170133, y: 0.17980634, z: 0.17921306}
   m_Children: []
   m_Father: {fileID: 4825908393460644}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -355.917, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4197419959140656
 Transform:
   m_ObjectHideFlags: 1
@@ -698,8 +698,8 @@ PolygonCollider2D:
       - {x: 1.4572634, y: 11.8225155}
       - {x: 1.4124244, y: 11.837461}
       - {x: 1.3825319, y: 11.8075695}
---- !u!60 &60519665112512086
-PolygonCollider2D:
+--- !u!61 &61423522008083744
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -707,10 +707,10 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.19142833, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -720,90 +720,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.305, y: -2.33}
-      - {x: 0.295, y: -2.26}
-      - {x: 0.345, y: -2.19}
-      - {x: 0.385, y: -2.07}
-      - {x: 0.385, y: -2.02}
-      - {x: 0.42499998, y: -1.91}
-      - {x: 0.415, y: -1.86}
-      - {x: 0.295, y: -1.75}
-      - {x: 0.36499998, y: -1.6899999}
-      - {x: 0.355, y: -1.62}
-      - {x: 0.405, y: -1.55}
-      - {x: 0.445, y: -1.43}
-      - {x: 0.42499998, y: -1.37}
-      - {x: 0.475, y: -1.3}
-      - {x: 0.49499997, y: -1.2099999}
-      - {x: 0.49499997, y: -1.1}
-      - {x: 0.42499998, y: -1.01}
-      - {x: 0.375, y: -1}
-      - {x: 0.405, y: -0.83}
-      - {x: 0.42499998, y: -0.45}
-      - {x: 0.445, y: -0.29}
-      - {x: 0.445, y: -0.13}
-      - {x: 0.465, y: 0.08}
-      - {x: 0.475, y: 0.24}
-      - {x: 0.475, y: 0.58}
-      - {x: 0.48499998, y: 0.79999995}
-      - {x: 0.48499998, y: 1.42}
-      - {x: 0.475, y: 1.53}
-      - {x: 0.465, y: 1.79}
-      - {x: 0.445, y: 2.1699998}
-      - {x: 0.415, y: 2.55}
-      - {x: 0.385, y: 2.8}
-      - {x: 0.375, y: 2.85}
-      - {x: 0.24499999, y: 2.96}
-      - {x: 0.13499999, y: 2.96}
-      - {x: 0.195, y: 2.51}
-      - {x: 0.205, y: 2.31}
-      - {x: 0.225, y: 2}
-      - {x: 0.235, y: 1.81}
-      - {x: 0.24499999, y: 1.51}
-      - {x: 0.24499999, y: 1.35}
-      - {x: 0.255, y: 1.35}
-      - {x: 0.24499999, y: 0.87}
-      - {x: 0.225, y: 0.45}
-      - {x: 0.21499999, y: 0.31}
-      - {x: 0.205, y: 0.11}
-      - {x: 0.185, y: -0.32999998}
-      - {x: 0.145, y: -0.65999997}
-      - {x: 0.125, y: -0.95}
-      - {x: 0.055, y: -0.95}
-      - {x: -0.044999998, y: -1.02}
-      - {x: -0.065, y: -1.09}
-      - {x: -0.024999999, y: -1.18}
-      - {x: -0.105, y: -1.29}
-      - {x: -0.39499998, y: -1.37}
-      - {x: -0.435, y: -1.4399999}
-      - {x: -0.435, y: -1.5899999}
-      - {x: -0.42499998, y: -1.6899999}
-      - {x: -0.355, y: -1.77}
-      - {x: -0.295, y: -1.76}
-      - {x: -0.21499999, y: -1.7199999}
-      - {x: 0.024999999, y: -1.73}
-      - {x: -0.044999998, y: -1.78}
-      - {x: -0.105, y: -1.8499999}
-      - {x: -0.145, y: -1.9}
-      - {x: -0.265, y: -1.87}
-      - {x: -0.405, y: -1.89}
-      - {x: -0.45499998, y: -1.9499999}
-      - {x: -0.49499997, y: -2.04}
-      - {x: -0.49499997, y: -2.22}
-      - {x: -0.475, y: -2.26}
-      - {x: -0.405, y: -2.29}
-      - {x: -0.24499999, y: -2.32}
-      - {x: -0.044999998, y: -2.3899999}
-      - {x: -0.105, y: -2.79}
-      - {x: -0.114999995, y: -2.8999999}
-      - {x: -0.055, y: -2.9399998}
-      - {x: -0.015, y: -2.96}
-      - {x: 0.13499999, y: -2.96}
-      - {x: 0.175, y: -2.9199998}
-      - {x: 0.205, y: -2.74}
-      - {x: 0.225, y: -2.3999999}
+  serializedVersion: 2
+  m_Size: {x: 1.3728561, y: 5.92}
+  m_EdgeRadius: 0
 --- !u!114 &114060324664719480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -815,6 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff06bcb8c572c4ddc8c540d46db1c206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slowMoSlider: {fileID: 0}
 --- !u!114 &114082767556087786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -831,6 +751,8 @@ MonoBehaviour:
   swordCollider: {fileID: 1502036799614530}
   initialDistanceFromPlayer: {x: 0, y: 0, z: 0}
   useController: 1
+  playerRb: {fileID: 50531710017888534}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &114172608397966066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -843,7 +765,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 200
-  jumpSpeed: 12
+  jumpSpeed: 20
+  secondJumpSpeed: 12
 --- !u!114 &114606844980696984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -867,14 +790,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05053d2b07bc04d138e5968185ae5b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: -2
-  lowJumpMultiplier: 5
+  fallMultiplier: 1.2
+  lowJumpMultiplier: 6
   feetPos: {fileID: 4368673513171454}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
   checkGroundRadius: 0.3
   jumpCount: 2
+  swordSprite: 0
 --- !u!114 &114685993903421844
 MonoBehaviour:
   m_ObjectHideFlags: 1
