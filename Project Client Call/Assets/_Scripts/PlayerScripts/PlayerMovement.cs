@@ -39,6 +39,8 @@ public class PlayerMovement : MonoBehaviour
 
 	private Vector3 initForwardVec;
 
+	private float initialJumpSpeed;
+
 
 	// Use this for initialization
 	void Start ()
@@ -49,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
 		inititalMovementSpeed = playerData.MovementSpeed;
 
 		initForwardVec = transform.right;
+
+		initialJumpSpeed = playerData.JumpSpeed;
 	}
 	
 	
@@ -66,17 +70,20 @@ public class PlayerMovement : MonoBehaviour
 	private void Jump()
 	{
 		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);
-
-		if (isGrounded && jumpCount != 2)
-		{
-			jumpCount = 2;
-		}
 		
 		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button5)) && jumpCount > 1)
 		{
 			jumpCount -= 1;
 			rb.velocity = Vector2.up * playerData.JumpSpeed;
 		}
+		
+		if (isGrounded && jumpCount != 2)
+		{
+			jumpCount = 2;
+		}
+
+		if (jumpCount == 2 && isGrounded == false) playerData.JumpSpeed = playerData.SecondJumpSpeed;  //Check if we are in second jump and decrease speed
+		else playerData.JumpSpeed = initialJumpSpeed;   //else set it back
 
 		if (rb.velocity.y < 0)
 		{

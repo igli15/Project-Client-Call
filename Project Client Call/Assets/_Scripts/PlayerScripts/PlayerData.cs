@@ -20,6 +20,9 @@ public class PlayerData : MonoBehaviour
     [SerializeField] 
     private float jumpSpeed = 5;
 
+    [SerializeField]
+    private float secondJumpSpeed = 12;
+
 
     private void Start()
     {
@@ -49,6 +52,18 @@ public class PlayerData : MonoBehaviour
         set
         {
             jumpSpeed = value;
+        }
+    }
+    
+    public float SecondJumpSpeed
+    {
+        get
+        {
+            return secondJumpSpeed;
+        }
+        set
+        {
+            secondJumpSpeed = value;
         }
     }
 
