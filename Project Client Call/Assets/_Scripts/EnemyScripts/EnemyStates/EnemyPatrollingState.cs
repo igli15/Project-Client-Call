@@ -7,7 +7,9 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
     [SerializeField]
     float radiusOfPatrolling = 5;
     [SerializeField]
-    float radiusOfPlayerIdentification = 5;
+    float radiusOfRangedAttack = 5;
+    [SerializeField]
+    float radiusOfMeleeAttack = 1;
 
     float currentDirection;
     float distanceToStop = 0.2f;
@@ -19,6 +21,10 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
     Vector3 destination2;
 
     bool running=false;
+
+    public float RadiusOfRangedAttack { get { return radiusOfRangedAttack; } }
+    public float RadiusOfMelleAttack { get { return radiusOfMeleeAttack; } }
+
     void Start()
     {
         running = true;
@@ -33,11 +39,9 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
     public void Update()
     {
         Patroll();
-        if ((enemyData.Player.transform.position - transform.position).magnitude < radiusOfPlayerIdentification)
-        {
-            GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyRangedAttackState>();
-        }
     }
+
+
 
     public void Patroll()
     {
@@ -77,6 +81,8 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
         Gizmos.DrawWireCube(destination2, new Vector3(0.2f,1,0.2f));
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radiusOfPlayerIdentification);
+        Gizmos.DrawWireSphere(transform.position, radiusOfRangedAttack);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, radiusOfMeleeAttack);
     }
 }

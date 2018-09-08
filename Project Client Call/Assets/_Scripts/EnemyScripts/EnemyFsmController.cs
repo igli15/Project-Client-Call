@@ -9,6 +9,8 @@ public class EnemyFsmController : MonoBehaviour, IAgent
     public Fsm<EnemyFsmController> fsm;
     private EnemyData enemyData;
 
+    private float radiusOfShooting;
+
     void Start()
     {
         if (fsm == null)
@@ -17,10 +19,22 @@ public class EnemyFsmController : MonoBehaviour, IAgent
         }
         fsm.ChangeState<EnemyPatrollingState>();
         enemyData = GetComponent<EnemyData>();
+
+        radiusOfShooting = GetComponent<EnemyPatrollingState>().RadiusOfRangedAttack;
     }
 
     private void Update()
     {
-        
+        if()
+
+        if ((enemyData.Player.transform.position - transform.position).magnitude < radiusOfShooting)
+        {
+            GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyRangedAttackState>();
+        }
+        else
+        {
+            GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyPatrollingState>();
+        }
+
     }
 }
