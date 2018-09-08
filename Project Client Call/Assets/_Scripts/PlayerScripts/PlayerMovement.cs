@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 		
 		if (isGrounded && jumpCount != 2)   //If we grounded then set jump count back to 0
 		{
-			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);  //TODO : Check to remove or not
+			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);  //NOTE : Check to remove or not
 			jumpCount = 2;
 			rb.gravityScale = 1;
 		}
@@ -136,10 +136,11 @@ public class PlayerMovement : MonoBehaviour
 
 	public void CalculateJump(float pJumpHeight,float pJumpTime)   //Calculates gravity scale and the speed automatically just by giving the time and height of the jump
 	{
-		targetGravity = -((2 * pJumpHeight)) / Mathf.Pow(pJumpTime, 2);
-		rb.gravityScale = targetGravity / Physics2D.gravity.y;
+		targetGravity = -((2 * pJumpHeight)) / Mathf.Pow(pJumpTime, 2);   //calculate the right gravity for our jump
+		
+		rb.gravityScale = targetGravity / Physics2D.gravity.y;   // set the gravity scale depending on our target gravity
 			
-		playerData.JumpSpeed = (Mathf.Abs(targetGravity) * pJumpTime);
+		playerData.JumpSpeed = (Mathf.Abs(targetGravity) * pJumpTime);  // find our final speed based on the time and gravity of the jump
 			
 	}
 

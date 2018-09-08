@@ -467,6 +467,16 @@ Prefab:
       propertyPath: slowMoSlider
       value: 
       objectReference: {fileID: 1388502886}
+    - target: {fileID: 114172608397966066, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+        type: 2}
+      propertyPath: groundedSmoothedVelocity
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 114172608397966066, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+        type: 2}
+      propertyPath: airborneSmoothedVelocity
+      value: 19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_IsPrefabAsset: 0
