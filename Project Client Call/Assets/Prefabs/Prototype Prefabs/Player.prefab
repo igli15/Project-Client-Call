@@ -765,9 +765,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ed6354934a34b3eb21a3f5c7d17695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  airborneSmoothedVelocity: 14
+  groundedSmoothedVelocity: 18
   movementSpeed: 200
-  jumpSpeed: 20
-  secondJumpSpeed: 12
   firstJumpValues:
     jumpHeight: 3
     jumpCompletionTime: 0.4

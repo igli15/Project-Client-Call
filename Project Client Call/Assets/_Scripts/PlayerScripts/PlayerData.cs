@@ -22,7 +22,12 @@ public class PlayerData : MonoBehaviour
         public float jumpCompletionTime;
 
     }
-    
+
+    [SerializeField]
+    private float airborneSmoothedVelocity = 12;
+    [SerializeField]
+    private float groundedSmoothedVelocity = 14;
+        
     [SerializeField]
     private float movementSpeed = 2;
 
@@ -82,6 +87,30 @@ public class PlayerData : MonoBehaviour
         }
     }
     
+    public float AirborneSmoothedVelocity
+    {
+        get
+        {
+            return airborneSmoothedVelocity;
+        }
+        set
+        {
+            airborneSmoothedVelocity = value;
+        }
+    }
+    
+    public float GroundedSmoothedVelocity
+    {
+        get
+        {
+            return groundedSmoothedVelocity;
+        }
+        set
+        {
+            groundedSmoothedVelocity = value;
+        }
+    }
+
     
     public JumpValues FirstJumpValues
     {

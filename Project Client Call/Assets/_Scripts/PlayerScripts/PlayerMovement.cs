@@ -43,7 +43,8 @@ public class PlayerMovement : MonoBehaviour
 
 	private float targetGravity;
 
-
+	private Vector2 smoothedVec;
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -120,8 +121,15 @@ public class PlayerMovement : MonoBehaviour
 
 	private void MoveHorizontally()
 	{
-		float _horizontal = Input.GetAxis("Horizontal");
-		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y);  //Move horizontally
+		float horizontal = Input.GetAxis("Horizontal");
+		
+		//rb.velocity = new Vector2(horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y);  //Move horizontally
+
+		float targetVelocity =
+			horizontal * playerData.MovementSpeed * Time.fixedDeltaTime;
+		
+		//apply smoothing
+		rb.velocity = Vector2.Lerp(rb.velocity,new Vector2(targetVelocity,rb.velocity.y), ((isGrounded)? playerData.GroundedSmoothedVelocity:playerData.AirborneSmoothedVelocity) * Time.fixedDeltaTime);
 		
 		CheckFlipHorizontally();  //basic flip
 	}
@@ -140,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
 		if (rb.velocity.x < 0 && transform.right.Equals(initForwardVec))  //flip only if we haven't already flipped :P
 		{
 			transform.right = -transform.right;
-		
+	
 		}
 		else if(rb.velocity.x > 0 && !transform.right.Equals(initForwardVec))
 		{
