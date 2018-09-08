@@ -8,8 +8,13 @@ public class EnemyData : MonoBehaviour
 {
     [SerializeField]
     private float movementSpeed = 2;
-    [SerializeField]
+    
     private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }    
 
     public float MovementSpeed
     {
