@@ -40,15 +40,3 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Project Client Call/Assets/Materials/Environment.meta
-Project Client Call/Assets/Materials/Items.meta
-Project Client Call/Assets/Materials/Main.meta
-Project Client Call/Assets/Objects/Environment.meta
-Project Client Call/Assets/Objects/Items.meta
-Project Client Call/Assets/Objects/Main.meta
-Project Client Call/Assets/Sprites/Main.meta
-Project Client Call/Assets/Sprites/NPC.meta
-Project Client Call/Assets/Sprites/Weapons.meta
-Project Client Call/Assets/Textures/Environment.meta
-Project Client Call/Assets/Textures/Items.meta
-Project Client Call/Assets/Textures/Main.meta
