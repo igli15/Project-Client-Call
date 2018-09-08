@@ -25,7 +25,6 @@ public class EnemyFsmController : MonoBehaviour, IAgent
 
     private void Update()
     {
-        if()
 
         if ((enemyData.Player.transform.position - transform.position).magnitude < radiusOfShooting)
         {
