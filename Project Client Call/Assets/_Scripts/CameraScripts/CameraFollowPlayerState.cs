@@ -13,6 +13,12 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	[SerializeField] 
 	private float smoothedSpeed = 10f;
 
+	[SerializeField] 
+	private float cameraBorderOffset = 1.8f;
+
+	[SerializeField] 
+	private float cameraMovementOffset = 1.5f;
+
 	private Vector3 offset;
 
 	private bool followPlayer = false;
@@ -69,7 +75,8 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 			
 			transform.DOLocalMoveX((transform.position.x + 
 			                        (targetToFollow.transform.position.x - transform.position.x)) 
-			                       + (targetToFollow.position.x -stageDimensions.x - 1.5f),0.2f);	 // move behind target		
+			                       + (targetToFollow.position.x -stageDimensions.x - cameraBorderOffset),0.2f);	 // move behind target	
+																												//offset helps to put the camera a but further then the player
 
 			movingToTarget = true; //So we don't overlap tweens
 			
@@ -88,12 +95,13 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 		transform.position = smoothedPos;
 	}
-
-	public void RaycastBorders()
-	{
+ 
+	public void RaycastBorders()   //Ray casts from the left border of the camera to a point in screen to check weather there is a "Trigger"
+	{							   //If there is a trigger then it stops following player.
+		
 		Ray ray = cam.ScreenPointToRay(new Vector3(0,0.2f,0));
 
-		RaycastHit2D hit = Physics2D.Raycast(ray.origin - new Vector3(1.8f,0,0),ray.direction);
+		RaycastHit2D hit = Physics2D.Raycast(ray.origin - new Vector3(cameraBorderOffset,0,0),ray.direction);
 
 		if (hit != null)
 		{
