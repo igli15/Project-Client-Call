@@ -8,12 +8,12 @@ using UnityEngine;
 
 
 public class PlayerMovement : MonoBehaviour
-{
-
+{	
+	
 	[SerializeField]
 	private float fallMultiplier = 2.5f;
 
-	[SerializeField] 
+	[SerializeField]
 	private float lowJumpMultiplier = 2f;
 	
 	[SerializeField] 
@@ -34,12 +34,14 @@ public class PlayerMovement : MonoBehaviour
 	private PlayerData playerData;
 	private Rigidbody2D rb;
 	private bool isGrounded;
-
+	
 	private float inititalMovementSpeed;
 
 	private Vector3 initForwardVec;
 
 	private float initialJumpSpeed;
+
+	private float targetGravity;
 
 
 	// Use this for initialization
@@ -71,20 +73,30 @@ public class PlayerMovement : MonoBehaviour
 	{
 		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);  //Check if we touched the ground
 		
-		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button5)) && jumpCount > 1)
+		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button5)) && jumpCount > 1)  //jump
 		{
-			jumpCount -= 1;
+			jumpCount -= 1;  											//decrease the count so  we can't jump forever
+			
+			//rb.velocity = Vector2.up * playerData.JumpSpeed;
+			
+			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);
+			
 			rb.velocity = Vector2.up * playerData.JumpSpeed;
+
 		}
 		
 		if (isGrounded && jumpCount != 2)   //If we grounded then set jump count back to 0
 		{
+			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);  //TODO : Check to remove or not
 			jumpCount = 2;
+			rb.gravityScale = 1;
 		}
 
 		if (jumpCount == 2 && isGrounded == false)  //Check if we are in second jump and decrease speed
 		{
-			playerData.JumpSpeed = playerData.SecondJumpSpeed;
+			CalculateJump(playerData.SecondJumpValues.jumpHeight,playerData.SecondJumpValues.jumpCompletionTime);
+			
+			/*playerData.JumpSpeed = playerData.SecondJumpSpeed;*/
 		} 
 		else playerData.JumpSpeed = initialJumpSpeed;   //else set it back
 
@@ -112,6 +124,15 @@ public class PlayerMovement : MonoBehaviour
 		rb.velocity = new Vector2(_horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y);  //Move horizontally
 		
 		CheckFlipHorizontally();  //basic flip
+	}
+
+	public void CalculateJump(float pJumpHeight,float pJumpTime)   //Calculates gravity scale and the speed automatically just by giving the time and height of the jump
+	{
+		targetGravity = -((2 * pJumpHeight)) / Mathf.Pow(pJumpTime, 2);
+		rb.gravityScale = targetGravity / Physics2D.gravity.y;
+			
+		playerData.JumpSpeed = (Mathf.Abs(targetGravity) * pJumpTime);
+			
 	}
 
 	public void CheckFlipHorizontally()

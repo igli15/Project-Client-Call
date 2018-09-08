@@ -14,16 +14,31 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour
 {
+    
+    [Serializable]
+    public struct JumpValues
+    {
+        public float jumpHeight;
+        public float jumpCompletionTime;
+
+    }
+    
     [SerializeField]
     private float movementSpeed = 2;
 
-    [SerializeField] 
+    //[SerializeField] 
     private float jumpSpeed = 5;
 
-    [SerializeField]
+   // [SerializeField]
     private float secondJumpSpeed = 12;
 
+    [SerializeField] 
+    private JumpValues firstJumpValues;
 
+    [SerializeField]
+    private JumpValues secondJumpValues;
+
+    
     private void Start()
     {
     
@@ -64,6 +79,31 @@ public class PlayerData : MonoBehaviour
         set
         {
             secondJumpSpeed = value;
+        }
+    }
+    
+    
+    public JumpValues FirstJumpValues
+    {
+        get
+        {
+            return firstJumpValues;
+        }
+        set
+        {
+            firstJumpValues = value;
+        }
+    }
+    
+    public JumpValues SecondJumpValues
+    {
+        get
+        {
+            return secondJumpValues;
+        }
+        set
+        {
+            secondJumpValues = value;
         }
     }
 
