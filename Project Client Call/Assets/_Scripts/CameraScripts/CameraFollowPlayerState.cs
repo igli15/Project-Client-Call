@@ -19,11 +19,17 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 	private bool movingToTarget = false;
 
+	private Camera cam;
+
+	private void Start()
+	{
+		cam = Camera.main;
+	}
+
 	public override void Enter(IAgent pAgent)
 	{
 		base.Enter(pAgent);
 		movingToTarget = false;
-		
 		FindRightPosBehindTarget();
 	}
 
@@ -39,22 +45,18 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 		if (followPlayer)
 		{
-
 			StartFollowingPlayer();
 		}
 		
-		
+	}
+
+	private void Update()
+	{
+		RaycastBorders();
 	}
 
 	private void SetMovingToTargetFalse()
 	{
-		movingToTarget = false;
-	}
-
-	public override void Exit(IAgent pAgent)
-	{
-		base.Exit(pAgent);
-		followPlayer = false;
 		movingToTarget = false;
 	}
 
@@ -85,5 +87,29 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 			smoothedSpeed * Time.deltaTime);
 
 		transform.position = smoothedPos;
+	}
+
+	public void RaycastBorders()
+	{
+		Ray ray = cam.ScreenPointToRay(new Vector3(0,0.2f,0));
+
+		RaycastHit2D hit = Physics2D.Raycast(ray.origin - new Vector3(1.8f,0,0),ray.direction);
+
+		if (hit != null)
+		{
+			if (hit.transform.CompareTag("ArenaExitTrigger") && !transform.right.Equals(targetToFollow.transform.right))
+			{
+				followPlayer = false;
+				movingToTarget = false;
+			}
+		}
+	}
+	
+	
+	public override void Exit(IAgent pAgent)
+	{
+		base.Exit(pAgent);
+		followPlayer = false;
+		movingToTarget = false;
 	}
 }
