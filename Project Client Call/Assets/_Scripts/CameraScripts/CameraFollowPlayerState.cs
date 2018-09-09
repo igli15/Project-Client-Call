@@ -71,7 +71,7 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 		if (targetToFollow.transform.position.x >= transform.position.x && !movingToTarget)
 		{
 
-			Vector3 stageDimensions = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));  //get stage dimensions
+			Vector3 stageDimensions = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));  //get stage dimensions
 			
 			transform.DOLocalMoveX((transform.position.x + 
 			                        (targetToFollow.transform.position.x - transform.position.x)) 
