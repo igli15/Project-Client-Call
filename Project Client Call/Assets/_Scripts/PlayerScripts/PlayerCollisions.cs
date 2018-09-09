@@ -29,7 +29,7 @@ public class PlayerCollisions : MonoBehaviour
 	{
 		if (other.CompareTag("ArenaExitTrigger"))
 		{
-			if (transform.position.x > other.transform.position.x)
+			if (transform.position.x > other.transform.position.x + .2f)
 			{
 				mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraFollowPlayerState>();
 				other.isTrigger = false;
@@ -38,7 +38,7 @@ public class PlayerCollisions : MonoBehaviour
 		}
 		if (other.CompareTag("ArenaEnterTrigger"))
 		{
-			if (transform.position.x > other.transform.position.x)
+			if (transform.position.x > other.transform.position.x + .2f)
 			{
 				mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraArenaState>();
 				other.isTrigger = false;
