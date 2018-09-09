@@ -6,17 +6,29 @@ using UnityEngine;
 public class EnemyMeleeAttackState : AbstractState<EnemyFsmController>
 {
 
-    private EnemyRangedAttack rangedAttack;
+    private EnemyMeleeAttack meleeAttack;
     private EnemyData enemyData;
     public void Start()
     {
-        rangedAttack = GetComponent<EnemyRangedAttack>();
+        meleeAttack = GetComponent<EnemyMeleeAttack>();
         enemyData = GetComponent<EnemyData>();
     }
 
     public void Update()
     {
-        rangedAttack.ShootTo(enemyData.Player.transform.position);
+        
+    }
+
+    public override void Enter(IAgent pAgent)
+    {
+        base.Enter(pAgent);
+        meleeAttack.MeleeAttack();
+    }
+
+    public override void Exit(IAgent pAgent)
+    {
+        base.Exit(pAgent);
+        meleeAttack.FinishMeleeAttack();
     }
 }
 

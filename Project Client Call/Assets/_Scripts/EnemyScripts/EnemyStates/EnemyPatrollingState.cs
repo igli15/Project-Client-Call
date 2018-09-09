@@ -32,6 +32,11 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
         enemyMovement = GetComponent<EnemyMovement>();
         enemyData = GetComponent<EnemyData>();
 
+        ResetBorders();
+    }
+
+    public void ResetBorders()
+    {
         destination1 = (transform.position - new Vector3(radiusOfPatrolling, 0, 0));
         destination2 = (transform.position + new Vector3(radiusOfPatrolling, 0, 0));
     }
@@ -70,8 +75,7 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
 
         if (!running)
         {
-            destination1 = (transform.position - new Vector3(radiusOfPatrolling, 0, 0));
-            destination2 = (transform.position + new Vector3(radiusOfPatrolling, 0, 0));
+            ResetBorders();
         }
 
         Gizmos.DrawLine(transform.position, destination1);
