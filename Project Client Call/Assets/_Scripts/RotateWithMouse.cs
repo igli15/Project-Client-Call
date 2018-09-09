@@ -9,6 +9,10 @@ public class RotateWithMouse : MonoBehaviour
 	private float radiusOfRotation = 1;
 
 	[SerializeField] 
+	[Range(0.02f,0.1f)]
+	private float smoothedRotationValue = .08f;
+
+	[SerializeField] 
 	private Transform target;
 
 	[SerializeField] 
@@ -23,7 +27,6 @@ public class RotateWithMouse : MonoBehaviour
 	[SerializeField] 
 	private Rigidbody2D playerRb;
 
-	[SerializeField] 
 	private SpriteRenderer spriteRenderer;
 	
 	private Vector2 dir;
@@ -33,6 +36,8 @@ public class RotateWithMouse : MonoBehaviour
 	private Vector3 initialPlayerForward;
 
 	private bool canRotate = true;
+
+	private Vector3 smoothedPos;  //just as ref....
 	
 
 	// Use this for initialization
@@ -64,8 +69,8 @@ public class RotateWithMouse : MonoBehaviour
 		if (canRotate)
 		{
 			dir *= radiusOfRotation;
-
-			transform.position = target.position + new Vector3(dir.x, dir.y, 0);
+			Vector3 targetPos = target.position + new Vector3(dir.x, dir.y, 0);
+			transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref smoothedPos, smoothedRotationValue); //Added some smoothing
 			transform.right = dir.normalized;
 		}
 
@@ -90,9 +95,6 @@ public class RotateWithMouse : MonoBehaviour
 			
 			float angleBetweenSwordAndPlayerDown = Vector3.Angle(new Vector3(joyPos.x, joyPos.y, 0), -playerRb.transform.up);
 
-			if(Input.GetKeyDown(KeyCode.C)) //Just for Debugging remove if needed
-			Debug.Log(angleBetweenSwordAndPlayer);
-			
 			if (angleBetweenSwordAndPlayer > 90) canRotate = false;
 			else if (angleBetweenSwordAndPlayerDown < 60) canRotate = false;
 			else canRotate = true;
@@ -100,7 +102,7 @@ public class RotateWithMouse : MonoBehaviour
 			dir = Vector2FromAngle(angle);
 
 
-			if (canRotate)						// Only compute if we can rotate
+			if (canRotate)							// Only compute if we can rotate
 			{
 				if (angle > 90 || angle < -90)    // Check if should flip Y Dir or not
 				{
@@ -115,7 +117,7 @@ public class RotateWithMouse : MonoBehaviour
 						spriteRenderer.flipY = false;
 				}
 
-				if (angleBetweenSwordAndPlayer == 0)   // If the angle is exactly 0 then we don't need to flip again 
+				if (angleBetweenSwordAndPlayer == 0)   // If the angle is exactly 0 then we don't need to flip again, removes some artifacts 
 				{
 					spriteRenderer.flipY = false;
 				}
@@ -139,7 +141,7 @@ public class RotateWithMouse : MonoBehaviour
 		return new Vector2(Mathf.Cos(a), Mathf.Sin(a));
 	}
 
-	public void CheckForJoyStickInput()
+	public void ArcadeMachineInputs()
 	{
 		if (Input.GetKey(KeyCode.D))
 		{
