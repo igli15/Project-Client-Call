@@ -54,9 +54,17 @@ public class EnemyFsmController : MonoBehaviour, IAgent
             case EnemyType.Tank:
                 CheckConditionsForTankEnemy();
                 break;
+            case EnemyType.Striker:
+                CheckConditionsForStrikerEnemy();
+                break;
         }
         
     }
+    void CheckConditionsForStrikerEnemy()
+    {
+
+    }
+
     void CheckConditionsForTankEnemy()
     {
         Debug.Log("TANK: 0+"+ isLooking+" | "+isInVision);
