@@ -485,11 +485,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4488004328518034, guid: e8ef0f005bfa543049c5fd7255b60337, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.880919
+      value: -8.51
       objectReference: {fileID: 0}
     - target: {fileID: 4488004328518034, guid: e8ef0f005bfa543049c5fd7255b60337, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.0178404
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 4488004328518034, guid: e8ef0f005bfa543049c5fd7255b60337, type: 2}
       propertyPath: m_LocalPosition.z
@@ -518,6 +518,26 @@ Prefab:
     - target: {fileID: 1830070242615870, guid: e8ef0f005bfa543049c5fd7255b60337, type: 2}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 50486399378022760, guid: e8ef0f005bfa543049c5fd7255b60337,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212692706008702276, guid: e8ef0f005bfa543049c5fd7255b60337,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf6947378aa564546bbc3398190ba212,
+        type: 3}
+    - target: {fileID: 4488004328518034, guid: e8ef0f005bfa543049c5fd7255b60337, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 114191105169930098, guid: e8ef0f005bfa543049c5fd7255b60337,
+        type: 2}
+      propertyPath: movementSpeed
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8ef0f005bfa543049c5fd7255b60337, type: 2}
