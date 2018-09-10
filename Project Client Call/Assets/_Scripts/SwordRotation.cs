@@ -38,6 +38,8 @@ public class SwordRotation : MonoBehaviour
 	private bool canRotate = true;
 
 	private Vector3 smoothedPos;  //just as ref....
+
+	private SpriteRenderer aimHudSpriteRenderer;
 	
 
 	// Use this for initialization
@@ -46,6 +48,8 @@ public class SwordRotation : MonoBehaviour
 		initialPlayerForward = playerRb.transform.right;
 		
 		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
+		aimHudSpriteRenderer = GetComponent<SpriteRenderer>();
 		
 		dir = Utils.Vector2FromAngle(0);  //just default value.
 
@@ -129,11 +133,16 @@ public class SwordRotation : MonoBehaviour
 				}
 			}
 
-			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
+			if (swordCollider.activeSelf == false)
+			{
+				swordCollider.SetActive(true);
+				aimHudSpriteRenderer.enabled = true;
+			}
 		}
 		else
 		{
 			swordCollider.SetActive(false);
+			aimHudSpriteRenderer.enabled = false;
 		}
 		
 		
