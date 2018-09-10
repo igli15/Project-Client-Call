@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - ArenaEnterTrigger
   - ArenaExitTrigger
+  - Projectile
+  - BigProjectile
   layers:
   - Default
   - TransparentFX
