@@ -8,6 +8,8 @@ using UnityEngine;
 public class EnemyRangedAttack : MonoBehaviour
 {
     [SerializeField]
+    string tag;
+    [SerializeField]
     GameObject bullet;
     [SerializeField]
     float reloadTime;
@@ -27,7 +29,8 @@ public class EnemyRangedAttack : MonoBehaviour
         Vector3 directionToShoot = targetPosition - transform.position;
         directionToShoot.Normalize();
 
-        GameObject newBullet = Instantiate(bullet, transform.position+ directionToShoot, transform.rotation, null);
+        GameObject newBullet = ObjectPooler.instance.SpawnFromPool(tag, transform.position+ directionToShoot, Quaternion.identity);
+
         newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed ;
     }
 

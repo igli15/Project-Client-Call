@@ -30,12 +30,12 @@ public class BulletCollision : MonoBehaviour
 
 		if (other.transform.CompareTag("Player"))
 		{
-			Destroy(gameObject);
+			ObjectPooler.instance.DestroyFromPool("SmallProjectile",gameObject);
 		}
         if (isReflected && other.transform.CompareTag("Enemy"))
         {
             other.GetComponent<Health>().InflictDamage(damage);
-            Destroy(gameObject);
+            ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
         }
         
 	}
