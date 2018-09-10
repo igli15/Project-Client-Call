@@ -149,7 +149,6 @@ public class PlayerMovement : MonoBehaviour
 		if (rb.velocity.x < 0 && transform.right.Equals(initForwardVec))  //flip only if we haven't already flipped :P
 		{
 			transform.right = -transform.right;
-	
 		}
 		else if(rb.velocity.x > 0 && !transform.right.Equals(initForwardVec))
 		{

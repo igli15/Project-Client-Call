@@ -94,8 +94,14 @@ public class RotateWithMouse : MonoBehaviour
 			
 			float angleBetweenSwordAndPlayerDown = Vector3.Angle(new Vector3(joyPos.x, joyPos.y, 0), -playerRb.transform.up);
 
-			if (angleBetweenSwordAndPlayer > 90) canRotate = false;
-			else if (angleBetweenSwordAndPlayerDown < 60) canRotate = false;
+			//if (angleBetweenSwordAndPlayer > 90) canRotate = false;   // This makes it rotate in the direction facing.
+			
+			if (Input.GetKeyDown(KeyCode.C))
+			{
+				Debug.Log("Angle between player and sword collider is : " + Find360Angle(playerRb.transform.right,transform.right));
+			}
+			
+			if (angleBetweenSwordAndPlayerDown < 60) canRotate = false;
 			else canRotate = true;
 			
 			dir = Vector2FromAngle(angle);
@@ -207,5 +213,11 @@ public class RotateWithMouse : MonoBehaviour
 		 dir = distanceFromMouse.normalized * radiusOfRotation;
 		
 	}
-	
+
+
+	public float Find360Angle(Vector3 vec1,Vector3 vec2)  //Returns an angle in 360 degree instead of unity's stupid way.
+	{
+		float angle = Vector2.Angle(vec1, vec2);
+		return Mathf.Sign(Vector3.Cross(vec1, vec2).z) < 0 ? (360 - angle) % 360 : angle;  //If the vectors aren't facing the same way the sign is -1
+	}
 }
