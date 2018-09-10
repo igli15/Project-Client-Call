@@ -25,7 +25,6 @@ public class EnemyEvadePlayerState : AbstractState<EnemyFsmController>
         {
 
            fsmController.stateReferences.enemyMovement.Move(direction, 0);
-           
         }
         else { fsmController.fsm.ChangeState<EnemyPatrollingState>(); }
     }

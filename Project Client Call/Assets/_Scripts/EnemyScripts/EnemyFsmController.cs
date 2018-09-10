@@ -77,9 +77,25 @@ public class EnemyFsmController : MonoBehaviour, IAgent
             case EnemyType.Striker:
                 CheckConditionsForStrikerEnemy();
                 break;
+            case EnemyType.Cannoneer:
+                CheckConditionsForCannoneerEnemy();
+                break;
         }
 
     }
+
+    void CheckConditionsForCannoneerEnemy()
+    {
+        if ((distanceToPLayer).magnitude < radiusOfShooting && (isLooking && isInVision || canBeHeared))
+        {
+            fsm.ChangeState<EnemyRangedAttackState>();
+        }
+        else
+        {
+            fsm.ChangeState<EnemyPatrollingState>();
+        }
+    }
+
     void CheckConditionsForStrikerEnemy()
     {
         if (Input.GetKeyDown(KeyCode.L) || fsm.GetCurrentState() is EnemyEvadePlayerState)
