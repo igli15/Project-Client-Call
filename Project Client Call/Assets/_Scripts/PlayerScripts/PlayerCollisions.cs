@@ -32,7 +32,7 @@ public class PlayerCollisions : MonoBehaviour
 		{
 			if (transform.position.x > other.transform.position.x + .2f)
 			{
-				mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraFollowPlayerState>();
+				mainCam.GetComponent<CameraFollowPlayerState>().ResetCamera(4f,0.4f);
 				other.isTrigger = false;
 			}
 			
@@ -41,7 +41,8 @@ public class PlayerCollisions : MonoBehaviour
 		{
 			if (transform.position.x > other.transform.position.x + .2f)
 			{
-				mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraArenaState>();
+				//mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraArenaState>();
+				mainCam.GetComponent<CameraFollowPlayerState>().MoveBackCamera(4f,0.4f);
 				other.isTrigger = false;
 			}
 		}

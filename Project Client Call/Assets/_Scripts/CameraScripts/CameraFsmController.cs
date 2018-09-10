@@ -38,7 +38,7 @@ public class CameraFsmController : MonoBehaviour,IAgent
 
 	public void GoToArenaMode()
 	{
-		fsm.ChangeState<CameraArenaState>();
+		//fsm.ChangeState<CameraArenaState>();
 	}
 
 	public void GoToFollowPlayerMode()

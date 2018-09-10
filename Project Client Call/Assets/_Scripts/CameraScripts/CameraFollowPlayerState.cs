@@ -88,6 +88,7 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	public void StartFollowingPlayer()
 	{
 		float desiredPos = targetToFollow.position.x + offset.x;
+	//	float desiredPosY = targetToFollow.position.y + 0.5f;  // TODO : Add it for Y Axis
 
 		Vector3 smoothedPos = Vector3.Lerp(transform.position,
 			new Vector3(desiredPos, transform.position.y, transform.position.z),
@@ -103,16 +104,25 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 		RaycastHit2D hit = Physics2D.Raycast(ray.origin - new Vector3(cameraBorderOffset,0,0),ray.direction);
 
-		if (hit != null)
+		if (hit)
 		{
-			if (hit.transform.CompareTag("ArenaExitTrigger") && !transform.right.Equals(targetToFollow.transform.right))
+			if ((hit.transform.CompareTag("ArenaExitTrigger") || hit.transform.CompareTag("ArenaEnterTrigger")) && !transform.right.Equals(targetToFollow.transform.right))
 			{
 				followPlayer = false;
 				movingToTarget = false;
 			}
 		}
 	}
-	
+
+	public void MoveBackCamera(float amount,float time)
+	{
+		transform.DOMoveZ(transform.position.z - amount, time);
+	}
+
+	public void ResetCamera(float amount,float time)
+	{
+		transform.DOMoveZ(transform.position.z + amount, time);
+	}
 	
 	public override void Exit(IAgent pAgent)
 	{
