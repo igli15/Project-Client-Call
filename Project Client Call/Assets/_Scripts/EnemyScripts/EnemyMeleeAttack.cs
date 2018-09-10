@@ -5,7 +5,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(EnemyMovement))]
 
-public class EnemyMeleeeAttack : MonoBehaviour
+public class EnemyMeleeAttack : MonoBehaviour
 {
     [SerializeField]
     GameObject damageBox;
@@ -18,13 +18,23 @@ public class EnemyMeleeeAttack : MonoBehaviour
         damageBox.GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    public void MeleeAttack(float direction)
+    public void MeleeAttack()
     {
-        if (direction > 1) direction = 1;
-        if (direction < -1) direction = -1;
-        enemyMovement.Move(direction, 0);
+      //  if (direction > 1) direction = 1;
+        //if (direction < -1) direction = -1;
+        //enemyMovement.Move(direction, 0);
         damageBox.GetComponent<BoxCollider2D>().enabled = true;
+        Debug.Log("BOX enabled");
+        //Activate Animation of meleeAttack???
     }
+
+    public void FinishMeleeAttack()
+    {
+        damageBox.GetComponent<BoxCollider2D>().enabled = false;
+        //Force quit Animation of meleeAttack???
+    }
+
+
 
 }
 
