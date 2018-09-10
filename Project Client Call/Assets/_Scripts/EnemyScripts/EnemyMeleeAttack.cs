@@ -24,6 +24,7 @@ public class EnemyMeleeAttack : MonoBehaviour
         //if (direction < -1) direction = -1;
         //enemyMovement.Move(direction, 0);
         damageBox.GetComponent<BoxCollider2D>().enabled = true;
+        Debug.Log("BOX enabled");
         //Activate Animation of meleeAttack???
     }
 

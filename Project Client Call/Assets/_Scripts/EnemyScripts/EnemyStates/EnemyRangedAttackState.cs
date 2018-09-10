@@ -5,30 +5,30 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyRangedAttack))]
 public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
 {
-    
+
 
     private EnemyRangedAttack rangedAttack;
-    private EnemyData enemyData;
+    private EnemyFsmController fsmCOntroller;
 
     float radiusOfShooting;
     public void Start()
     {
         rangedAttack = GetComponent<EnemyRangedAttack>();
-        enemyData = GetComponent<EnemyData>();
+        fsmCOntroller = GetComponent<EnemyFsmController>();
 
         radiusOfShooting = GetComponent<EnemyPatrollingState>().RadiusOfRangedAttack;
     }
 
     public void Update()
     {
-        rangedAttack.ShootTo(enemyData.Player.transform.position);
+        rangedAttack.ShootTo(fsmCOntroller.stateReferences.enemyData.Player.transform.position);
         CheckStateConditions();
     }
 
 
     void CheckStateConditions()
     {
-        if ((enemyData.Player.transform.position - transform.position).magnitude > radiusOfShooting)
+        if ((fsmCOntroller.stateReferences.enemyData.Player.transform.position - transform.position).magnitude > radiusOfShooting)
         {
             GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyPatrollingState>();
         }

@@ -24,7 +24,7 @@ public class EnemyEvadeState : AbstractState<EnemyFsmController>
 
     public void Update()
     {
-        if ((transform.position.x-destination.x)>=1)
+        if ((transform.position.x - destination.x) >= 1)
         {
             enemyMovement.Move(direction, 0);
         }
@@ -36,15 +36,15 @@ public class EnemyEvadeState : AbstractState<EnemyFsmController>
         Vector2 distanceToPlayer = enemyData.Player.transform.position - transform.position;
         direction = Mathf.Sign(distanceToPlayer.x);
 
-        int layerMask =  (1 << 9);
-        RaycastHit2D raycast2d = Physics2D.Raycast(transform.position, transform.right* direction, distanceOfChargeBack, layerMask);
+        int layerMask = (1 << 9);
+        RaycastHit2D raycast2d = Physics2D.Raycast(transform.position, transform.right * direction, distanceOfChargeBack, layerMask);
         if (raycast2d.collider != null)
         {
             destination = raycast2d.point;
         }
         else
         {
-            destination = transform.position + transform.right* direction * distanceOfChargeBack;
+            destination = transform.position + transform.right * direction * distanceOfChargeBack;
         }
 
         initialSpeed = enemyData.MovementSpeed;
@@ -53,7 +53,7 @@ public class EnemyEvadeState : AbstractState<EnemyFsmController>
 
     public override void Exit(IAgent pAgent)
     {
-        
+
         base.Exit(pAgent);
         enemyData.MovementSpeed = initialSpeed;
         GetComponent<EnemyPatrollingState>().ResetBorders();

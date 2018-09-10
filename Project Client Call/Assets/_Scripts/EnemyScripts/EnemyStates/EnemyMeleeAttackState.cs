@@ -5,30 +5,29 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyRangedAttack))]
 public class EnemyMeleeAttackState : AbstractState<EnemyFsmController>
 {
-
-    private EnemyMeleeAttack meleeAttack;
-    private EnemyData enemyData;
+    private EnemyFsmController fsmController;
     public void Start()
     {
-        meleeAttack = GetComponent<EnemyMeleeAttack>();
-        enemyData = GetComponent<EnemyData>();
+        fsmController = GetComponent<EnemyFsmController>();
     }
 
     public void Update()
     {
-        
+
     }
 
     public override void Enter(IAgent pAgent)
     {
         base.Enter(pAgent);
-        meleeAttack.MeleeAttack();
+        Debug.Log("Enter of MeleeAttackSTate");
+        if (null == fsmController) Debug.Log("SUKA BLYAT");
+        fsmController.stateReferences.enemyMeleeAttack.MeleeAttack();
     }
 
     public override void Exit(IAgent pAgent)
     {
         base.Exit(pAgent);
-        meleeAttack.FinishMeleeAttack();
+        fsmController.stateReferences.enemyMeleeAttack.FinishMeleeAttack();
     }
 }
 

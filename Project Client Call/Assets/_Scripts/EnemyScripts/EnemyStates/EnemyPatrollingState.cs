@@ -14,13 +14,12 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
     float currentDirection;
     float distanceToStop = 0.2f;
 
-    EnemyMovement enemyMovement;
-    EnemyData enemyData;
+    EnemyFsmController fsmController;
 
     Vector3 destination1;
     Vector3 destination2;
 
-    bool running=false;
+    bool running = false;
 
     public float RadiusOfRangedAttack { get { return radiusOfRangedAttack; } }
     public float RadiusOfMelleAttack { get { return radiusOfMeleeAttack; } }
@@ -29,8 +28,7 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
     {
         running = true;
         currentDirection = 1;
-        enemyMovement = GetComponent<EnemyMovement>();
-        enemyData = GetComponent<EnemyData>();
+        fsmController = GetComponent<EnemyFsmController>();
 
         ResetBorders();
     }
@@ -50,12 +48,12 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
 
     public void Patroll()
     {
-        if(transform.position.x - destination1.x < distanceToStop) currentDirection = 1;
+        if (transform.position.x - destination1.x < distanceToStop) currentDirection = 1;
 
-        if(destination2.x - transform.position.x < distanceToStop)  currentDirection = -1;
+        if (destination2.x - transform.position.x < distanceToStop) currentDirection = -1;
 
 
-        enemyMovement.Move(currentDirection, 0);
+        fsmController.stateReferences.enemyMovement.Move(currentDirection, 0);
     }
 
     public override void Enter(IAgent pAgent)
@@ -81,8 +79,8 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
         Gizmos.DrawLine(transform.position, destination1);
         Gizmos.DrawLine(transform.position, destination2);
 
-        Gizmos.DrawWireCube(destination1, new Vector3(0.2f,1,0.2f));
-        Gizmos.DrawWireCube(destination2, new Vector3(0.2f,1,0.2f));
+        Gizmos.DrawWireCube(destination1, new Vector3(0.2f, 1, 0.2f));
+        Gizmos.DrawWireCube(destination2, new Vector3(0.2f, 1, 0.2f));
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radiusOfRangedAttack);

@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class EnemyFsmController : MonoBehaviour, IAgent
 {
-    enum EnemyType {Simple,Tank,Striker, Cannoneer }
+    enum EnemyType { Simple, Tank, Striker, Cannoneer }
     [SerializeField]
     EnemyType enemyType;
-
     [HideInInspector]
     public Fsm<EnemyFsmController> fsm;
-    private EnemyData enemyData;
+    [HideInInspector]
+    public StateReferences stateReferences;
 
     private float radiusOfShooting;
     private float radiusOfMeleeeAttack;
+
     Vector2 distanceToPLayer
     {
-        get { return enemyData.Player.transform.position - transform.position; }
+        get { return stateReferences.enemyData.Player.transform.position - transform.position; }
     }
     bool isLooking
     {
@@ -24,12 +25,14 @@ public class EnemyFsmController : MonoBehaviour, IAgent
     }
     bool isInVision
     {
-        get {
+        get
+        {
             int layerMask = 1 << 10 | (1 << 9);
             RaycastHit2D raycast2d = Physics2D.Raycast(transform.position, distanceToPLayer, distanceToPLayer.magnitude, layerMask);
             return raycast2d.collider != null && raycast2d.collider.CompareTag("Player");
-            }
+        }
     }
+    bool areComponentsReady;
 
     void Start()
     {
@@ -37,15 +40,24 @@ public class EnemyFsmController : MonoBehaviour, IAgent
         {
             fsm = new Fsm<EnemyFsmController>(this);
         }
+        areComponentsReady = false;
+
+
         fsm.ChangeState<EnemyPatrollingState>();
-        enemyData = GetComponent<EnemyData>();
+
 
         radiusOfShooting = GetComponent<EnemyPatrollingState>().RadiusOfRangedAttack;
-        radiusOfMeleeeAttack= GetComponent<EnemyPatrollingState>().RadiusOfMelleAttack;
+        radiusOfMeleeeAttack = GetComponent<EnemyPatrollingState>().RadiusOfMelleAttack;
     }
 
     private void Update()
     {
+        if (!areComponentsReady)
+        {
+            stateReferences = new StateReferences(GetComponent<EnemyData>(), GetComponent<EnemyMovement>(),
+                                                  GetComponent<EnemyMeleeAttack>(), GetComponent<EnemyRangedAttack>());
+            areComponentsReady = true;
+        }
         switch (enemyType)
         {
             case EnemyType.Simple:
@@ -58,7 +70,7 @@ public class EnemyFsmController : MonoBehaviour, IAgent
                 CheckConditionsForStrikerEnemy();
                 break;
         }
-        
+
     }
     void CheckConditionsForStrikerEnemy()
     {
@@ -67,7 +79,6 @@ public class EnemyFsmController : MonoBehaviour, IAgent
 
     void CheckConditionsForTankEnemy()
     {
-        Debug.Log("TANK: 0+"+ isLooking+" | "+isInVision);
         if ((distanceToPLayer).magnitude < radiusOfMeleeeAttack && isLooking && isInVision)
         {
             GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyChaseAndMeleeAttackState>();
@@ -93,5 +104,24 @@ public class EnemyFsmController : MonoBehaviour, IAgent
         {
             GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyPatrollingState>();
         }
+    }
+}
+
+public struct StateReferences
+{
+    public EnemyData enemyData;
+    public EnemyMovement enemyMovement;
+    public EnemyMeleeAttack enemyMeleeAttack;
+    public EnemyRangedAttack enemyRangedAttack;
+
+    public StateReferences(EnemyData enemyData, EnemyMovement enemyMovement,
+        EnemyMeleeAttack enemyMeleeAttack, EnemyRangedAttack enemyRangedAttack)
+    {
+        Debug.Log("StateReferences is ready");
+        this.enemyData = enemyData;
+        this.enemyMovement = enemyMovement;
+        this.enemyMeleeAttack = enemyMeleeAttack;
+        Debug.Log("MeleeAttack: " + enemyMeleeAttack);
+        this.enemyRangedAttack = enemyRangedAttack;
     }
 }

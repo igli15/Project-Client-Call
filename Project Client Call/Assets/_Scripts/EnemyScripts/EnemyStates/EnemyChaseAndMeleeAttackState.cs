@@ -2,45 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyRangedAttack))]
+[RequireComponent(typeof(EnemyMeleeAttack))]
 public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
 {
-    private EnemyMovement enemyMovement;
-    private EnemyMeleeAttack meleeAttack;
-    private EnemyData enemyData;
     [SerializeField]
     float speedInCharge = 100;
     float initialSpeed;
+
+    EnemyFsmController fsmController;
     public void Start()
     {
-        meleeAttack = GetComponent<EnemyMeleeAttack>();
-        enemyMovement = GetComponent<EnemyMovement>();
-        enemyData = GetComponent<EnemyData>();
+        fsmController = GetComponent<EnemyFsmController>();
     }
 
     public void Update()
     {
-        Vector2 distanceToPlayer= enemyData.Player.transform.position - transform.position;
+
+        Vector2 distanceToPlayer = fsmController.stateReferences.enemyData.Player.transform.position - transform.position;
         //IncreaseOfSpeed
-        enemyMovement.Move(distanceToPlayer.normalized);
+        fsmController.stateReferences.enemyMovement.Move(distanceToPlayer.normalized);
         //meleeAttack.MeleeAttack();
     }
 
     public override void Enter(IAgent pAgent)
     {
         Debug.Log("ENTER THE CHASE");
+
         base.Enter(pAgent);
-        meleeAttack.MeleeAttack();
-        initialSpeed = enemyData.MovementSpeed;
-        enemyData.MovementSpeed = speedInCharge;
+        fsmController.stateReferences.enemyMeleeAttack.MeleeAttack();
+        initialSpeed = fsmController.stateReferences.enemyData.MovementSpeed;
+        fsmController.stateReferences.enemyData.MovementSpeed = speedInCharge;
     }
 
     public override void Exit(IAgent pAgent)
     {
         GetComponent<EnemyPatrollingState>().ResetBorders();
         base.Exit(pAgent);
-        enemyData.MovementSpeed = initialSpeed;
-        meleeAttack.FinishMeleeAttack();
+        fsmController.stateReferences.enemyData.MovementSpeed = initialSpeed;
+        fsmController.stateReferences.enemyMeleeAttack.FinishMeleeAttack();
     }
 }
 
