@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Prototype Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Prototype Scene.unity" afterDir="false" />
-    </list>
+    <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +132,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/SwordRotation.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="724">
-              <caret line="73" column="45" lean-forward="true" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+              <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
               <folding>
                 <marker date="1536590743870" expanded="true" signature="6:92" ph="..." />
                 <marker date="1536590743870" expanded="true" signature="136:5077" ph="{...}" />
@@ -687,10 +685,10 @@
         <state relative-caret-position="440">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <marker date="1536422538849" expanded="false" signature="6:78" ph="..." />
-            <marker date="1536422538849" expanded="true" signature="196:524" ph="{...}" />
-            <marker date="1536422538849" expanded="true" signature="300:417" ph="{...}" />
-            <marker date="1536422538849" expanded="true" signature="443:522" ph="{...}" />
+            <marker date="1536594372702" expanded="false" signature="6:78" ph="..." />
+            <marker date="1536594372702" expanded="true" signature="196:827" ph="{...}" />
+            <marker date="1536594372702" expanded="true" signature="300:417" ph="{...}" />
+            <marker date="1536594372702" expanded="true" signature="817:825" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -714,11 +712,11 @@
         <state relative-caret-position="440">
           <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
-            <marker date="1536422538848" expanded="false" signature="6:78" ph="..." />
-            <marker date="1536422538848" expanded="true" signature="161:819" ph="{...}" />
-            <marker date="1536422538848" expanded="true" signature="286:387" ph="{...}" />
-            <marker date="1536422538848" expanded="true" signature="444:642" ph="{...}" />
-            <marker date="1536422538848" expanded="true" signature="686:816" ph="{...}" />
+            <marker date="1536594372701" expanded="false" signature="6:78" ph="..." />
+            <marker date="1536594372701" expanded="true" signature="161:1739" ph="{...}" />
+            <marker date="1536594372701" expanded="true" signature="286:387" ph="{...}" />
+            <marker date="1536594372701" expanded="true" signature="444:642" ph="{...}" />
+            <marker date="1536594372701" expanded="true" signature="1730:1736" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -886,7 +884,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/SwordRotation.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="724">
-          <caret line="73" column="45" lean-forward="true" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
           <folding>
             <marker date="1536590743870" expanded="true" signature="6:92" ph="..." />
             <marker date="1536590743870" expanded="true" signature="136:5077" ph="{...}" />

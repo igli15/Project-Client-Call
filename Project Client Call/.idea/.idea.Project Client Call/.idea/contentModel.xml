@@ -24,6 +24,8 @@
             <e p="EnemyMovement.cs" t="Include" />
             <e p="EnemyRangedAttack.cs" t="Include" />
             <e p="EnemyStates" t="Include">
+              <e p="EnemyChaseAndMeleeAttackState.cs" t="Include" />
+              <e p="EnemyEvadePlayerState.cs" t="Include" />
               <e p="EnemyMeleeAttackState.cs" t="Include" />
               <e p="EnemyPatrollingState.cs" t="Include" />
               <e p="EnemyRangedAttackState.cs" t="Include" />
@@ -37,6 +39,7 @@
             <e p="Fsm.cs" t="Include" />
             <e p="IAgent.cs" t="Include" />
           </e>
+          <e p="Health.cs" t="Include" />
           <e p="PlayerScripts" t="Include">
             <e p="PlayerCollisions.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
