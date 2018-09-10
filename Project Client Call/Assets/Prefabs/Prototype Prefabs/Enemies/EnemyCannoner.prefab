@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4045942251628420
 Transform:
   m_ObjectHideFlags: 1
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04846a02f79b0bb4f8bdfcb86e940510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tag: BigProjectile
   bullet: {fileID: 1521303912402666, guid: 16f0d4e6ca9229545af0eb6cead3adb4, type: 2}
   reloadTime: 1
   bulletSpeed: 5
@@ -202,8 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861b4ec7f6b46c54bbc3e9b289636cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 1
+  maxHealth: 1
   shouldBeDestroyed: 1
 --- !u!114 &114673519596962818
 MonoBehaviour:
