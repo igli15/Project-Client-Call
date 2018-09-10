@@ -98,6 +98,7 @@ public class SwordRotation : MonoBehaviour
 			
 			if (Input.GetKeyDown(KeyCode.C))
 			{
+				Debug.Log(playerRb.transform.right);
 				Debug.Log("Angle between player and sword collider is : " + Find360Angle(playerRb.transform.right,transform.right));
 			}
 			
@@ -217,7 +218,7 @@ public class SwordRotation : MonoBehaviour
 
 	public float Find360Angle(Vector3 vec1,Vector3 vec2)  //Returns an angle in 360 degree instead of unity's stupid way.
 	{
-		float angle = Vector2.Angle(vec1, vec2);
-		return Mathf.Sign(Vector3.Cross(vec1, vec2).z) < 0 ? (360 - angle) % 360 : angle;  //If the vectors aren't facing the same way the sign is -1
+		float angle = Vector3.Angle(vec1,vec2);
+		return (Vector3.Angle(Vector3.up, vec2) > 90f) ? 360f - angle : angle;            
 	}
 }
