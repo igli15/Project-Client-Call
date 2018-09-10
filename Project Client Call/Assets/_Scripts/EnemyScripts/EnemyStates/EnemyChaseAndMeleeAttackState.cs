@@ -12,7 +12,7 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
     EnemyFsmController fsmController;
     public void Start()
     {
-        fsmController = GetComponent<EnemyFsmController>();
+        
     }
 
     public void Update()
@@ -26,8 +26,7 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
 
     public override void Enter(IAgent pAgent)
     {
-        Debug.Log("ENTER THE CHASE");
-
+        if (!fsmController) fsmController = GetComponent<EnemyFsmController>();
         base.Enter(pAgent);
         fsmController.stateReferences.enemyMeleeAttack.MeleeAttack();
         initialSpeed = fsmController.stateReferences.enemyData.MovementSpeed;

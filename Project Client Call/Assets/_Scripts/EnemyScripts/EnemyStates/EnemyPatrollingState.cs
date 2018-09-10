@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class EnemyPatrollingState : AbstractState<EnemyFsmController>
 {
+    
     [SerializeField]
     float radiusOfPatrolling = 5;
+    [Header("Red Sphere")]
     [SerializeField]
     float radiusOfRangedAttack = 5;
+    [Header("Purple Sphere")]
     [SerializeField]
     float radiusOfMeleeAttack = 1;
+    [Header("Green Sphere")]
+    [SerializeField]
+    float radiusOfFootStepHearing = 2;
 
     float currentDirection;
     float distanceToStop = 0.2f;
@@ -23,6 +29,7 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
 
     public float RadiusOfRangedAttack { get { return radiusOfRangedAttack; } }
     public float RadiusOfMelleAttack { get { return radiusOfMeleeAttack; } }
+    public float RadiusOfFootStepsHearing { get { return radiusOfFootStepHearing; } }
 
     void Start()
     {
@@ -86,5 +93,7 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
         Gizmos.DrawWireSphere(transform.position, radiusOfRangedAttack);
         Gizmos.color = Color.magenta;
         Gizmos.DrawWireSphere(transform.position, radiusOfMeleeAttack);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, radiusOfFootStepHearing);
     }
 }

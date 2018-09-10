@@ -8,7 +8,6 @@ public class EnemyMeleeAttackState : AbstractState<EnemyFsmController>
     private EnemyFsmController fsmController;
     public void Start()
     {
-        fsmController = GetComponent<EnemyFsmController>();
     }
 
     public void Update()
@@ -19,6 +18,7 @@ public class EnemyMeleeAttackState : AbstractState<EnemyFsmController>
     public override void Enter(IAgent pAgent)
     {
         base.Enter(pAgent);
+        if (!fsmController) fsmController = GetComponent<EnemyFsmController>();
         Debug.Log("Enter of MeleeAttackSTate");
         if (null == fsmController) Debug.Log("SUKA BLYAT");
         fsmController.stateReferences.enemyMeleeAttack.MeleeAttack();

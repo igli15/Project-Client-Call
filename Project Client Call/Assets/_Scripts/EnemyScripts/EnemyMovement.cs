@@ -35,6 +35,17 @@ public class EnemyMovement : MonoBehaviour
         CheckFlipHorizontally();
     }
 
+    public void FaceToPlayer()
+    {
+        Vector2 distanceToPlayer = GetComponent<EnemyFsmController>().stateReferences.enemyData.Player.transform.position - transform.position;
+        float direction = Mathf.Sign(distanceToPlayer.x);
+
+        if (!transform.right.Equals(new Vector3(direction, 0)))
+        {
+            transform.right = new Vector3(direction, 0);
+        }
+    }
+
     public void CheckFlipHorizontally()
     {
         if (rb.velocity.x < 0 && transform.right.Equals(initForwardVec))  //flip only if we haven't already flipped :P
