@@ -1,10 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SwordRotation : MonoBehaviour
-{
-
+{	
 	[SerializeField]
 	private float radiusOfRotation = 1;
 
@@ -47,7 +47,7 @@ public class SwordRotation : MonoBehaviour
 		
 		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 		
-		dir = Vector2FromAngle(0);
+		dir = Utils.Vector2FromAngle(0);  //just default value.
 
 	}
 	
@@ -105,7 +105,7 @@ public class SwordRotation : MonoBehaviour
 			if (angleBetweenSwordAndPlayerDown < 60) canRotate = false;
 			else canRotate = true;
 			
-			dir = Vector2FromAngle(angle);
+			dir = Utils.Vector2FromAngle(angle);
 
 
 			if (canRotate)							// Only compute if we can rotate
@@ -139,68 +139,61 @@ public class SwordRotation : MonoBehaviour
 		
 	}
 	
-	
-	
-	public Vector2 Vector2FromAngle(float a)
-	{
-		a *= Mathf.Deg2Rad;
-		return new Vector2(Mathf.Cos(a), Mathf.Sin(a));
-	}
 
 	public void ArcadeMachineInputs()
 	{
 		if (Input.GetKey(KeyCode.D))
 		{
-			dir = Vector2FromAngle(0).normalized;
+			dir = Utils.Vector2FromAngle(0).normalized;
 			joystickUsed = true;
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.E))
 		{
-			dir = Vector2FromAngle(45).normalized;
+			dir = Utils.Vector2FromAngle(45).normalized;
 			joystickUsed = true;
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.W))
 		{
-			dir = Vector2FromAngle(90).normalized;
+			dir = Utils.Vector2FromAngle(90).normalized;
 			joystickUsed = true;
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.Q))
 		{
-			dir = Vector2FromAngle(135).normalized;
+			dir = Utils.Vector2FromAngle(135).normalized;
 			joystickUsed = true;
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.A))
 		{
-			dir = Vector2FromAngle(180).normalized;
+			dir = Utils.Vector2FromAngle(180).normalized;
 			joystickUsed = true;
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.Z))
 		{
-			dir = Vector2FromAngle(225).normalized;
+			dir = Utils.Vector2FromAngle(225).normalized;
 			joystickUsed = true;
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 
 		else if (Input.GetKey(KeyCode.X))
 		{
-			dir = Vector2FromAngle(270).normalized;
+			dir = Utils.Vector2FromAngle(270).normalized;
 			joystickUsed = true;
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (Input.GetKey(KeyCode.C))
 		{
-			dir = Vector2FromAngle(315).normalized;
+			dir = Utils.Vector2FromAngle(315).normalized;
 			joystickUsed = true;
 			if(swordCollider.activeSelf == false) swordCollider.SetActive(true);
 		}
 		else if (joystickUsed == false)
 		{
-			dir = Vector2FromAngle(0).normalized;
+			dir = Utils.Vector2FromAngle(0).normalized;
 			swordCollider.SetActive(false);
 		}
 

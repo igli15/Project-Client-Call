@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerCollisions : MonoBehaviour
 {
@@ -45,4 +46,5 @@ public class PlayerCollisions : MonoBehaviour
 			}
 		}
 	}
+
 }
