@@ -96,10 +96,10 @@ public class SwordRotation : MonoBehaviour
 
 			//if (angleBetweenSwordAndPlayer > 90) canRotate = false;   // This makes it rotate in the direction facing.
 			
-			if (Input.GetKeyDown(KeyCode.C))
+			if (Input.GetKeyDown(KeyCode.C))  //Just for debugging
 			{
 				Debug.Log(playerRb.transform.right);
-				Debug.Log("Angle between player and sword collider is : " + Find360Angle(playerRb.transform.right,transform.right));
+				Debug.Log("Angle between player and sword collider is : " + Utils.Find360Angle(playerRb.transform.right,transform.right));
 			}
 			
 			if (angleBetweenSwordAndPlayerDown < 60) canRotate = false;
@@ -215,10 +215,4 @@ public class SwordRotation : MonoBehaviour
 		
 	}
 
-
-	public float Find360Angle(Vector3 vec1,Vector3 vec2)  //Returns an angle in 360 degree instead of unity's stupid way.
-	{
-		float angle = Vector3.Angle(vec1,vec2);
-		return (Vector3.Angle(Vector3.up, vec2) > 90f) ? 360f - angle : angle;            
-	}
 }

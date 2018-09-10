@@ -49,6 +49,7 @@
           <e p="SwordCollisions.cs" t="Include" />
           <e p="SwordRotation.cs" t="Include" />
           <e p="TimeManager.cs" t="Include" />
+          <e p="Utils.cs" t="Include" />
         </e>
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
