@@ -7,7 +7,6 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_Scripts" t="Include">
-          <e p="ArenaTriggers.cs" t="Include" />
           <e p="BulletCollision.cs" t="Include" />
           <e p="BulletScripts" t="Include">
             <e p="BulletBehaviour.cs" t="Include" />
@@ -20,8 +19,18 @@
           <e p="EnemyScripts" t="Include">
             <e p="EnemyAI.cs" t="Include" />
             <e p="EnemyData.cs" t="Include" />
+            <e p="EnemyFsmController.cs" t="Include" />
+            <e p="EnemyMeleeAttack.cs" t="Include" />
             <e p="EnemyMovement.cs" t="Include" />
             <e p="EnemyRangedAttack.cs" t="Include" />
+            <e p="EnemyStates" t="Include">
+              <e p="EnemyMeleeAttackState.cs" t="Include" />
+              <e p="EnemyPatrollingState.cs" t="Include" />
+              <e p="EnemyRangedAttackState.cs" t="Include" />
+            </e>
+            <e p="EnemyTypes" t="Include">
+              <e p="EnemySimple.cs" t="Include" />
+            </e>
           </e>
           <e p="FSM" t="Include">
             <e p="AbstractState.cs" t="Include" />
@@ -36,8 +45,9 @@
             <e p="PlayerNormalState.cs" t="Include" />
             <e p="PlayerSlowMotionState.cs" t="Include" />
           </e>
-          <e p="RotateWithMouse.cs" t="Include" />
           <e p="SlowMotionSlider.cs" t="Include" />
+          <e p="SwordCollisions.cs" t="Include" />
+          <e p="SwordRotation.cs" t="Include" />
           <e p="TimeManager.cs" t="Include" />
         </e>
         <e p="Demigiant" t="Include">

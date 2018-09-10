@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateWithMouse : MonoBehaviour
+public class SwordRotation : MonoBehaviour
 {
 
 	[SerializeField]
