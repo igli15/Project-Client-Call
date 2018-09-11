@@ -10,6 +10,7 @@ TagManager:
   - ArenaExitTrigger
   - Projectile
   - BigProjectile
+  - Ground
   layers:
   - Default
   - TransparentFX
