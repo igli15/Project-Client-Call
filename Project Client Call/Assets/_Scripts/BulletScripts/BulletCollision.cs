@@ -31,6 +31,11 @@ public class BulletCollision : MonoBehaviour
             isReflected = true;
 		}
 
+        if (other.transform.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+
 		if (other.transform.CompareTag("Player"))
 		{
 			ObjectPooler.instance.DestroyFromPool("SmallProjectile",gameObject);

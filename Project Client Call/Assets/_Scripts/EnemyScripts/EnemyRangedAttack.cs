@@ -65,6 +65,11 @@ public class EnemyRangedAttack : MonoBehaviour
         reloadTime = initReloadTime;
     }
 
+    public void SeetReloadZero()
+    {
+        lastTimeShot = 0;
+    }
+
     public float GetBulletSpeed()
     {
         return bulletSpeed;
