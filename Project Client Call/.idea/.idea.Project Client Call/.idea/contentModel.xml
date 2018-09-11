@@ -41,6 +41,12 @@
             <e p="IAgent.cs" t="Include" />
           </e>
           <e p="Health.cs" t="Include" />
+          <e p="HudScripts" t="Include">
+            <e p="ISelectable.cs" t="Include" />
+            <e p="SelectableManager.cs" t="Include" />
+            <e p="SlowMotionSlider.cs" t="Include" />
+            <e p="WordScroll.cs" t="Include" />
+          </e>
           <e p="IPooleableObject.cs" t="Include" />
           <e p="ObjectPooler.cs" t="Include" />
           <e p="PlayerScripts" t="Include">
@@ -52,7 +58,6 @@
             <e p="PlayerNormalState.cs" t="Include" />
             <e p="PlayerSlowMotionState.cs" t="Include" />
           </e>
-          <e p="SlowMotionSlider.cs" t="Include" />
           <e p="SwordCollisions.cs" t="Include" />
           <e p="SwordRotation.cs" t="Include" />
           <e p="TimeManager.cs" t="Include" />
