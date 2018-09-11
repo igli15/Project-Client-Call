@@ -55,11 +55,12 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 		}
 		
 
-		if (followPlayer)
+		/*if (followPlayer)
 		{
 			StartFollowingPlayer();
-		}
+		}*/
 		
+		StartFollowingPlayer();
 	}
 
 	private void Update()
@@ -69,14 +70,21 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 	public void StartFollowingPlayer()
 	{
-			float desiredPos = targetToFollow.position.x + offset.x;
-			//	float desiredPosY = targetToFollow.position.y + 0.5f;  // TODO : Add it for Y Axis
-
-			Vector3 smoothedPos = Vector3.Lerp(transform.position,
-				new Vector3(desiredPos, transform.position.y, transform.position.z),
-				smoothedSpeed * Time.deltaTime);
-
-			transform.position = smoothedPos;
+		float desiredPos = transform.position.x;
+		if (followPlayer)
+		{
+			desiredPos = targetToFollow.position.x + offset.x;
+			
+		}
+		
+		float desiredPosY = targetToFollow.position.y + 2.5f;  // TODO : Add it for Y Axis
+		
+		Vector3 smoothedPos = Vector3.Lerp(transform.position,
+			new Vector3(desiredPos, desiredPosY, transform.position.z),
+			smoothedSpeed * Time.deltaTime);
+		
+		transform.position = smoothedPos;
+		
 	}
  
 	public void RaycastBorders()   //Ray casts from the left border of the camera to a point in screen to check weather there is a "Trigger"
