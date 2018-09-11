@@ -31,7 +31,8 @@ public class CameraFollowPlayer : MonoBehaviour
 	private bool startCheckingForPlayer = false;
 
 	private float initialYPos;
-	
+
+	private float desiredPosY;
 
 	private Camera cam;
 
@@ -60,12 +61,12 @@ public class CameraFollowPlayer : MonoBehaviour
 		}
 		
 
-		/*if (followPlayer)
-		{
-			StartFollowingPlayer();
-		}*/
+		desiredPosY  = targetToFollow.position.y + cameraYOffset;
+		
 		
 		StartFollowingPlayer();
+		
+		
 	}
 
 	private void Update()
@@ -76,17 +77,11 @@ public class CameraFollowPlayer : MonoBehaviour
 	public void StartFollowingPlayer()
 	{
 		float desiredPos = transform.position.x;
-		float desiredPosY = initialYPos;
 		if (followPlayer)
 		{
-			desiredPos = targetToFollow.position.x + offset.x;
-			
+			 desiredPos = targetToFollow.position.x + offset.x;
 		}
 
-		if (targetToFollow.transform.position.y > cameraYBound)
-		{
-			desiredPosY = targetToFollow.position.y + cameraYOffset;
-		} 
 
 		Vector3 smoothedPos = Vector3.Lerp(transform.position,
 			new Vector3(desiredPos, desiredPosY, transform.position.z),
@@ -99,18 +94,22 @@ public class CameraFollowPlayer : MonoBehaviour
 	public void RaycastBorders()   //Ray casts from the left border of the camera to a point in screen to check weather there is a "Trigger"
 	{							   //If there is a trigger then it stops following player.
 		
-		Ray ray = cam.ScreenPointToRay(new Vector3(0,0.2f,0));
+		//Ray ray = cam.ScreenPointToRay(new Vector3(0,0.2f,0));
 
-		RaycastHit2D hit = Physics2D.Raycast(ray.origin - new Vector3(cameraBorderOffset,0,0),ray.direction);
+		//RaycastHit2D hit = Physics2D.Raycast(ray.origin - new Vector3(cameraBorderOffset,0,0),ray.direction);
+
+		RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 5,transform.position.y),transform.forward * 10000 );
 
 		if (hit)
 		{
 			if ((hit.transform.CompareTag("ArenaExitTrigger") || hit.transform.CompareTag("ArenaEnterTrigger")) && !transform.right.Equals(targetToFollow.transform.right))
 			{
+				Debug.Log("Hit");
 				followPlayer = false;
 				movingToTarget = false;
 			}
 		}
+
 	}
 
 

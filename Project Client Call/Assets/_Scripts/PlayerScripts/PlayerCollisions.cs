@@ -43,7 +43,6 @@ public class PlayerCollisions : MonoBehaviour
 			if (transform.position.x > other.transform.position.x + .2f)
 			{
 				mainCam.GetComponent<CameraFollowPlayer>().EnterArenaMode(other.transform);
-				
 				other.isTrigger = false;
 			}
 		}

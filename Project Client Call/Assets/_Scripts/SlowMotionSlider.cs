@@ -1,10 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SlowMotionSlider : MonoBehaviour
 {
+	[SerializeField] 
+	private Sprite filledIcon;
+	
+	[SerializeField] 
+	private Sprite emptyIcon;
+
+	[SerializeField] 
+	private Image pressL1;
+
+	[SerializeField] 
+	private Image icon;
 	
 	[SerializeField] 
 	private float slowMoConsumeRate = 3f;
@@ -16,6 +28,7 @@ public class SlowMotionSlider : MonoBehaviour
 	[SerializeField] 
 	private PlayerFsmController playerFsmController;
 
+
 	private Slider slowMoSlider;
 	private bool refillSlider = false;
 	private bool consumeSlider = false;
@@ -24,7 +37,6 @@ public class SlowMotionSlider : MonoBehaviour
 	void Start ()
 	{
 		slowMoSlider = GetComponent<Slider>();
-		
 		
 		slowMoSlider.onValueChanged.AddListener(CheckIfSloMoFinished);
 
@@ -36,7 +48,9 @@ public class SlowMotionSlider : MonoBehaviour
 
 		PlayerSlowMotionState.OnDeflectionStateEntered += StartConsuming;
 		PlayerSlowMotionState.OnDeflectionStateExit += StopConsuming;
+
 	}
+	
 	
 	// Update is called once per frame
 	void Update () 
@@ -85,7 +99,19 @@ public class SlowMotionSlider : MonoBehaviour
 		if (value <= 0)
 		{
 			playerFsmController.fsm.ChangeState<PlayerNormalState>();
+		}	
+		
+		if (slowMoSlider.value >= 0.95f)
+		{
+			icon.sprite = filledIcon;
+			pressL1.enabled = true;
+			Debug.Log("full");
 		}
-			
+		else if (slowMoSlider.value< 0.95f)
+		{
+			icon.sprite = emptyIcon;
+			pressL1.enabled = false;
+			Debug.Log("empty");
+		}
 	}
 }
