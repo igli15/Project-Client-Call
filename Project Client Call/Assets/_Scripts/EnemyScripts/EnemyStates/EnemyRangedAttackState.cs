@@ -5,39 +5,56 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyRangedAttack))]
 public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
 {
-
+    [SerializeField]
+    float movementSpeedInAttack = 50;
+    [SerializeField]
+    float timeBeforeShoot = 1;
+    enum localFsmState {Movement, Attack }
+    localFsmState currentLocalFsmState;
 
     private EnemyRangedAttack rangedAttack;
     private EnemyFsmController fsmController;
 
     float radiusOfShooting;
+    float timeMovementStarted;
     public void Start()
     {
-
-
         radiusOfShooting = GetComponent<EnemyPatrollingState>().RadiusOfRangedAttack;
     }
 
     public void Update()
     {
-        fsmController.stateReferences.enemyRangedAttack.ShootTo(fsmController.stateReferences.enemyData.Player.transform.position);
-        CheckStateConditions();
+        if (currentLocalFsmState == localFsmState.Movement)
+        {
+            fsmController.stateReferences.enemyMovement.Move(transform.right);
+            if (Time.time > timeMovementStarted + timeBeforeShoot || (fsmController.stateReferences.enemyData.Player.transform.position-transform.position).magnitude<1) currentLocalFsmState = localFsmState.Attack;
+        }
+
+        if(currentLocalFsmState==localFsmState.Attack)ShootToPlayer();
     }
 
     public override void Enter(IAgent pAgent)
     {
-        if(!fsmController) fsmController = GetComponent<EnemyFsmController>();
+        if (!fsmController) fsmController = GetComponent<EnemyFsmController>();
+        GetComponent<EnemyRangedAttack>().SeetReloadZero();
+        currentLocalFsmState = localFsmState.Movement;
+        timeMovementStarted = Time.time;
+
         base.Enter(pAgent);
         fsmController.stateReferences.enemyMovement.FaceToPlayer();
     }
 
-
-    void CheckStateConditions()
+    public override void Exit(IAgent pAgent)
     {
-        if ((fsmController.stateReferences.enemyData.Player.transform.position - transform.position).magnitude > radiusOfShooting)
-        {
-            GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyPatrollingState>();
-        }
+        GetComponent<EnemyRangedAttack>().ResetReloadTime();
+
+        base.Exit(pAgent);
+    }
+
+    void ShootToPlayer()
+    {
+        if(fsmController.isInVision)
+            fsmController.stateReferences.enemyRangedAttack.ShootTo(fsmController.stateReferences.enemyData.Player.transform.position);
     }
 }
 

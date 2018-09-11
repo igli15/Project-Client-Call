@@ -7,6 +7,9 @@ public class BulletCollision : MonoBehaviour
     [SerializeField]
     float damage = 1;
 
+    //TODO: ADD this 
+    //isReflectable  <== Cannoneerr's projectiles dont get reflected
+
 	private Rigidbody2D rb;
     [HideInInspector]
     public bool isReflected;
@@ -27,6 +30,11 @@ public class BulletCollision : MonoBehaviour
 			rb.velocity = other.transform.parent.right * enemyRangedAttack.GetBulletSpeed() * TimeManager.timeSlowScale ;
             isReflected = true;
 		}
+
+        if (other.transform.CompareTag("Ground"))
+        {
+            ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
+        }
 
 		if (other.transform.CompareTag("Player"))
 		{

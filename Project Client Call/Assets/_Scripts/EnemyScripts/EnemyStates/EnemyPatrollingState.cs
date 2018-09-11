@@ -55,9 +55,11 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
 
     public void Patroll()
     {
-        if (transform.position.x - destination1.x < distanceToStop) currentDirection = 1;
+        if (fsmController.stateReferences.enemyMovement.IsNextoToCliff()) currentDirection*=-1;
 
-        if (destination2.x - transform.position.x < distanceToStop) currentDirection = -1;
+        else if (transform.position.x - destination1.x < distanceToStop) currentDirection = 1;
+
+        else if (destination2.x - transform.position.x < distanceToStop) currentDirection = -1;
 
 
         fsmController.stateReferences.enemyMovement.Move(currentDirection, 0);
@@ -74,7 +76,7 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
-    public void OnDrawGizmos()
+    public void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
 

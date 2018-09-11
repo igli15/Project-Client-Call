@@ -6,7 +6,10 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-
+    [SerializeField]
+    float offsetOfRaycasting=3;
+    [SerializeField]
+    float lengthOfRaycast = 3;
     private EnemyData enemyData;
     private Rigidbody2D rb;
 
@@ -18,6 +21,13 @@ public class EnemyMovement : MonoBehaviour
         enemyData = GetComponent<EnemyData>();
 
         initForwardVec = transform.right;
+    }
+
+    public bool IsNextoToCliff()
+    {
+        int layerMask = (1 << 9);
+        RaycastHit2D raycast2d = Physics2D.Raycast(transform.position, -transform.up+transform.right*offsetOfRaycasting, lengthOfRaycast, layerMask);
+        return raycast2d.collider == null;
     }
 
     public void Move(float _horizontal,float _vertical)
@@ -56,6 +66,12 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.right = -transform.right;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, transform.position +(- transform.up + transform.right * offsetOfRaycasting)*lengthOfRaycast);
     }
 
 }

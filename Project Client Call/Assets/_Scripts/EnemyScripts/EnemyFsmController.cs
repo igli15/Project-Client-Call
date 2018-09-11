@@ -16,22 +16,24 @@ public class EnemyFsmController : MonoBehaviour, IAgent
     private float radiusOfShooting;
     private float radiusOfMeleeeAttack;
     private float radiusOfFootStepsHearing;
+
     Vector2 distanceToPLayer
     {
         get { return stateReferences.enemyData.Player.transform.position - transform.position; }
     }
 
-    bool isLooking
+    public bool isLooking
     {
         get { return transform.right.x == Mathf.Sign(distanceToPLayer.x); }
     }
-    bool isInVision
+    public bool isInVision
     {
         get
         {
             int layerMask = 1 << 10 | (1 << 9);
+            Debug.DrawRay(transform.position, distanceToPLayer);
             RaycastHit2D raycast2d = Physics2D.Raycast(transform.position, distanceToPLayer, distanceToPLayer.magnitude, layerMask);
-            return raycast2d.collider != null && raycast2d.collider.CompareTag("Player");
+            return raycast2d.collider != null && ( raycast2d.collider.transform.CompareTag("Player") || raycast2d.collider.transform.CompareTag("Sword Collider"));
         }
     }
     bool canBeHeared
@@ -129,11 +131,7 @@ public class EnemyFsmController : MonoBehaviour, IAgent
 
     void CheckConditionsForSimpleEnemy()
     {
-        if ((distanceToPLayer).magnitude < radiusOfMeleeeAttack && (isLooking && isInVision || canBeHeared))
-        {
-            fsm.ChangeState<EnemyMeleeAttackState>();
-        }
-        else if ((distanceToPLayer).magnitude < radiusOfShooting && (isLooking && isInVision || canBeHeared))
+        if ((distanceToPLayer).magnitude < radiusOfShooting && (isLooking && isInVision || canBeHeared))
         {
            fsm.ChangeState<EnemyRangedAttackState>();
         }

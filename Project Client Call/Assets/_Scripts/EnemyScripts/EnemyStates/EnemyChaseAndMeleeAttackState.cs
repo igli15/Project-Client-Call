@@ -17,10 +17,13 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
 
     public void Update()
     {
+        if (!fsmController.stateReferences.enemyMovement.IsNextoToCliff())
+        {
 
-        Vector2 distanceToPlayer = fsmController.stateReferences.enemyData.Player.transform.position - transform.position;
-        //IncreaseOfSpeed
-        fsmController.stateReferences.enemyMovement.Move(distanceToPlayer.normalized);
+            Vector2 distanceToPlayer = fsmController.stateReferences.enemyData.Player.transform.position - transform.position;
+            fsmController.stateReferences.enemyMovement.Move(distanceToPlayer.x, 0);
+        }
+        else { GetComponent<Rigidbody2D>().velocity = Vector2.zero; }
         //meleeAttack.MeleeAttack();
     }
 
