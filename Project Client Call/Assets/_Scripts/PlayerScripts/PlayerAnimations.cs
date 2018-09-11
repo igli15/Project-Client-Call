@@ -5,9 +5,6 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour
 {
 
-	private PlayerMovement playerMovement;
-	private PlayerData playerData;
-	private Rigidbody2D rb;
 	
 	[SerializeField]
 	private Animator animator;
@@ -15,9 +12,6 @@ public class PlayerAnimations : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		playerMovement = GetComponent<PlayerMovement>();
-		playerData = GetComponent<PlayerData>();
-		rb = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
