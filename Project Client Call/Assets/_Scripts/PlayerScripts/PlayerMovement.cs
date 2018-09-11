@@ -45,11 +45,14 @@ public class PlayerMovement : MonoBehaviour
 
 	private Vector2 smoothedVec;
 	
+	private PlayerAnimations playerAnimations;
+	
 	// Use this for initialization
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		playerData = GetComponent<PlayerData>();
+		playerAnimations = GetComponent<PlayerAnimations>();
 		
 		inititalMovementSpeed = playerData.MovementSpeed;
 
@@ -67,6 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Update()
 	{
+		RepeatSecondJumpAnim();  // Checks if needed to repeat second jump anim  //TODO Update collider
 		Jump();  //Jump is in update, just trust me works better :P
 	}
 
@@ -74,9 +78,16 @@ public class PlayerMovement : MonoBehaviour
 	{
 		isGrounded = Physics2D.OverlapCircle(feetPos.position,checkGroundRadius,whatIsGround);  //Check if we touched the ground
 		
+		if(isGrounded) playerAnimations.SetJumpingToFalse();
+		else
+		{
+			playerAnimations.SetJumpingToTrue();
+		}
+		
 		if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button5)) && jumpCount > 1)  //jump
 		{
-			jumpCount -= 1;  											//decrease the count so  we can't jump forever
+			
+			jumpCount -= 1;  		//decrease the count so  we can't jump forever
 			
 			//rb.velocity = Vector2.up * playerData.JumpSpeed;
 			
@@ -91,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
 			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);  //NOTE : Check to remove or not
 			jumpCount = 2;
 			rb.gravityScale = 1;
+			
 		}
 
 		if (jumpCount == 2 && isGrounded == false)  //Check if we are in second jump and decrease speed
@@ -122,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
 	private void MoveHorizontally()
 	{
 		float horizontal = Input.GetAxis("Horizontal");
-		
+		playerAnimations.SetWalkingSpeedAnim(Mathf.Abs(horizontal));
 		//rb.velocity = new Vector2(horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y);  //Move horizontally
 
 		float targetVelocity =
@@ -156,4 +168,11 @@ public class PlayerMovement : MonoBehaviour
 		}
 	}
 
+	private void RepeatSecondJumpAnim()
+	{
+		if (isGrounded == false && jumpCount == 2 && Input.GetKeyDown(KeyCode.Space))
+		{
+			playerAnimations.PlayJumpAgain();
+		}
+	}
 }

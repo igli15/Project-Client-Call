@@ -43,6 +43,7 @@
           <e p="IPooleableObject.cs" t="Include" />
           <e p="ObjectPooler.cs" t="Include" />
           <e p="PlayerScripts" t="Include">
+            <e p="PlayerAnimations.cs" t="Include" />
             <e p="PlayerCollisions.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
             <e p="PlayerFsmController.cs" t="Include" />
