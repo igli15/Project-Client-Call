@@ -34,6 +34,8 @@ public class WordScroll : MonoBehaviour,ISelectable
 	{
 		selectableManager = transform.parent.GetComponent<SelectableManager>();
 		wordScrollManager = transform.parent.GetComponent<WordScrollManager>();
+
+		wordScrollManager.OnBeforeUsernameGenerated += AddCharacter;
 		
 		selectableManager.AddSelectable(indexToBePlaced,this);
 
@@ -71,9 +73,11 @@ public class WordScroll : MonoBehaviour,ISelectable
 		if(letters.Length > 0)
 		text.text = letters[scrollIndex].ToString();
 
+	}
 
-		wordScrollManager.AddCharacter(indexToBePlaced,text.text);
-		
+	private void AddCharacter(WordScrollManager sender)
+	{
+		sender.AddCharacter(indexToBePlaced,text.text);
 	}
 
 	public void BeSelected()
@@ -109,5 +113,10 @@ public class WordScroll : MonoBehaviour,ISelectable
 
 		scrollIndex += 1;
 
+	}
+
+	private void OnDestroy()
+	{
+		wordScrollManager.OnBeforeUsernameGenerated += AddCharacter;
 	}
 }

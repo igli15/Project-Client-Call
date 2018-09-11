@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class WordScrollManager : MonoBehaviour
@@ -10,7 +12,8 @@ public class WordScrollManager : MonoBehaviour
 	
 	[HideInInspector]
 	public string[] letters;
-	
+
+	public Action<WordScrollManager> OnBeforeUsernameGenerated;
 	
 	// Use this for initialization
 	void Start ()
@@ -34,13 +37,15 @@ public class WordScrollManager : MonoBehaviour
 
 	public string GenerateUserName()
 	{
-		string result = "";
+		StringBuilder stringBuilder = new StringBuilder();
+		
+		if( OnBeforeUsernameGenerated != null)  OnBeforeUsernameGenerated(this);
 
 		foreach (var letter in letters)
 		{
-			result += letter;
+			stringBuilder.Append(letter);
 		}
 
-		return result;
+		return stringBuilder.ToString();
 	}
 }

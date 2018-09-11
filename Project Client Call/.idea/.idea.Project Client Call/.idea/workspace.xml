@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Prototype Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Prototype Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HudScripts/ISelectable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/HudScripts/ISelectable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HudScripts/SelectableManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/HudScripts/SelectableManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScroll.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScroll.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScrollManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScrollManager.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,12 +24,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="16210" />
+          <entry key="cs" value="16423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="16210" />
+          <entry key="C#" value="16423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -110,47 +109,48 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScroll.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+            <state relative-caret-position="-836">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
-                <marker date="1536704195853" expanded="true" signature="6:119" ph="..." />
-                <marker date="1536704195853" expanded="true" signature="183:1991" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="626:963" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1018:1559" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1095:1120" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1185:1205" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1224:1377" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1270:1296" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1345:1373" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1486:1556" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1586:1642" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1664:1721" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1746:1853" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1773:1829" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1881:1989" ph="{...}" />
-                <marker date="1536704195853" expanded="true" signature="1925:1964" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="6:119" ph="..." />
+                <marker date="1536704535721" expanded="true" signature="172:2145" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="615:1016" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1071:1507" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1148:1173" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1238:1258" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1277:1430" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1323:1349" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1398:1426" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1561:1617" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1644:1700" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1722:1779" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1804:1911" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1831:1887" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1939:2047" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="1983:2022" ph="{...}" />
+                <marker date="1536704535721" expanded="true" signature="2074:2143" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScrollManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="872">
-              <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+            <state relative-caret-position="836">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
-                <marker date="1536704132419" expanded="false" signature="6:78" ph="..." />
-                <marker date="1536704132419" expanded="true" signature="126:695" ph="{...}" />
-                <marker date="1536704132419" expanded="true" signature="279:325" ph="{...}" />
-                <marker date="1536704132419" expanded="true" signature="380:463" ph="{...}" />
-                <marker date="1536704132419" expanded="true" signature="418:460" ph="{...}" />
-                <marker date="1536704132419" expanded="true" signature="515:548" ph="{...}" />
-                <marker date="1536704132419" expanded="true" signature="583:693" ph="{...}" />
-                <marker date="1536704132419" expanded="true" signature="643:672" ph="{...}" />
+                <marker date="1536704715295" expanded="true" signature="6:111" ph="..." />
+                <marker date="1536704715295" expanded="true" signature="159:927" ph="{...}" />
+                <marker date="1536704715295" expanded="true" signature="372:418" ph="{...}" />
+                <marker date="1536704715295" expanded="true" signature="473:556" ph="{...}" />
+                <marker date="1536704715295" expanded="true" signature="511:553" ph="{...}" />
+                <marker date="1536704715295" expanded="true" signature="608:641" ph="{...}" />
+                <marker date="1536704715295" expanded="true" signature="676:925" ph="{...}" />
+                <marker date="1536704715295" expanded="true" signature="845:886" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -324,8 +324,8 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/HudScripts/ISelectable.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/HudScripts/IScrolablle.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/HudScripts/SelectableManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScrollManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScroll.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScrollManager.cs" />
       </list>
     </option>
   </component>
@@ -424,7 +424,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109390000" />
+    <option name="totallyTimeSpent" value="109947000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -810,23 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScrollManager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="872">
-          <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <marker date="1536704132419" expanded="false" signature="6:78" ph="..." />
-            <marker date="1536704132419" expanded="true" signature="126:695" ph="{...}" />
-            <marker date="1536704132419" expanded="true" signature="279:325" ph="{...}" />
-            <marker date="1536704132419" expanded="true" signature="380:463" ph="{...}" />
-            <marker date="1536704132419" expanded="true" signature="418:460" ph="{...}" />
-            <marker date="1536704132419" expanded="true" signature="515:548" ph="{...}" />
-            <marker date="1536704132419" expanded="true" signature="583:693" ph="{...}" />
-            <marker date="1536704132419" expanded="true" signature="643:672" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/SelectableManager.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -850,25 +833,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScroll.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+        <state relative-caret-position="-836">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
-            <marker date="1536704195853" expanded="true" signature="6:119" ph="..." />
-            <marker date="1536704195853" expanded="true" signature="183:1991" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="626:963" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1018:1559" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1095:1120" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1185:1205" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1224:1377" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1270:1296" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1345:1373" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1486:1556" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1586:1642" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1664:1721" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1746:1853" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1773:1829" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1881:1989" ph="{...}" />
-            <marker date="1536704195853" expanded="true" signature="1925:1964" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="6:119" ph="..." />
+            <marker date="1536704535721" expanded="true" signature="172:2145" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="615:1016" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1071:1507" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1148:1173" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1238:1258" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1277:1430" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1323:1349" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1398:1426" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1561:1617" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1644:1700" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1722:1779" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1804:1911" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1831:1887" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1939:2047" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="1983:2022" ph="{...}" />
+            <marker date="1536704535721" expanded="true" signature="2074:2143" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScrollManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <marker date="1536704715295" expanded="true" signature="6:111" ph="..." />
+            <marker date="1536704715295" expanded="true" signature="159:927" ph="{...}" />
+            <marker date="1536704715295" expanded="true" signature="372:418" ph="{...}" />
+            <marker date="1536704715295" expanded="true" signature="473:556" ph="{...}" />
+            <marker date="1536704715295" expanded="true" signature="511:553" ph="{...}" />
+            <marker date="1536704715295" expanded="true" signature="608:641" ph="{...}" />
+            <marker date="1536704715295" expanded="true" signature="676:925" ph="{...}" />
+            <marker date="1536704715295" expanded="true" signature="845:886" ph="{...}" />
           </folding>
         </state>
       </provider>
