@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -32,7 +33,7 @@ public class PlayerCollisions : MonoBehaviour
 		{
 			if (transform.position.x > other.transform.position.x + .2f)
 			{
-				mainCam.GetComponent<CameraFollowPlayerState>().ResetCamera(4f,0.4f);
+				mainCam.GetComponent<CameraFollowPlayerState>().EnterNormalMode(other.transform);
 				other.isTrigger = false;
 			}
 			
@@ -41,8 +42,8 @@ public class PlayerCollisions : MonoBehaviour
 		{
 			if (transform.position.x > other.transform.position.x + .2f)
 			{
-				//mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraArenaState>();
-				mainCam.GetComponent<CameraFollowPlayerState>().MoveBackCamera(4f,0.4f);
+				mainCam.GetComponent<CameraFollowPlayerState>().EnterArenaMode(other.transform);
+				
 				other.isTrigger = false;
 			}
 		}

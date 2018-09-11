@@ -16,9 +16,6 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	[SerializeField] 
 	private float cameraBorderOffset = 1.8f;
 
-	[SerializeField] 
-	private float cameraMovementOffset = 1.5f;
-
 	private Vector3 offset;
 
 	private bool followPlayer = false;
@@ -87,14 +84,14 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 	public void StartFollowingPlayer()
 	{
-		float desiredPos = targetToFollow.position.x + offset.x;
-	//	float desiredPosY = targetToFollow.position.y + 0.5f;  // TODO : Add it for Y Axis
+			float desiredPos = targetToFollow.position.x + offset.x;
+			//	float desiredPosY = targetToFollow.position.y + 0.5f;  // TODO : Add it for Y Axis
 
-		Vector3 smoothedPos = Vector3.Lerp(transform.position,
-			new Vector3(desiredPos, transform.position.y, transform.position.z),
-			smoothedSpeed * Time.deltaTime);
+			Vector3 smoothedPos = Vector3.Lerp(transform.position,
+				new Vector3(desiredPos, transform.position.y, transform.position.z),
+				smoothedSpeed * Time.deltaTime);
 
-		transform.position = smoothedPos;
+			transform.position = smoothedPos;
 	}
  
 	public void RaycastBorders()   //Ray casts from the left border of the camera to a point in screen to check weather there is a "Trigger"
@@ -114,14 +111,32 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 		}
 	}
 
-	public void MoveBackCamera(float amount,float time)
+
+	public void EnterArenaMode(Transform triggerPos)
 	{
-		transform.DOMoveZ(transform.position.z - amount, time);
+		followPlayer = false;
+		Sequence sequence = DOTween.Sequence();
+		sequence.Append(
+			cam.transform.DOMoveX(transform.position.x + Mathf.Abs(triggerPos.transform.position.x - cam.transform.position.x) + 5,0.4f));
+			
+		sequence.Append(cam.transform.DOMoveZ(cam.transform.position.z - 4, 0.2f));
+		
+		sequence.Append(DOVirtual.DelayedCall(1f, () => movingToTarget = false));
+		sequence.Append(DOVirtual.DelayedCall(1f, () => followPlayer = true));
 	}
 
-	public void ResetCamera(float amount,float time)
+	public void EnterNormalMode(Transform triggerPos)
 	{
-		transform.DOMoveZ(transform.position.z + amount, time);
+		followPlayer = false;
+		Sequence sequence = DOTween.Sequence();
+		sequence.Append(
+			cam.transform.DOMoveX(transform.position.x + Mathf.Abs(triggerPos.transform.position.x - cam.transform.position.x) + 5,0.4f));
+		
+		sequence.Append(cam.transform.DOMoveZ(cam.transform.position.z + 4, 0.2f));
+		
+		sequence.Append(DOVirtual.DelayedCall(1f, () => movingToTarget = false));
+		sequence.Append(DOVirtual.DelayedCall(1f, () => followPlayer = true));
+
 	}
 	
 	public override void Exit(IAgent pAgent)
