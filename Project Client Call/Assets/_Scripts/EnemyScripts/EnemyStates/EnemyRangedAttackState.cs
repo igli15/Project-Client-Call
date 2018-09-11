@@ -30,7 +30,11 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
             if (Time.time > timeMovementStarted + timeBeforeShoot || (fsmController.stateReferences.enemyData.Player.transform.position-transform.position).magnitude<1) currentLocalFsmState = localFsmState.Attack;
         }
 
-        if(currentLocalFsmState==localFsmState.Attack)ShootToPlayer();
+        if (currentLocalFsmState == localFsmState.Attack)
+        {
+            //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            ShootToPlayer();
+        }
     }
 
     public override void Enter(IAgent pAgent)
@@ -39,7 +43,7 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
         GetComponent<EnemyRangedAttack>().SeetReloadZero();
         currentLocalFsmState = localFsmState.Movement;
         timeMovementStarted = Time.time;
-
+        GetComponent<EnemyAnimations>().SetAttackState(true);
         base.Enter(pAgent);
         fsmController.stateReferences.enemyMovement.FaceToPlayer();
     }
@@ -47,7 +51,7 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
     public override void Exit(IAgent pAgent)
     {
         GetComponent<EnemyRangedAttack>().ResetReloadTime();
-
+        GetComponent<EnemyAnimations>().SetAttackState(false);
         base.Exit(pAgent);
     }
 
