@@ -33,7 +33,7 @@ public class PlayerCollisions : MonoBehaviour
 		{
 			if (transform.position.x > other.transform.position.x + .2f)
 			{
-				mainCam.GetComponent<CameraFollowPlayerState>().EnterNormalMode(other.transform);
+				mainCam.GetComponent<CameraFollowPlayer>().EnterNormalMode(other.transform);
 				other.isTrigger = false;
 			}
 			
@@ -42,7 +42,7 @@ public class PlayerCollisions : MonoBehaviour
 		{
 			if (transform.position.x > other.transform.position.x + .2f)
 			{
-				mainCam.GetComponent<CameraFollowPlayerState>().EnterArenaMode(other.transform);
+				mainCam.GetComponent<CameraFollowPlayer>().EnterArenaMode(other.transform);
 				
 				other.isTrigger = false;
 			}

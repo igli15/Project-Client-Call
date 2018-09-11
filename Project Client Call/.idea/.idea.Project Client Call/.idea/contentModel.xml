@@ -12,9 +12,7 @@
             <e p="BulletCollision.cs" t="Include" />
           </e>
           <e p="CameraScripts" t="Include">
-            <e p="CameraArenaState.cs" t="Include" />
-            <e p="CameraFollowPlayerState.cs" t="Include" />
-            <e p="CameraFsmController.cs" t="Include" />
+            <e p="CameraFollowPlayer.cs" t="Include" />
           </e>
           <e p="EnemyScripts" t="Include">
             <e p="EnemyAI.cs" t="Include" />

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 
 
-public class CameraFollowPlayerState : AbstractState<CameraFsmController>
+public class CameraFollowPlayer : MonoBehaviour
 {
 
 	[SerializeField] 
@@ -37,14 +37,9 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 	private void Start()
 	{
+		movingToTarget = false;
 		initialYPos = transform.position.y;
 		cam = Camera.main;
-	}
-
-	public override void Enter(IAgent pAgent)
-	{
-		base.Enter(pAgent);
-		movingToTarget = false;
 	}
 
 	private void LateUpdate()
@@ -142,12 +137,5 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 		
 		sequence.Append(DOVirtual.DelayedCall(1f, () => movingToTarget = false));
 
-	}
-	
-	public override void Exit(IAgent pAgent)
-	{
-		base.Exit(pAgent);
-		followPlayer = false;
-		movingToTarget = false;
 	}
 }
