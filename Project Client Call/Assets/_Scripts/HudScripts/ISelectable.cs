@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public interface ISelectable  
+public interface ISelectable
 {
-
-
+    void BeSelected();
+    void Reset();
 }

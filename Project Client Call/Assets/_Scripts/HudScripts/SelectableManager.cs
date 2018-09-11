@@ -6,12 +6,11 @@ using UnityEngine;
 public class SelectableManager : MonoBehaviour
 {
 	[SerializeField] 
-	protected int MaxNumberOfSelectables;
+	private int MaxNumberOfSelectables;
 	
-	public static ISelectable[] Selectables;
+	private ISelectable[] Selectables;
 
-	[HideInInspector] 
-	public static int currentIndex;
+	private int currentIndex;
 	
 	// Use this for initialization
 
@@ -57,6 +56,7 @@ public class SelectableManager : MonoBehaviour
 
 			currentIndex -= 1;
 		}
+		
 	}
 
 	public ISelectable GetCurrentSelected()
@@ -64,7 +64,7 @@ public class SelectableManager : MonoBehaviour
 		return Selectables[currentIndex];
 	}
 
-	protected void AddSelectable(int index,ISelectable selectable)
+	public void AddSelectable(int index,ISelectable selectable)
 	{
 		Selectables[index] = selectable;
 	}
