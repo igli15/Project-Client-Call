@@ -33,7 +33,7 @@ public class BulletCollision : MonoBehaviour
 
         if (other.transform.CompareTag("Ground"))
         {
-            Destroy(gameObject);
+            ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
         }
 
 		if (other.transform.CompareTag("Player"))

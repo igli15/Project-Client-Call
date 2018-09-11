@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -53,7 +53,7 @@ public class EnemyRangedAttack : MonoBehaviour
         directionToShoot.Normalize();
 
         //Add randomization HERE <==================
-
+        directionToShoot += new Vector3(0, (Random.value -0.5f )* randomizeMultiplier);
         GameObject newBullet = ObjectPooler.instance.SpawnFromPool(objectPoolTag, transform.position+ directionToShoot, Quaternion.identity); //Buller spawn
         newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed ;
     }
