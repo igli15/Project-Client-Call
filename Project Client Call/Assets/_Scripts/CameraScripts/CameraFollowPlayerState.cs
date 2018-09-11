@@ -22,6 +22,8 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 	private bool movingToTarget = false;
 
+	private bool startCheckingForPlayer = false;
+
 	private Camera cam;
 
 	private void Start()
@@ -33,7 +35,6 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	{
 		base.Enter(pAgent);
 		movingToTarget = false;
-		FindRightPosBehindTarget();
 	}
 
 	private void LateUpdate()
@@ -43,8 +44,16 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 			offset = transform.position - targetToFollow.position;  //Get the right offset from the target to the camera
 			
 			followPlayer = true;
+			startCheckingForPlayer = true;
 			movingToTarget = true; //just so we do this once
 		}
+
+		if (startCheckingForPlayer && targetToFollow.transform.position.x > transform.position.x)
+		{
+			followPlayer = true;
+			startCheckingForPlayer = false;
+		}
+		
 
 		if (followPlayer)
 		{
@@ -56,30 +65,6 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	private void Update()
 	{
 		RaycastBorders();
-	}
-
-	private void SetMovingToTargetFalse()
-	{
-		movingToTarget = false;
-	}
-
-	public void FindRightPosBehindTarget()
-	{
-		if (targetToFollow.transform.position.x >= transform.position.x && !movingToTarget)
-		{
-
-			Vector3 stageDimensions = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));  //get stage dimensions
-			
-			transform.DOLocalMoveX((transform.position.x + 
-			                        (targetToFollow.transform.position.x - transform.position.x)) 
-			                       + (targetToFollow.position.x -stageDimensions.x - cameraBorderOffset),0.2f);	 // move behind target	
-																												//offset helps to put the camera a but further then the player
-
-			movingToTarget = true; //So we don't overlap tweens
-			
-			Invoke("SetMovingToTargetFalse",1.5f);    //We want to check again but only after the tweener has finished 
-													 //So that animations/Tweens do not overlap.
-		}
 	}
 
 	public void StartFollowingPlayer()
@@ -122,7 +107,6 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 		sequence.Append(cam.transform.DOMoveZ(cam.transform.position.z - 4, 0.2f));
 		
 		sequence.Append(DOVirtual.DelayedCall(1f, () => movingToTarget = false));
-		sequence.Append(DOVirtual.DelayedCall(1f, () => followPlayer = true));
 	}
 
 	public void EnterNormalMode(Transform triggerPos)
@@ -135,7 +119,6 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 		sequence.Append(cam.transform.DOMoveZ(cam.transform.position.z + 4, 0.2f));
 		
 		sequence.Append(DOVirtual.DelayedCall(1f, () => movingToTarget = false));
-		sequence.Append(DOVirtual.DelayedCall(1f, () => followPlayer = true));
 
 	}
 	
