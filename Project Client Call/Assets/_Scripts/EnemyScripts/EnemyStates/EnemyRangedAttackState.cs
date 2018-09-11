@@ -35,6 +35,7 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
 
     void ShootToPlayer()
     {
+        if(fsmController.isInVision)
         fsmController.stateReferences.enemyRangedAttack.ShootTo(fsmController.stateReferences.enemyData.Player.transform.position);
     }
 }

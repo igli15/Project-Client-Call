@@ -7,6 +7,9 @@ public class BulletCollision : MonoBehaviour
     [SerializeField]
     float damage = 1;
 
+    //TODO: ADD this 
+    //isReflectable  <== Cannoneerr's projectiles dont get reflected
+
 	private Rigidbody2D rb;
     [HideInInspector]
     public bool isReflected;
