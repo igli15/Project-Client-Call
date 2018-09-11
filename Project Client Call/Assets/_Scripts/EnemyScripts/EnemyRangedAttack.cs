@@ -8,32 +8,62 @@ using UnityEngine;
 public class EnemyRangedAttack : MonoBehaviour
 {
     [SerializeField]
-    string tag;
+    string objectPoolTag;
     [SerializeField]
     GameObject bullet;
+
+    [SerializeField]
+    float bulletPerShot = 1;
+    [SerializeField]
+    float delaybetweenBullet = 0;
     [SerializeField]
     float reloadTime;
+
+    [SerializeField]
+    float randomizeMultiplier = 0;
     [SerializeField]
     float bulletSpeed;
 
+    float bulletPreShotCount;
+    float initReloadTime;
     float lastTimeShot;
     private void Start()
     {
+        initReloadTime = reloadTime;
+        bulletPreShotCount = 0;
         lastTimeShot = 0;
     }
 
     public void ShootTo(Vector3 targetPosition)
     {
-        if (Time.time < lastTimeShot + reloadTime) return;
+        if (Time.time < lastTimeShot + reloadTime) return; //Checking how much time passed since last shot
         lastTimeShot = Time.time;
+
+        if (bulletPerShot > 0 && bulletPreShotCount<bulletPerShot)
+        {
+            bulletPreShotCount++;
+            reloadTime = delaybetweenBullet;
+        }
+        if (bulletPerShot > 0 && bulletPreShotCount >= bulletPerShot)
+        {
+            ResetReloadTime();
+        }
+
         Vector3 directionToShoot = targetPosition - transform.position;
         directionToShoot.Normalize();
 
-        GameObject newBullet = ObjectPooler.instance.SpawnFromPool(tag, transform.position+ directionToShoot, Quaternion.identity);
+        //Add randomization HERE <==================
 
+        GameObject newBullet = ObjectPooler.instance.SpawnFromPool(objectPoolTag, transform.position+ directionToShoot, Quaternion.identity); //Buller spawn
         newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed ;
     }
 
+    public void ResetReloadTime()
+    {
+        bulletPreShotCount = 0;
+        lastTimeShot = Time.time;
+        reloadTime = initReloadTime;
+    }
 
     public float GetBulletSpeed()
     {

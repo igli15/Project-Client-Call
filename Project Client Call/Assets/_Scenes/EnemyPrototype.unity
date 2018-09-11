@@ -152,10 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 1035239169236850, guid: 03f837f4cec224521b87de3438b5d9c2, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f837f4cec224521b87de3438b5d9c2, type: 2}
   m_IsPrefabAsset: 0
@@ -244,25 +240,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &450351047 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1035239169236850, guid: 03f837f4cec224521b87de3438b5d9c2,
-    type: 2}
-  m_PrefabInternal: {fileID: 33544319}
---- !u!114 &450351058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 450351047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 861b4ec7f6b46c54bbc3e9b289636cb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  maxHealth: 1
-  shouldBeDestroyed: 1
 --- !u!1001 &522679486
 Prefab:
   m_ObjectHideFlags: 0
@@ -301,25 +278,6 @@ Prefab:
     - target: {fileID: 4369928439763302, guid: 41b9af2b5a02e48578896b9151d50fb6, type: 2}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1747281027610544, guid: 41b9af2b5a02e48578896b9151d50fb6, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114589336067655878, guid: 41b9af2b5a02e48578896b9151d50fb6,
-        type: 2}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114589336067655878, guid: 41b9af2b5a02e48578896b9151d50fb6,
-        type: 2}
-      propertyPath: health
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114550816275780746, guid: 41b9af2b5a02e48578896b9151d50fb6,
-        type: 2}
-      propertyPath: tag
-      value: BigProjectile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41b9af2b5a02e48578896b9151d50fb6, type: 2}
@@ -873,23 +831,28 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114471571939949036, guid: 76cb82caf945940de9dcfadd5bbb2b78,
         type: 2}
-      propertyPath: health
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471571939949036, guid: 76cb82caf945940de9dcfadd5bbb2b78,
-        type: 2}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471571939949036, guid: 76cb82caf945940de9dcfadd5bbb2b78,
-        type: 2}
       propertyPath: shouldBeDestroyed
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114844166430410410, guid: 76cb82caf945940de9dcfadd5bbb2b78,
         type: 2}
-      propertyPath: tag
+      propertyPath: objectPoolTag
       value: SmallProjectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844166430410410, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: bulletPerShot
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844166430410410, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: delaybetweenBullet
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844166430410410, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: reloadTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
