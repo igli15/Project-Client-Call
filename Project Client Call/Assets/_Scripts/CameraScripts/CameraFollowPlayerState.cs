@@ -14,6 +14,12 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	private float smoothedSpeed = 10f;
 
 	[SerializeField] 
+	private float cameraYOffset = 2.5f;
+
+	[SerializeField] 
+	private float cameraYBound = 6;
+	
+	[SerializeField] 
 	private float cameraBorderOffset = 1.8f;
 
 	private Vector3 offset;
@@ -24,10 +30,14 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 
 	private bool startCheckingForPlayer = false;
 
+	private float initialYPos;
+	
+
 	private Camera cam;
 
 	private void Start()
 	{
+		initialYPos = transform.position.y;
 		cam = Camera.main;
 	}
 
@@ -71,14 +81,18 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 	public void StartFollowingPlayer()
 	{
 		float desiredPos = transform.position.x;
+		float desiredPosY = initialYPos;
 		if (followPlayer)
 		{
 			desiredPos = targetToFollow.position.x + offset.x;
 			
 		}
-		
-		float desiredPosY = targetToFollow.position.y + 2.5f;  // TODO : Add it for Y Axis
-		
+
+		if (targetToFollow.transform.position.y > cameraYBound)
+		{
+			desiredPosY = targetToFollow.position.y + cameraYOffset;
+		} 
+
 		Vector3 smoothedPos = Vector3.Lerp(transform.position,
 			new Vector3(desiredPos, desiredPosY, transform.position.z),
 			smoothedSpeed * Time.deltaTime);
