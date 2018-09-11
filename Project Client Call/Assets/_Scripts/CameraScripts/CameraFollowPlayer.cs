@@ -36,11 +36,16 @@ public class CameraFollowPlayer : MonoBehaviour
 
 	private Camera cam;
 
+	private float screenWidth;
+
 	private void Start()
 	{
 		movingToTarget = false;
 		initialYPos = transform.position.y;
 		cam = Camera.main;
+		screenWidth =
+			Utils.GetPerspectiveCameraDimensions(Vector3.Distance(transform.position, targetToFollow.position), cam).x;
+
 	}
 
 	private void LateUpdate()
@@ -98,7 +103,7 @@ public class CameraFollowPlayer : MonoBehaviour
 
 		//RaycastHit2D hit = Physics2D.Raycast(ray.origin - new Vector3(cameraBorderOffset,0,0),ray.direction);
 
-		RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - 5,transform.position.y),transform.forward * 10000 );
+		RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x - screenWidth/2,transform.position.y),transform.forward * 10000 );
 
 		if (hit)
 		{
@@ -118,7 +123,7 @@ public class CameraFollowPlayer : MonoBehaviour
 		followPlayer = false;
 		Sequence sequence = DOTween.Sequence();
 		sequence.Append(
-			cam.transform.DOMoveX(transform.position.x + Mathf.Abs(triggerPos.transform.position.x - cam.transform.position.x) + 5,0.4f));
+			cam.transform.DOMoveX(transform.position.x + Mathf.Abs(triggerPos.transform.position.x - cam.transform.position.x) + screenWidth/2,0.4f));
 			
 		sequence.Append(cam.transform.DOMoveZ(cam.transform.position.z - 4, 0.2f));
 		
@@ -130,7 +135,7 @@ public class CameraFollowPlayer : MonoBehaviour
 		followPlayer = false;
 		Sequence sequence = DOTween.Sequence();
 		sequence.Append(
-			cam.transform.DOMoveX(transform.position.x + Mathf.Abs(triggerPos.transform.position.x - cam.transform.position.x) + 5,0.4f));
+			cam.transform.DOMoveX(transform.position.x + Mathf.Abs(triggerPos.transform.position.x - cam.transform.position.x) + screenWidth/2,0.4f));
 		
 		sequence.Append(cam.transform.DOMoveZ(cam.transform.position.z + 4, 0.2f));
 		

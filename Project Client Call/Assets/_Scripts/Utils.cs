@@ -21,4 +21,11 @@ public static class Utils
 		a *= Mathf.Deg2Rad;
 		return new Vector2(Mathf.Cos(a), Mathf.Sin(a));
 	}
+
+	public static Vector2 GetPerspectiveCameraDimensions(float distanceFromCamera,Camera cam)
+	{
+		float height = 2.0f * distanceFromCamera * Mathf.Tan(cam.fieldOfView * 0.5f * Mathf.Deg2Rad);
+		float width = height * cam.aspect;
+		return new Vector2(width,height);
+	}
 }
