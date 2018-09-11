@@ -44,7 +44,7 @@ public class CameraFollowPlayerState : AbstractState<CameraFsmController>
 			offset = transform.position - targetToFollow.position;  //Get the right offset from the target to the camera
 			
 			followPlayer = true;
-			startCheckingForPlayer = true;
+			startCheckingForPlayer = true;  //Start checking for 
 			movingToTarget = true; //just so we do this once
 		}
 
