@@ -27,11 +27,16 @@ public class EnemyRangedAttack : MonoBehaviour
     float bulletPreShotCount;
     float initReloadTime;
     float lastTimeShot;
+
+    Vector3 currentTarget;
+    EnemyData enemyData;
     private void Start()
     {
         initReloadTime = reloadTime;
         bulletPreShotCount = 0;
         lastTimeShot = 0;
+        enemyData=GetComponent<EnemyData>();
+        enemyData.AnimHandler.OnThrowAnimation += ActualShootToTarget;
     }
 
     public void ShootTo(Vector3 targetPosition)
@@ -39,7 +44,10 @@ public class EnemyRangedAttack : MonoBehaviour
         if (Time.time < lastTimeShot + reloadTime) return; //Checking how much time passed since last shot
         lastTimeShot = Time.time;
 
-        if (bulletPerShot > 0 && bulletPreShotCount<bulletPerShot)
+        currentTarget = targetPosition;
+        GetComponent<EnemyAnimations>().TrigerShootingAnimation(); // <============================== CALLING ANIMATION  || ANIMATION WILL CALL ACTUAL SHOOT FUNC.
+
+        /*if (bulletPerShot > 0 && bulletPreShotCount<bulletPerShot)
         {
             bulletPreShotCount++;
             reloadTime = delaybetweenBullet;
@@ -47,16 +55,19 @@ public class EnemyRangedAttack : MonoBehaviour
         if (bulletPerShot > 0 && bulletPreShotCount >= bulletPerShot)
         {
             ResetReloadTime();
-        }
+        }*/
+    }
 
-        Vector3 directionToShoot = targetPosition - transform.position;
+    public void ActualShootToTarget(AnimationHandler animHandler)
+    {
+        Vector3 directionToShoot = enemyData.Player.transform.position - transform.position;
         directionToShoot.Normalize();
-
-        //Add randomization HERE <==================
-        GetComponent<EnemyAnimations>().TrigerShootingAnimation();
-        directionToShoot += new Vector3(0, (Random.value -0.5f )* randomizeMultiplier);
-        GameObject newBullet = ObjectPooler.instance.SpawnFromPool(objectPoolTag, transform.position+ directionToShoot, Quaternion.identity); //Buller spawn
-        newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed ;
+        for (int i = 0; i < bulletPerShot; i++)
+        {
+            directionToShoot += new Vector3(0, (Random.value - 0.5f) * randomizeMultiplier);
+            GameObject newBullet = ObjectPooler.instance.SpawnFromPool(objectPoolTag, transform.position + directionToShoot, Quaternion.identity); //Buller spawn
+            newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed;
+        }
     }
 
     public void ResetReloadTime()

@@ -27,7 +27,10 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
         if (currentLocalFsmState == localFsmState.Movement)
         {
             fsmController.stateReferences.enemyMovement.Move(transform.right);
-            if (Time.time > timeMovementStarted + timeBeforeShoot || (fsmController.stateReferences.enemyData.Player.transform.position-transform.position).magnitude<1) currentLocalFsmState = localFsmState.Attack;
+            if (Time.time > timeMovementStarted + timeBeforeShoot || (fsmController.stateReferences.enemyData.Player.transform.position - transform.position).magnitude < 1)
+            {
+                currentLocalFsmState = localFsmState.Attack;
+            }
         }
 
         if (currentLocalFsmState == localFsmState.Attack)

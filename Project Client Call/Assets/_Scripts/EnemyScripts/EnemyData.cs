@@ -8,7 +8,8 @@ public class EnemyData : MonoBehaviour
 {
     [SerializeField]
     private float movementSpeed = 2;
-
+    [SerializeField]
+    AnimationHandler animHandler;
     private float initMovementSpeed;
     private GameObject player;
 
@@ -16,7 +17,7 @@ public class EnemyData : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         initMovementSpeed = movementSpeed;
-    }    
+    }
 
     public float MovementSpeed
     {
@@ -30,6 +31,10 @@ public class EnemyData : MonoBehaviour
     public GameObject Player
     {
         get { return player; }
+    }
+    public AnimationHandler AnimHandler
+    {
+        get { return animHandler; }
     }
 
 }
