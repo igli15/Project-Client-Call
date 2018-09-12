@@ -16,7 +16,7 @@ public class EnemyFsmController : MonoBehaviour, IAgent
     private float radiusOfShooting;
     private float radiusOfMeleeeAttack;
     private float radiusOfFootStepsHearing;
-
+    private bool isDead;
     Vector2 distanceToPLayer
     {
         get { return stateReferences.enemyData.Player.transform.position - transform.position; }
@@ -50,9 +50,9 @@ public class EnemyFsmController : MonoBehaviour, IAgent
             fsm = new Fsm<EnemyFsmController>(this);
         }
         areComponentsReady = false;
-
+        isDead = false;
         fsm.ChangeState<EnemyPatrollingState>();
-
+        GetComponent<Health>().OnDeath += OnDeath;
         radiusOfFootStepsHearing = GetComponent<EnemyPatrollingState>().RadiusOfFootStepsHearing;
         radiusOfShooting = GetComponent<EnemyPatrollingState>().RadiusOfRangedAttack;
         radiusOfMeleeeAttack = GetComponent<EnemyPatrollingState>().RadiusOfMelleAttack;
@@ -67,6 +67,8 @@ public class EnemyFsmController : MonoBehaviour, IAgent
 
             areComponentsReady = true;
         }
+
+        if (isDead) return;
 
         switch (enemyType)
         {
@@ -84,6 +86,12 @@ public class EnemyFsmController : MonoBehaviour, IAgent
                 break;
         }
 
+    }
+
+    void OnDeath(Health health)
+    {
+        isDead = true;
+        fsm.ChangeState<EnemyDeadState>();
     }
 
     void CheckConditionsForCannoneerEnemy()

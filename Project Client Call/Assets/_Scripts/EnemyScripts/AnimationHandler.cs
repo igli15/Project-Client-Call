@@ -9,8 +9,13 @@ public class AnimationHandler : MonoBehaviour
 
     public void CallOnThrowAnimation()
     {
-        Debug.Log("ANIMATION CALLED SOMETHING");
         if (null != OnThrowAnimation) OnThrowAnimation(this);
+    }
+
+    public void CallOnDeath()
+    {
+        Debug.Log("ENEMY: I AM DEAD");
+        Destroy(transform.parent.gameObject);
     }
 
 }
