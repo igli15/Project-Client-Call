@@ -8,10 +8,26 @@ public class SwordCollisions : MonoBehaviour
 
     [SerializeField] private PlayerAnimations playerAnimations;
 
+    [SerializeField] private GameObject swoosh;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //TODO: Make sure to check only for bullet here (Add a tag to the bullet)
+        if (other.CompareTag("Projectile"))
+        {
+            swoosh.SetActive(true);
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Projectile"))
+        {
+            swoosh.SetActive(false);
+        }
+    }
 
+    private void CheckForAngleCollision()   //NOTE not needed now keep just in case
+    {
         float angle = Utils.Find360Angle(playerRb.transform.right, transform.right);
 
         if ((angle >= 0 && angle <= 25) || (angle <= 360 && angle >= 335))
