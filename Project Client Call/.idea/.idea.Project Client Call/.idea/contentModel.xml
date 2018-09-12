@@ -29,8 +29,10 @@
             <e p="EnemyRangedAttack.cs" t="Include" />
             <e p="EnemyStates" t="Include">
               <e p="EnemyChaseAndMeleeAttackState.cs" t="Include" />
+              <e p="EnemyDeadState.cs" t="Include" />
               <e p="EnemyEvadePlayerState.cs" t="Include" />
               <e p="EnemyMeleeAttackState.cs" t="Include" />
+              <e p="EnemyOnKneeState.cs" t="Include" />
               <e p="EnemyPatrollingState.cs" t="Include" />
               <e p="EnemyRangedAttackState.cs" t="Include" />
             </e>
@@ -67,8 +69,11 @@
             <e p="PlayerNormalState.cs" t="Include" />
             <e p="PlayerSlowMotionState.cs" t="Include" />
           </e>
-          <e p="SwordCollisions.cs" t="Include" />
-          <e p="SwordRotation.cs" t="Include" />
+          <e p="SwordScripts" t="Include">
+            <e p="DisableSwosh.cs" t="Include" />
+            <e p="SwordCollisions.cs" t="Include" />
+            <e p="SwordRotation.cs" t="Include" />
+          </e>
           <e p="TimeManager.cs" t="Include" />
           <e p="Utils.cs" t="Include" />
         </e>
@@ -80,6 +85,7 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="InsertCoinScript.cs" t="Include" />
         <e p="menuScript.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">

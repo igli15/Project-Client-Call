@@ -70,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void Update()
 	{
-		RepeatSecondJumpAnim();  // Checks if needed to repeat second jump anim  //TODO Update collider
+		RepeatSecondJumpAnim();  // Checks if needed to repeat second jump anim  
 		Jump();  //Jump is in update, just trust me works better :P
 	}
 
@@ -170,7 +170,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void RepeatSecondJumpAnim()
 	{
-		if (isGrounded == false && jumpCount == 2 && Input.GetKeyDown(KeyCode.Space))
+		if (isGrounded == false && jumpCount ==2  && (Input.GetKeyDown(KeyCode.Space) ||  (Input.GetKeyDown(KeyCode.Joystick1Button5))))
 		{
 			playerAnimations.PlayJumpAgain();
 		}
