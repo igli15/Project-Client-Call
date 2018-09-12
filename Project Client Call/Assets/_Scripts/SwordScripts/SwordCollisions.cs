@@ -10,21 +10,18 @@ public class SwordCollisions : MonoBehaviour
 
     [SerializeField] private GameObject swoosh;
 
+
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Projectile"))
         {
             swoosh.SetActive(true);
+            swoosh.transform.parent = null;
         }
     }
     
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Projectile"))
-        {
-            swoosh.SetActive(false);
-        }
-    }
+ 
 
     private void CheckForAngleCollision()   //NOTE not needed now keep just in case
     {
