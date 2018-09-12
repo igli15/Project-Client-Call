@@ -394,6 +394,7 @@ GameObject:
   - component: {fileID: 157807098}
   - component: {fileID: 157807097}
   - component: {fileID: 157807099}
+  - component: {fileID: 157807100}
   m_Layer: 5
   m_Name: WordScroll
   m_TagString: Untagged
@@ -466,7 +467,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactersToScorll: ' ABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ'
+  scrollIndex: 0
+--- !u!114 &157807100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157807095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8b424c347f4142b6dca6fd4a94e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   indexToBePlaced: 0
+  selectableManager: {fileID: 550563439}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1242,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxNumberOfSelectables: 5
+  KeyToMoveNext: 275
+  KeyToMoveBack: 276
 --- !u!114 &550563440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1239,7 +1255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c159b3583ef444357a7b1c8e9ea444d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfScrolables: 5
+  maxNrOfLetters: 5
+  letters: []
 --- !u!1 &588887160
 GameObject:
   m_ObjectHideFlags: 0
@@ -1478,6 +1495,7 @@ GameObject:
   - component: {fileID: 625475728}
   - component: {fileID: 625475727}
   - component: {fileID: 625475729}
+  - component: {fileID: 625475730}
   m_Layer: 5
   m_Name: WordScroll (2)
   m_TagString: Untagged
@@ -1550,7 +1568,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactersToScorll: ' ABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ'
+  scrollIndex: 0
+--- !u!114 &625475730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 625475725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8b424c347f4142b6dca6fd4a94e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   indexToBePlaced: 2
+  selectableManager: {fileID: 550563439}
 --- !u!1 &793566476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,6 +2340,7 @@ GameObject:
   - component: {fileID: 1004197809}
   - component: {fileID: 1004197808}
   - component: {fileID: 1004197810}
+  - component: {fileID: 1004197811}
   m_Layer: 5
   m_Name: WordScroll (4)
   m_TagString: Untagged
@@ -2381,7 +2413,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactersToScorll: ' ABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ'
+  scrollIndex: 0
+--- !u!114 &1004197811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1004197806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8b424c347f4142b6dca6fd4a94e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   indexToBePlaced: 4
+  selectableManager: {fileID: 550563439}
 --- !u!1 &1092494315
 GameObject:
   m_ObjectHideFlags: 0
@@ -3454,6 +3499,7 @@ GameObject:
   - component: {fileID: 1693265254}
   - component: {fileID: 1693265253}
   - component: {fileID: 1693265255}
+  - component: {fileID: 1693265256}
   m_Layer: 5
   m_Name: WordScroll (1)
   m_TagString: Untagged
@@ -3526,7 +3572,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactersToScorll: ' ABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ'
+  scrollIndex: 0
+--- !u!114 &1693265256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1693265251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8b424c347f4142b6dca6fd4a94e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   indexToBePlaced: 1
+  selectableManager: {fileID: 550563439}
 --- !u!1 &1890321419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3677,6 +3736,7 @@ GameObject:
   - component: {fileID: 1960556730}
   - component: {fileID: 1960556729}
   - component: {fileID: 1960556731}
+  - component: {fileID: 1960556732}
   m_Layer: 5
   m_Name: WordScroll (3)
   m_TagString: Untagged
@@ -3749,7 +3809,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactersToScorll: ' ABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ'
+  scrollIndex: 0
+--- !u!114 &1960556732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960556727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8b424c347f4142b6dca6fd4a94e11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   indexToBePlaced: 3
+  selectableManager: {fileID: 550563439}
 --- !u!1 &2135433065
 GameObject:
   m_ObjectHideFlags: 0

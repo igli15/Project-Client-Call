@@ -11,6 +11,9 @@ public class SelectableManager : MonoBehaviour
 	private ISelectable[] Selectables;
 
 	private int currentIndex;
+
+	[SerializeField] private KeyCode KeyToMoveNext;
+	[SerializeField] private KeyCode KeyToMoveBack;
 	
 	// Use this for initialization
 
@@ -27,8 +30,8 @@ public class SelectableManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Input.GetKeyDown(KeyCode.LeftArrow)) ShiftSelect(false);
-		else if(Input.GetKeyDown(KeyCode.RightArrow)) ShiftSelect(true);
+		if(Input.GetKeyDown(KeyToMoveBack)) ShiftSelect(false);
+		else if(Input.GetKeyDown(KeyToMoveNext)) ShiftSelect(true);
 	}
 
 	public void ShiftSelect(bool right)

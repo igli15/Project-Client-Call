@@ -4,22 +4,15 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WordScroll : MonoBehaviour,ISelectable
+public class WordScroll : MonoBehaviour
 {
 
 	[SerializeField] 
 	private string charactersToScorll;
 	
-	[SerializeField] 
-	private int indexToBePlaced = 0;
-
-	private SelectableManager selectableManager;
 	private WordScrollManager wordScrollManager;
+	private Selectable selectable;
 	
-	private bool isSelected = false;
-
-	private Image image;
-
 	private string currentLetter = "";
 
 	private char[] letters;
@@ -32,14 +25,12 @@ public class WordScroll : MonoBehaviour,ISelectable
 	// Use this for initialization
 	void Start ()
 	{
-		selectableManager = transform.parent.GetComponent<SelectableManager>();
+		selectable = GetComponent<Selectable>();
+		
 		wordScrollManager = transform.parent.GetComponent<WordScrollManager>();
 
 		wordScrollManager.OnBeforeUsernameGenerated += AddCharacter;
 		
-		selectableManager.AddSelectable(indexToBePlaced,this);
-
-		image = GetComponent<Image>();
 
 		letters = charactersToScorll.ToCharArray();
 
@@ -49,16 +40,8 @@ public class WordScroll : MonoBehaviour,ISelectable
 	// Update is called once per frame
 	void Update () 
 	{
-		if (selectableManager.GetCurrentSelected().Equals(this) && !isSelected)
-		{
-			BeSelected();
-		}
-		else if (!selectableManager.GetCurrentSelected().Equals(this))
-		{
-			Reset();
-		}
-
-		if (isSelected)
+		
+		if (selectable.IsSelected)
 		{
 			if (Input.GetKeyDown(KeyCode.UpArrow))
 			{
@@ -77,19 +60,7 @@ public class WordScroll : MonoBehaviour,ISelectable
 
 	private void AddCharacter(WordScrollManager sender)
 	{
-		sender.AddCharacter(indexToBePlaced,text.text);
-	}
-
-	public void BeSelected()
-	{
-		image.color = Color.black;
-		isSelected = true;
-	}
-
-	public void Reset()
-	{
-		image.color = Color.white;
-		isSelected = false;
+		sender.AddCharacter(selectable.IndexToBePlaced,text.text);
 	}
 
 	public void ScrollUp()
