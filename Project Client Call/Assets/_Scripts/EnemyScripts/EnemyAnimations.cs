@@ -31,4 +31,9 @@ public class EnemyAnimations : MonoBehaviour {
     {
         animator.SetTrigger("Shoot");
     }
+
+    public void TrigerDeathAnimation()
+    {
+        animator.SetTrigger("Death");
+    }
 }
