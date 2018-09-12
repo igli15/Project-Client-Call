@@ -292,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 22907343}
   - component: {fileID: 22907342}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ArenaEnterTrigger
   m_TagString: ArenaEnterTrigger
   m_Icon: {fileID: 0}
@@ -788,7 +788,12 @@ Prefab:
       propertyPath: particleSystem
       value: 
       objectReference: {fileID: 1482593594}
-    m_RemovedComponents: []
+    - target: {fileID: 1067157676146796, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114905483419365550, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &341397497
@@ -2165,7 +2170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 986962927}
   - component: {fileID: 986962926}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ArenaEnterTrigger (1)
   m_TagString: ArenaEnterTrigger
   m_Icon: {fileID: 0}
@@ -2802,6 +2807,22 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198869334484596484, guid: 625dc36c85f8b4348aa3cc526980b423,
     type: 2}
   m_PrefabInternal: {fileID: 2022423595}
+--- !u!1 &1499635373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1300862674151170, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 329570606}
+--- !u!114 &1499635380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1499635373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e46f88d08f214c72b90bfcdf19e6342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1504153130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,7 +3434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890321421}
   - component: {fileID: 1890321420}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: ArenaExitTrigger
   m_TagString: ArenaExitTrigger
   m_Icon: {fileID: 0}
@@ -3551,6 +3572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1936889515}
+  - component: {fileID: 1936889516}
   m_Layer: 10
   m_Name: LevelManager
   m_TagString: Untagged
@@ -3571,6 +3593,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1936889516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1936889514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b00c661c0f6a4b3d916d70ea4ace4a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  test: 10
 --- !u!1 &1960556727
 GameObject:
   m_ObjectHideFlags: 0
