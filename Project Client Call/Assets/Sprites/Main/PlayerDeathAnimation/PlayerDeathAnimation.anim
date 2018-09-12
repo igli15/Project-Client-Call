@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PlayerDeathAnimation
+  serializedVersion: 6
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: bcdc47fa3b65ad04e81263d0535f2853, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 1528b1ed48b0777488eef93fb531b2ae, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 6a7edc268fc54724faddb187b1baefbf, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: bc1a560f8a810c44f8bfc7b6840f7aac, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 5e1cb1debe84a5c47bef600ea174b898, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: 15cb1d60bafd7504f960af5b88b63d59, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 6801a33c9fef7624d80f2279a51a6c25, type: 3}
+    - time: 0.5833333
+      value: {fileID: 21300000, guid: e89e0a562555bc74993510926efd70bf, type: 3}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: b1170d3c863d2fd4abe3be3a346386da, type: 3}
+    - time: 0.75
+      value: {fileID: 21300000, guid: 40a5bd73ddcfe674886bcba2bd9c1235, type: 3}
+    - time: 0.8333333
+      value: {fileID: 21300000, guid: 871452bad7319f74994fdf93fa967872, type: 3}
+    - time: 0.9166667
+      value: {fileID: 21300000, guid: 21fc9b536e4670a469a3f2b0123cffbc, type: 3}
+    - time: 1
+      value: {fileID: 21300000, guid: 3e0717b4224019f43b073e0d91fe8871, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: bcdc47fa3b65ad04e81263d0535f2853, type: 3}
+    - {fileID: 21300000, guid: 1528b1ed48b0777488eef93fb531b2ae, type: 3}
+    - {fileID: 21300000, guid: 6a7edc268fc54724faddb187b1baefbf, type: 3}
+    - {fileID: 21300000, guid: bc1a560f8a810c44f8bfc7b6840f7aac, type: 3}
+    - {fileID: 21300000, guid: 5e1cb1debe84a5c47bef600ea174b898, type: 3}
+    - {fileID: 21300000, guid: 15cb1d60bafd7504f960af5b88b63d59, type: 3}
+    - {fileID: 21300000, guid: 6801a33c9fef7624d80f2279a51a6c25, type: 3}
+    - {fileID: 21300000, guid: e89e0a562555bc74993510926efd70bf, type: 3}
+    - {fileID: 21300000, guid: b1170d3c863d2fd4abe3be3a346386da, type: 3}
+    - {fileID: 21300000, guid: 40a5bd73ddcfe674886bcba2bd9c1235, type: 3}
+    - {fileID: 21300000, guid: 871452bad7319f74994fdf93fa967872, type: 3}
+    - {fileID: 21300000, guid: 21fc9b536e4670a469a3f2b0123cffbc, type: 3}
+    - {fileID: 21300000, guid: 3e0717b4224019f43b073e0d91fe8871, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.0833334
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 0
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_GenerateMotionCurves: 0
+  m_Events:
+  - time: 1
+    functionName: CallOnPlayerDestroy
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
