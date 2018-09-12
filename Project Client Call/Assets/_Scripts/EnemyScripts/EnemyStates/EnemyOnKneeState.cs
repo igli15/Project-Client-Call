@@ -9,7 +9,8 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     {
         base.Enter(pAgent);
         GetComponent<EnemyAnimations>().TrigerOnKneeAnimation();
-
+        GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<Rigidbody2D>().isKinematic = true;
     }
 
     void Update()
