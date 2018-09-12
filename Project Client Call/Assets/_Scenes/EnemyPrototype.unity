@@ -1324,7 +1324,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1493544465706550, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
       propertyPath: m_Name
-      value: EnemySimple (1)
+      value: EnemySimple
       objectReference: {fileID: 0}
     - target: {fileID: 114471571939949036, guid: 76cb82caf945940de9dcfadd5bbb2b78,
         type: 2}
