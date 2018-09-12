@@ -4,7 +4,11 @@ using UnityEngine;
 [RequireComponent(typeof(Health))]
 public class EnemyOnKneeState : AbstractState<EnemyFsmController>
 {
-
+    bool isActivated;
+    public void Start()
+    {
+        isActivated = false;
+    }
     public override void Enter(IAgent pAgent)
     {
         base.Enter(pAgent);
@@ -20,9 +24,10 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Sword Collider"))
+        if (other.CompareTag("Sword Collider")&&!isActivated)
         {
             GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyDeadState>();
+            isActivated = true;
         }
     }
 }
