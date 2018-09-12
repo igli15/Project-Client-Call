@@ -41,4 +41,9 @@ public class EnemyAnimations : MonoBehaviour {
     {
         animator.SetTrigger("OnKnee");
     }
+
+    public void SetDeathState(bool deathState)
+    {
+        animator.SetBool("DeathState", deathState);
+    }
 }

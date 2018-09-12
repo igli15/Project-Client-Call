@@ -43,7 +43,7 @@ public class EnemyRangedAttack : MonoBehaviour
     {
         if (Time.time < lastTimeShot + reloadTime) return; //Checking how much time passed since last shot
         lastTimeShot = Time.time;
-
+        
         currentTarget = targetPosition;
         GetComponent<EnemyAnimations>().TrigerShootingAnimation(); // <============================== CALLING ANIMATION  || ANIMATION WILL CALL ACTUAL SHOOT FUNC.
 
