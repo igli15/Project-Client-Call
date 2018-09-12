@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Prototype Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Prototype Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,22 +23,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="18115" />
+          <entry key="cs" value="19085" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="18115" />
+          <entry key="C#" value="19085" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="31" />
+          <entry key="cs" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="31" />
+          <entry key="C#" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -143,15 +144,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/IgnoreCollisions.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+            <state relative-caret-position="608">
+              <caret line="46" column="72" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
               <folding>
-                <marker date="1536784023574" expanded="false" signature="6:78" ph="..." />
-                <marker date="1536784023574" expanded="true" signature="125:378" ph="{...}" />
-                <marker date="1536784023574" expanded="true" signature="232:312" ph="{...}" />
-                <marker date="1536784023574" expanded="true" signature="367:376" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="6:113" ph="..." />
+                <marker date="1536787102898" expanded="true" signature="155:1428" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="367:376" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="400:475" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="438:472" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="517:597" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="721:1426" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="1053:1423" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="1209:1397" ph="{...}" />
+                <marker date="1536787102898" expanded="true" signature="1329:1392" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -259,13 +266,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerCollisions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/BulletScripts/BulletCollision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/Utils.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/IgnoreCollisions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScrollManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/SwordScripts/DisableSwosh.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/TimeManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/SelectableManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/SwordScripts/SwordCollisions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/FSM/Fsm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/FSM/IAgent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/FSM/AbstractState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scripts/EnemyScripts/EnemyData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -337,6 +344,7 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/SwordScripts/SwordCollisions.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/IgnoreCollisions.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs" />
       </list>
     </option>
   </component>
@@ -435,7 +443,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115900000" />
+    <option name="totallyTimeSpent" value="117867000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -519,7 +527,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/TimeManager.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/BulletScripts/BulletBehaviour.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -831,24 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerCollisions.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
-          <folding>
-            <marker date="1536758860352" expanded="false" signature="6:123" ph="..." />
-            <marker date="1536758860352" expanded="true" signature="170:1131" ph="{...}" />
-            <marker date="1536758860352" expanded="true" signature="222:253" ph="{...}" />
-            <marker date="1536758860352" expanded="true" signature="256:596" ph="/* private void OnTriggerEnter2D(Collider2D other) ... */" />
-            <marker date="1536758860352" expanded="true" signature="646:1128" ph="{...}" />
-            <marker date="1536758860352" expanded="true" signature="693:889" ph="{...}" />
-            <marker date="1536758860352" expanded="true" signature="761:881" ph="{...}" />
-            <marker date="1536758860352" expanded="true" signature="934:1125" ph="{...}" />
-            <marker date="1536758860352" expanded="true" signature="1002:1121" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/Selectable.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
@@ -924,12 +913,43 @@
     <entry file="file://$PROJECT_DIR$/Assets/IgnoreCollisions.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="12" column="77" selection-start-line="12" selection-start-column="77" selection-end-line="12" selection-end-column="77" />
+          <caret line="12" column="77" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerCollisions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
-            <marker date="1536784023574" expanded="false" signature="6:78" ph="..." />
-            <marker date="1536784023574" expanded="true" signature="125:378" ph="{...}" />
-            <marker date="1536784023574" expanded="true" signature="232:312" ph="{...}" />
-            <marker date="1536784023574" expanded="true" signature="367:376" ph="{...}" />
+            <marker date="1536758860352" expanded="false" signature="6:123" ph="..." />
+            <marker date="1536758860352" expanded="true" signature="170:1131" ph="{...}" />
+            <marker date="1536758860352" expanded="true" signature="222:253" ph="{...}" />
+            <marker date="1536758860352" expanded="true" signature="256:596" ph="/* private void OnTriggerEnter2D(Collider2D other) ... */" />
+            <marker date="1536758860352" expanded="true" signature="646:1128" ph="{...}" />
+            <marker date="1536758860352" expanded="true" signature="693:889" ph="{...}" />
+            <marker date="1536758860352" expanded="true" signature="761:881" ph="{...}" />
+            <marker date="1536758860352" expanded="true" signature="934:1125" ph="{...}" />
+            <marker date="1536758860352" expanded="true" signature="1002:1121" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="46" column="72" selection-start-line="46" selection-start-column="72" selection-end-line="46" selection-end-column="72" />
+          <folding>
+            <marker date="1536787102898" expanded="true" signature="6:113" ph="..." />
+            <marker date="1536787102898" expanded="true" signature="155:1428" ph="{...}" />
+            <marker date="1536787102898" expanded="true" signature="367:376" ph="{...}" />
+            <marker date="1536787102898" expanded="true" signature="400:475" ph="{...}" />
+            <marker date="1536787102898" expanded="true" signature="438:472" ph="{...}" />
+            <marker date="1536787102898" expanded="true" signature="517:597" ph="{...}" />
+            <marker date="1536787102898" expanded="true" signature="721:1426" ph="{...}" />
+            <marker date="1536787102898" expanded="true" signature="1053:1423" ph="{...}" />
+            <marker date="1536787102898" expanded="true" signature="1209:1397" ph="{...}" />
+            <marker date="1536787102898" expanded="true" signature="1329:1392" ph="{...}" />
           </folding>
         </state>
       </provider>

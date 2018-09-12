@@ -61,6 +61,7 @@
           <e p="IPooleableObject.cs" t="Include" />
           <e p="MenuScript" t="Include">
             <e p="InsertCoinScript.cs" t="Include" />
+            <e p="LevelLoader.cs" t="Include" />
             <e p="menuScript.cs" t="Include" />
           </e>
           <e p="ObjectPooler.cs" t="Include" />
@@ -92,7 +93,6 @@
           </e>
         </e>
         <e p="HighScoreManager.cs" t="Include" />
-        <e p="IgnoreCollisions.cs" t="Include" />
         <e p="resolutionScreenManager.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
