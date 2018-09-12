@@ -32,6 +32,9 @@ public class EnemyMovement : MonoBehaviour
 
     public void Move(float _horizontal,float _vertical)
     {
+        
+        GetComponent<EnemyAnimations>().SetSpeedOfEnemy(GetComponent<Rigidbody2D>().velocity.x);
+
         Vector2 _movementVec = new Vector2(_horizontal, _vertical);
         _movementVec.Normalize();
         rb.velocity = _movementVec * enemyData.MovementSpeed * Time.fixedDeltaTime;
@@ -40,6 +43,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void Move(Vector2 _movementVec)
     {
+        GetComponent<EnemyAnimations>().SetSpeedOfEnemy(GetComponent<Rigidbody2D>().velocity.x);
         _movementVec.Normalize();
         rb.velocity = _movementVec * enemyData.MovementSpeed * Time.fixedDeltaTime;
         CheckFlipHorizontally();
