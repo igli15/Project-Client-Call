@@ -36,6 +36,7 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
         if (currentLocalFsmState == localFsmState.Attack)
         {
             //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            fsmController.stateReferences.enemyMovement.FaceToPlayer();
             ShootToPlayer();
         }
     }
