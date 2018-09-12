@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HighScoreManager : MonoBehaviour {
 
-	Dictionary<string,int> highscore = new Dictionary<string,int>();
+	Dictionary<string,int> highscoreDictionary = new Dictionary<string,int>();
 	private int killerScore;
 	private int achieverScore;
 	private int explorerScore;
@@ -12,7 +12,7 @@ public class HighScoreManager : MonoBehaviour {
 	private int totalScore;
 	private int totalEnemyNumber;
 	private int totalRoomNumbers;
-	
+	private float highscore;
 	private float killerScoreAdd;
 
 	private int collectableNumber;
@@ -54,6 +54,20 @@ public class HighScoreManager : MonoBehaviour {
 	public void CalcTotalScore()
 	{
 		totalScore = killerScore + socialScore + achieverScore + explorerScore;
+	}
+	public void SubmitHighscore(string userName)
+	{
+		if(highscoreDictionary[userName] == null)
+		{
+			highscore = totalScore;
+			highscoreDictionary[userName] = (int)highscore;
+			return;
+		}
+		if(totalScore > highscore)
+		{
+			highscore = totalScore;
+			highscoreDictionary[userName] = (int)highscore;
+		}
 	}
 
 }
