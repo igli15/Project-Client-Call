@@ -26,7 +26,9 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     {
         if (other.CompareTag("Sword Collider")&&!isActivated)
         {
+            GetComponent<EnemyAnimations>().SetDeathState(true);
             GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyDeadState>();
+
             isActivated = true;
         }
     }
