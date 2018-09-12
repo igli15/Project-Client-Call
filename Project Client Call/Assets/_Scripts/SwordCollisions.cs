@@ -6,6 +6,8 @@ public class SwordCollisions : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D playerRb;
 
+    [SerializeField] private PlayerAnimations playerAnimations;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         //TODO: Make sure to check only for bullet here (Add a tag to the bullet)
@@ -15,9 +17,11 @@ public class SwordCollisions : MonoBehaviour
         if ((angle >= 0 && angle <= 25) || (angle <= 360 && angle >= 335))
         {
             Debug.Log("Forward slash");
+            playerAnimations.Swoosh();
         }
         else if (angle > 25 && angle < 80)
-        {
+        { 
+            playerAnimations.Swoosh();
             Debug.Log("UpForwardSlash");
         }
         else if (angle >= 80 && angle < 110)

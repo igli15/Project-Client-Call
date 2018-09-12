@@ -80,6 +80,7 @@
           </e>
         </e>
         <e p="menuScript.cs" t="Include" />
+        <e p="PlayerAnimationHandler.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Resources" t="Include">
             <e p="LineBreaking Following Characters.txt" t="Include" />

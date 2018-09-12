@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour
 {
 
-	
 	[SerializeField]
 	private Animator animator;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		PlayerAnimationHandler.PlayerAnimHandler += EndSwoshing;
 	}
 	
 	// Update is called once per frame
@@ -37,5 +37,20 @@ public class PlayerAnimations : MonoBehaviour
 	public void PlayJumpAgain()
 	{
 		animator.Play("PlayerJumpAnim",-1,0);
+	}
+
+	public void EndSwoshing(PlayerAnimationHandler sender)
+	{
+		animator.SetBool("SwoshTest",false);
+	}
+
+	private void OnDestroy()
+	{
+		PlayerAnimationHandler.PlayerAnimHandler -= EndSwoshing;
+	}
+
+	public void Swoosh()
+	{
+		animator.SetBool("SwoshTest",true);
 	}
 }
