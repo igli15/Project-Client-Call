@@ -17,6 +17,7 @@ public class EnemyFsmController : MonoBehaviour, IAgent
     private float radiusOfMeleeeAttack;
     private float radiusOfFootStepsHearing;
     private bool isDead;
+
     Vector2 distanceToPLayer
     {
         get { return stateReferences.enemyData.Player.transform.position - transform.position; }
@@ -91,7 +92,7 @@ public class EnemyFsmController : MonoBehaviour, IAgent
     void OnDeath(Health health)
     {
         isDead = true;
-        fsm.ChangeState<EnemyDeadState>();
+        fsm.ChangeState<EnemyOnKneeState>();
     }
 
     void CheckConditionsForCannoneerEnemy()
