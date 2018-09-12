@@ -36,4 +36,9 @@ public class EnemyAnimations : MonoBehaviour {
     {
         animator.SetTrigger("Death");
     }
+
+    public void TrigerOnKneeAnimation()
+    {
+        animator.SetTrigger("OnKnee");
+    }
 }
