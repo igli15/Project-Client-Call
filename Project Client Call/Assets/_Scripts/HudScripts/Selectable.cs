@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 
 public class Selectable : MonoBehaviour,ISelectable {
@@ -16,6 +17,11 @@ public class Selectable : MonoBehaviour,ISelectable {
 
 	private Image image;
 	
+	[SerializeField]
+	private UnityEvent OnSelected;
+
+	[SerializeField]
+	private UnityEvent OnReset;
 
 	private void Start()
 	{
@@ -38,13 +44,15 @@ public class Selectable : MonoBehaviour,ISelectable {
 
 	public void BeSelected()
 	{
-		image.color = Color.black;
+		//image.color = Color.black;
+		OnSelected.Invoke();
 		isSelected = true;
 	}
 
 	public void Reset()
 	{
-		image.color = Color.white;
+		//image.color = Color.white;
+		OnReset.Invoke();
 		isSelected = false;
 	}
 
