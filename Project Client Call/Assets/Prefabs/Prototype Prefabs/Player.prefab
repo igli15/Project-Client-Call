@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4825908393460644}
   - component: {fileID: 114082767556087786}
   - component: {fileID: 212530902226953984}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 60297139166206532}
   - component: {fileID: 61150017044994458}
   - component: {fileID: 95592262073305902}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Avatar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4541075305813766}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 212434969709853530}
   - component: {fileID: 114245042483853020}
   - component: {fileID: 60405917489789580}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Representation
   m_TagString: Sword Collider
   m_Icon: {fileID: 0}
@@ -97,7 +97,8 @@ GameObject:
   - component: {fileID: 114905483419365550}
   - component: {fileID: 212351943355131094}
   - component: {fileID: 114148788193865190}
-  m_Layer: 0
+  - component: {fileID: 114888910230473332}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -112,7 +113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4368673513171454}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FeetPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,6 +904,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114888910230473332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664043145904872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 861b4ec7f6b46c54bbc3e9b289636cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  maxHealth: 100
+  shouldBeDestroyed: 0
 --- !u!114 &114905483419365550
 MonoBehaviour:
   m_ObjectHideFlags: 1
