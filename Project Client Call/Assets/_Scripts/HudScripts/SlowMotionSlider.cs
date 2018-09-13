@@ -37,6 +37,9 @@ public class SlowMotionSlider : MonoBehaviour
 	void Start ()
 	{
 		slowMoSlider = GetComponent<Slider>();
+
+		slowMoSlider.value = 0;
+		StartRefilling(null);
 		
 		slowMoSlider.onValueChanged.AddListener(CheckIfSloMoFinished);
 
