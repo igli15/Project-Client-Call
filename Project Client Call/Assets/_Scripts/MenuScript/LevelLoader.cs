@@ -18,6 +18,8 @@ public class LevelLoader : MonoBehaviour
 	private UnityEvent OnLoadFinished;
 
 	private const float maxTimeNeededToCompleteLoad = 0.9f;
+
+	AsyncOperation sceneLoadingData;
 	
 	// Use this for initialization
 	void Start () 
@@ -32,9 +34,9 @@ public class LevelLoader : MonoBehaviour
 
 	IEnumerator LoadLevelAsync(string levelName)     //Coroutine allows to load the level without disturbing the main thread.
 	{
-		/*yield return new WaitForSeconds(1);         // if you want to load slowly */
+		yield return new WaitForSeconds(1);         // if you want to load slowly */
 
-		AsyncOperation sceneLoadingData = SceneManager.LoadSceneAsync(levelName);   //Get the data and load async
+		sceneLoadingData = SceneManager.LoadSceneAsync(levelName);   //Get the data and load async
 		
 		sceneLoadingData.allowSceneActivation = false;           //Don't automatically go to the next level if finished
 
@@ -51,5 +53,10 @@ public class LevelLoader : MonoBehaviour
 			}
 			yield return null;
 		}
+	}
+
+	public void StartLevel()
+	{
+		sceneLoadingData.allowSceneActivation = true;
 	}
 }

@@ -984,7 +984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &291604676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,6 +1108,7 @@ MonoBehaviour:
   fadeSpeed: 1
   introVideo: {fileID: 977344668}
   menuVideo: {fileID: 1603692137}
+  _skipButton: {fileID: 807757009}
 --- !u!1 &307965992
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,6 +2292,87 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 1057286374}
+--- !u!1 &807757009
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 807757010}
+  - component: {fileID: 807757012}
+  - component: {fileID: 807757011}
+  - component: {fileID: 807757013}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &807757010
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 807757009}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1851401612}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 227, y: -162}
+  m_SizeDelta: {x: 70.5, y: 36.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &807757011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 807757009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: f20c174509a96954681e4b3c2b6afc2e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &807757012
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 807757009}
+  m_CullTransparentMesh: 0
+--- !u!114 &807757013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 807757009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63924397d0bdf884ca0c7ef5c04f70b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &831224138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,6 +3154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977344669}
   - component: {fileID: 977344670}
+  - component: {fileID: 977344671}
   m_Layer: 5
   m_Name: StoryIntro
   m_TagString: Untagged
@@ -3104,7 +3187,7 @@ VideoPlayer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 977344668}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 568ee644b5a4da244b8ec127f7d82b15, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 94b94a0c0728fe94d89f69f88d1cab7e, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 841226495}
@@ -3130,6 +3213,18 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
+--- !u!114 &977344671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 977344668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11438e18924b50408e7a4076265ea8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelLoader: {fileID: 1276377782}
 --- !u!1 &992092317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3701,6 +3796,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 747dca9fea4ad496a9a48d5f58976168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnLoadFinished:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 291604682}
+        m_MethodName: EnableSkipButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!4 &1276377783
 Transform:
   m_ObjectHideFlags: 0
@@ -4258,7 +4369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1437964586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4837,6 +4948,7 @@ RectTransform:
   - {fileID: 992092318}
   - {fileID: 1603692138}
   - {fileID: 977344669}
+  - {fileID: 807757010}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
