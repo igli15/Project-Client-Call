@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -13,20 +14,15 @@ public class LevelLoader : MonoBehaviour
 	[SerializeField] 
 	private KeyCode skipButton2;*/
 
+	[SerializeField]
+	private UnityEvent OnLoadFinished;
+
 	private const float maxTimeNeededToCompleteLoad = 0.9f;
 	
 	// Use this for initialization
 	void Start () 
 	{
 		
-	}
-
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.L))
-		{
-			LoadLevel("MainMenu");
-		}
 	}
 
 	public void LoadLevel(string levelName)
@@ -47,6 +43,7 @@ public class LevelLoader : MonoBehaviour
 			if (sceneLoadingData.progress >= maxTimeNeededToCompleteLoad) //If we are completed check If specified buttons are pressed and then go to next scene
 			{
 				Debug.Log("press any key to continue");
+				OnLoadFinished.Invoke();
 				if (Input.anyKeyDown)
 				{
 					sceneLoadingData.allowSceneActivation = true;
