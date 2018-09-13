@@ -1,16 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 public class WorldMusic : MonoBehaviour {
 
-	// Use this for initialization
+	public AudioMixer levelMusicMixer;
+	public AudioMixerSnapshot introMusicSS;
+	public AudioMixerSnapshot sideScrollMusicSS;
+	public AudioMixerSnapshot arenaIntroSS;
+	public AudioMixerSnapshot arenaLoopSS;
+	public AudioMixerSnapshot resolutionScreenMusicSS;
+	
 	void Start () {
-		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public void MusicTransitionFadeOutSudden(AudioMixerSnapshot snapshot, float fadingTime)
+	{
+		snapshot.TransitionTo(fadingTime);
 	}
 }
