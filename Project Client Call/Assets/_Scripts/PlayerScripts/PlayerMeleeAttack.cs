@@ -24,8 +24,17 @@ public class PlayerMeleeAttack : MonoBehaviour {
         {
             if (raycast2d[i].collider != null && (raycast2d[i].collider.transform.CompareTag("Enemy")))
             {
-                raycast2d[i].collider.GetComponent<Health>().InflictDamage(100);
-                Debug.Log("Enemy: "+ raycast2d [i].collider.name+ "is Killed by melee");
+                if (raycast2d[i].collider.GetComponent<EnemyOnKneeState>().enabled)
+                {
+                    raycast2d[i].collider.GetComponent<EnemyOnKneeState>().FinishHim();
+                    Debug.Log("Enemy: " + raycast2d[i].collider.name + "is Finsihed by melee");
+                }
+                else
+                {
+                    raycast2d[i].collider.GetComponent<Health>().InflictDamage(100);
+                    Debug.Log("Enemy: " + raycast2d[i].collider.name + "is Killed by melee");
+                }
+
             }
         }
 

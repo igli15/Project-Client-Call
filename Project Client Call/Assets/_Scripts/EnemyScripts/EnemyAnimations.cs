@@ -23,7 +23,6 @@ public class EnemyAnimations : MonoBehaviour {
 
     public void SetAttackState(bool attackState)
     {
-        Debug.Log("rangedAttackState"+ attackState);
         animator.SetBool("AttackState", attackState);
     }
 

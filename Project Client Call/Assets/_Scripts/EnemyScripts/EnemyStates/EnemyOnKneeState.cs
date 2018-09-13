@@ -13,8 +13,10 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     {
         base.Enter(pAgent);
         GetComponent<EnemyAnimations>().TrigerOnKneeAnimation();
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GetComponent<BoxCollider2D>().isTrigger = true;
         GetComponent<Rigidbody2D>().isKinematic = true;
+        GetComponent<BoxCollider2D>().offset -= new Vector2(-4, 0);
     }
 
     void Update()
@@ -22,14 +24,20 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
 
     }
 
+    public void FinishHim()
+    {
+        if (isActivated) return;
+        GetComponent<EnemyAnimations>().SetDeathState(true);
+        GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyDeadState>();
+
+        isActivated = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Sword Collider")&&!isActivated)
         {
-            GetComponent<EnemyAnimations>().SetDeathState(true);
-            GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyDeadState>();
 
-            isActivated = true;
         }
     }
 }
