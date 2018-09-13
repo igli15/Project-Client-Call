@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 1809606137}
 --- !u!50 &23826674
 Rigidbody2D:
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 30970494}
 --- !u!50 &103700248
 Rigidbody2D:
@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 137936713}
 --- !u!50 &287106182
 Rigidbody2D:
@@ -1992,7 +1992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 31100408}
 --- !u!50 &353524859
 Rigidbody2D:
@@ -2329,7 +2329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 1384610103}
 --- !u!50 &468837835
 Rigidbody2D:
@@ -3059,7 +3059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 1030663318}
 --- !u!50 &692257429
 Rigidbody2D:
@@ -3659,7 +3659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 737404003}
 --- !u!50 &933600573
 Rigidbody2D:
@@ -4294,7 +4294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 1998750607}
 --- !u!50 &1088407732
 Rigidbody2D:
@@ -5445,7 +5445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 502174975}
 --- !u!50 &1279407379
 Rigidbody2D:
@@ -5823,7 +5823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 1421736143}
 --- !u!50 &1412956220
 Rigidbody2D:
@@ -6327,7 +6327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 553622887}
 --- !u!50 &1611712419
 Rigidbody2D:
@@ -6563,7 +6563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 623679578}
 --- !u!50 &1761414937
 Rigidbody2D:
@@ -7049,7 +7049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 2068286119}
 --- !u!50 &1861392657
 Rigidbody2D:
@@ -12090,7 +12090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 1125100950}
 --- !u!50 &1990686603
 Rigidbody2D:
@@ -12915,7 +12915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2dd9dad5d94ae4392f2dd05d869b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 150
+  movementSpeed: 85
   animHandler: {fileID: 1927685803}
 --- !u!50 &2139115107
 Rigidbody2D:
