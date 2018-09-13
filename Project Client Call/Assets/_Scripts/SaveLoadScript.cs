@@ -8,19 +8,6 @@ using UnityEngine;
 public static class SaveLoadScript 
 {
 	
-	[Serializable]
-	public class HighscoreData
-	{
-		public string name;
-		public int score;
-	}
-
-	[Serializable]
-	public class HighScoreArray
-	{
-		public HighscoreData[] highscoreArray;
-	}
-	
 	
 	public static void Save(object objToSave,string saveFileName)
 	{
@@ -40,33 +27,5 @@ public static class SaveLoadScript
 			
 			Debug.Log(loadedData);
 		}
-	}
-
-	public static HighScoreArray HighScoreDictionaryToArray(Dictionary<string,int> dictionaryToSerialize)
-	{
-		List<HighscoreData> highscoreDataList = new List<HighscoreData>();
-
-		foreach (KeyValuePair<string,int> pairs in dictionaryToSerialize)
-		{
-			HighscoreData highscoreData = new HighscoreData();
-			highscoreData.name = pairs.Key;
-			highscoreData.score = pairs.Value;
-			highscoreDataList.Add(highscoreData);
-		}
-		
-		HighScoreArray highScoreArray = new HighScoreArray();
-		highScoreArray.highscoreArray = highscoreDataList.ToArray();
-		return highScoreArray;
-	}
-
-	public static Dictionary<string, int> HighScoreDictionaryFromArray(HighScoreArray highScoreArray)
-	{
-		Dictionary<string, int> dictionaryToReturn = new Dictionary<string, int>();
-		
-		for (int i = 0; i < highScoreArray.highscoreArray.Length ; i++)
-		{
-				dictionaryToReturn.Add(highScoreArray.highscoreArray[i].name,highScoreArray.highscoreArray[i].score);
-		}
-		return dictionaryToReturn;
 	}
 }
