@@ -42,6 +42,7 @@ public class BulletCollision : MonoBehaviour
 
 		if (other.transform.CompareTag("Player"))
 		{
+            other.transform.parent.GetComponent<Health>().InflictDamage(damage);
 			ObjectPooler.instance.DestroyFromPool("SmallProjectile",gameObject);
 		}
         if (isReflected && other.transform.CompareTag("Enemy"))

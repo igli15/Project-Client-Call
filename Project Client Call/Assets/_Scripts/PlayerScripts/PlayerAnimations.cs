@@ -44,6 +44,11 @@ public class PlayerAnimations : MonoBehaviour
 		animator.SetBool("SwoshTest",false);
 	}
 
+    public void SetIsDead()
+    {
+        animator.SetTrigger("isDead");
+    }
+
 	private void OnDestroy()
 	{
 		PlayerAnimationHandler.PlayerAnimHandler -= EndSwoshing;

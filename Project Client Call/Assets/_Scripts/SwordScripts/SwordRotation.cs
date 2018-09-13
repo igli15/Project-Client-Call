@@ -53,8 +53,17 @@ public class SwordRotation : MonoBehaviour
 		
 		dir = Utils.Vector2FromAngle(0);  //just default value.
 
-	}
-	
+        GetComponentInParent<Health>().OnDeath += OnDeath;
+    }
+
+    void OnDeath(Health health)
+    {
+        gameObject.SetActive(false);
+        //ALAHU AKBAR
+    }
+
+
+
 	// Update is called once per frame
 	void Update () 
 	{

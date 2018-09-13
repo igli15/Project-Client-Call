@@ -12,4 +12,10 @@ public class PlayerAnimationHandler : MonoBehaviour
 	{
 		if (PlayerAnimHandler != null) PlayerAnimHandler(this);
 	}
+
+    public void CallOnPlayerDestroy()
+    {
+        gameObject.tag = "Untagged";
+        // Destroy(transform.parent.gameObject);
+    }
 }
