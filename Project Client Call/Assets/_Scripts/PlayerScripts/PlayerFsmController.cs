@@ -27,6 +27,7 @@ public class PlayerFsmController : MonoBehaviour,IAgent
         fsm.ChangeState<PlayerDeadState>();
         isDead = true;
         GetComponent<PlayerMovement>().enabled = false;
+
     }
 
 	private void Update()

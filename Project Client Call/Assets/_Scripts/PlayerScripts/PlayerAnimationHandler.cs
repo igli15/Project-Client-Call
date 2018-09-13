@@ -15,6 +15,6 @@ public class PlayerAnimationHandler : MonoBehaviour
 
     public void CallOnPlayerDestroy()
     {
-        Destroy(transform.parent.gameObject);
+       // Destroy(transform.parent.gameObject);
     }
 }
