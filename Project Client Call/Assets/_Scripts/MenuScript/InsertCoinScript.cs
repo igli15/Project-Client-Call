@@ -2,19 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using DG.Tweening;
 public class InsertCoinScript : MonoBehaviour {
 
-	private Text _text;
-	[SerializeField] private float SizeDifference;
-	[SerializeField] private float SizeIncrease;
+	[SerializeField] 	private Text _text;
+	[SerializeField] private int desiredSize;
+	[SerializeField] private GameObject mainMenu;
+	private int originalSize;
+	[SerializeField] private float SizeIncreaseSpeed;
+	private bool increase;
 	// Use this for initialization
 	void Start () {
-		_text = GetComponent<Text>();
+		originalSize = _text.fontSize;
+		increase = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//frewpkfweioj
+		if(_text.fontSize >= desiredSize)
+		{
+			increase = false;
+		}
+		if(_text.fontSize <= originalSize)
+		{
+			increase = true;
+		}
+		if(increase) _text.fontSize += 1;
+		else {_text.fontSize -= 1; }
+
+		if(Input.GetKeyDown(KeyCode.KeypadEnter))
+		{
+			mainMenu.SetActive(true);
+			this.gameObject.SetActive(false);		
+		}
 	}
 }

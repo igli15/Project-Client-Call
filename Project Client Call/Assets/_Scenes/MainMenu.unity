@@ -976,13 +976,15 @@ GameObject:
   - component: {fileID: 291604677}
   - component: {fileID: 291604676}
   - component: {fileID: 291604680}
+  - component: {fileID: 291604681}
+  - component: {fileID: 291604682}
   m_Layer: 5
   m_Name: Difficulty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &291604676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1076,6 +1078,35 @@ MonoBehaviour:
   - {fileID: 760850495}
   - {fileID: 279086760}
   scrollSpeed: 0.08
+  selectedButton: 0
+--- !u!114 &291604681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 291604675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961c2ddf65bc92a4e873b57cd7c36055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _menu: {fileID: 1057286374}
+--- !u!114 &291604682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 291604675}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71d1edab8b04e847a16eac702b250bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuMusicOff: {fileID: 245237315433741322, guid: d53c58362ff80c04895f9187a70c009f,
+    type: 2}
+  fadeSpeed: 1
+  introVideo: {fileID: 977344668}
+  menuVideo: {fileID: 1603692137}
 --- !u!1 &307965992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1620,6 @@ GameObject:
   - component: {fileID: 616190466}
   - component: {fileID: 616190469}
   - component: {fileID: 616190468}
-  - component: {fileID: 616190467}
   m_Layer: 5
   m_Name: InsertCoin
   m_TagString: Untagged
@@ -1615,19 +1645,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -430}
   m_SizeDelta: {x: 400, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &616190467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 616190465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: edbd0721a10822048bde62b2172cb99a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SizeDifference: 0
-  SizeIncrease: 0
 --- !u!114 &616190468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2161,6 +2178,7 @@ GameObject:
   - component: {fileID: 783329358}
   - component: {fileID: 783329357}
   - component: {fileID: 783329356}
+  - component: {fileID: 783329361}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -2183,6 +2201,7 @@ MonoBehaviour:
   button:
   - {fileID: 1919146704}
   scrollSpeed: 0.08
+  selectedButton: 0
 --- !u!114 &783329357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2259,6 +2278,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &783329361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 783329355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28187fdb1b9f53e4b9e12fcb0dddd989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1057286374}
 --- !u!1 &831224138
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,6 +2491,7 @@ GameObject:
   - component: {fileID: 856697004}
   - component: {fileID: 856697003}
   - component: {fileID: 856697002}
+  - component: {fileID: 856697007}
   m_Layer: 5
   m_Name: ScoreBoard
   m_TagString: Untagged
@@ -2482,6 +2514,7 @@ MonoBehaviour:
   button:
   - {fileID: 657081738}
   scrollSpeed: 0.08
+  selectedButton: 0
 --- !u!114 &856697003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2558,6 +2591,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &856697007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 856697001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28187fdb1b9f53e4b9e12fcb0dddd989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1057286374}
 --- !u!1 &937482305
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +2749,7 @@ MonoBehaviour:
   button:
   - {fileID: 453222710}
   scrollSpeed: 0.08
+  selectedButton: 0
 --- !u!114 &961462375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2792,6 +2838,7 @@ GameObject:
   - component: {fileID: 963952156}
   - component: {fileID: 963952155}
   - component: {fileID: 963952154}
+  - component: {fileID: 963952159}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -2814,6 +2861,7 @@ MonoBehaviour:
   button:
   - {fileID: 103612622}
   scrollSpeed: 0.08
+  selectedButton: 0
 --- !u!114 &963952155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2890,6 +2938,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &963952159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963952153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28187fdb1b9f53e4b9e12fcb0dddd989, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 1057286374}
 --- !u!1 &971111713
 GameObject:
   m_ObjectHideFlags: 0
@@ -3017,7 +3077,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &977344669
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3064,7 +3124,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -3111,7 +3171,8 @@ AudioSource:
   m_GameObject: {fileID: 992092317}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243702368581347748, guid: d53c58362ff80c04895f9187a70c009f,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 980ef3502f610484a90be3721fc06125, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3285,6 +3346,7 @@ GameObject:
   - component: {fileID: 1057286376}
   - component: {fileID: 1057286375}
   - component: {fileID: 1057286379}
+  - component: {fileID: 1057286380}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -3386,6 +3448,22 @@ MonoBehaviour:
   - {fileID: 2085636589}
   - {fileID: 1551030490}
   scrollSpeed: 0.08
+  selectedButton: 0
+--- !u!114 &1057286380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1057286374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e034f3ba02ac69048b61ea350d0ac8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startGame: {fileID: 291604675}
+  scoreBoard: {fileID: 856697001}
+  controls: {fileID: 783329355}
+  credits: {fileID: 963952153}
 --- !u!1 &1076613709
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,7 +4217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1437964586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4148,13 +4226,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1437964585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9ce7df373418c144b87948121eed0fb, type: 3}
+  m_Script: {fileID: 11500000, guid: edbd0721a10822048bde62b2172cb99a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stroke: {fileID: 0}
-  button:
-  - {fileID: 0}
-  scrollSpeed: 0.08
+  _text: {fileID: 616190468}
+  desiredSize: 95
+  mainMenu: {fileID: 1057286374}
+  SizeIncreaseSpeed: 2.5
 --- !u!114 &1437964587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4358,7 +4436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1603692138
 Transform:
   m_ObjectHideFlags: 0
