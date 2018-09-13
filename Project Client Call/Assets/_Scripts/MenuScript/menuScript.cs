@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 public class menuScript : MonoBehaviour {
 
 	
 	[SerializeField] private Image _stroke;
 	[SerializeField] private Button[] button = new Button[4];
 	[SerializeField] private float scrollSpeed;
+	[SerializeField] private AudioSource clipSource;
+	[SerializeField] private AudioClip _strokeSound;
 	private float scrollAmount;
 	public int selectedButton;
 	void Start () {
@@ -22,6 +25,7 @@ public class menuScript : MonoBehaviour {
 		{
 			if(Input.GetAxisRaw("VerticalJoy") > 0 | Input.GetAxisRaw("Vertical") > 0)
 			{
+				clipSource.PlayOneShot(_strokeSound);
 				if(selectedButton > 0)
 				{
 					button[selectedButton].GetComponentInChildren<Text>().color = Color.black;
@@ -42,7 +46,7 @@ public class menuScript : MonoBehaviour {
 
 			if(Input.GetAxisRaw("VerticalJoy") < 0 | Input.GetAxis("Vertical") < 0)
 			{
-				Debug.Log("hey2!!!");
+				clipSource.PlayOneShot(_strokeSound);
 					if(selectedButton < button.Length - 1)
 					{
 						button[selectedButton].GetComponentInChildren<Text>().color = Color.black;
