@@ -15,6 +15,7 @@ public class PlayerAnimationHandler : MonoBehaviour
 
     public void CallOnPlayerDestroy()
     {
-       // Destroy(transform.parent.gameObject);
+        gameObject.tag = "Untagged";
+        // Destroy(transform.parent.gameObject);
     }
 }

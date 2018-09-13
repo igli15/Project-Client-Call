@@ -16,6 +16,8 @@ public class PlayerDeadState : AbstractState<PlayerFsmController>
         GetComponent<PlayerAnimations>().SetIsDead();
         GetComponent<PlayerAnimations>().SetJumpingToFalse();
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+
         Debug.Log("ENTER DEAD STATE");
     }
 
