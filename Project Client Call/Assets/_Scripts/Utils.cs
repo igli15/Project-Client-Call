@@ -15,6 +15,11 @@ public static class Utils
 		float angle = Vector3.Angle(vec1, vec2);
 		return (Vector3.Angle(Vector3.up, vec2) > 90f) ? 360f - angle : angle;  
 	}
+
+    public static Vector2 Vec3ToVec2(Vector3 vec3)
+    {
+        return new Vector2(vec3.x, vec3.y);
+    }
 	
 	public static  Vector2 Vector2FromAngle(float a)
 	{

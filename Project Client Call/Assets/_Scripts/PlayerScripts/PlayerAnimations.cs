@@ -48,8 +48,12 @@ public class PlayerAnimations : MonoBehaviour
     {
         animator.SetTrigger("isDead");
     }
+    public void SetAttack()
+    {
+        animator.SetTrigger("MeleeAttack");
+    }
 
-	private void OnDestroy()
+    private void OnDestroy()
 	{
 		PlayerAnimationHandler.PlayerAnimHandler -= EndSwoshing;
 	}
