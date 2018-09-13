@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		RepeatSecondJumpAnim();  // Checks if needed to repeat second jump anim  
 		Jump();  //Jump is in update, just trust me works better :P
+		Debug.Log(jumpCount);
 	}
 
 	private void Jump()
@@ -92,23 +93,28 @@ public class PlayerMovement : MonoBehaviour
 			//rb.velocity = Vector2.up * playerData.JumpSpeed;
 			
 			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);
-			
+			Debug.Log("first");
 			rb.velocity = Vector2.up * playerData.JumpSpeed;
 
 		}
 		
 		if (isGrounded && jumpCount != 2)   //If we grounded then set jump count back to 0
 		{
-			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);  //NOTE : Check to remove or not
+			//CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);  //NOTE : Check to remove or not
 			jumpCount = 2;
 			rb.gravityScale = 1;
 			
 		}
 
-		if (jumpCount == 2 && isGrounded == false)  //Check if we are in second jump and decrease speed
+		if (jumpCount == 1 && isGrounded == false)  //Check if we are in second jump and decrease speed
 		{
-			CalculateJump(playerData.SecondJumpValues.jumpHeight,playerData.SecondJumpValues.jumpCompletionTime);
-			
+			if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button5))
+			{
+				CalculateJump(playerData.SecondJumpValues.jumpHeight + playerData.FirstJumpValues.jumpHeight, playerData.SecondJumpValues.jumpCompletionTime +  playerData.FirstJumpValues.jumpCompletionTime);
+				rb.velocity = Vector2.up * playerData.JumpSpeed;
+				jumpCount -= 1;
+			}
+			Debug.Log("second");
 			/*playerData.JumpSpeed = playerData.SecondJumpSpeed;*/
 		} 
 		else playerData.JumpSpeed = initialJumpSpeed;   //else set it back
