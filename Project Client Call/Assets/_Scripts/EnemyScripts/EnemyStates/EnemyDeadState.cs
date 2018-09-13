@@ -10,7 +10,7 @@ public class EnemyDeadState : AbstractState<EnemyFsmController>
     {
         base.Enter(pAgent);
         GetComponent<EnemyAnimations>().TrigerDeathAnimation();
-        GetComponent<EnemyMovement>().FaceToPlayer();
+       // GetComponent<EnemyMovement>().FaceToPlayer();
         //transform.right = -transform.right;
     }
 }

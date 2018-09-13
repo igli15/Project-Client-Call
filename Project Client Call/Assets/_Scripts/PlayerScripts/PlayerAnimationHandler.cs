@@ -7,8 +7,9 @@ public class PlayerAnimationHandler : MonoBehaviour
 {
 
 	public static Action<PlayerAnimationHandler> PlayerAnimHandler;
+    public static Action<PlayerAnimationHandler> OnMeleeAttackAnimationFinished;
 
-	public void CallHandlers()
+    public void CallHandlers()
 	{
 		if (PlayerAnimHandler != null) PlayerAnimHandler(this);
 	}
@@ -17,5 +18,16 @@ public class PlayerAnimationHandler : MonoBehaviour
     {
         gameObject.tag = "Untagged";
         // Destroy(transform.parent.gameObject);
+    }
+
+    public void CallOnMeleeAttack()
+    {
+        if (OnMeleeAttackAnimationFinished != null) OnMeleeAttackAnimationFinished(this);
+    }
+
+    public void OnDestroy()
+    {
+        PlayerAnimHandler = null;
+        OnMeleeAttackAnimationFinished = null;
     }
 }
