@@ -100,7 +100,7 @@ public class SwordRotation : MonoBehaviour
 		float angle = Mathf.Atan2(verticalPos, horizontalPos) * Mathf.Rad2Deg;
 
 
-		if (joyPos.magnitude > 0.2f)
+		if (joyPos.magnitude > 0.1f)
 		{
 			float angleBetweenSwordAndPlayer =
 				Vector3.Angle(new Vector3(joyPos.x, joyPos.y, 0), playerRb.transform.right);

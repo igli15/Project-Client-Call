@@ -70,6 +70,7 @@
             <e p="PlayerAnimations.cs" t="Include" />
             <e p="PlayerCollisions.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
+            <e p="PlayerDeadState.cs" t="Include" />
             <e p="PlayerFsmController.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
             <e p="PlayerNormalState.cs" t="Include" />

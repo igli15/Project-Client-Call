@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 212351943355131094}
   - component: {fileID: 114148788193865190}
   - component: {fileID: 114888910230473332}
+  - component: {fileID: 114056653298110476}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -928,6 +929,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114056653298110476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664043145904872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cf67e75c8e40cd4d985591fe0cf55c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &114060324664719480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1096,8 +1109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861b4ec7f6b46c54bbc3e9b289636cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 1
+  maxHealth: 1
   shouldBeDestroyed: 0
 --- !u!198 &198158689145759610
 ParticleSystem:
