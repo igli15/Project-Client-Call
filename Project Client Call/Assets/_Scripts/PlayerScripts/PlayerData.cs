@@ -32,7 +32,7 @@ public class PlayerData : MonoBehaviour
     private float movementSpeed = 2;
 
     //[SerializeField] 
-    private float jumpSpeed = 5;
+    private float jumpSpeed = 0;
 
    // [SerializeField]
     private float secondJumpSpeed = 12;
