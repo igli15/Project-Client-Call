@@ -15,8 +15,6 @@ public class Selectable : MonoBehaviour,ISelectable {
 
 	private bool isSelected = false;
 
-	private Image image;
-	
 	[SerializeField]
 	private UnityEvent OnSelected;
 
@@ -26,7 +24,6 @@ public class Selectable : MonoBehaviour,ISelectable {
 	private void Start()
 	{
 		selectableManager.AddSelectable(indexToBePlaced,this);
-		image = GetComponent<Image>();
 	}
 
 	private void Update()

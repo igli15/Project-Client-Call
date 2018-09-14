@@ -8,11 +8,6 @@ using UnityEngine.UI;
 public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 {
 
-	
-	private PlayerMovement playerMovement;
-
-	private bool spendslowMoEnergy = false;
-
 	public static Action<PlayerSlowMotionState> OnDeflectionStateEntered;
 	public static Action<PlayerSlowMotionState> OnDeflectionStateExit;
 
@@ -20,8 +15,6 @@ public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 	// Use this for initialization
 	void Start ()
 	{
-		playerMovement = GetComponent<PlayerMovement>();
-
 	}
 
 

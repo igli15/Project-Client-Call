@@ -13,12 +13,10 @@ public class EnemyAI : MonoBehaviour
 
     private Transform playerTransform;
     private EnemyMovement enemyMovement;
-    private EnemyRangedAttack enemyRangedAttack;
 
     private void Start()
     {
         playerTransform = player.transform;
-        enemyRangedAttack = GetComponent<EnemyRangedAttack>();
         enemyMovement = GetComponent<EnemyMovement>();
     }
 

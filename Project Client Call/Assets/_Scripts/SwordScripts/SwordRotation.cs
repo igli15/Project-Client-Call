@@ -33,7 +33,6 @@ public class SwordRotation : MonoBehaviour
 
 	private bool joystickUsed = false;
 
-	private Vector3 initialPlayerForward;
 
 	private bool canRotate = true;
 
@@ -45,7 +44,6 @@ public class SwordRotation : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		initialPlayerForward = playerRb.transform.right;
 		
 		spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 

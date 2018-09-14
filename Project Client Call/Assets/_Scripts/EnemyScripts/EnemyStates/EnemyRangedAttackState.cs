@@ -6,8 +6,6 @@ using UnityEngine;
 public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
 {
     [SerializeField]
-    float movementSpeedInAttack = 50;
-    [SerializeField]
     float timeBeforeShoot = 1;
     enum localFsmState {Movement, Attack }
     localFsmState currentLocalFsmState;
@@ -15,11 +13,10 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
     private EnemyRangedAttack rangedAttack;
     private EnemyFsmController fsmController;
 
-    float radiusOfShooting;
     float timeMovementStarted;
     public void Start()
     {
-        radiusOfShooting = GetComponent<EnemyPatrollingState>().RadiusOfRangedAttack;
+     
     }
 
     public void Update()

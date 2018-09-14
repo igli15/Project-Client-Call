@@ -16,12 +16,6 @@ public class CameraFollowPlayer : MonoBehaviour
 	[SerializeField] 
 	private float cameraYOffset = 2.5f;
 
-	[SerializeField] 
-	private float cameraYBound = 6;
-	
-	[SerializeField] 
-	private float cameraBorderOffset = 1.8f;
-
 	private Vector3 offset;
 
 	private bool followPlayer = false;
@@ -30,7 +24,6 @@ public class CameraFollowPlayer : MonoBehaviour
 
 	private bool startCheckingForPlayer = false;
 
-	private float initialYPos;
 
 	private float desiredPosY;
 
@@ -41,7 +34,6 @@ public class CameraFollowPlayer : MonoBehaviour
 	private void Start()
 	{
 		movingToTarget = false;
-		initialYPos = transform.position.y;
 		cam = Camera.main;
 		screenWidth =
 			Utils.GetPerspectiveCameraDimensions(Vector3.Distance(transform.position, targetToFollow.position), cam).x;

@@ -11,7 +11,7 @@ public class SwordCollisions : MonoBehaviour
     [SerializeField] private GameObject swoosh;
 
     [SerializeField]
-    private ParticleSystem particleSystem;
+    private ParticleSystem swoshParticleSystem;
 
   
 
@@ -21,7 +21,7 @@ public class SwordCollisions : MonoBehaviour
         if (other.CompareTag("Projectile"))
         {
             swoosh.SetActive(true);
-            particleSystem.Play();
+            swoshParticleSystem.Play();
             swoosh.transform.parent = null;
         }
     }

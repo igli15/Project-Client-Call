@@ -3,19 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(EnemyMovement))]
+#pragma warning disable 0168 
+#pragma warning disable 0219
+#pragma warning disable 0414
 
+[RequireComponent(typeof(EnemyMovement))]
 public class EnemyRangedAttack : MonoBehaviour
 {
     [SerializeField]
     string objectPoolTag;
-    [SerializeField]
-    GameObject bullet;
 
     [SerializeField]
     float bulletPerShot = 1;
-    [SerializeField]
-    float delaybetweenBullet = 0;
+
     [SerializeField]
     float reloadTime;
 
@@ -28,7 +28,6 @@ public class EnemyRangedAttack : MonoBehaviour
     float initReloadTime;
     float lastTimeShot;
 
-    Vector3 currentTarget;
     EnemyData enemyData;
     private void Start()
     {
@@ -43,8 +42,7 @@ public class EnemyRangedAttack : MonoBehaviour
     {
         if (Time.time < lastTimeShot + reloadTime) return; //Checking how much time passed since last shot
         lastTimeShot = Time.time;
-        
-        currentTarget = targetPosition;
+
         GetComponent<EnemyAnimations>().TrigerShootingAnimation(); // <============================== CALLING ANIMATION  || ANIMATION WILL CALL ACTUAL SHOOT FUNC.
 
         /*if (bulletPerShot > 0 && bulletPreShotCount<bulletPerShot)
