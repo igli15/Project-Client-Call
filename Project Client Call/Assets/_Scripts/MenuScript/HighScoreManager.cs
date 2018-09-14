@@ -8,14 +8,15 @@ using UnityEngine;
 public class HighScoreManager : MonoBehaviour
 {
 	[Serializable]
-	public class HighscoreData
+	public class HighscoreData      //Making a dictionary manually
 	{
 		public string name;
 		public int score;
 	}
 
 
-	public HighscoreData[] highscoreArray;
+	[HideInInspector]
+	public HighscoreData[] highscoreArray;   //an array of datas ;D
 	
 
 	Dictionary<string,int> highscoreDictionary = new Dictionary<string,int>();
@@ -35,6 +36,9 @@ public class HighScoreManager : MonoBehaviour
 	private int collectableScoreAdd;
 	void Start () 
 	{
+		
+		//TODO Uncomment all of these stuff when linking everything
+		
 		//totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
 		//killerScoreAdd = 2500000/totalEnemyNumber;
 		totalScore = 3000000;
@@ -45,7 +49,7 @@ public class HighScoreManager : MonoBehaviour
 		SaveLoadScript.Load(this,"Test");
 		if (highscoreArray != null)
 		{
-			highscoreDictionary = HighScoreDictionaryFromArray(highscoreArray);
+			highscoreDictionary = HighScoreDictionaryFromArray(highscoreArray);   //Load array if there is one
 		}
 
 	}
@@ -53,7 +57,7 @@ public class HighScoreManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.A))
+		if (Input.GetKeyDown(KeyCode.A))          //NOTE: for testing
 		{
 			SubmitHighscore("igli");
 			SaveHighscore();
@@ -88,18 +92,20 @@ public class HighScoreManager : MonoBehaviour
 	{
 		totalScore = killerScore + socialScore + achieverScore + explorerScore;
 	}
-	public void SubmitHighscore(string userName)
+	public void SubmitHighscore(string userName)         //Check if there is a username or not and apply score properly then save locally
 	{
 		if(!highscoreDictionary.ContainsKey(userName))
 		{
 			highscore = totalScore;
 			highscoreDictionary.Add(userName,(int)highscore);
+			SaveHighscore();
 			return;
 		}
 		if(totalScore > highscore)
 		{
 			highscore = totalScore;
 			highscoreDictionary[userName] = (int)highscore;
+			SaveHighscore();
 		}
 	}
 
@@ -109,7 +115,7 @@ public class HighScoreManager : MonoBehaviour
 		SaveLoadScript.Save(this,"test");
 	}
 	
-	public HighscoreData[] HighScoreDictionaryToArray(Dictionary<string,int> dictionaryToSerialize)
+	public HighscoreData[] HighScoreDictionaryToArray(Dictionary<string,int> dictionaryToSerialize)   //Returns An array from dictionary
 	{
 		List<HighscoreData> highscoreDataList = new List<HighscoreData>();
 
@@ -126,7 +132,7 @@ public class HighScoreManager : MonoBehaviour
 		return arrayToReturn;
 	}
 
-	public Dictionary<string, int> HighScoreDictionaryFromArray(HighscoreData[] arrayOfData)
+	public Dictionary<string, int> HighScoreDictionaryFromArray(HighscoreData[] arrayOfData)    //Returns a dictionary from the array
 	{
 		Dictionary<string, int> dictionaryToReturn = new Dictionary<string, int>();
 		
