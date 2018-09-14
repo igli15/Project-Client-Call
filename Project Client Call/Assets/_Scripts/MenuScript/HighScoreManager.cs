@@ -21,10 +21,10 @@ public class HighScoreManager : MonoBehaviour
 
 	Dictionary<string,int> highscoreDictionary = new Dictionary<string,int>();
 	
-	private int killerScore;
-	private int achieverScore;
-	private int explorerScore;
-	private int socialScore;
+	private float killerScore;
+	private float achieverScore;
+	private float explorerScore;
+	private float socialScore;
 	private int totalScore;
 	private int totalEnemyNumber;
 	private int totalRoomNumbers;
@@ -39,10 +39,10 @@ public class HighScoreManager : MonoBehaviour
 		
 		//TODO Uncomment all of these stuff when linking everything
 		
-		//totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
-		//killerScoreAdd = 2500000/totalEnemyNumber;
-		totalScore = 3000000;
-		//totalRoomNumbers = GameObject.FindGameObjectsWithTag("Room").Length;
+		totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
+		killerScoreAdd = 250000/totalEnemyNumber;
+		socialScore = 250000;
+		totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRooms").Length;
 		//collectableNumber = GameObject.FindGameObjectsWithTag("Collectable").Length;
 		//collectableScoreAdd = 250000/collectableNumber;
 
@@ -70,13 +70,21 @@ public class HighScoreManager : MonoBehaviour
 				Debug.Log(pair.Key + " " + pair.Value);
 			}
 		}
+		if (Input.GetKeyDown(KeyCode.D))
+		{
+			CalcTotalScore();
+			Debug.Log("TotalScore: " + totalScore);
+		}
 	}
 
 
 	public void InreaseKillScore()
 	{
-		killerScore +=(int)killerScoreAdd;
-		totalScore -=(int) killerScoreAdd;
+		killerScore +=killerScoreAdd;
+		socialScore -= killerScoreAdd;
+		
+		Debug.Log("Killer Score: " +killerScore);
+		Debug.Log("Socializer Score: " + socialScore);
 	}
 	public void IncreaseAchieverScore()
 	{
@@ -90,7 +98,7 @@ public class HighScoreManager : MonoBehaviour
 
 	public void CalcTotalScore()
 	{
-		totalScore = killerScore + socialScore + achieverScore + explorerScore;
+		totalScore = (int)(killerScore + socialScore + achieverScore + explorerScore);
 	}
 	public void SubmitHighscore(string userName)         //Check if there is a username or not and apply score properly then save locally
 	{

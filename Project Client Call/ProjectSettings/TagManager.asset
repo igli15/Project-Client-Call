@@ -11,6 +11,7 @@ TagManager:
   - Projectile
   - BigProjectile
   - Ground
+  - ExplorerRoom
   layers:
   - Default
   - TransparentFX
