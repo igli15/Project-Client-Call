@@ -785,6 +785,11 @@ Prefab:
       propertyPath: secondJumpValues.jumpHeight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114082767556087786, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+        type: 2}
+      propertyPath: useController
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114056653298110476, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
@@ -3491,7 +3496,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1936889515}
   - component: {fileID: 1936889516}
-  - component: {fileID: 1936889517}
   m_Layer: 10
   m_Name: LevelManager
   m_TagString: Untagged
@@ -3520,21 +3524,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1936889514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b00c661c0f6a4b3d916d70ea4ace4a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ee9b5d136599d14bbbec93fb2835d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test: 10
---- !u!114 &1936889517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1936889514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 747dca9fea4ad496a9a48d5f58976168, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  highscoreArray: []
 --- !u!1 &1960556727
 GameObject:
   m_ObjectHideFlags: 0

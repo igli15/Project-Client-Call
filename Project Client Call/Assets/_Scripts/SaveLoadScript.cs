@@ -1,14 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using UnityEngine;
 
-public class SaveLoadScript : MonoBehaviour
+public static class SaveLoadScript 
 {
-	[HideInInspector]
-	public float test = 10;
 	
-	public void Save(object objToSave,string saveFileName)
+	
+	public static void Save(object objToSave,string saveFileName)
 	{
 		var data = JsonUtility.ToJson(objToSave, true);
 		File.WriteAllText(Application.persistentDataPath + "/"+ saveFileName + ".json", Encryption.Encrypt(data));
@@ -16,7 +17,7 @@ public class SaveLoadScript : MonoBehaviour
 		
 	}
     
-	public void Load(string fileNameToLoadFrom,object objToLoad)
+	public static void Load(object objToLoad,string fileNameToLoadFrom)
 	{
 		if (File.Exists(Application.persistentDataPath + "/"+ fileNameToLoadFrom + ".json"))
 		{
@@ -25,16 +26,6 @@ public class SaveLoadScript : MonoBehaviour
 			JsonUtility.FromJsonOverwrite(loadedData, objToLoad);
 			
 			Debug.Log(loadedData);
-		}
-	}
-
-	private void Update()
-	{
-		if (Input.GetKeyDown(KeyCode.T))
-		{
-			test += 1;
-			Save(this,"Test");
-			Load("Test",this);
 		}
 	}
 }
