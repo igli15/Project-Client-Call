@@ -27,12 +27,10 @@ public class PlayerMeleeAttack : MonoBehaviour {
                 if (raycast2d[i].collider.GetComponent<EnemyOnKneeState>().enabled)
                 {
                     raycast2d[i].collider.GetComponent<EnemyOnKneeState>().FinishHim();
-                    Debug.Log("Enemy: " + raycast2d[i].collider.name + "is Finsihed by melee");
                 }
                 else
                 {
                     raycast2d[i].collider.GetComponent<Health>().InflictDamage(100);
-                    Debug.Log("Enemy: " + raycast2d[i].collider.name + "is Killed by melee");
                 }
 
             }
@@ -44,7 +42,6 @@ public class PlayerMeleeAttack : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            Debug.Log("Attack");
             playerAnimations.SetAttack();
         }
 	}

@@ -33,7 +33,6 @@ public class BulletCollision : MonoBehaviour
 			if(rb != null)
 			rb.velocity = other.transform.parent.right * enemyRangedAttack.GetBulletSpeed() * damageMultiplier*TimeManager.timeSlowScale ;
             isReflected = true;
-            Debug.Log("REFLECTED");
 		}
 
         if (other.transform.CompareTag("Ground"))
@@ -52,7 +51,6 @@ public class BulletCollision : MonoBehaviour
             if (other.GetComponent<EnemyOnKneeState>().enabled) return;
             other.GetComponent<Health>().InflictDamage(damage);
             ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
-            Debug.Log("IsReflected: " + isReflected);
         }
         
 	}

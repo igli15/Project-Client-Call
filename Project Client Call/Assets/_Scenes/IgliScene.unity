@@ -596,8 +596,6 @@ MonoBehaviour:
   targetToFollow: {fileID: 1645704970}
   smoothedSpeed: 8
   cameraYOffset: 2.5
-  cameraYBound: 6
-  cameraBorderOffset: 1.8
 --- !u!20 &282840813
 Camera:
   m_ObjectHideFlags: 0
@@ -770,28 +768,7 @@ Prefab:
       propertyPath: slowMoSlider
       value: 
       objectReference: {fileID: 2135433068}
-    - target: {fileID: 114888910230473332, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
-        type: 2}
-      propertyPath: health
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114888910230473332, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
-        type: 2}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114172608397966066, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
-        type: 2}
-      propertyPath: secondJumpValues.jumpHeight
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114082767556087786, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
-        type: 2}
-      propertyPath: useController
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114056653298110476, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &341397497
@@ -1451,16 +1428,16 @@ Prefab:
     - target: {fileID: 114471571939949036, guid: 76cb82caf945940de9dcfadd5bbb2b78,
         type: 2}
       propertyPath: health
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114471571939949036, guid: 76cb82caf945940de9dcfadd5bbb2b78,
         type: 2}
       propertyPath: maxHealth
-      value: 100
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1493544465706550, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
@@ -1743,23 +1720,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f687ea5fa98184aa6a43666ff0aad494, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &875317013 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1664043145904872, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
-    type: 2}
-  m_PrefabInternal: {fileID: 329570606}
---- !u!114 &875317022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 875317013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cf67e75c8e40cd4d985591fe0cf55c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!1 &898992918
 GameObject:
   m_ObjectHideFlags: 0

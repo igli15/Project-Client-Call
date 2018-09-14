@@ -101,7 +101,6 @@ public class CameraFollowPlayer : MonoBehaviour
 		{
 			if ((hit.transform.CompareTag("ArenaExitTrigger") || hit.transform.CompareTag("ArenaEnterTrigger")) && !transform.right.Equals(targetToFollow.transform.right))
 			{
-				Debug.Log("Hit");
 				followPlayer = false;
 				movingToTarget = false;
 			}

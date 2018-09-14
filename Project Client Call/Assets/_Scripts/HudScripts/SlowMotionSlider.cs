@@ -108,13 +108,11 @@ public class SlowMotionSlider : MonoBehaviour
 		{
 			icon.sprite = filledIcon;
 			pressL1.enabled = true;
-			Debug.Log("full");
 		}
 		else if (slowMoSlider.value< 0.95f)
 		{
 			icon.sprite = emptyIcon;
 			pressL1.enabled = false;
-			Debug.Log("empty");
 		}
 	}
 }

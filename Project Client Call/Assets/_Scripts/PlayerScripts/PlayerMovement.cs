@@ -72,7 +72,6 @@ public class PlayerMovement : MonoBehaviour
 	{
 		RepeatSecondJumpAnim();  // Checks if needed to repeat second jump anim  
 		Jump();  //Jump is in update, just trust me works better :P
-		Debug.Log(jumpCount);
 	}
 
 	private void Jump()
@@ -93,7 +92,6 @@ public class PlayerMovement : MonoBehaviour
 			//rb.velocity = Vector2.up * playerData.JumpSpeed;
 			
 			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);
-			Debug.Log("first");
 			rb.velocity = Vector2.up * playerData.JumpSpeed;
 
 		}
@@ -114,7 +112,6 @@ public class PlayerMovement : MonoBehaviour
 				rb.velocity = Vector2.up * playerData.JumpSpeed;
 				jumpCount -= 1;
 			}
-			Debug.Log("second");
 			/*playerData.JumpSpeed = playerData.SecondJumpSpeed;*/
 		} 
 		else playerData.JumpSpeed = initialJumpSpeed;   //else set it back
