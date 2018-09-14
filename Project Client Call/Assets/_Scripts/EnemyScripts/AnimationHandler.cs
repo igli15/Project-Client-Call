@@ -7,8 +7,6 @@ public class AnimationHandler : MonoBehaviour
 {
     public Action<AnimationHandler> OnThrowAnimation;
 
-    [SerializeField] 
-    private HighScoreManager highScoreManager;
 
     public void CallOnThrowAnimation()
     {
@@ -18,7 +16,7 @@ public class AnimationHandler : MonoBehaviour
     public void CallOnDeath()
     {
         Debug.Log("ENEMY: I AM DEAD");
-        highScoreManager.InreaseKillScore();
+        HighScoreManager.instance.InreaseKillScore();
         Destroy(transform.parent.gameObject);
     }
 

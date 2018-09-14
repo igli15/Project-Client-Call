@@ -34,6 +34,27 @@ public class HighScoreManager : MonoBehaviour
 	private int collectableNumber;
 
 	private int collectableScoreAdd;
+
+	public static HighScoreManager instance;
+
+	private void Awake()
+	{
+		#region SINGELTON          
+		
+		if (instance == null)
+		{
+			instance = this;
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
+		
+		#endregion  
+		
+		DontDestroyOnLoad(gameObject);
+	}
+
 	void Start () 
 	{
 		

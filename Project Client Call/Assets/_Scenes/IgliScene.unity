@@ -3659,7 +3659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1858232887
 Transform:
   m_ObjectHideFlags: 0
@@ -3888,7 +3888,7 @@ GameObject:
   - component: {fileID: 1936889515}
   - component: {fileID: 1936889516}
   m_Layer: 10
-  m_Name: LevelManager
+  m_Name: HighScoreManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

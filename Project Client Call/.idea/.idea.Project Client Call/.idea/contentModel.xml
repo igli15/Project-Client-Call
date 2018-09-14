@@ -46,6 +46,7 @@
               <e p="Follower.cs" t="Include" />
             </e>
           </e>
+          <e p="ExplorerRooms.cs" t="Include" />
           <e p="FSM" t="Include">
             <e p="AbstractState.cs" t="Include" />
             <e p="Fsm.cs" t="Include" />
