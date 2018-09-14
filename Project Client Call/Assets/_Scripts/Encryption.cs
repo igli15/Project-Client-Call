@@ -4,7 +4,7 @@ using System.Text;
 
 public class Encryption
 {
-    private static readonly string hash = "CirclyFly123@321!";
+    private static readonly string hash = "123@321!";
 
     public static string Encrypt(string original)
     {
