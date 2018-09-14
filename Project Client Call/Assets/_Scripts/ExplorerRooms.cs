@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class ExplorerRooms : MonoBehaviour
 {
-
-	[SerializeField] 
-	private HighScoreManager highScoreManager;
 	
 	private bool isVisited = false;
 
-	
 
 	public void ExploreRoom()
 	{
 		if (!isVisited)
 		{
+			Debug.Log("HI");
+			HighScoreManager.instance.IncreaseExplorerScore();
 			isVisited = true;
 		}
 	}

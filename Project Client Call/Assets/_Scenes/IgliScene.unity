@@ -1809,9 +1809,10 @@ GameObject:
   m_Component:
   - component: {fileID: 852809079}
   - component: {fileID: 852809080}
+  - component: {fileID: 852809081}
   m_Layer: 0
   m_Name: ExplorerRoom
-  m_TagString: Untagged
+  m_TagString: ExplorerRoom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1838,7 +1839,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 2.714003, y: 2.4495583}
@@ -1854,6 +1855,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.428006, y: 5.8991165}
   m_EdgeRadius: 0
+--- !u!114 &852809081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 852809078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4310534670a65458eb1c5ffaa196dc2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &898992918
 GameObject:
   m_ObjectHideFlags: 0
