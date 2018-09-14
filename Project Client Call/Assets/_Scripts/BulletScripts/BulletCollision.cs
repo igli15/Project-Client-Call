@@ -28,7 +28,7 @@ public class BulletCollision : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("Sword Collider")&& !isReflectable)
+		if (other.CompareTag("Sword Collider")&& isReflectable)
 		{
 			if(rb != null)
 			rb.velocity = other.transform.parent.right * enemyRangedAttack.GetBulletSpeed() * damageMultiplier*TimeManager.timeSlowScale ;

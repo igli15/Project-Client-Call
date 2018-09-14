@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 58512754310302074}
   - component: {fileID: 114643007758760724}
   - component: {fileID: 114738218306448836}
+  - component: {fileID: 50144509752649714}
   m_Layer: 0
   m_Name: CannonBall
   m_TagString: BigProjectile
@@ -43,6 +44,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50144509752649714
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1876726565960982}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58512754310302074
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -69,6 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8849fe5d437013748a6536d4b6e53d33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedOfRotation: 1
 --- !u!114 &114738218306448836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -80,6 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29e821e65dfa42278a1fefba4e5acb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  damageMultiplier: 1.5
+  isReflectable: 0
+  isReflected: 0
 --- !u!212 &212418428186479438
 SpriteRenderer:
   m_ObjectHideFlags: 1
