@@ -74,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		RepeatSecondJumpAnim();  // Checks if needed to repeat second jump anim  
 		Jump();  //Jump is in update, just trust me works better :P
+		
 	}
 
 	private void Jump()
@@ -126,7 +127,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 		else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.Space)||Input.GetKeyDown(KeyCode.Joystick1Button5)))  //check if we jumping but button is pressed easily
 		{
-			//rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;   //apply low jump multiplier
+			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;   //apply low jump multiplier
 		}
 	}
 	
@@ -163,11 +164,11 @@ public class PlayerMovement : MonoBehaviour
 
 	public void CheckFlipHorizontally()
 	{
-		if (rb.velocity.x < 0 && transform.right.Equals(initForwardVec))  //flip only if we haven't already flipped :P
+		if (Input.GetAxisRaw("Horizontal") <0  && transform.right.Equals(initForwardVec))  //flip only if we haven't already flipped :P
 		{
 			transform.right = -transform.right;
 		}
-		else if(rb.velocity.x > 0 && !transform.right.Equals(initForwardVec))
+		else if(Input.GetAxisRaw("Horizontal") >0 && !transform.right.Equals(initForwardVec))
 		{
 			transform.right = -transform.right;
 		}
