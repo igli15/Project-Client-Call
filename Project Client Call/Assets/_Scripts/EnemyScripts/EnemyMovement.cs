@@ -30,7 +30,7 @@ public class EnemyMovement : MonoBehaviour
         return raycast2d.collider == null;
     }
 
-    public void Move(float _horizontal,float _vertical)
+    public void Move(float _horizontal,float _vertical,bool ignoreCLiffs=false)
     {
         
         GetComponent<EnemyAnimations>().SetSpeedOfEnemy(GetComponent<Rigidbody2D>().velocity.x);
@@ -38,15 +38,15 @@ public class EnemyMovement : MonoBehaviour
         Vector2 _movementVec = new Vector2(_horizontal, _vertical);
         _movementVec.Normalize();
         rb.velocity = _movementVec * enemyData.MovementSpeed * Time.fixedDeltaTime;
-        CheckFlipHorizontally();
+        if (!ignoreCLiffs) CheckFlipHorizontally();
     }
 
-    public void Move(Vector2 _movementVec)
+    public void Move(Vector2 _movementVec,bool ignoreCLiffs=false)
     {
         GetComponent<EnemyAnimations>().SetSpeedOfEnemy(GetComponent<Rigidbody2D>().velocity.x);
         _movementVec.Normalize();
         rb.velocity = _movementVec * enemyData.MovementSpeed * Time.fixedDeltaTime;
-        CheckFlipHorizontally();
+        if(!ignoreCLiffs) CheckFlipHorizontally();
     }
 
     public void FaceToPlayer()
