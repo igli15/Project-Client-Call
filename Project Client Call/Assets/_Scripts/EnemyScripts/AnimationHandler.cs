@@ -9,7 +9,6 @@ public class AnimationHandler : MonoBehaviour
 
     public void CallOnThrowAnimation()
     {
-        Debug.Log("OnthrowAnimation: " + OnThrowAnimation!=null);
         if (null != OnThrowAnimation) OnThrowAnimation(this);
     }
 

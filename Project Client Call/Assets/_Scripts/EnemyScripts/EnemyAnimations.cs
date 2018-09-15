@@ -45,4 +45,13 @@ public class EnemyAnimations : MonoBehaviour {
     {
         animator.SetBool("DeathState", deathState);
     }
+    public void SetCharge(bool charging)
+    {
+        animator.SetBool("Charging", charging);
+    }
+
+    public void SetIdle(bool idle)
+    {
+        animator.SetBool("Idle", idle);
+    }
 }

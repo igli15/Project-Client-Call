@@ -131,10 +131,6 @@ public class EnemyFsmController : MonoBehaviour, IAgent
         {
             fsm.ChangeState<EnemyChaseAndMeleeAttackState>();
         }
-        else
-        {
-            fsm.ChangeState<EnemyPatrollingState>();
-        }
     }
 
 

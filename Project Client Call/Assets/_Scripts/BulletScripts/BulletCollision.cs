@@ -28,6 +28,7 @@ public class BulletCollision : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
+        Debug.Log(other.tag+" IsReflectable: "+isReflectable);
 		if (other.CompareTag("Sword Collider")&& isReflectable)
 		{
 			if(rb != null)
@@ -37,20 +38,23 @@ public class BulletCollision : MonoBehaviour
 
         if (other.transform.CompareTag("Ground"))
         {
-            
-            ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
+            if (isReflectable) ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
+            else ObjectPooler.instance.DestroyFromPool("BigProjectile", gameObject);
         }
 
-		if (other.transform.CompareTag("Player")&&!isReflectable)
+		if (other.transform.CompareTag("Player"))
 		{
+            Debug.Log("DAMAGE");
             other.transform.parent.GetComponent<Health>().InflictDamage(damage);
-			ObjectPooler.instance.DestroyFromPool("SmallProjectile",gameObject);
-		}
+			if(isReflectable) ObjectPooler.instance.DestroyFromPool("SmallProjectile",gameObject);
+            else ObjectPooler.instance.DestroyFromPool("BigProjectile", gameObject);
+        }
         if (isReflected && other.transform.CompareTag("Enemy"))
         {
             if (other.GetComponent<EnemyOnKneeState>().enabled) return;
             other.GetComponent<Health>().InflictDamage(damage);
-            ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
+            if (isReflectable) ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
+            else ObjectPooler.instance.DestroyFromPool("BigProjectile", gameObject);
         }
         
 	}
