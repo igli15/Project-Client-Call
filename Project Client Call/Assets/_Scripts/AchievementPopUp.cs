@@ -1,49 +1,115 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AchievementPopUp : MonoBehaviour
 {
+	[Header("PopupTransitionValues")] 
+	[SerializeField]
+	private float transitionTime = 0.8f;
+	
+	[SerializeField]
+	private float timeTillGone = 2f;
+	
+	[Header("PopUpElements")] 
+	[SerializeField]
+	private Text titleText;
 
+	[SerializeField]
+	private Text description;
+
+	[SerializeField] 
+	private Text japaneseText;
+	
+	[SerializeField] 
+	private Image backgroundImage;
+	
 	[Serializable]
-	public class AchievementArt
+	public class AchievementData
 	{
-		public Sprite icon;
-		public Sprite background;
 		public string title;
 		public string description;
+		public string japaneseText;
+		//public Sprite icon;
+		public Sprite background;
+
+		[HideInInspector] 
+		public bool isCompleted;
 	}
+
+	[Space]
+	[Header("PopUpDatas")]
+	[SerializeField] private List<AchievementData> achievementData;
+
+	private static Dictionary<string, AchievementData> achievementDictionary;
+	private RectTransform rectTransform;
+	
+	private static Queue<AchievementData> achievementQueue = new Queue<AchievementData>();
+
+	private bool isDisplaying = false;
+
+	private Rect canvasRect;
 		
 	// Use this for initialization
 	void Start ()
 	{
+		canvasRect = GetComponentInParent<Canvas>().pixelRect;
 		
+		achievementDictionary = new Dictionary<string, AchievementData>();
+		rectTransform = GetComponent<RectTransform>();
+		rectTransform.anchoredPosition = new Vector2(0 + rectTransform.sizeDelta.x, canvasRect.height);
+
+		foreach (AchievementData data in achievementData)
+		{
+			achievementDictionary.Add(data.title,data);
+		}
 	}
 
 
-	public void Show()
+	private void Show(AchievementData pData)
 	{
-		transform.DOScaleX(2, 0.8f);
+		backgroundImage.sprite = pData.background;
+		japaneseText.text = pData.japaneseText;
+		description.text = pData.description;
+		titleText.text = pData.title;
+		
+		
+		rectTransform.DOAnchorPos(new Vector2(0, canvasRect.height),transitionTime);
+
+		isDisplaying = true;
+		
+		StartCoroutine(Reset(pData));
 	}
 
-	public void Reset()
+	IEnumerator Reset(AchievementData pData)
 	{
-		transform.DOScaleX(0, 0.8f);
+		yield return  new WaitForSeconds(timeTillGone);
+		
+		rectTransform.DOAnchorPos(new Vector2(0 + rectTransform.sizeDelta.x,  canvasRect.height), transitionTime);
+		DOVirtual.DelayedCall(transitionTime,() => isDisplaying =false);
 	}
 
 	private void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.A))
+		if (achievementQueue.Count > 0)
 		{
-			Show();
+			if (!isDisplaying)
+			{
+				Show(achievementQueue.Dequeue());
+			}
 		}
+	}
 
-		if (Input.GetKeyDown(KeyCode.S))
+	public static void QueueAchievement(string achievementName)
+	{
+		if (!achievementDictionary[achievementName].isCompleted)
 		{
-			Reset();
+			achievementDictionary[achievementName].isCompleted = true;
+			achievementQueue.Enqueue(achievementDictionary[achievementName]);
 		}
 	}
 }
