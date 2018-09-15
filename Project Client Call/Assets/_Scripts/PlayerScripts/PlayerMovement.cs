@@ -126,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
 		}
 		else if (rb.velocity.y > 0 && !(Input.GetKey(KeyCode.Space)||Input.GetKeyDown(KeyCode.Joystick1Button5)))  //check if we jumping but button is pressed easily
 		{
-			rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;   //apply low jump multiplier
+			//rb.velocity += Vector2.up * (lowJumpMultiplier - 1) * Physics2D.gravity * Time.deltaTime;   //apply low jump multiplier
 		}
 	}
 	
