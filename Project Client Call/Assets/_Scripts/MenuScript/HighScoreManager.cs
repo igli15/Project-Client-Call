@@ -30,19 +30,42 @@ public class HighScoreManager : MonoBehaviour
 	private int totalRoomNumbers;
 	private float highscore;
 	private float killerScoreAdd;
+	private float explorerScoreAdd;
 
 	private int collectableNumber;
 
 	private int collectableScoreAdd;
+
+	public static HighScoreManager instance;
+
+	private void Awake()
+	{
+		#region SINGELTON          
+		
+		if (instance == null)
+		{
+			instance = this;
+		}
+		else
+		{
+			Destroy(gameObject);
+		}
+		
+		#endregion  
+		
+		DontDestroyOnLoad(gameObject);
+	}
+
 	void Start () 
 	{
 		
 		//TODO Uncomment all of these stuff when linking everything
 		
 		totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
-		killerScoreAdd = 250000/totalEnemyNumber;
-		socialScore = 250000;
-		totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRooms").Length;
+		killerScoreAdd = 500000/totalEnemyNumber;
+		socialScore = 500000;
+		totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRoom").Length;
+		explorerScoreAdd = 250000/totalRoomNumbers;
 		//collectableNumber = GameObject.FindGameObjectsWithTag("Collectable").Length;
 		//collectableScoreAdd = 250000/collectableNumber;
 
@@ -73,7 +96,7 @@ public class HighScoreManager : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.D))
 		{
 			CalcTotalScore();
-			Debug.Log("TotalScore: " + totalScore);
+			Debug.Log("Explorer: " + explorerScore);
 		}
 	}
 
@@ -82,9 +105,6 @@ public class HighScoreManager : MonoBehaviour
 	{
 		killerScore +=killerScoreAdd;
 		socialScore -= killerScoreAdd;
-		
-		Debug.Log("Killer Score: " +killerScore);
-		Debug.Log("Socializer Score: " + socialScore);
 	}
 	public void IncreaseAchieverScore()
 	{
@@ -93,7 +113,7 @@ public class HighScoreManager : MonoBehaviour
 
 	public void IncreaseExplorerScore()
 	{
-		//bool visited becomes true if collided with it and score added;
+		explorerScore += explorerScoreAdd;
 	}
 
 	public void CalcTotalScore()

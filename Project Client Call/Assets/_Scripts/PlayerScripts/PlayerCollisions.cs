@@ -46,6 +46,11 @@ public class PlayerCollisions : MonoBehaviour
 				other.isTrigger = false;
 			}
 		}
+
+		if (other.CompareTag("ExplorerRoom"))
+		{
+			other.GetComponent<ExplorerRooms>().ExploreRoom();
+		}
 	}
 
 }

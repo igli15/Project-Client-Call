@@ -8,7 +8,9 @@ using UnityEngine;
 
 
 public class PlayerMovement : MonoBehaviour
-{	
+{
+	[Range(1,5)]
+	public float TimeHeightRatio = 4;
 	
 	[SerializeField]
 	private float fallMultiplier = 2.5f;
@@ -151,12 +153,12 @@ public class PlayerMovement : MonoBehaviour
 
 	public void CalculateJump(float pJumpHeight,float pJumpTime)   //Calculates gravity scale and the speed automatically just by giving the time and height of the jump
 	{
-		targetGravity = -((2 * pJumpHeight)) / Mathf.Pow(pJumpTime, 2);   //calculate the right gravity for our jump
+		targetGravity = -((2 * pJumpHeight)) / Mathf.Pow(pJumpTime,TimeHeightRatio);   //calculate the right gravity for our jump
 		
 		rb.gravityScale = targetGravity / Physics2D.gravity.y;   // set the gravity scale depending on our target gravity
 			
-		playerData.JumpSpeed = (Mathf.Abs(targetGravity) * pJumpTime);  // find our final speed based on the time and gravity of the jump
-			
+		playerData.JumpSpeed =(Mathf.Abs(targetGravity) * pJumpTime);  // find our final speed based on the time and gravity of the jump
+
 	}
 
 	public void CheckFlipHorizontally()
