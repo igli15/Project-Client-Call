@@ -8,30 +8,53 @@ using UnityEngine.UI;
 public class AchievementPopUp : MonoBehaviour
 {
 
+	[SerializeField] 
+	private CanvasScaler canvasScaler;
+	
 	[Serializable]
-	public class AchievementArt
+	public class AchievementData
 	{
-		public Sprite icon;
-		public Sprite background;
 		public string title;
 		public string description;
+		public Sprite icon;
+		public Sprite background;
 	}
+
+	[SerializeField] private List<AchievementData> achievementData;
+
+	private Dictionary<string, AchievementData> achievementDictionary;
+	private RectTransform rectTransform;
 		
 	// Use this for initialization
 	void Start ()
 	{
+		achievementDictionary = new Dictionary<string, AchievementData>();
+		rectTransform = GetComponent<RectTransform>();
+		//rectTransform.sizeDelta = new Vector2(0,0);
 		
+		foreach (AchievementData data in achievementData)
+		{
+			//achievementDictionary.Add(data.title,);
+		}
 	}
 
 
-	public void Show()
+	public void Show(AchievementData pData = null)
 	{
-		transform.DOScaleX(2, 0.8f);
+		//transform.DOScaleX(2, 0.8f);
+		
+		//rectTransform.sizeDelta = new Vector2(0,80);
+		//rectTransform.DOSizeDelta(new Vector2(600, 80), 0.8f);
+		
+		rectTransform.DOAnchorPos(new Vector2(0,450), 0.8f);
+
 	}
 
-	public void Reset()
+	public void Reset(AchievementData pData = null)
 	{
-		transform.DOScaleX(0, 0.8f);
+		//transform.DOScaleX(0, 0.8f);
+
+		rectTransform.DOAnchorPos(new Vector2(0 + rectTransform.sizeDelta.x, 450), 0.8f);
 	}
 
 	private void Update()
