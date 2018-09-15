@@ -10,6 +10,8 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
     float speedInCharge = 100;
     [SerializeField]
     float distanceOfCharge = 3;
+    [SerializeField]
+    float distanceOfMelee = 1;
     [Header("Timing")]
     [SerializeField]
     float timeOfRecovering = 2;
@@ -29,13 +31,13 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
     public void Start()
     {
         stoped = false;
-       // endChargePosition = transform.position;
+        // endChargePosition = transform.position;
     }
 
     public void Update()
     {
         if (Time.time < timeOfEnterTostate + timeOfWaitingBeforeCharge) return;
-        
+
         Vector2 distanceToEndPos = endChargePosition - transform.position;
 
         if (distanceToEndPos.magnitude < 0.2f || fsmController.stateReferences.enemyMovement.IsNextoToCliff())
@@ -45,8 +47,6 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
             {
                 if (Time.time > stopTime + timeOfRecovering)
                 {
-                    //IDK <=======================
-                    Debug.Log("Enter patroll state");
                     fsmController.fsm.ChangeState<EnemyPatrollingState>();
                 }
             }
@@ -58,11 +58,26 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
                 GetComponent<EnemyAnimations>().SetIdle(true);
             }
         }
-        else {
+        else
+        {
             GetComponent<EnemyAnimations>().SetCharge(true);
-            fsmController.stateReferences.enemyMovement.Move(distanceToEndPos.normalized.x, 0); }
+            fsmController.stateReferences.enemyMovement.Move(distanceToEndPos.normalized.x, 0);
+            CheckCollisionWithPlayer();
+        }
 
-       
+
+    }
+
+    public void CheckCollisionWithPlayer()
+    {
+        int layerMask = 1 << 10;
+        Debug.DrawRay(transform.position, transform.right * distanceOfMelee);
+        RaycastHit2D raycast2d = Physics2D.Raycast(transform.position, transform.right, distanceOfMelee, layerMask);
+        if (raycast2d.collider != null)
+        {
+
+            raycast2d.collider.GetComponentInParent<Health>().InflictDamage(1);
+        }
     }
 
     public Vector3 CalculateDesiredPosition()
@@ -76,12 +91,12 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
         stoped = false;
         timeOfEnterTostate = Time.time;
         if (!fsmController) fsmController = GetComponent<EnemyFsmController>();
-        
+
         GetComponent<EnemyAnimations>().SetIdle(true);
         //CALCULATE <===========
         endChargePosition = CalculateDesiredPosition();
         base.Enter(pAgent);
-        
+
         initialSpeed = fsmController.stateReferences.enemyData.MovementSpeed;
         fsmController.stateReferences.enemyData.MovementSpeed = speedInCharge;
     }
@@ -94,15 +109,16 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
         GetComponent<EnemyAnimations>().SetIdle(false);
         base.Exit(pAgent);
         fsmController.stateReferences.enemyData.MovementSpeed = initialSpeed;
-        
+
     }
 
     private void OnDrawGizmos()
     {
+        Gizmos.DrawLine(transform.position, transform.position + transform.right * distanceOfMelee);
         Gizmos.color = Color.black;
-        Gizmos.DrawLine(transform.position, transform.position+transform.right*distanceOfCharge);
+        Gizmos.DrawLine(transform.position, transform.position + transform.right * distanceOfCharge);
         Gizmos.color = Color.red;
-        if (endChargePosition==null) return;
+        if (endChargePosition == null) return;
         Gizmos.DrawLine(transform.position, endChargePosition);
         Gizmos.DrawWireCube(endChargePosition, Vector3.one);
     }
