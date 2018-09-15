@@ -51,15 +51,18 @@ public class AchievementPopUp : MonoBehaviour
 	private static Queue<AchievementData> achievementQueue = new Queue<AchievementData>();
 
 	private bool isDisplaying = false;
+
+	private Rect canvasRect;
 		
 	// Use this for initialization
 	void Start ()
 	{
+		canvasRect = GetComponentInParent<Canvas>().pixelRect;
 		
 		achievementDictionary = new Dictionary<string, AchievementData>();
 		rectTransform = GetComponent<RectTransform>();
-		rectTransform.anchoredPosition = new Vector2(0 + rectTransform.sizeDelta.x, 450);
-		
+		rectTransform.anchoredPosition = new Vector2(0 + rectTransform.sizeDelta.x, canvasRect.height);
+
 		foreach (AchievementData data in achievementData)
 		{
 			achievementDictionary.Add(data.title,data);
@@ -75,7 +78,7 @@ public class AchievementPopUp : MonoBehaviour
 		titleText.text = pData.title;
 		
 		
-		rectTransform.DOAnchorPos(new Vector2(0,450),transitionTime);
+		rectTransform.DOAnchorPos(new Vector2(0, canvasRect.height),transitionTime);
 
 		isDisplaying = true;
 		
@@ -86,28 +89,19 @@ public class AchievementPopUp : MonoBehaviour
 	{
 		yield return  new WaitForSeconds(timeTillGone);
 		
-		rectTransform.DOAnchorPos(new Vector2(0 + rectTransform.sizeDelta.x, 450), transitionTime);
+		rectTransform.DOAnchorPos(new Vector2(0 + rectTransform.sizeDelta.x,  canvasRect.height), transitionTime);
 		DOVirtual.DelayedCall(transitionTime,() => isDisplaying =false);
 	}
 
 	private void Update()
 	{
-		if (achievementQueue.Count() > 0)
+		if (achievementQueue.Count > 0)
 		{
 			if (!isDisplaying)
 			{
 				Show(achievementQueue.Dequeue());
 			}
 		}
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			QueueAchievement("The Beginning");
-		}
-		if (Input.GetKeyDown(KeyCode.B))
-		{
-			QueueAchievement("Jump");
-		}
-
 	}
 
 	public static void QueueAchievement(string achievementName)
