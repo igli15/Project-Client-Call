@@ -8,6 +8,13 @@ using UnityEngine.UI;
 
 public class AchievementPopUp : MonoBehaviour
 {
+	[Header("PopupTransitionValues")] 
+	[SerializeField]
+	private float transitionTime = 0.8f;
+	
+	[SerializeField]
+	private float timeTillGone = 2f;
+	
 	[Header("PopUpElements")] 
 	[SerializeField]
 	private Text titleText;
@@ -38,10 +45,10 @@ public class AchievementPopUp : MonoBehaviour
 	[Header("PopUpDatas")]
 	[SerializeField] private List<AchievementData> achievementData;
 
-	private Dictionary<string, AchievementData> achievementDictionary;
+	private static Dictionary<string, AchievementData> achievementDictionary;
 	private RectTransform rectTransform;
 	
-	private Queue<AchievementData> achievementQueue = new Queue<AchievementData>();
+	private static Queue<AchievementData> achievementQueue = new Queue<AchievementData>();
 
 	private bool isDisplaying = false;
 		
@@ -60,7 +67,7 @@ public class AchievementPopUp : MonoBehaviour
 	}
 
 
-	public void Show(AchievementData pData)
+	private void Show(AchievementData pData)
 	{
 		backgroundImage.sprite = pData.background;
 		japaneseText.text = pData.japaneseText;
@@ -68,19 +75,19 @@ public class AchievementPopUp : MonoBehaviour
 		titleText.text = pData.title;
 		
 		
-		rectTransform.DOAnchorPos(new Vector2(0,450), 0.8f);
+		rectTransform.DOAnchorPos(new Vector2(0,450),transitionTime);
 
 		isDisplaying = true;
-		pData.isCompleted = true;
+		
 		StartCoroutine(Reset(pData));
 	}
 
 	IEnumerator Reset(AchievementData pData)
 	{
-		yield return  new WaitForSeconds(2f);
+		yield return  new WaitForSeconds(timeTillGone);
 		
-		rectTransform.DOAnchorPos(new Vector2(0 + rectTransform.sizeDelta.x, 450), 0.8f);
-		DOVirtual.DelayedCall(0.8f,() => isDisplaying =false);
+		rectTransform.DOAnchorPos(new Vector2(0 + rectTransform.sizeDelta.x, 450), transitionTime);
+		DOVirtual.DelayedCall(transitionTime,() => isDisplaying =false);
 	}
 
 	private void Update()
@@ -103,10 +110,11 @@ public class AchievementPopUp : MonoBehaviour
 
 	}
 
-	public void QueueAchievement(string achievementName)
+	public static void QueueAchievement(string achievementName)
 	{
 		if (!achievementDictionary[achievementName].isCompleted)
 		{
+			achievementDictionary[achievementName].isCompleted = true;
 			achievementQueue.Enqueue(achievementDictionary[achievementName]);
 		}
 	}
