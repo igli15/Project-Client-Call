@@ -13,7 +13,7 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     public override void Enter(IAgent pAgent)
     {
         base.Enter(pAgent);
-          
+        Debug.Log("OnKnee");
         GetComponent<EnemyAnimations>().TrigerOnKneeAnimation();
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GetComponent<BoxCollider2D>().isTrigger = true;
@@ -29,6 +29,7 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     public void FinishHim()
     {
         if (isActivated) return;
+        Debug.Log("FINISH HIM");
         GetComponent<EnemyAnimations>().SetDeathState(true);
         GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyDeadState>();
         
