@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4644493042786818}
   - component: {fileID: 212418428186479438}
   - component: {fileID: 58512754310302074}
+  - component: {fileID: 50144509752649714}
   - component: {fileID: 114643007758760724}
   - component: {fileID: 114738218306448836}
-  - component: {fileID: 50144509752649714}
   m_Layer: 0
   m_Name: CannonBall
   m_TagString: BigProjectile
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1876726565960982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.926, y: 1.403, z: -0.099304475}
-  m_LocalScale: {x: 3.7346, y: 4.0806, z: 1}
+  m_LocalPosition: {x: 2.206, y: 1.413, z: -0.099304475}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,12 +73,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0005877472, y: 0}
+  m_Offset: {x: -0.017893314, y: -0.0000500679}
   serializedVersion: 2
-  m_Radius: 0.06440145
+  m_Radius: 1.7831373
 --- !u!114 &114643007758760724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -141,7 +141,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 70ff062f44d4c6a4b9405e499fd049e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
