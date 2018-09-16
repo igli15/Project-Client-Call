@@ -13,9 +13,6 @@ public class SwordCollisions : MonoBehaviour
     [SerializeField]
     private ParticleSystem swoshParticleSystem;
 
-    [SerializeField] 
-    private SpriteRenderer swordCircleHudSpriteRender;
-
     private SpriteRenderer spriteRenderer;
 
     private void Start()
@@ -79,13 +76,11 @@ public class SwordCollisions : MonoBehaviour
     public void DisableSwordHud()
     {
         spriteRenderer.enabled = false;
-        swordCircleHudSpriteRender.enabled = false;
         
     }
     public void EnableSwordHud()
     {
         spriteRenderer.enabled = true;
-        swordCircleHudSpriteRender.enabled = true;
         
     }
     

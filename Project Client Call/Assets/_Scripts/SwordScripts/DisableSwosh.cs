@@ -13,8 +13,13 @@ public class DisableSwosh : MonoBehaviour
 
 	private SwordCollisions swordCollisions;
 
+	private Animator animator;
+
+	private int prevIndex = 1;
+
 	private void Start()
 	{
+		
 		swordCollisions = swordCollider.GetComponent<SwordCollisions>();
 		gameObject.SetActive(false);
 		
@@ -28,5 +33,21 @@ public class DisableSwosh : MonoBehaviour
 		swordCollisions.EnableSwordHud();
 		gameObject.SetActive(false);
 
+	}
+
+	private void OnEnable()
+	{
+		animator = GetComponent<Animator>();
+		
+		if (prevIndex == 1)
+		{
+			animator.SetInteger("Index",0);
+			prevIndex = 0;
+		}
+		else
+		{
+			animator.SetInteger("Index",1);
+			prevIndex = 1;
+		}
 	}
 }
