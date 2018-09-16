@@ -501,6 +501,7 @@ MonoBehaviour:
   target: {fileID: 0}
   speedInCharge: 300
   distanceOfCharge: 8
+  distanceOfMelee: 1
   timeOfRecovering: 2
   timeOfWaitingBeforeCharge: 1
 --- !u!114 &310880262
@@ -918,7 +919,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1493544465706550, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
@@ -1176,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1021211687
 Transform:
   m_ObjectHideFlags: 0
@@ -1234,6 +1235,7 @@ MonoBehaviour:
   target: {fileID: 0}
   speedInCharge: 300
   distanceOfCharge: 8
+  distanceOfMelee: 1
   timeOfRecovering: 2
   timeOfWaitingBeforeCharge: 1
 --- !u!114 &1021211691
@@ -1811,7 +1813,8 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114313798413134324, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1519768265
