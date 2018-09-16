@@ -47,11 +47,13 @@ public class EnemyAnimations : MonoBehaviour {
     }
     public void SetCharge(bool charging)
     {
+        Debug.Log("SET CHARGE ANIM: "+ charging);
         animator.SetBool("Charging", charging);
     }
 
     public void SetIdle(bool idle)
     {
+        Debug.Log("SET ANIM: "+idle);
         animator.SetBool("Idle", idle);
     }
 }
