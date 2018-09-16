@@ -58,7 +58,7 @@ public class PlayerCollisions : MonoBehaviour
 		if (other.CompareTag("EndTrigger"))
 		{
 			GetComponentInParent<PlayerMovement>().enabled = false;
-			GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+			GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
 			resolutionScreen.SetActive(true);
 			
 		}
