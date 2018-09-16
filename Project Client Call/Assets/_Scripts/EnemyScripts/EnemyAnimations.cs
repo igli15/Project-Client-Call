@@ -43,6 +43,7 @@ public class EnemyAnimations : MonoBehaviour {
 
     public void SetDeathState(bool deathState)
     {
+        Debug.Log("ANIMATION HAS BEEN CALLED: " + deathState);
         animator.SetBool("DeathState", deathState);
     }
     public void SetCharge(bool charging)
