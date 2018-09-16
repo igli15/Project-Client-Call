@@ -127,7 +127,7 @@ public class EnemyFsmController : MonoBehaviour, IAgent
 
     void CheckConditionsForTankEnemy()
     {
-        if ((distanceToPLayer).magnitude < radiusOfMeleeeAttack && (isLooking && isInVision || canBeHeared))
+        if ((distanceToPLayer).magnitude < radiusOfMeleeeAttack && isInVision && (isLooking|| canBeHeared))
         {
             fsm.ChangeState<EnemyChaseAndMeleeAttackState>();
         }
