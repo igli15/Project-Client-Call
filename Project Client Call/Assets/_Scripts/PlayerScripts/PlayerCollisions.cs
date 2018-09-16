@@ -7,6 +7,9 @@ using UnityEngine.Events;
 public class PlayerCollisions : MonoBehaviour
 {
 
+	[SerializeField] 
+	private GameObject resolutionScreen;
+	
 	private Camera mainCam;
 	
 	private void Start()
@@ -50,6 +53,13 @@ public class PlayerCollisions : MonoBehaviour
 		if (other.CompareTag("ExplorerRoom"))
 		{
 			other.GetComponent<ExplorerRooms>().ExploreRoom();
+		}
+
+		if (other.CompareTag("EndTrigger"))
+		{
+			GetComponentInParent<PlayerMovement>().enabled = false;
+			resolutionScreen.SetActive(true);
+			
 		}
 	}
 

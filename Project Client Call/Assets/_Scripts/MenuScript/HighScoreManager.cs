@@ -18,7 +18,9 @@ public class HighScoreManager : MonoBehaviour
 
 	[HideInInspector]
 	public HighscoreData[] highscoreArray;   //an array of datas ;D
-	
+
+	[SerializeField] 
+	private float achievementNumber = 0;
 
 	Dictionary<string,int> highscoreDictionary = new Dictionary<string,int>();
 	
@@ -32,10 +34,8 @@ public class HighScoreManager : MonoBehaviour
 	private float highscore;
 	private float killerScoreAdd;
 	private float explorerScoreAdd;
+	private float achieverScoreAdd;
 
-	private int collectableNumber;
-
-	private int collectableScoreAdd;
 
 	public static HighScoreManager instance;
 
@@ -68,15 +68,16 @@ public class HighScoreManager : MonoBehaviour
 	
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		if (scene.name == "PartOne")
+		Debug.Log("Loadededed");
+		if (scene.name == "IgliScene")
 		{
+			Debug.Log("Hellooooo");
 			totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
 			killerScoreAdd = 500000 / totalEnemyNumber;
 			socialScore = 500000;
 			totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRoom").Length;
 			explorerScoreAdd = 250000 / totalRoomNumbers;
-			//collectableNumber = GameObject.FindGameObjectsWithTag("Collectable").Length;
-			//collectableScoreAdd = 250000/collectableNumber;
+			achieverScoreAdd = 250000 / achievementNumber;
 		}
 	}
 
@@ -84,13 +85,6 @@ public class HighScoreManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.A))          //NOTE: for testing
-		{
-			totalScore = 20000;
-			SubmitHighscore("test");
-			SaveHighscore();
-		}
-
 		if (Input.GetKeyDown(KeyCode.K))
 		{
 			foreach (KeyValuePair<string,int> pair in highscoreDictionary)
@@ -101,7 +95,7 @@ public class HighScoreManager : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.D))
 		{
 			CalcTotalScore();
-			Debug.Log("Explorer: " + explorerScore);
+			Debug.Log(totalScore);
 		}
 	}
 
@@ -113,7 +107,7 @@ public class HighScoreManager : MonoBehaviour
 	}
 	public void IncreaseAchieverScore()
 	{
-		achieverScore += collectableScoreAdd;
+		achieverScore += achieverScoreAdd;
 	}
 
 	public void IncreaseExplorerScore()
@@ -123,7 +117,8 @@ public class HighScoreManager : MonoBehaviour
 
 	public int CalcTotalScore()
 	{
-		return totalScore = (int)(killerScore + socialScore + achieverScore + explorerScore);
+		totalScore = (int)(killerScore + socialScore + achieverScore + explorerScore);
+		return totalScore;
 	}
 	public void SubmitHighscore(string userName)         //Check if there is a username or not and apply score properly then save locally
 	{

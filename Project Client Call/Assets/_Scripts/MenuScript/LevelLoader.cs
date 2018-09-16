@@ -34,7 +34,7 @@ public class LevelLoader : MonoBehaviour
 
 	IEnumerator LoadLevelAsync(string levelName)     //Coroutine allows to load the level without disturbing the main thread.
 	{
-		yield return new WaitForSeconds(1);         // if you want to load slowly */
+		yield return new WaitForSeconds(0.2f);         // if you want to load slowly */
 
 		sceneLoadingData = SceneManager.LoadSceneAsync(levelName);   //Get the data and load async
 		

@@ -12,6 +12,8 @@ TagManager:
   - BigProjectile
   - Ground
   - ExplorerRoom
+  - EndTrigger
+  - HighscoreManager
   layers:
   - Default
   - TransparentFX

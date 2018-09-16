@@ -22,7 +22,7 @@ public class ResolutionScreenManager : MonoBehaviour {
 		sequence.Append(_killer.DOText(HighScoreManager.instance.KillerScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
 		sequence.Append(_achiever.DOText(HighScoreManager.instance.AchieverScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
 		sequence.Append(_socialiser.DOText(HighScoreManager.instance.SocialScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
-		sequence.Append(_explorer.DOText(HighScoreManager.instance.KillerScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
+		sequence.Append(_explorer.DOText(HighScoreManager.instance.ExplorerScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
 		sequence.Append(_totalScore.DOText(HighScoreManager.instance.CalcTotalScore().ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
 	}
 	

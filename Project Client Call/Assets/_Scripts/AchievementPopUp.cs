@@ -53,6 +53,8 @@ public class AchievementPopUp : MonoBehaviour
 	private bool isDisplaying = false;
 
 	private Rect canvasRect;
+
+	private HighScoreManager highScoreManager;
 		
 	// Use this for initialization
 	void Start ()
@@ -61,7 +63,9 @@ public class AchievementPopUp : MonoBehaviour
 		
 		achievementDictionary = new Dictionary<string, AchievementData>();
 		rectTransform = GetComponent<RectTransform>();
-		rectTransform.anchoredPosition = new Vector2(0 + rectTransform.sizeDelta.x, canvasRect.height);
+		rectTransform.anchoredPosition = new Vector2(0 + rectTransform.sizeDelta.x, 450);
+
+		highScoreManager = GameObject.FindGameObjectWithTag("HighscoreManager").GetComponent<HighScoreManager>();
 
 		foreach (AchievementData data in achievementData)
 		{
@@ -78,10 +82,10 @@ public class AchievementPopUp : MonoBehaviour
 		titleText.text = pData.title;
 		
 		
-		rectTransform.DOAnchorPos(new Vector2(0, canvasRect.height),transitionTime);
+		rectTransform.DOAnchorPos(new Vector2(0, 450),transitionTime);
 
 		isDisplaying = true;
-		
+		highScoreManager.IncreaseAchieverScore();
 		StartCoroutine(Reset(pData));
 	}
 
@@ -89,7 +93,7 @@ public class AchievementPopUp : MonoBehaviour
 	{
 		yield return  new WaitForSeconds(timeTillGone);
 		
-		rectTransform.DOAnchorPos(new Vector2(0 + rectTransform.sizeDelta.x,  canvasRect.height), transitionTime);
+		rectTransform.DOAnchorPos(new Vector2(0 + rectTransform.sizeDelta.x, 450), transitionTime);
 		DOVirtual.DelayedCall(transitionTime,() => isDisplaying =false);
 	}
 
@@ -112,4 +116,5 @@ public class AchievementPopUp : MonoBehaviour
 			achievementQueue.Enqueue(achievementDictionary[achievementName]);
 		}
 	}
+
 }
