@@ -69,7 +69,7 @@ public class HighScoreManager : MonoBehaviour
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
 		Debug.Log("Loadededed");
-		if (scene.name == "IgliScene")
+		if (scene.name == "IgliScene" || scene.name == "PartOne")
 		{
 			Debug.Log("Hellooooo");
 			totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;

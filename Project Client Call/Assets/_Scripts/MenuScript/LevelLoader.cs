@@ -20,6 +20,8 @@ public class LevelLoader : MonoBehaviour
 	private const float maxTimeNeededToCompleteLoad = 0.9f;
 
 	AsyncOperation sceneLoadingData;
+
+	private bool startedLoading = false;
 	
 	// Use this for initialization
 	void Start () 
@@ -29,7 +31,11 @@ public class LevelLoader : MonoBehaviour
 
 	public void LoadLevel(string levelName)
 	{
-		StartCoroutine(LoadLevelAsync(levelName));    //Start out Async Loading
+		if (!startedLoading)
+		{
+			startedLoading = true;
+			StartCoroutine(LoadLevelAsync(levelName));  //Start out Async Loading
+		} 
 	}
 
 	IEnumerator LoadLevelAsync(string levelName)     //Coroutine allows to load the level without disturbing the main thread.
