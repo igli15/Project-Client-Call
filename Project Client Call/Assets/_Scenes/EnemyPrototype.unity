@@ -684,6 +684,11 @@ Prefab:
       propertyPath: shouldBeDestroyed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114550816275780746, guid: 41b9af2b5a02e48578896b9151d50fb6,
+        type: 2}
+      propertyPath: reloadTime
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41b9af2b5a02e48578896b9151d50fb6, type: 2}
   m_IsPrefabAsset: 0
