@@ -60,6 +60,7 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
         }
         else
         {
+            GetComponent<EnemyAnimations>().SetIdle(false);
             GetComponent<EnemyAnimations>().SetCharge(true);
             fsmController.stateReferences.enemyMovement.Move(distanceToEndPos.normalized.x, 0);
             CheckCollisionWithPlayer();
@@ -91,7 +92,7 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
         stoped = false;
         timeOfEnterTostate = Time.time;
         if (!fsmController) fsmController = GetComponent<EnemyFsmController>();
-
+        //GetComponent<EnemyAnimations>().SetCharge(false);
         GetComponent<EnemyAnimations>().SetIdle(true);
         //CALCULATE <===========
         endChargePosition = CalculateDesiredPosition();
@@ -103,10 +104,11 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
 
     public override void Exit(IAgent pAgent)
     {
-
         GetComponent<EnemyPatrollingState>().ResetBorders();
+
         GetComponent<EnemyAnimations>().SetCharge(false);
         GetComponent<EnemyAnimations>().SetIdle(false);
+
         base.Exit(pAgent);
         fsmController.stateReferences.enemyData.MovementSpeed = initialSpeed;
 
