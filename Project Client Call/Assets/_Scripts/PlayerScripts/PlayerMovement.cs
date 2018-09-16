@@ -114,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 				CalculateJump(playerData.SecondJumpValues.jumpHeight + playerData.FirstJumpValues.jumpHeight, playerData.SecondJumpValues.jumpCompletionTime +  playerData.FirstJumpValues.jumpCompletionTime);
 				rb.velocity = Vector2.up * playerData.JumpSpeed;
 				jumpCount -= 1;
+				AchievementPopUp.QueueAchievement("DoubleJump");
 			}
 			/*playerData.JumpSpeed = playerData.SecondJumpSpeed;*/
 		} 

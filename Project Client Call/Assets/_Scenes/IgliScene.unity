@@ -2778,13 +2778,18 @@ MonoBehaviour:
   japaneseText: {fileID: 1370539620}
   backgroundImage: {fileID: 1167037139}
   achievementData:
-  - title: Jump
-    description: DoubleJump
+  - title: DoubleJump
+    description: Do One DoubleJump
     japaneseText: "\u8DF3\u8E8D"
     background: {fileID: 21300000, guid: b5eca9eed236d45eb8d8ee09cef4f846, type: 3}
     isCompleted: 0
   - title: The Beginning
     description: Kill 10 Enemies
+    japaneseText: "\u521D\u3081"
+    background: {fileID: 21300000, guid: b5eca9eed236d45eb8d8ee09cef4f846, type: 3}
+    isCompleted: 0
+  - title: Deflection Master
+    description: Deflect 20 Shurikens
     japaneseText: "\u521D\u3081"
     background: {fileID: 21300000, guid: b5eca9eed236d45eb8d8ee09cef4f846, type: 3}
     isCompleted: 0

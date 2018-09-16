@@ -15,6 +15,9 @@ public class SwordCollisions : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    private int deflectionCount;
+    private bool completed;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -22,16 +25,25 @@ public class SwordCollisions : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Projectile"))
+        if (other.CompareTag("Projectile") && !completed)
         {
+            deflectionCount += 1;
             swoosh.SetActive(true);
             swoshParticleSystem.Play();
             DisableSwordHud();
             swoosh.transform.parent = null;
+            completed = true;
         }
     }
-    
- 
+
+    private void Update()
+    {
+        if (deflectionCount >= 20)
+        {
+            AchievementPopUp.QueueAchievement("Deflection Master");
+        }
+    }
+
 
     private void CheckForAngleCollision()   //NOTE not needed now keep just in case
     {
