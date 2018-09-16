@@ -30,7 +30,7 @@ public class InsertCoinScript : MonoBehaviour {
 		if(increase) _text.fontSize += 1;
 		else {_text.fontSize -= 1; }
 
-		if(Input.GetKeyDown(KeyCode.KeypadEnter))
+		if(Input.anyKey)
 		{
 			mainMenu.SetActive(true);
 			this.gameObject.SetActive(false);		

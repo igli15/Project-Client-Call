@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class HighScoreManager : MonoBehaviour
@@ -54,35 +55,39 @@ public class HighScoreManager : MonoBehaviour
 		#endregion  
 		
 		DontDestroyOnLoad(gameObject);
-	}
-
-	void Start () 
-	{
 		
-		//TODO Uncomment all of these stuff when linking everything
+		SceneManager.sceneLoaded += OnSceneLoaded;
 		
-		totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
-		killerScoreAdd = 500000/totalEnemyNumber;
-		socialScore = 500000;
-		totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRoom").Length;
-		explorerScoreAdd = 250000/totalRoomNumbers;
-		//collectableNumber = GameObject.FindGameObjectsWithTag("Collectable").Length;
-		//collectableScoreAdd = 250000/collectableNumber;
-
 		SaveLoadScript.Load(this,"Test");
 		if (highscoreArray != null)
 		{
 			highscoreDictionary = HighScoreDictionaryFromArray(highscoreArray);   //Load array if there is one
 		}
-
 	}
+
+	
+	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+	{
+		if (scene.name == "PartOne")
+		{
+			totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
+			killerScoreAdd = 500000 / totalEnemyNumber;
+			socialScore = 500000;
+			totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRoom").Length;
+			explorerScoreAdd = 250000 / totalRoomNumbers;
+			//collectableNumber = GameObject.FindGameObjectsWithTag("Collectable").Length;
+			//collectableScoreAdd = 250000/collectableNumber;
+		}
+	}
+
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		if (Input.GetKeyDown(KeyCode.A))          //NOTE: for testing
 		{
-			SubmitHighscore("igli");
+			totalScore = 20000;
+			SubmitHighscore("test");
 			SaveHighscore();
 		}
 

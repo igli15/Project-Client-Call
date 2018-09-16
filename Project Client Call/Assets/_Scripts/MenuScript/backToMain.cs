@@ -11,8 +11,9 @@ public class backToMain : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.KeypadEnter))
+	void Update ()
+	{
+		if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Joystick1Button1)) 
 		{
 			menu.SetActive(true);
 			this.gameObject.SetActive(false);
