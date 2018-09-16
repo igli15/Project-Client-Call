@@ -2822,7 +2822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0af8cc8f24308749839a7fa94a95b3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countDown: 2.62
+  countDown: 1.2
   _killer: {fileID: 859977252}
   _achiever: {fileID: 666698921}
   _socialiser: {fileID: 910596519}
