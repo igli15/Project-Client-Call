@@ -63,7 +63,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493544465706550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.65, y: 11.29, z: 0}
+  m_LocalPosition: {x: -29.67, y: 6.25, z: 0}
   m_LocalScale: {x: 0.219, y: 0.702625, z: 0}
   m_Children:
   - {fileID: 4875595478410790}
@@ -158,7 +158,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  movementSpeedInAttack: 50
   timeBeforeShoot: 0.3
 --- !u!114 &114211860614558074
 MonoBehaviour:
@@ -251,9 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPoolTag: SmallProjectile
-  bullet: {fileID: 1521303912402666, guid: 16f0d4e6ca9229545af0eb6cead3adb4, type: 2}
   bulletPerShot: 3
-  delaybetweenBullet: 0.1
   reloadTime: 1
   randomizeMultiplier: 0.66
   bulletSpeed: 10
