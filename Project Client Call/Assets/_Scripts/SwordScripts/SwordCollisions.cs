@@ -8,25 +8,42 @@ public class SwordCollisions : MonoBehaviour
 
     [SerializeField] private PlayerAnimations playerAnimations;
 
-    [SerializeField] private GameObject swoosh;
+    [SerializeField] private GameObject swoosh;   
 
     [SerializeField]
     private ParticleSystem swoshParticleSystem;
 
-  
+    private SpriteRenderer spriteRenderer;
 
+    private int deflectionCount;
+    private bool completed;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Projectile"))
+        if (other.CompareTag("Projectile") && !completed)
         {
+            deflectionCount += 1;
             swoosh.SetActive(true);
             swoshParticleSystem.Play();
+            DisableSwordHud();
             swoosh.transform.parent = null;
+            completed = true;
         }
     }
-    
- 
+
+    private void Update()
+    {
+        if (deflectionCount >= 20)
+        {
+            AchievementPopUp.QueueAchievement("Deflection Master");
+        }
+    }
+
 
     private void CheckForAngleCollision()   //NOTE not needed now keep just in case
     {
@@ -68,5 +85,15 @@ public class SwordCollisions : MonoBehaviour
         }
     }
 
+    public void DisableSwordHud()
+    {
+        spriteRenderer.enabled = false;
+        
+    }
+    public void EnableSwordHud()
+    {
+        spriteRenderer.enabled = true;
+        
+    }
     
 }

@@ -39,6 +39,7 @@
               <e p="EnemyOnKneeState.cs" t="Include" />
               <e p="EnemyPatrollingState.cs" t="Include" />
               <e p="EnemyRangedAttackState.cs" t="Include" />
+              <e p="EnemyWaitState.cs" t="Include" />
             </e>
             <e p="EnemyTypes" t="Include">
               <e p="EnemySimple.cs" t="Include" />

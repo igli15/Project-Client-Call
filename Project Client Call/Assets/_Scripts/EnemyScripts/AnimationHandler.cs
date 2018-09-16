@@ -7,6 +7,12 @@ public class AnimationHandler : MonoBehaviour
 {
     public Action<AnimationHandler> OnThrowAnimation;
 
+    private PlayerMeleeAttack playerMeleeAttack;
+
+    private void Start()
+    {
+        playerMeleeAttack = GameObject.FindGameObjectWithTag("Player").GetComponentInParent<PlayerMeleeAttack>();
+    }
 
     public void CallOnThrowAnimation()
     {
@@ -17,6 +23,7 @@ public class AnimationHandler : MonoBehaviour
     {
         Debug.Log("ENEMY: I AM DEAD");
         HighScoreManager.instance.InreaseKillScore();
+        playerMeleeAttack.finishCount += 1;
         Destroy(transform.parent.gameObject);
     }
 

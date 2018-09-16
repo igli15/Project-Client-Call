@@ -143,13 +143,13 @@ public class SwordRotation : MonoBehaviour
 			if (swordCollider.activeSelf == false)
 			{
 				swordCollider.SetActive(true);
-				aimHudSpriteRenderer.enabled = true;
+				//aimHudSpriteRenderer.enabled = true;
 			}
 		}
 		else
 		{
 			swordCollider.SetActive(false);
-			aimHudSpriteRenderer.enabled = false;
+//			aimHudSpriteRenderer.enabled = false;
 		}
 		
 		

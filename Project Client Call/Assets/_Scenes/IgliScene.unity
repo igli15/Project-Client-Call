@@ -876,7 +876,14 @@ Prefab:
       propertyPath: firstJumpValues.jumpCompletionTime
       value: 0.3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114245042483853020, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+        type: 2}
+      propertyPath: swordCircleHudSpriteRender
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114313798413134324, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
+    - {fileID: 212530902226953984, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &341397497
@@ -1941,7 +1948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -3.000061, y: 337}
+  m_AnchoredPosition: {x: -3, y: 337}
   m_SizeDelta: {x: 450, y: 79}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &839874299
@@ -2771,14 +2778,29 @@ MonoBehaviour:
   japaneseText: {fileID: 1370539620}
   backgroundImage: {fileID: 1167037139}
   achievementData:
-  - title: Jump
-    description: DoubleJump
+  - title: DoubleJump
+    description: Do One DoubleJump
     japaneseText: "\u8DF3\u8E8D"
     background: {fileID: 21300000, guid: b5eca9eed236d45eb8d8ee09cef4f846, type: 3}
     isCompleted: 0
   - title: The Beginning
     description: Kill 10 Enemies
     japaneseText: "\u521D\u3081"
+    background: {fileID: 21300000, guid: b5eca9eed236d45eb8d8ee09cef4f846, type: 3}
+    isCompleted: 0
+  - title: Deflection Master
+    description: Deflect 20 Shurikens
+    japaneseText: "\u504F\u5411"
+    background: {fileID: 21300000, guid: b5eca9eed236d45eb8d8ee09cef4f846, type: 3}
+    isCompleted: 0
+  - title: Melee Attack
+    description: Mekee Attack 20 Enemies
+    japaneseText: "\u8FD1\u63A5"
+    background: {fileID: 21300000, guid: b5eca9eed236d45eb8d8ee09cef4f846, type: 3}
+    isCompleted: 0
+  - title: Finish Him
+    description: Finish 20 Enemies
+    japaneseText: "\u6B7B\u4EA1"
     background: {fileID: 21300000, guid: b5eca9eed236d45eb8d8ee09cef4f846, type: 3}
     isCompleted: 0
 --- !u!114 &1167037139
@@ -2927,12 +2949,12 @@ Prefab:
     - target: {fileID: 114471571939949036, guid: 76cb82caf945940de9dcfadd5bbb2b78,
         type: 2}
       propertyPath: health
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 114471571939949036, guid: 76cb82caf945940de9dcfadd5bbb2b78,
         type: 2}
       propertyPath: maxHealth
-      value: 1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1493544465706550, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
       propertyPath: m_IsActive
