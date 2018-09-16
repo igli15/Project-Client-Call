@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyOnKneeState : AbstractState<EnemyFsmController>
 {
     bool isActivated;
+   
     public void Start()
     {
         isActivated = false;
@@ -12,6 +13,7 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     public override void Enter(IAgent pAgent)
     {
         base.Enter(pAgent);
+          
         GetComponent<EnemyAnimations>().TrigerOnKneeAnimation();
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GetComponent<BoxCollider2D>().isTrigger = true;
@@ -29,9 +31,10 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
         if (isActivated) return;
         GetComponent<EnemyAnimations>().SetDeathState(true);
         GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyDeadState>();
-
+        
         isActivated = true;
     }
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {

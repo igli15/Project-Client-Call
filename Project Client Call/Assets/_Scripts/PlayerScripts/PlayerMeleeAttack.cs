@@ -8,6 +8,11 @@ public class PlayerMeleeAttack : MonoBehaviour {
     [SerializeField]
     float meleeAttackDistance = 1;
 
+    private float meleeCount = 0;
+    
+    [HideInInspector]
+    public float finishCount = 0;
+
     PlayerAnimations playerAnimations;
     void Start () {
         playerAnimations = GetComponent<PlayerAnimations>();
@@ -26,10 +31,12 @@ public class PlayerMeleeAttack : MonoBehaviour {
             {
                 if (raycast2d[i].collider.GetComponent<EnemyOnKneeState>().enabled)
                 {
+                    
                     raycast2d[i].collider.GetComponent<EnemyOnKneeState>().FinishHim();
                 }
                 else
                 {
+                    meleeCount += 1;
                     raycast2d[i].collider.GetComponent<Health>().InflictDamage(100);
                 }
 
@@ -44,6 +51,18 @@ public class PlayerMeleeAttack : MonoBehaviour {
         {
             playerAnimations.SetAttack();
         }
+
+	    if (meleeCount >= 20)
+	    {
+	        AchievementPopUp.QueueAchievement("Melee Attack");
+	        meleeCount = 0;
+	    }
+
+	    if (finishCount >= 20)
+	    {
+	        AchievementPopUp.QueueAchievement("Finish Him");
+	        finishCount = 0;
+	    }
 	}
     private void OnDrawGizmos()
     {
