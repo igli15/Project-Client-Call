@@ -20,7 +20,7 @@ public class MainMenuScript : MonoBehaviour {
 	void Update () {
 		selection = _menuScript.selectedButton;
 			Debug.Log(selection);
-		if(Input.GetKeyDown(KeyCode.KeypadEnter))
+		if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Joystick1Button1))
 		{
 			Debug.Log("doing it again");
 			switch (selection)

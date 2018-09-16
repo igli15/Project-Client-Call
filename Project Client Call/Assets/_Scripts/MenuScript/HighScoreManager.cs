@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public class HighScoreManager : MonoBehaviour
@@ -17,7 +18,9 @@ public class HighScoreManager : MonoBehaviour
 
 	[HideInInspector]
 	public HighscoreData[] highscoreArray;   //an array of datas ;D
-	
+
+	[SerializeField] 
+	private float achievementNumber = 0;
 
 	Dictionary<string,int> highscoreDictionary = new Dictionary<string,int>();
 	
@@ -31,10 +34,8 @@ public class HighScoreManager : MonoBehaviour
 	private float highscore;
 	private float killerScoreAdd;
 	private float explorerScoreAdd;
+	private float achieverScoreAdd;
 
-	private int collectableNumber;
-
-	private int collectableScoreAdd;
 
 	public static HighScoreManager instance;
 
@@ -54,38 +55,36 @@ public class HighScoreManager : MonoBehaviour
 		#endregion  
 		
 		DontDestroyOnLoad(gameObject);
-	}
-
-	void Start () 
-	{
 		
-		//TODO Uncomment all of these stuff when linking everything
+		SceneManager.sceneLoaded += OnSceneLoaded;
 		
-		totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
-		killerScoreAdd = 500000/totalEnemyNumber;
-		socialScore = 500000;
-		totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRoom").Length;
-		//explorerScoreAdd = 250000/totalRoomNumbers;
-		//collectableNumber = GameObject.FindGameObjectsWithTag("Collectable").Length;
-		//collectableScoreAdd = 250000/collectableNumber;
-
 		SaveLoadScript.Load(this,"Test");
 		if (highscoreArray != null)
 		{
 			highscoreDictionary = HighScoreDictionaryFromArray(highscoreArray);   //Load array if there is one
 		}
-
 	}
+
+	
+	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+	{
+		Debug.Log("Loadededed");
+		if (scene.name == "IgliScene" || scene.name == "PartOne")
+		{
+			Debug.Log("Hellooooo");
+			totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
+			killerScoreAdd = 500000 / totalEnemyNumber;
+			socialScore = 500000;
+			totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRoom").Length;
+			explorerScoreAdd = 250000 / totalRoomNumbers;
+			achieverScoreAdd = 250000 / achievementNumber;
+		}
+	}
+
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.A))          //NOTE: for testing
-		{
-			SubmitHighscore("igli");
-			SaveHighscore();
-		}
-
 		if (Input.GetKeyDown(KeyCode.K))
 		{
 			foreach (KeyValuePair<string,int> pair in highscoreDictionary)
@@ -96,7 +95,7 @@ public class HighScoreManager : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.D))
 		{
 			CalcTotalScore();
-			Debug.Log("Explorer: " + explorerScore);
+			Debug.Log(totalScore);
 		}
 	}
 
@@ -108,7 +107,7 @@ public class HighScoreManager : MonoBehaviour
 	}
 	public void IncreaseAchieverScore()
 	{
-		achieverScore += collectableScoreAdd;
+		achieverScore += achieverScoreAdd;
 	}
 
 	public void IncreaseExplorerScore()
@@ -116,9 +115,10 @@ public class HighScoreManager : MonoBehaviour
 		explorerScore += explorerScoreAdd;
 	}
 
-	public void CalcTotalScore()
+	public int CalcTotalScore()
 	{
 		totalScore = (int)(killerScore + socialScore + achieverScore + explorerScore);
+		return totalScore;
 	}
 	public void SubmitHighscore(string userName)         //Check if there is a username or not and apply score properly then save locally
 	{
@@ -169,5 +169,29 @@ public class HighScoreManager : MonoBehaviour
 			dictionaryToReturn.Add(arrayOfData[i].name,arrayOfData[i].score);
 		}
 		return dictionaryToReturn;
+	}
+
+	public float KillerScore
+	{
+		get { return killerScore; }
+		set { killerScore = value; }
+	}
+
+	public float AchieverScore
+	{
+		get { return achieverScore; }
+		set { achieverScore = value; }
+	}
+
+	public float ExplorerScore
+	{
+		get { return explorerScore; }
+		set { explorerScore = value; }
+	}
+
+	public float SocialScore
+	{
+		get { return socialScore; }
+		set { socialScore = value; }
 	}
 }

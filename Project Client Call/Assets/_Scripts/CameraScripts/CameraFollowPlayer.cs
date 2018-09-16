@@ -118,7 +118,7 @@ public class CameraFollowPlayer : MonoBehaviour
 			
 		sequence.Append(cam.transform.DOMoveZ(cam.transform.position.z - 4, 0.2f));
 		
-		sequence.Append(DOVirtual.DelayedCall(1f, () => movingToTarget = false));
+		sequence.Append(DOVirtual.DelayedCall(0.2f, () => movingToTarget = false));
 	}
 
 	public void EnterNormalMode(Transform triggerPos)
@@ -130,7 +130,7 @@ public class CameraFollowPlayer : MonoBehaviour
 		
 		sequence.Append(cam.transform.DOMoveZ(cam.transform.position.z + 4, 0.2f));
 		
-		sequence.Append(DOVirtual.DelayedCall(1f, () => movingToTarget = false));
+		sequence.Append(DOVirtual.DelayedCall(0.2f, () => movingToTarget = false));
 
 	}
 }

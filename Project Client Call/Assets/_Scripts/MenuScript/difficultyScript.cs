@@ -9,6 +9,7 @@ public class difficultyScript : MonoBehaviour {
 	private audioTransition _audioScript;
 	[SerializeField] private GameObject _menu;
 	[SerializeField] private LevelLoader levelLoader;
+	[SerializeField] private string levelName;
 	private int selected;
 	void Start () {
 		_menuScript = GetComponent<menuScript>();
@@ -18,13 +19,13 @@ public class difficultyScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		selected = _menuScript.selectedButton;
-		if(Input.GetKeyDown(KeyCode.KeypadEnter))
+		if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Joystick1Button1))
 		{
 			switch (selected)
 			{
 				case 0:
 				_audioScript.enabled = true;
-				levelLoader.LoadLevel("PartOne");
+				levelLoader.LoadLevel(levelName);
 
 				break;
 				case 1:
