@@ -5,41 +5,55 @@ using UnityEngine;
 public class EnemyOnKneeState : AbstractState<EnemyFsmController>
 {
     bool isActivated;
-   
+    EnemyAnimations enemyAnimations;
+    Rigidbody2D rb;
+    BoxCollider2D collider;
+    EnemyFsmController fsmController;
+
     public void Start()
     {
-        isActivated = false;
+
     }
     public override void Enter(IAgent pAgent)
     {
         base.Enter(pAgent);
         Debug.Log("OnKnee");
-        GetComponent<EnemyAnimations>().TrigerOnKneeAnimation();
-        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        GetComponent<BoxCollider2D>().isTrigger = true;
-        GetComponent<Rigidbody2D>().isKinematic = true;
-        GetComponent<BoxCollider2D>().offset -= new Vector2(-4, 0);
+        enemyAnimations.TrigerOnKneeAnimation();
+        rb.velocity = Vector3.zero;
+        collider.isTrigger = true;
+        rb.isKinematic = true;
+        collider.offset -= new Vector2(-4, 0);
     }
+
+    public void SetEverything()
+    {
+        enemyAnimations = GetComponent<EnemyAnimations>();
+        rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<BoxCollider2D>();
+        fsmController = GetComponent<EnemyFsmController>();
+
+        isActivated = false;
+    }
+
 
     void Update()
     {
-
     }
 
     public void FinishHim()
     {
         if (isActivated) return;
         Debug.Log("FINISH HIM");
-        GetComponent<EnemyAnimations>().SetDeathState(true);
-        GetComponent<EnemyFsmController>().fsm.ChangeState<EnemyDeadState>();
-        
+        enemyAnimations.SetDeathState(true);
+        fsmController.fsm.ChangeState<EnemyDeadState>();
+
         isActivated = true;
     }
-    
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Sword Collider")&&!isActivated)
+        if (other.CompareTag("Sword Collider") && !isActivated)
         {
 
         }
