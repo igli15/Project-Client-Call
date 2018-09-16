@@ -21,14 +21,6 @@ public class WordScrollManager : MonoBehaviour
 		letters = new string[maxNrOfLetters];
 	}
 	
-	// Update is called once per frame
-	void Update () 
-	{
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			Debug.Log(GenerateUserName());
-		}
-	}
 
 	public void AddCharacter(int index,string letter)
 	{

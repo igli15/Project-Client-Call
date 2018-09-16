@@ -121,9 +121,9 @@ public class HighScoreManager : MonoBehaviour
 		explorerScore += explorerScoreAdd;
 	}
 
-	public void CalcTotalScore()
+	public int CalcTotalScore()
 	{
-		totalScore = (int)(killerScore + socialScore + achieverScore + explorerScore);
+		return totalScore = (int)(killerScore + socialScore + achieverScore + explorerScore);
 	}
 	public void SubmitHighscore(string userName)         //Check if there is a username or not and apply score properly then save locally
 	{

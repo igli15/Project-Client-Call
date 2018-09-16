@@ -74,6 +74,7 @@
             <e p="MainMenuScript.cs" t="Include" />
             <e p="menuScript.cs" t="Include" />
             <e p="resolutionScreenManager.cs" t="Include" />
+            <e p="SaveScoreButton.cs" t="Include" />
             <e p="ScoreBoardManager.cs" t="Include" />
           </e>
           <e p="ObjectPooler.cs" t="Include" />
