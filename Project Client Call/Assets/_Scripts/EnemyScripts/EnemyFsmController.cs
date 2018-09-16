@@ -66,7 +66,8 @@ public class EnemyFsmController : MonoBehaviour, IAgent
             stateReferences = new StateReferences(GetComponent<EnemyData>(), GetComponent<EnemyMovement>(),
                 GetComponent<EnemyMeleeAttack>(), GetComponent<EnemyRangedAttack>());
 
-            GetComponent<EnemyOnKneeState>().SetEverything();
+            try { GetComponent<EnemyOnKneeState>().SetEverything(); }
+            catch { }
             areComponentsReady = true;
         }
 
