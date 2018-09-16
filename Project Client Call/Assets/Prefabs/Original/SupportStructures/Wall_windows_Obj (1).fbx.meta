@@ -1,26 +1,35 @@
 fileFormatVersion: 2
-guid: acad1e6aed0dba440a5c051239c05290
+guid: a8c1f3f1f3c6e1d4f82d0ef9906cb77f
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Flags
-    100004: TopPiece1
-    400000: //RootNode
-    400002: Flags
-    400004: TopPiece1
+    100000: polySurface314
+    100002: polySurface315
+    100004: polySurface325
+    100006: polySurface326
+    100008: //RootNode
+    400000: polySurface314
+    400002: polySurface315
+    400004: polySurface325
+    400006: polySurface326
+    400008: //RootNode
     2100000: lambert1
-    2100002: lambert3
-    2100004: lambert2
-    2300000: //RootNode
-    2300002: Flags
-    2300004: TopPiece1
-    3300000: //RootNode
-    3300002: Flags
-    3300004: TopPiece1
-    4300000: polySurface67
-    4300002: Flags
-    4300004: TopPiece1
+    2300000: polySurface314
+    2300002: polySurface315
+    2300004: polySurface325
+    2300006: polySurface326
+    2300008: //RootNode
+    3300000: polySurface314
+    3300002: polySurface315
+    3300004: polySurface325
+    3300006: polySurface326
+    3300008: //RootNode
+    4300000: pCube127
+    4300002: polySurface314
+    4300004: polySurface315
+    4300006: polySurface325
+    4300008: polySurface326
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -72,6 +81,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
