@@ -29,13 +29,15 @@ GameObject:
   - component: {fileID: 114389757254950100}
   - component: {fileID: 114556528476344102}
   - component: {fileID: 114361860768168044}
+  - component: {fileID: 114678519311876638}
+  - component: {fileID: 114882893142954832}
   m_Layer: 11
   m_Name: EnemyTank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1874323815404504
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   maxHealth: 1
-  shouldBeDestroyed: 1
+  shouldBeDestroyed: 0
 --- !u!114 &114557390917011616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,6 +265,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e175972d320704488787a15092db6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114678519311876638
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035239169236850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24d36179a59a0845b1facb86b64ea7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+--- !u!114 &114882893142954832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035239169236850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1687dbcc38f73094d8f03d2f66cd73a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!212 &212537105468919618
 SpriteRenderer:
   m_ObjectHideFlags: 1
