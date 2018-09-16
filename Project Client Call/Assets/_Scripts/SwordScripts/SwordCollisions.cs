@@ -8,13 +8,20 @@ public class SwordCollisions : MonoBehaviour
 
     [SerializeField] private PlayerAnimations playerAnimations;
 
-    [SerializeField] private GameObject swoosh;
+    [SerializeField] private GameObject swoosh;   
 
     [SerializeField]
     private ParticleSystem swoshParticleSystem;
 
-  
+    [SerializeField] 
+    private SpriteRenderer swordCircleHudSpriteRender;
 
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,6 +29,7 @@ public class SwordCollisions : MonoBehaviour
         {
             swoosh.SetActive(true);
             swoshParticleSystem.Play();
+            DisableSwordHud();
             swoosh.transform.parent = null;
         }
     }
@@ -68,5 +76,17 @@ public class SwordCollisions : MonoBehaviour
         }
     }
 
+    public void DisableSwordHud()
+    {
+        spriteRenderer.enabled = false;
+        swordCircleHudSpriteRender.enabled = false;
+        
+    }
+    public void EnableSwordHud()
+    {
+        spriteRenderer.enabled = true;
+        swordCircleHudSpriteRender.enabled = true;
+        
+    }
     
 }
