@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
-public class resolutionScreenManager : MonoBehaviour {
+public class ResolutionScreenManager : MonoBehaviour {
 
 	// Use this for initialization
+	
+	
 	[SerializeField] private float countDown;
 	private Sequence sequence;
 	[SerializeField] private Text _killer;
@@ -17,7 +19,7 @@ public class resolutionScreenManager : MonoBehaviour {
 	void Start () {
 		sequence = DOTween.Sequence();
 
-		sequence.Append(_killer.DOText("200000",countDown,true,ScrambleMode.Numerals,"0123456789"));
+		sequence.Append(_killer.DOText(HighScoreManager.instance.KillerScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
 		sequence.Append(_achiever.DOText("200000",countDown,true,ScrambleMode.Numerals,"0123456789"));
 		sequence.Append(_socialiser.DOText("200000",countDown,true,ScrambleMode.Numerals,"0123456789"));
 		sequence.Append(_explorer.DOText("200000",countDown,true,ScrambleMode.Numerals,"0123456789"));

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/PartOne.unity
     guid: 444be7337823ab94d983fea89bcd5686
+  - enabled: 1
+    path: Assets/_Scenes/IgliScene.unity
+    guid: a15fca7401fe6be4b9a789b36cedb8e1
   m_configObjects: {}

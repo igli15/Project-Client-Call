@@ -16,7 +16,6 @@ public class SwordCollisions : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private int deflectionCount;
-    private bool completed;
 
     private void Start()
     {
@@ -25,14 +24,14 @@ public class SwordCollisions : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Projectile") && !completed)
+        if (other.CompareTag("Projectile"))
         {
             deflectionCount += 1;
             swoosh.SetActive(true);
             swoshParticleSystem.Play();
             DisableSwordHud();
             swoosh.transform.parent = null;
-            completed = true;
+           
         }
     }
 

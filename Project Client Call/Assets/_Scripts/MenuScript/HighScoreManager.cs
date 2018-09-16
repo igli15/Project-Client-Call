@@ -175,4 +175,28 @@ public class HighScoreManager : MonoBehaviour
 		}
 		return dictionaryToReturn;
 	}
+
+	public float KillerScore
+	{
+		get { return killerScore; }
+		set { killerScore = value; }
+	}
+
+	public float AchieverScore
+	{
+		get { return achieverScore; }
+		set { achieverScore = value; }
+	}
+
+	public float ExplorerScore
+	{
+		get { return explorerScore; }
+		set { explorerScore = value; }
+	}
+
+	public float SocialScore
+	{
+		get { return socialScore; }
+		set { socialScore = value; }
+	}
 }
