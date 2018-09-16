@@ -56,9 +56,4 @@ public class BulletCollision : MonoBehaviour
         }
         
 	}
-
-	private void OnCollisionEnter(Collision other)
-	{
-		
-	}
 }

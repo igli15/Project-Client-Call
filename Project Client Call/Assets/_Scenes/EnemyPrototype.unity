@@ -1074,7 +1074,7 @@ MonoBehaviour:
     size: 10
   - tag: BigProjectile
     prefab: {fileID: 1876726565960982, guid: a4b19232ed2a57245bc759e08e31a460, type: 2}
-    size: 600
+    size: 200
 --- !u!4 &711843961
 Transform:
   m_ObjectHideFlags: 0

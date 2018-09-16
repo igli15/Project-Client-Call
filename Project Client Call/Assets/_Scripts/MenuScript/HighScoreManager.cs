@@ -65,7 +65,7 @@ public class HighScoreManager : MonoBehaviour
 		killerScoreAdd = 500000/totalEnemyNumber;
 		socialScore = 500000;
 		totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRoom").Length;
-		explorerScoreAdd = 250000/totalRoomNumbers;
+		//explorerScoreAdd = 250000/totalRoomNumbers;
 		//collectableNumber = GameObject.FindGameObjectsWithTag("Collectable").Length;
 		//collectableScoreAdd = 250000/collectableNumber;
 
