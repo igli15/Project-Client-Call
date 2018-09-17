@@ -2959,6 +2959,11 @@ Prefab:
       propertyPath: health
       value: 999
       objectReference: {fileID: 0}
+    - target: {fileID: 114172608397966066, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+        type: 2}
+      propertyPath: movementSpeed
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114313798413134324, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5, type: 2}
