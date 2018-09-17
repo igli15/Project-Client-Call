@@ -19,7 +19,7 @@ public class difficultyScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		selected = _menuScript.selectedButton;
-		if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+		if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.Space))
 		{
 			switch (selected)
 			{

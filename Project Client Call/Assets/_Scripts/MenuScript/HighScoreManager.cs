@@ -68,10 +68,8 @@ public class HighScoreManager : MonoBehaviour
 	
 	void OnSceneLoaded(Scene scene, LoadSceneMode mode)
 	{
-		Debug.Log("Loadededed");
-		if (scene.name == "IgliScene" || scene.name == "PartOne")
+		try
 		{
-			Debug.Log("Hellooooo");
 			totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
 			killerScoreAdd = 500000 / totalEnemyNumber;
 			socialScore = 500000;
@@ -79,9 +77,14 @@ public class HighScoreManager : MonoBehaviour
 			explorerScoreAdd = 250000 / totalRoomNumbers;
 			achieverScoreAdd = 250000 / achievementNumber;
 		}
-	}
-
+		catch (Exception e)
+		{
+			Debug.Log("Not level scene");
+		}
 	
+	}
+	
+
 	// Update is called once per frame
 	void Update () 
 	{
