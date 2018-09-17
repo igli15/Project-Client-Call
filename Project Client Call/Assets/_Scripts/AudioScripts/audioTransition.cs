@@ -12,6 +12,7 @@ public class audioTransition : MonoBehaviour {
 	[SerializeField] private GameObject introVideo;
 	[SerializeField] private GameObject menuVideo;
 	[SerializeField] private GameObject _skipButton;
+	[SerializeField] private LevelLoader levelLoader;
 	private float waitingTime;
 	private float buttonTimer = 1;
 	void Start () { 
@@ -27,6 +28,7 @@ public class audioTransition : MonoBehaviour {
 		if(waitingTime <= 0 & introVideo.GetComponent<VideoPlayer>().isPrepared == true)
 		{
 			introVideo.GetComponent<VideoPlayer>().Play();
+			//levelLoader.LoadLevel("IgliScene");
 			
 		}
 		if(waitingTime <= -0.1f)
