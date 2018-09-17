@@ -161,6 +161,7 @@ public class EnemyFsmController : MonoBehaviour, IAgent
     public void PlayBloodParticleSystem(Transform pos)
     {
         bloodParticleSystem.gameObject.transform.position = pos.position;
+        bloodParticleSystem.gameObject.transform.right = -pos.right;
         bloodParticleSystem.Play();
     }
 
