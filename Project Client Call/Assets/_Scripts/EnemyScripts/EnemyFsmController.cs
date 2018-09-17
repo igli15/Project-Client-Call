@@ -17,7 +17,13 @@ public class EnemyFsmController : MonoBehaviour, IAgent
     private float radiusOfMeleeeAttack;
     private float radiusOfFootStepsHearing;
     private bool isDead;
+    
+    [HideInInspector]
+    public Health health;
 
+    [SerializeField]
+    private ParticleSystem bloodParticleSystem;
+    
     Vector2 distanceToPLayer
     {
         get { return stateReferences.enemyData.Player.transform.position - transform.position; }
@@ -50,10 +56,13 @@ public class EnemyFsmController : MonoBehaviour, IAgent
         {
             fsm = new Fsm<EnemyFsmController>(this);
         }
+
+        health = GetComponent<Health>();
         areComponentsReady = false;
         isDead = false;
         fsm.ChangeState<EnemyPatrollingState>();
-        GetComponent<Health>().OnDeath += OnDeath;
+         health.OnDeath += OnDeath;
+        
         radiusOfFootStepsHearing = GetComponent<EnemyPatrollingState>().RadiusOfFootStepsHearing;
         radiusOfShooting = GetComponent<EnemyPatrollingState>().RadiusOfRangedAttack;
         radiusOfMeleeeAttack = GetComponent<EnemyPatrollingState>().RadiusOfMelleAttack;
@@ -148,6 +157,13 @@ public class EnemyFsmController : MonoBehaviour, IAgent
             fsm.ChangeState<EnemyPatrollingState>();
         }
     }
+
+    public void PlayBloodParticleSystem(Transform pos)
+    {
+        bloodParticleSystem.gameObject.transform.position = pos.position;
+        bloodParticleSystem.Play();
+    }
+
 }
 
 public struct StateReferences

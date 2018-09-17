@@ -50,7 +50,12 @@ public class BulletCollision : MonoBehaviour
         if (isReflected && other.transform.CompareTag("Enemy"))
         {
             if (other.GetComponent<EnemyOnKneeState>().enabled) return;
-            other.GetComponent<Health>().InflictDamage(damage);
+
+	        EnemyFsmController enemyFsmController = other.GetComponent<EnemyFsmController>();
+			enemyFsmController.health.InflictDamage(damage);
+	        enemyFsmController.PlayBloodParticleSystem(transform);
+
+	       
             if (isReflectable) ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
             else ObjectPooler.instance.DestroyFromPool("BigProjectile", gameObject);
         }
