@@ -10,7 +10,7 @@ public class BulletBehaviour : MonoBehaviour
     
     private void FixedUpdate()
     {
-        transform.Rotate(new Vector3(0, 0, speedOfRotation));
+        //transform.Rotate(new Vector3(0, 0, speedOfRotation));
     }
 
 }
