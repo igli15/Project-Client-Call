@@ -24,7 +24,7 @@ public class sideScrollMusicTrigger : MonoBehaviour {
 	void Start () {
 		startFadeOut = false;
 		startPlaying = fadingTime;
-		audioSource.GetComponent<AudioClip>().LoadAudioData();
+		audioSource.GetComponent<AudioSource>().clip.LoadAudioData();
 		nextEventTime =AudioSettings.dspTime + 2.0f;
 	}
 	
