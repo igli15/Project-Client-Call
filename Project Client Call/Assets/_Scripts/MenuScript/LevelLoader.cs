@@ -16,6 +16,9 @@ public class LevelLoader : MonoBehaviour
 
 	[SerializeField]
 	private UnityEvent OnLoadFinished;
+	
+	[SerializeField]
+	private UnityEvent OnLoadStarted;
 
 	private const float maxTimeNeededToCompleteLoad = 0.9f;
 
@@ -24,9 +27,10 @@ public class LevelLoader : MonoBehaviour
 	private bool startedLoading = false;
 	
 	// Use this for initialization
-	void Start () 
+	void Start ()
 	{
-		
+		//Application.backgroundLoadingPriority = ThreadPriority.Low;
+	
 	}
 
 	public void LoadLevel(string levelName)
@@ -40,8 +44,11 @@ public class LevelLoader : MonoBehaviour
 
 	IEnumerator LoadLevelAsync(string levelName)     //Coroutine allows to load the level without disturbing the main thread.
 	{
-		//yield return new WaitForSeconds(1);         // if you want to load slowly */
-
+		OnLoadStarted.Invoke();
+		
+		yield return new WaitForSeconds(0.4f);         // if you want to load slowly */
+		
+		Application.backgroundLoadingPriority = ThreadPriority.Low;
 		sceneLoadingData = SceneManager.LoadSceneAsync(levelName);   //Get the data and load async
 		
 		sceneLoadingData.allowSceneActivation = false;           //Don't automatically go to the next level if finished
