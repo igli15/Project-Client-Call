@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyCannoneerAnimation/EnemyCannoneerDeath.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -243,7 +241,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
+            <state relative-caret-position="836">
               <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
               <folding>
                 <marker date="1537175301271" expanded="false" signature="6:139" ph="..." />
@@ -475,12 +473,12 @@
       <workItem from="1536649833322" duration="11874000" />
       <workItem from="1536912378380" duration="306000" />
       <workItem from="1537097033550" duration="5431000" />
-      <workItem from="1537175238250" duration="228000" />
+      <workItem from="1537175238250" duration="558000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153255000" />
+    <option name="totallyTimeSpent" value="153585000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -978,7 +976,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
+        <state relative-caret-position="836">
           <caret line="42" column="10" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
           <folding>
             <marker date="1537175301271" expanded="false" signature="6:139" ph="..." />
