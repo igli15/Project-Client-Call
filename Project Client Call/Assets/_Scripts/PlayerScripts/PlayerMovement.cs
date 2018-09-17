@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 	[SerializeField] 
 	private float swordSprite;
 	
+    public bool IsGrounded { get { return isGrounded; } }
+
 	private PlayerData playerData;
 	private Rigidbody2D rb;
 	private bool isGrounded;
@@ -48,11 +50,13 @@ public class PlayerMovement : MonoBehaviour
 	private Vector2 smoothedVec;
 	
 	private PlayerAnimations playerAnimations;
-	
+    [HideInInspector]
+    public bool canMoveHorizontally;
 	// Use this for initialization
 	void Start ()
 	{
-		rb = GetComponent<Rigidbody2D>();
+        canMoveHorizontally = true;
+        rb = GetComponent<Rigidbody2D>();
 		playerData = GetComponent<PlayerData>();
 		playerAnimations = GetComponent<PlayerAnimations>();
 		
@@ -67,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		MoveHorizontally(); 
+		if(canMoveHorizontally) MoveHorizontally(); 
 	}
 
 	private void Update()

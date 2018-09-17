@@ -7,14 +7,22 @@ public class PlayerMeleeAttack : MonoBehaviour {
     // Use this for initialization
     [SerializeField]
     float meleeAttackDistance = 1;
-
+    [SerializeField]
+    float reloadTime=1;
     private float meleeCount = 0;
     
     [HideInInspector]
     public float finishCount = 0;
 
+    float lastTimeOfMelee;
+    Rigidbody2D rb;
     PlayerAnimations playerAnimations;
+    PlayerMovement movement;
+ 
     void Start () {
+        lastTimeOfMelee = 0;
+        movement = GetComponent<PlayerMovement>();
+        rb = GetComponent<Rigidbody2D>();
         playerAnimations = GetComponent<PlayerAnimations>();
         PlayerAnimationHandler.OnMeleeAttackAnimationFinished += OnAnimFinished;
 	}
@@ -33,13 +41,15 @@ public class PlayerMeleeAttack : MonoBehaviour {
             {
                 if (raycast2d[i].collider.GetComponent<EnemyOnKneeState>().enabled)
                 {
-                    
                     raycast2d[i].collider.GetComponent<EnemyOnKneeState>().FinishHim();
+                    raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                 }
                 else
                 {
                     meleeCount += 1;
+                    raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                     raycast2d[i].collider.GetComponent<Health>().InflictDamage(100);
+                    raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                 }
 
             }
@@ -49,8 +59,16 @@ public class PlayerMeleeAttack : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
+            if (Time.time < lastTimeOfMelee + reloadTime) return;
+            lastTimeOfMelee = Time.time;
+            if (movement.IsGrounded)
+            {
+                rb.velocity = Vector2.zero;
+                movement.canMoveHorizontally = false;
+                StartCoroutine(WaitTillMeleeFinishes(0.5f));
+            }
             playerAnimations.SetAttack();
         }
 
@@ -66,6 +84,14 @@ public class PlayerMeleeAttack : MonoBehaviour {
 	        finishCount = 0;
 	    }
 	}
+
+    IEnumerator WaitTillMeleeFinishes(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+        movement.canMoveHorizontally = true;
+
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
