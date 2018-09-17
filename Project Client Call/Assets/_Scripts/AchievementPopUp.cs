@@ -52,14 +52,11 @@ public class AchievementPopUp : MonoBehaviour
 
 	private bool isDisplaying = false;
 
-	private Rect canvasRect;
-
 	private HighScoreManager highScoreManager;
 		
 	// Use this for initialization
 	void Start ()
 	{
-		canvasRect = GetComponentInParent<Canvas>().pixelRect;
 		
 		achievementDictionary = new Dictionary<string, AchievementData>();
 		rectTransform = GetComponent<RectTransform>();
