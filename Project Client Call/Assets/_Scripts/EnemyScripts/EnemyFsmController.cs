@@ -102,7 +102,6 @@ public class EnemyFsmController : MonoBehaviour, IAgent
 
     void OnDeath(Health health)
     {
-        Debug.Log("ON_DEATH");
         isDead = true;
         fsm.ChangeState<EnemyOnKneeState>();
     }
