@@ -1112,6 +1112,81 @@ MonoBehaviour:
   introVideo: {fileID: 977344668}
   menuVideo: {fileID: 1603692137}
   _skipButton: {fileID: 807757009}
+--- !u!1 &305059415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305059416}
+  - component: {fileID: 305059418}
+  - component: {fileID: 305059417}
+  m_Layer: 5
+  m_Name: ScoreText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &305059416
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305059415}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999636, y: 0.99999636, z: 0.99999636}
+  m_Children: []
+  m_Father: {fileID: 1251737475}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5814286, y: 0.17167494}
+  m_AnchorMax: {x: 0.72714293, y: 0.43151796}
+  m_AnchoredPosition: {x: -0.40000153, y: 3.7003174}
+  m_SizeDelta: {x: 6.4000015, y: 8.5005}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &305059417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305059415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 60
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Scores
+--- !u!222 &305059418
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305059415}
+  m_CullTransparentMesh: 0
 --- !u!1 &307965992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1557,7 @@ GameObject:
   - component: {fileID: 477933397}
   - component: {fileID: 477933396}
   m_Layer: 5
-  m_Name: Text
+  m_Name: NameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1501,10 +1576,10 @@ RectTransform:
   m_Father: {fileID: 1251737475}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -215.9}
-  m_SizeDelta: {x: 619.8, y: 303.9}
+  m_AnchorMin: {x: 0.3164286, y: 0.17167494}
+  m_AnchorMax: {x: 0.44142854, y: 0.4362769}
+  m_AnchoredPosition: {x: 0.3999939, y: 1.2000122}
+  m_SizeDelta: {x: 4.600006, y: 3.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477933396
 MonoBehaviour:
@@ -1527,18 +1602,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 60
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scores
+  m_Text: Names
 --- !u!222 &477933397
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1870,7 +1945,7 @@ RectTransform:
   m_Children:
   - {fileID: 2021446425}
   m_Father: {fileID: 1251737475}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2780,7 +2855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9855cbdb62027416ab73f317f2e8fcf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highscoreTextField: {fileID: 477933396}
+  highscoreTextField: {fileID: 305059417}
+  nameTextField: {fileID: 477933396}
 --- !u!1 &937482305
 GameObject:
   m_ObjectHideFlags: 0
@@ -3689,7 +3765,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1251737475}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3869,6 +3945,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477933395}
+  - {fileID: 305059416}
   - {fileID: 1076613710}
   - {fileID: 657081741}
   m_Father: {fileID: 856697006}
