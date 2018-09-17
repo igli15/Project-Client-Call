@@ -49,6 +49,7 @@ public class PlayerMeleeAttack : MonoBehaviour {
                     meleeCount += 1;
                     raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                     raycast2d[i].collider.GetComponent<Health>().InflictDamage(100);
+                    raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                 }
 
             }

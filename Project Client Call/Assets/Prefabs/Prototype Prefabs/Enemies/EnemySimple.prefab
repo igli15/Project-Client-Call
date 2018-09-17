@@ -127,7 +127,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493544465706550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.67, y: 6.25, z: 0}
+  m_LocalPosition: {x: 1.97, y: 6.25, z: 0}
   m_LocalScale: {x: 0.219, y: 0.702625, z: 0}
   m_Children:
   - {fileID: 4875595478410790}
@@ -208,7 +208,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004775524, y: -0.024439573}
+  m_Offset: {x: -0.29294997, y: -0.037912726}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -219,7 +219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.0548615, y: 2.3703022}
+  m_Size: {x: 1.0952622, y: 2.343356}
   m_EdgeRadius: 0
 --- !u!95 &95262341632785224
 Animator:
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  radiusOfPatrolling: 3.19
+  radiusOfPatrolling: 2.67
   radiusOfRangedAttack: 6.95
   radiusOfMeleeAttack: 1.08
   radiusOfFootStepHearing: 3.88
@@ -347,6 +347,8 @@ MonoBehaviour:
   reloadTime: 1
   randomizeMultiplier: 0.66
   bulletSpeed: 10
+  horizontalOffsetOfShooting: 1
+  verticalOffsetOfShooting: 0
 --- !u!114 &114879985552815260
 MonoBehaviour:
   m_ObjectHideFlags: 1

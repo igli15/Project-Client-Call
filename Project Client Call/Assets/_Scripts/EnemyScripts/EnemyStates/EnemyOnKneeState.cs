@@ -43,7 +43,6 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     public void FinishHim()
     {
         if (isActivated) return;
-        Debug.Log("FINISH HIM");
         enemyAnimations.SetDeathState(true);
         fsmController.fsm.ChangeState<EnemyDeadState>();
 
