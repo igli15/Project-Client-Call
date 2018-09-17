@@ -23,7 +23,10 @@ public class EnemyRangedAttack : MonoBehaviour
     float randomizeMultiplier = 0;
     [SerializeField]
     float bulletSpeed;
-
+    [SerializeField]
+    float horizontalOffsetOfShooting=1;
+    [SerializeField]
+    float verticalOffsetOfShooting = 0;
     float bulletPreShotCount;
     float initReloadTime;
     float lastTimeShot;
@@ -63,7 +66,7 @@ public class EnemyRangedAttack : MonoBehaviour
         for (int i = 0; i < bulletPerShot; i++)
         {
             directionToShoot += new Vector3(0, (Random.value - 0.5f) * randomizeMultiplier);
-            GameObject newBullet = ObjectPooler.instance.SpawnFromPool(objectPoolTag, transform.position + directionToShoot, Quaternion.identity); //Buller spawn
+            GameObject newBullet = ObjectPooler.instance.SpawnFromPool(objectPoolTag, transform.position +transform.up*verticalOffsetOfShooting+transform.right*horizontalOffsetOfShooting, Quaternion.identity); //Buller spawn
             newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed;
         }
     }

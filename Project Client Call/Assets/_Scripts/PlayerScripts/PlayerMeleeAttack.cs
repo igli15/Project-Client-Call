@@ -22,8 +22,10 @@ public class PlayerMeleeAttack : MonoBehaviour {
     void OnAnimFinished(PlayerAnimationHandler sender)
     {
         int layerMask = 1 << 11 | (1 << 9);
+
+        Vector2 size = Vector2.one;
         
-        RaycastHit2D[] raycast2d = Physics2D.RaycastAll(transform.position, transform.right* meleeAttackDistance, meleeAttackDistance, layerMask);
+        RaycastHit2D[] raycast2d = Physics2D.BoxCastAll(transform.position, size,0, transform.right, meleeAttackDistance,layerMask);
 
         for (int i = 0; i < raycast2d.Length; i++)
         {
