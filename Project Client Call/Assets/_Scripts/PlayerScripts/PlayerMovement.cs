@@ -98,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
 			
 			//rb.velocity = Vector2.up * playerData.JumpSpeed;
 			
+			AudioManagerScript.instance.PlaySound("Jump");
 			CalculateJump(playerData.FirstJumpValues.jumpHeight,playerData.FirstJumpValues.jumpCompletionTime);
 			rb.velocity = Vector2.up * playerData.JumpSpeed;
 
@@ -115,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button5))
 			{
+				AudioManagerScript.instance.PlaySound("SecondJump");
 				CalculateJump(playerData.SecondJumpValues.jumpHeight + playerData.FirstJumpValues.jumpHeight, playerData.SecondJumpValues.jumpCompletionTime +  playerData.FirstJumpValues.jumpCompletionTime);
 				rb.velocity = Vector2.up * playerData.JumpSpeed;
 				jumpCount -= 1;

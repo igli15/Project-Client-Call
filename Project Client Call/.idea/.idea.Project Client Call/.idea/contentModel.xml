@@ -10,6 +10,10 @@
         <e p="_Scripts" t="Include">
           <e p="AchievementPopUp.cs" t="Include" />
           <e p="AudioScripts" t="Include">
+            <e p="AudioManager" t="Include">
+              <e p="AudioManagerScript.cs" t="Include" />
+              <e p="Sound.cs" t="Include" />
+            </e>
             <e p="audioTransition.cs" t="Include" />
             <e p="IntroScript.cs" t="Include" />
             <e p="WorldMusic.cs" t="Include" />
@@ -22,6 +26,9 @@
             <e p="CameraFollowPlayer.cs" t="Include" />
           </e>
           <e p="Encryption.cs" t="Include" />
+          <e p="EnemyManager" t="Include">
+            <e p="EnemyManager.cs" t="Include" />
+          </e>
           <e p="EnemyScripts" t="Include">
             <e p="AnimationHandler.cs" t="Include" />
             <e p="EnemyAI.cs" t="Include" />

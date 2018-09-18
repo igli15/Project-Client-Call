@@ -11,24 +11,22 @@ public class PlayerCollisions : MonoBehaviour
 	private GameObject resolutionScreen;
 	
 	private Camera mainCam;
+
+	private Health health;
 	
 	private void Start()
 	{
 		mainCam = Camera.main;
+		health = GetComponentInParent<Health>();
 	}
 
-	/*private void OnTriggerEnter2D(Collider2D other)
+	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.CompareTag("ArenaExitTrigger"))
+		if (other.transform.CompareTag("Spikes"))
 		{
-			mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraFollowPlayerState>();
-		
+			health.InflictDamage(100);
 		}
-		if (other.CompareTag("ArenaEnterTrigger"))
-		{
-			mainCam.GetComponent<CameraFsmController>().fsm.ChangeState<CameraArenaState>();
-		}
-	}*/
+	}
 	
 	private void OnTriggerExit2D(Collider2D other)
 	{

@@ -14,6 +14,7 @@ TagManager:
   - ExplorerRoom
   - EndTrigger
   - HighscoreManager
+  - Spikes
   layers:
   - Default
   - TransparentFX

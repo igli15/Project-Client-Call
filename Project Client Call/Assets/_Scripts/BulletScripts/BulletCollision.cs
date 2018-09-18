@@ -39,7 +39,6 @@ public class BulletCollision : MonoBehaviour
             if (isReflectable) ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
             else ObjectPooler.instance.DestroyFromPool("BigProjectile", gameObject);
         }
-
 		if (other.transform.CompareTag("Player"))
 		{
             other.transform.parent.GetComponent<Health>().InflictDamage(damage);
@@ -50,6 +49,7 @@ public class BulletCollision : MonoBehaviour
         {
             if (other.GetComponent<EnemyOnKneeState>().enabled) return;
 
+	        AudioManagerScript.instance.PlaySound("ShurikenHit");
 	        EnemyFsmController enemyFsmController = other.GetComponent<EnemyFsmController>();
 			enemyFsmController.health.InflictDamage(damage);
 	        enemyFsmController.PlayBloodParticleSystem(transform);
