@@ -31,13 +31,16 @@ public class EnemyRangedAttack : MonoBehaviour
     float initReloadTime;
     float lastTimeShot;
 
+    private EnemyFsmController enemyFsmController;
+
     EnemyData enemyData;
     private void Start()
     {
         initReloadTime = reloadTime;
         bulletPreShotCount = 0;
         lastTimeShot = 0;
-        enemyData=GetComponent<EnemyData>();
+        enemyData = GetComponent<EnemyData>();
+        enemyFsmController = GetComponent<EnemyFsmController>();
         enemyData.AnimHandler.OnThrowAnimation += ActualShootToTarget;
     }
 
@@ -46,6 +49,11 @@ public class EnemyRangedAttack : MonoBehaviour
         if (Time.time < lastTimeShot + reloadTime) return; //Checking how much time passed since last shot
         lastTimeShot = Time.time;
 
+        if (enemyFsmController.GetEnemyType == EnemyFsmController.EnemyType.Cannoneer)
+        {
+            AudioManagerScript.instance.PlaySound("CannonFuse");
+        }
+            
         GetComponent<EnemyAnimations>().TrigerShootingAnimation(); // <============================== CALLING ANIMATION  || ANIMATION WILL CALL ACTUAL SHOOT FUNC.
 
         /*if (bulletPerShot > 0 && bulletPreShotCount<bulletPerShot)
@@ -61,7 +69,15 @@ public class EnemyRangedAttack : MonoBehaviour
 
     public void ActualShootToTarget(AnimationHandler animHandler)
     {
-        AudioManagerScript.instance.PlaySound("ShurikenThrow");
+        if (enemyFsmController.GetEnemyType == EnemyFsmController.EnemyType.Cannoneer)
+        {
+            AudioManagerScript.instance.PlaySound("CannonShot");
+        }
+        else
+        {
+            AudioManagerScript.instance.PlaySound("ShurikenThrow");
+        }
+
         Vector3 directionToShoot = enemyData.Player.transform.position - transform.position;
         directionToShoot.Normalize();
         for (int i = 0; i < bulletPerShot; i++)

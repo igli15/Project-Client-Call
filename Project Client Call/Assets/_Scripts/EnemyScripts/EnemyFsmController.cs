@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyFsmController : MonoBehaviour, IAgent
 {
-    enum EnemyType { Simple, Tank, Striker, Cannoneer }
+    public enum EnemyType { Simple, Tank, Striker, Cannoneer }
     [SerializeField]
     EnemyType enemyType;
 
@@ -163,8 +163,14 @@ public class EnemyFsmController : MonoBehaviour, IAgent
         bloodParticleSystem.gameObject.transform.right = -pos.right;
         bloodParticleSystem.Play();
     }
+    
 
+    public EnemyType GetEnemyType
+    {
+        get { return enemyType; }
+    }
 }
+
 
 public struct StateReferences
 {

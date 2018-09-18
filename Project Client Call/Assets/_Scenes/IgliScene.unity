@@ -1307,7 +1307,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1747281027610544, guid: 41b9af2b5a02e48578896b9151d50fb6, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41b9af2b5a02e48578896b9151d50fb6, type: 2}
@@ -1391,6 +1391,24 @@ MonoBehaviour:
     pitch: 1
     spatialBlend: 1
     doplerEffect: 1
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: CannonFuse
+    clip: {fileID: 8300000, guid: 29696ff06058534438e3abec043aea15, type: 3}
+    volume: 0.8
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 1
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: CannonShot
+    clip: {fileID: 8300000, guid: 824ac0f9e0765504d80ab5dc4cf93ed7, type: 3}
+    volume: 0.6
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 3.58
     loop: 0
     RollOffMode: 0
     audioSource: {fileID: 0}
