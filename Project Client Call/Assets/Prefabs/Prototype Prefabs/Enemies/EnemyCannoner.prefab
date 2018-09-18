@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 114796952135983240}
   - component: {fileID: 114816891605236294}
   - component: {fileID: 114294839019888112}
+  - component: {fileID: 70055738164073836}
   m_Layer: 11
   m_Name: EnemyCannoner
   m_TagString: Enemy
@@ -127,8 +128,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747281027610544}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -14.920001, y: 6.47, z: 0}
-  m_LocalScale: {x: 0.219, y: 0.77, z: 1}
+  m_LocalPosition: {x: 345.61862, y: 20.11, z: -0.5}
+  m_LocalScale: {x: -0.219, y: 0.77, z: 1}
   m_Children:
   - {fileID: 4045942251628420}
   - {fileID: 4857568425117610}
@@ -202,7 +203,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747281027610544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -221,6 +222,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0548615, y: 1.8326626}
   m_EdgeRadius: 0
+--- !u!70 &70055738164073836
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747281027610544}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3, y: 0}
+  m_Size: {x: 2.14, y: 2.69}
+  m_Direction: 0
 --- !u!95 &95112514265964678
 Animator:
   serializedVersion: 3
@@ -297,6 +313,8 @@ MonoBehaviour:
   reloadTime: 2
   randomizeMultiplier: 0
   bulletSpeed: 10
+  horizontalOffsetOfShooting: 1
+  verticalOffsetOfShooting: 0
 --- !u!114 &114589336067655878
 MonoBehaviour:
   m_ObjectHideFlags: 1

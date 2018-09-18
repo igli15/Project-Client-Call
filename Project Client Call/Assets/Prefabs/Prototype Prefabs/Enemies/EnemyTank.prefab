@@ -31,13 +31,14 @@ GameObject:
   - component: {fileID: 114361860768168044}
   - component: {fileID: 114678519311876638}
   - component: {fileID: 114882893142954832}
+  - component: {fileID: 70983121915113040}
   m_Layer: 11
   m_Name: EnemyTank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1376367413083944
 GameObject:
   m_ObjectHideFlags: 1
@@ -142,7 +143,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1035239169236850}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.7300005, y: 10.84, z: 0}
+  m_LocalPosition: {x: 346.3295, y: 32.17, z: 0}
   m_LocalScale: {x: 0.219, y: 0.77, z: 1}
   m_Children:
   - {fileID: 4758483093281734}
@@ -202,7 +203,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1035239169236850}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -221,6 +222,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0548615, y: 2.2506661}
   m_EdgeRadius: 0
+--- !u!70 &70983121915113040
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035239169236850}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3, y: -0.17}
+  m_Size: {x: 2.73, y: 2.7}
+  m_Direction: 0
 --- !u!95 &95556213917777352
 Animator:
   serializedVersion: 3
@@ -251,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  radiusOfPatrolling: 20
+  radiusOfPatrolling: 4.87
   radiusOfRangedAttack: 0
   radiusOfMeleeAttack: 5.19
   radiusOfFootStepHearing: 3.15
