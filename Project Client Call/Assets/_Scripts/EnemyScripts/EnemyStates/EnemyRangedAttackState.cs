@@ -12,11 +12,11 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
 
     private EnemyRangedAttack rangedAttack;
     private EnemyFsmController fsmController;
-
+    private EnemyAnimations animations;
     float timeMovementStarted;
     public void Start()
     {
-     
+        
     }
 
     public void Update()
@@ -40,19 +40,20 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
 
     public override void Enter(IAgent pAgent)
     {
+        if(!animations) animations = GetComponent<EnemyAnimations>();
         if (!fsmController) fsmController = GetComponent<EnemyFsmController>();
-        GetComponent<EnemyRangedAttack>().SeetReloadZero();
+        fsmController.stateReferences.enemyRangedAttack.SeetReloadZero();
         currentLocalFsmState = localFsmState.Movement;
         timeMovementStarted = Time.time;
-        GetComponent<EnemyAnimations>().SetAttackState(true);
+        animations.SetAttackState(true);
         base.Enter(pAgent);
         fsmController.stateReferences.enemyMovement.FaceToPlayer();
     }
 
     public override void Exit(IAgent pAgent)
     {
-        GetComponent<EnemyRangedAttack>().ResetReloadTime();
-        GetComponent<EnemyAnimations>().SetAttackState(false);
+        fsmController.stateReferences.enemyRangedAttack.ResetReloadTime();
+        animations.SetAttackState(false);
         base.Exit(pAgent);
     }
 

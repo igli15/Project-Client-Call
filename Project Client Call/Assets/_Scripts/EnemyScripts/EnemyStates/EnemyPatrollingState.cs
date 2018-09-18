@@ -22,6 +22,7 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
 
     EnemyFsmController fsmController;
 
+    Rigidbody2D rb;
     Vector3 destination1;
     Vector3 destination2;
 
@@ -36,6 +37,7 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
         running = true;
         currentDirection = 1;
         fsmController = GetComponent<EnemyFsmController>();
+        rb = GetComponent<Rigidbody2D>();
 
         ResetBorders();
     }
@@ -73,7 +75,7 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
     public override void Exit(IAgent pAgent)
     {
         base.Exit(pAgent);
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+       rb.velocity = Vector2.zero;
     }
 
     public void OnDrawGizmosSelected()
