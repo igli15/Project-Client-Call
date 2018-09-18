@@ -26,6 +26,7 @@ public class SwordCollisions : MonoBehaviour
     {
         if (other.CompareTag("Projectile"))
         {
+            AudioManagerScript.instance.PlaySound("Deflect");
             deflectionCount += 1;
             swoosh.SetActive(true);
             swoshParticleSystem.Play();
