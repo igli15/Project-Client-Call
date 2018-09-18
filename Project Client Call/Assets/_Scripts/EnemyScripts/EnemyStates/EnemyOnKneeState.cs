@@ -17,7 +17,6 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     public override void Enter(IAgent pAgent)
     {
         base.Enter(pAgent);
-        Debug.Log("OnKnee");
         enemyAnimations.TrigerOnKneeAnimation();
         rb.velocity = Vector3.zero;
         collider.isTrigger = true;
@@ -49,12 +48,4 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
         isActivated = true;
     }
 
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Sword Collider") && !isActivated)
-        {
-
-        }
-    }
 }
