@@ -13,7 +13,8 @@ public class sideScrollMusicTrigger : MonoBehaviour {
 	[SerializeField] private bool arenaException = false;
 	[SerializeField] private AudioSource arenaSource;
 	[SerializeField] private AudioClip arenaLoopClip;
-	private float startPlaying;
+    [SerializeField] private EnemyManager enemyManager;
+    private float startPlaying;
 	private bool startFadeOut;
 	private float bpm = 143.93f;
 	private int numBeatsPerSegment = 4;
@@ -49,6 +50,7 @@ public class sideScrollMusicTrigger : MonoBehaviour {
 			{
 				arenaLoopPlaying = true;
 				arenaSource.Play();
+                enemyManager.SpawnEnemies("arena_1");
 				worldMusic.MusicTransitionFadeOutSudden(worldMusic.arenaLoopSS, 0);
 			}
 			/*double time = AudioSettings.dspTime;
