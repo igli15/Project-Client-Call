@@ -127,9 +127,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747281027610544}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 345.61862, y: 20.11, z: -0.5}
-  m_LocalScale: {x: -0.219, y: 0.77, z: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 19.710022, y: 21.442001, z: 0}
+  m_LocalScale: {x: 0.219, y: 0.77, z: 1}
   m_Children:
   - {fileID: 4045942251628420}
   - {fileID: 4857568425117610}
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   radiusOfPatrolling: 0
-  radiusOfRangedAttack: 6.95
+  radiusOfRangedAttack: 13.04
   radiusOfMeleeAttack: 1.08
   radiusOfFootStepHearing: 3.88
 --- !u!114 &114294839019888112
