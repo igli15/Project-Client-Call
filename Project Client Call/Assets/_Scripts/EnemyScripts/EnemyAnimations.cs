@@ -16,11 +16,6 @@ public class EnemyAnimations : MonoBehaviour {
 		
 	}
 
-    public void SetSpeedOfEnemy(float speedOfEnemy)
-    {
-        animator.SetFloat("speedOfEnemy", speedOfEnemy);
-    }
-
     public void SetAttackState(bool attackState)
     {
         animator.SetBool("AttackState", attackState);
