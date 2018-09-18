@@ -1385,6 +1385,15 @@ MonoBehaviour:
     loop: 0
     RollOffMode: 0
     audioSource: {fileID: 0}
+  - name: ShurikenHit
+    clip: {fileID: 8300000, guid: c7d3854aa73100043aa731b6e4021afc, type: 3}
+    volume: 0.1
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 1
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
 --- !u!4 &389327254
 Transform:
   m_ObjectHideFlags: 0
