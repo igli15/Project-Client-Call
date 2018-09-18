@@ -41,12 +41,14 @@ public class PlayerMeleeAttack : MonoBehaviour {
             {
                 if (raycast2d[i].collider.GetComponent<EnemyOnKneeState>().enabled)
                 {
+                    AudioManagerScript.instance.PlaySound("SwordKill");
                     raycast2d[i].collider.GetComponent<EnemyOnKneeState>().FinishHim();
                     raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                 }
                 else
                 {
                     meleeCount += 1;
+                    AudioManagerScript.instance.PlaySound("SwordKill");
                     raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                     raycast2d[i].collider.GetComponent<Health>().InflictDamage(100);
                     raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
@@ -62,6 +64,7 @@ public class PlayerMeleeAttack : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             if (Time.time < lastTimeOfMelee + reloadTime) return;
+            AudioManagerScript.instance.PlaySound("Melee");
             lastTimeOfMelee = Time.time;
             if (movement.IsGrounded)
             {

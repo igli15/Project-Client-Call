@@ -1358,6 +1358,24 @@ MonoBehaviour:
     loop: 0
     RollOffMode: 0
     audioSource: {fileID: 0}
+  - name: Melee
+    clip: {fileID: 8300000, guid: a382d78c7cd814d409e98b477a4076f3, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    doplerEffect: 0
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: SwordKill
+    clip: {fileID: 8300000, guid: 0fc1a0e8487c60b47ad34d06b8fffa7e, type: 3}
+    volume: 0.08
+    pitch: 1.65
+    spatialBlend: 0
+    doplerEffect: 0
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
 --- !u!4 &389327254
 Transform:
   m_ObjectHideFlags: 0
