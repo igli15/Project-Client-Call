@@ -42,12 +42,14 @@ public class EnemyData : MonoBehaviour
         int levelOfDificulties = PlayerPrefs.GetInt("levelOfDifficulty");
         if (levelOfDificulties == 0)
         {
+            Debug.Log("NORMAL");
             bulletSpeed = normalBulletSpeed;
             bulletsPerShot = normalBulletPerShot;
             reloadTime = nomralReloadTime;
         }
         else
         {
+            Debug.Log("HARD");
             bulletSpeed = hardBulletSpeed;
             bulletsPerShot = hardBulletPerShot;
             reloadTime = hardReloadTime;
@@ -55,9 +57,9 @@ public class EnemyData : MonoBehaviour
     }
 
 
-    public float BulletSpeed { get { return hardBulletSpeed; } set { hardBulletSpeed = value; } }
-    public float ReloadSpeed { get { return hardReloadTime; } }
-    public float BulletPerShot { get { return hardBulletSpeed; } }
+    public float BulletSpeed { get { return bulletSpeed; } set { bulletSpeed = value; } }
+    public float ReloadSpeed { get { return reloadTime; } }
+    public float BulletPerShot { get { return bulletSpeed; } }
 
     public float MovementSpeed
     {

@@ -275,6 +275,16 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114211860614558074, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: hardBulletPerShot
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844166430410410, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: randomizeMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
   m_IsPrefabAsset: 0
@@ -463,6 +473,11 @@ Prefab:
     - target: {fileID: 4476426648403764, guid: 03f837f4cec224521b87de3438b5d9c2, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078270200696476, guid: 03f837f4cec224521b87de3438b5d9c2,
+        type: 2}
+      propertyPath: hardBulletPerShot
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f837f4cec224521b87de3438b5d9c2, type: 2}
@@ -739,6 +754,16 @@ Prefab:
       propertyPath: m_Name
       value: EnemySimple (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114211860614558074, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: hardBulletPerShot
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844166430410410, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: randomizeMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
   m_IsPrefabAsset: 0
@@ -896,6 +921,11 @@ Prefab:
         type: 2}
       propertyPath: offsetOfShooting
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114976225099857406, guid: 41b9af2b5a02e48578896b9151d50fb6,
+        type: 2}
+      propertyPath: hardBulletPerShot
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41b9af2b5a02e48578896b9151d50fb6, type: 2}
@@ -1190,6 +1220,16 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.70263
       objectReference: {fileID: 0}
+    - target: {fileID: 114211860614558074, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: hardBulletPerShot
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844166430410410, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: randomizeMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
   m_IsPrefabAsset: 0
@@ -1310,6 +1350,16 @@ Prefab:
     - target: {fileID: 4334057719925276, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114211860614558074, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: hardBulletPerShot
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114844166430410410, guid: 76cb82caf945940de9dcfadd5bbb2b78,
+        type: 2}
+      propertyPath: randomizeMultiplier
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
@@ -2261,8 +2311,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 100
-  bulletSpeed: 10
-  reloadTime: 0
+  hardBulletSpeed: 10
+  hardReloadTime: 1
+  hardBulletPerShot: 3
+  normalBulletSpeed: 7
+  nomralReloadTime: 1.5
+  normalBulletPerShot: 1
   animHandler: {fileID: 1109366943}
 --- !u!50 &1021211696
 Rigidbody2D:
@@ -2917,6 +2971,11 @@ Prefab:
         type: 2}
       propertyPath: radiusOfPatrolling
       value: 5.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078270200696476, guid: 03f837f4cec224521b87de3438b5d9c2,
+        type: 2}
+      propertyPath: hardBulletPerShot
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f837f4cec224521b87de3438b5d9c2, type: 2}

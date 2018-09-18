@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/IgliScene.unity
     guid: a15fca7401fe6be4b9a789b36cedb8e1
+  - enabled: 1
+    path: Assets/_Scenes/EnemyPrototype.unity
+    guid: b9c17c61dd402ff4f8ea8065d61fdda0
   m_configObjects: {}
