@@ -61,6 +61,7 @@ public class EnemyRangedAttack : MonoBehaviour
 
     public void ActualShootToTarget(AnimationHandler animHandler)
     {
+        AudioManagerScript.instance.PlaySound("ShurikenThrow");
         Vector3 directionToShoot = enemyData.Player.transform.position - transform.position;
         directionToShoot.Normalize();
         for (int i = 0; i < bulletPerShot; i++)

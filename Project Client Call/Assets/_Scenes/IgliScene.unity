@@ -1071,7 +1071,7 @@ AudioListener:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 282840810}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!114 &282840812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1373,6 +1373,15 @@ MonoBehaviour:
     pitch: 1.65
     spatialBlend: 0
     doplerEffect: 0
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: ShurikenThrow
+    clip: {fileID: 8300000, guid: fc7fe142f97c08c4687251a0d480c8b7, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 1.42
     loop: 0
     RollOffMode: 0
     audioSource: {fileID: 0}
@@ -5229,6 +5238,18 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76cb82caf945940de9dcfadd5bbb2b78, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1356970522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1664043145904872, guid: 5190410f6f1e94ffa9dbf4cc64da9dd5,
+    type: 2}
+  m_PrefabInternal: {fileID: 329570606}
+--- !u!81 &1356970533
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1356970522}
+  m_Enabled: 1
 --- !u!1 &1358023992
 GameObject:
   m_ObjectHideFlags: 0
