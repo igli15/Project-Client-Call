@@ -84,7 +84,13 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
     public Vector3 CalculateDesiredPosition()
     {
         fsmController.stateReferences.enemyMovement.FaceToPlayer();
-        return transform.position + transform.right * distanceOfCharge;
+
+        RaycastHit2D raycast2d = Physics2D.Raycast(transform.position, transform.right, distanceOfCharge, 1<<9);
+        if (raycast2d.collider != null)
+        {
+            return transform.position + transform.right *( raycast2d.distance -0.5f);
+        }
+        else return transform.position + transform.right * distanceOfCharge;
     }
 
     public override void Enter(IAgent pAgent)
@@ -104,13 +110,15 @@ public class EnemyChaseAndMeleeAttackState : AbstractState<EnemyFsmController>
 
     public override void Exit(IAgent pAgent)
     {
-        GetComponent<EnemyPatrollingState>().ResetBorders();
+       
 
         GetComponent<EnemyAnimations>().SetCharge(false);
         GetComponent<EnemyAnimations>().SetIdle(false);
 
         base.Exit(pAgent);
         fsmController.stateReferences.enemyData.MovementSpeed = initialSpeed;
+        fsmController.stateReferences.enemyMovement.FaceToPlayer();
+        GetComponent<EnemyPatrollingState>().ResetBorders();
 
     }
 

@@ -44,8 +44,21 @@ public class EnemyPatrollingState : AbstractState<EnemyFsmController>
 
     public void ResetBorders()
     {
-        destination1 = (transform.position - new Vector3(radiusOfPatrolling, 0, 0));
-        destination2 = (transform.position + new Vector3(radiusOfPatrolling, 0, 0));
+        int layerMask = (1 << 9);
+        
+        RaycastHit2D raycast2d = Physics2D.Raycast(transform.position,new Vector2(-1,0), radiusOfPatrolling, layerMask);
+        if (raycast2d.collider != null)
+        {
+            destination1 = (transform.position - new Vector3(raycast2d.distance-0.5f, 0, 0));
+        }
+        else destination1 = (transform.position - new Vector3(radiusOfPatrolling, 0, 0));
+
+        raycast2d = Physics2D.Raycast(transform.position, new Vector2(1,0), radiusOfPatrolling, layerMask);
+        if (raycast2d.collider != null)
+        {
+            destination2 = (transform.position + new Vector3(raycast2d.distance -0.5f, 0, 0));
+        }
+        else destination2 = (transform.position + new Vector3(radiusOfPatrolling, 0, 0));
     }
 
     public void Update()
