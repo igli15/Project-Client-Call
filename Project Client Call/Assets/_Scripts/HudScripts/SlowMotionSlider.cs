@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
@@ -32,6 +33,7 @@ public class SlowMotionSlider : MonoBehaviour
 	private Slider slowMoSlider;
 	private bool refillSlider = false;
 	private bool consumeSlider = false;
+
 	
 	// Use this for initialization
 	void Start ()
