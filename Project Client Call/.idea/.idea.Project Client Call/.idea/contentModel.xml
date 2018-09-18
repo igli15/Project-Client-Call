@@ -106,6 +106,7 @@
           <e p="TimeManager.cs" t="Include" />
           <e p="Utils.cs" t="Include" />
         </e>
+        <e p="BulletHalo.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
             <e p="DOTween43.xml" t="Include" />
@@ -114,6 +115,7 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="PostProccesingManager.cs" t="Include" />
         <e p="PostProcessing" t="Include">
           <e p="Editor" t="Include">
             <e p="Attributes" t="Include">

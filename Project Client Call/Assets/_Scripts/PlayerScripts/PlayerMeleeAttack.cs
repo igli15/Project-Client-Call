@@ -19,7 +19,8 @@ public class PlayerMeleeAttack : MonoBehaviour {
     PlayerAnimations playerAnimations;
     PlayerMovement movement;
  
-    void Start () {
+    void Start () 
+    {
         lastTimeOfMelee = 0;
         movement = GetComponent<PlayerMovement>();
         rb = GetComponent<Rigidbody2D>();
@@ -42,12 +43,18 @@ public class PlayerMeleeAttack : MonoBehaviour {
                 if (raycast2d[i].collider.GetComponent<EnemyOnKneeState>().enabled)
                 {
                     AudioManagerScript.instance.PlaySound("SwordKill");
+                    
+                    HighScoreManager.instance.InreaseKillScore();
+                    HighScoreManager.instance.DecreaseSocializerScore();
                     raycast2d[i].collider.GetComponent<EnemyOnKneeState>().FinishHim();
                     raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                 }
                 else
                 {
+                    HighScoreManager.instance.IncreaseSocializerScore();
+                    
                     meleeCount += 1;
+                    
                     AudioManagerScript.instance.PlaySound("SwordKill");
                     raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                     raycast2d[i].collider.GetComponent<Health>().InflictDamage(100);

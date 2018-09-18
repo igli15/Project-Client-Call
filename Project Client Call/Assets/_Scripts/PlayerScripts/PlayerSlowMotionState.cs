@@ -10,7 +10,7 @@ public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 
 	public static Action<PlayerSlowMotionState> OnDeflectionStateEntered;
 	public static Action<PlayerSlowMotionState> OnDeflectionStateExit;
-
+	public static Action<PlayerSlowMotionState> OnSlowMoState;
 	
 	// Use this for initialization
 	void Start ()
@@ -28,7 +28,7 @@ public class PlayerSlowMotionState : AbstractState<PlayerFsmController>
 
 	private void Update()
 	{
-
+		if (OnSlowMoState != null) OnSlowMoState(this);
 	}
 
 	public override void Exit(IAgent pAgent)
