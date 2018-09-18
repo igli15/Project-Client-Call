@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1314315749328562}
+  m_IsPrefabAsset: 1
+--- !u!1 &1314315749328562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4691537094191298}
+  - component: {fileID: 114834986995917002}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4691537094191298
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314315749328562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7529992, y: 2.3810475, z: -6.3408327}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114834986995917002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314315749328562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3302f6267e0a428d86e2fa2ef1d7579, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Jump
+    clip: {fileID: 8300000, guid: c436747363ea3df4babe616a0df2e329, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    doplerEffect: 0
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: SecondJump
+    clip: {fileID: 8300000, guid: 16f9f20ff346e3042977b8a7e4ff2680, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    doplerEffect: 0
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: Melee
+    clip: {fileID: 8300000, guid: a382d78c7cd814d409e98b477a4076f3, type: 3}
+    volume: 0.2
+    pitch: 1
+    spatialBlend: 0
+    doplerEffect: 0
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: SwordKill
+    clip: {fileID: 8300000, guid: 0fc1a0e8487c60b47ad34d06b8fffa7e, type: 3}
+    volume: 0.08
+    pitch: 1.65
+    spatialBlend: 0
+    doplerEffect: 0
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: ShurikenThrow
+    clip: {fileID: 8300000, guid: fc7fe142f97c08c4687251a0d480c8b7, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 1.42
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: ShurikenHit
+    clip: {fileID: 8300000, guid: c7d3854aa73100043aa731b6e4021afc, type: 3}
+    volume: 0.1
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 1
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: CannonFuse
+    clip: {fileID: 8300000, guid: 29696ff06058534438e3abec043aea15, type: 3}
+    volume: 0.8
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 1
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: CannonShot
+    clip: {fileID: 8300000, guid: 824ac0f9e0765504d80ab5dc4cf93ed7, type: 3}
+    volume: 0.6
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 3.58
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: SmokeSound
+    clip: {fileID: 8300000, guid: 20557426ab4d40541954a5d9303dfdef, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 2.08
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
+  - name: Deflect
+    clip: {fileID: 8300000, guid: d57e589cf122440c4820231bda3b9d48, type: 3}
+    volume: 0.1
+    pitch: 1
+    spatialBlend: 0
+    doplerEffect: 0
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}

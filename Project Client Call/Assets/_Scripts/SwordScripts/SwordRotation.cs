@@ -33,7 +33,6 @@ public class SwordRotation : MonoBehaviour
 
 	private bool joystickUsed = false;
 
-
 	private bool canRotate = true;
 
 	private Vector3 smoothedPos;  //just as ref....
