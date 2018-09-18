@@ -1412,6 +1412,15 @@ MonoBehaviour:
     loop: 0
     RollOffMode: 0
     audioSource: {fileID: 0}
+  - name: SmokeSound
+    clip: {fileID: 8300000, guid: 20557426ab4d40541954a5d9303dfdef, type: 3}
+    volume: 0.3
+    pitch: 1
+    spatialBlend: 1
+    doplerEffect: 2.08
+    loop: 0
+    RollOffMode: 0
+    audioSource: {fileID: 0}
 --- !u!4 &389327254
 Transform:
   m_ObjectHideFlags: 0

@@ -36,6 +36,8 @@ public class EnemyManager : MonoBehaviour
     {
         foreach (GameObject enemy in arenaGroupsDictionary[tag])
         {
+            AudioManagerScript.instance.PlaySound("SmokeSound");
+            
            GameObject particle =  ObjectPooler.instance.SpawnFromPool("EnemySpawnParticles", enemy.transform.position + new Vector3(0,0,-2), transform.rotation);
             particle.transform.parent = enemy.transform;
             particle.transform.localScale = new Vector3(0.5f,0.5f,0.5f);
