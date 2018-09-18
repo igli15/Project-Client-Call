@@ -14,15 +14,8 @@ public class EnemyRangedAttack : MonoBehaviour
     string objectPoolTag;
 
     [SerializeField]
-    float bulletPerShot = 1;
-
-    [SerializeField]
-    float reloadTime;
-
-    [SerializeField]
     float randomizeMultiplier = 0;
-    [SerializeField]
-    float bulletSpeed;
+
     [SerializeField]
     float horizontalOffsetOfShooting=1;
     [SerializeField]
@@ -36,17 +29,17 @@ public class EnemyRangedAttack : MonoBehaviour
     EnemyData enemyData;
     private void Start()
     {
-        initReloadTime = reloadTime;
+        enemyData = GetComponent<EnemyData>();
+        initReloadTime = enemyData.BulletSpeed;
         bulletPreShotCount = 0;
         lastTimeShot = 0;
-        enemyData = GetComponent<EnemyData>();
         enemyFsmController = GetComponent<EnemyFsmController>();
         enemyData.AnimHandler.OnThrowAnimation += ActualShootToTarget;
     }
 
     public void ShootTo(Vector3 targetPosition)
     {
-        if (Time.time < lastTimeShot + reloadTime) return; //Checking how much time passed since last shot
+        if (Time.time < lastTimeShot + enemyData.ReloadSpeed) return; //Checking how much time passed since last shot
         lastTimeShot = Time.time;
 
         if (enemyFsmController.GetEnemyType == EnemyFsmController.EnemyType.Cannoneer)
@@ -80,11 +73,11 @@ public class EnemyRangedAttack : MonoBehaviour
 
         Vector3 directionToShoot = enemyData.Player.transform.position - transform.position;
         directionToShoot.Normalize();
-        for (int i = 0; i < bulletPerShot; i++)
+        for (int i = 0; i < enemyData.BulletPerShot; i++)
         {
             directionToShoot += new Vector3(0, (Random.value - 0.5f) * randomizeMultiplier);
             GameObject newBullet = ObjectPooler.instance.SpawnFromPool(objectPoolTag, transform.position +transform.up*verticalOffsetOfShooting+transform.right*horizontalOffsetOfShooting, Quaternion.identity); //Buller spawn
-            newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * bulletSpeed;
+            newBullet.GetComponent<Rigidbody2D>().velocity = directionToShoot * enemyData.BulletSpeed;
         }
     }
 
@@ -92,7 +85,7 @@ public class EnemyRangedAttack : MonoBehaviour
     {
         bulletPreShotCount = 0;
         lastTimeShot = Time.time;
-        reloadTime = initReloadTime;
+        enemyData.BulletSpeed = initReloadTime;
     }
 
     public void SeetReloadZero()
@@ -102,7 +95,7 @@ public class EnemyRangedAttack : MonoBehaviour
 
     public float GetBulletSpeed()
     {
-        return bulletSpeed;
+        return enemyData.BulletSpeed;
     }
 }
 
