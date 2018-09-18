@@ -72,7 +72,6 @@ public class HighScoreManager : MonoBehaviour
 		{
 			totalEnemyNumber = GameObject.FindGameObjectsWithTag("Enemy").Length;
 			killerScoreAdd = 500000 / totalEnemyNumber;
-			socialScore = 500000;
 			totalRoomNumbers = GameObject.FindGameObjectsWithTag("ExplorerRoom").Length;
 			explorerScoreAdd = 250000 / totalRoomNumbers;
 			achieverScoreAdd = 250000 / achievementNumber;
@@ -102,11 +101,19 @@ public class HighScoreManager : MonoBehaviour
 		}
 	}
 
+	public void IncreaseSocializerScore()
+	{
+		socialScore += killerScoreAdd;   //killer score add is just the ratio of the enemies don't mind the name :P
+	}
 
+	public void DecreaseSocializerScore()
+	{
+		socialScore -= killerScoreAdd;   //killer score add is just the ratio of the enemies don't mind the name :P
+	}
+	
 	public void InreaseKillScore()
 	{
 		killerScore +=killerScoreAdd;
-		socialScore -= killerScoreAdd;
 	}
 	public void IncreaseAchieverScore()
 	{
