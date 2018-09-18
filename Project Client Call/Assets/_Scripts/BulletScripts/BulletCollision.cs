@@ -36,17 +36,20 @@ public class BulletCollision : MonoBehaviour
 
         if (other.transform.CompareTag("Ground"))
         {
+            isReflected = false;
             if (isReflectable) ObjectPooler.instance.DestroyFromPool("SmallProjectile", gameObject);
             else ObjectPooler.instance.DestroyFromPool("BigProjectile", gameObject);
         }
 		if (other.transform.CompareTag("Player"))
 		{
+            isReflected = false;
             other.transform.parent.GetComponent<Health>().InflictDamage(damage);
 			if(isReflectable) ObjectPooler.instance.DestroyFromPool("SmallProjectile",gameObject);
             else ObjectPooler.instance.DestroyFromPool("BigProjectile", gameObject);
         }
         if (isReflected && other.transform.CompareTag("Enemy"))
         {
+            isReflected = false;
             if (other.GetComponent<EnemyOnKneeState>().enabled) return;
 
 	        AudioManagerScript.instance.PlaySound("ShurikenHit");
