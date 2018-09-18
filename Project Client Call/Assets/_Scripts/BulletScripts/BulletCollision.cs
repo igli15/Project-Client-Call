@@ -10,9 +10,8 @@ public class BulletCollision : MonoBehaviour
     float damageMultiplier = 1.5f;
     [SerializeField]
     bool isReflectable=false;
-
-    //TODO: ADD this 
-    //isReflectable  <== Cannoneerr's projectiles dont get reflected
+    [SerializeField]
+    float reflectedSpeed = 10;
 
 	private Rigidbody2D rb;
     [HideInInspector]
@@ -31,7 +30,7 @@ public class BulletCollision : MonoBehaviour
 		if (other.CompareTag("Sword Collider")&& isReflectable)
 		{
 			if(rb != null)
-			rb.velocity = other.transform.parent.right * enemyRangedAttack.GetBulletSpeed() * damageMultiplier*TimeManager.timeSlowScale ;
+			rb.velocity = other.transform.parent.right *reflectedSpeed * damageMultiplier*TimeManager.timeSlowScale ;
             isReflected = true;
 		}
 
