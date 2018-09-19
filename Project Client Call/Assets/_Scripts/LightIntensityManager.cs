@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class BulletHalo : MonoBehaviour
+public class LightIntensityManager : MonoBehaviour
 {
 	[SerializeField] 
 	private float timeTillMaxIntensity = 0.2f;

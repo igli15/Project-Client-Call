@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="" />
+    <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/BulletHalo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BulletHalo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyCannoneerAnimation/EnemyCannoneerDeath.meta" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +22,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="32281" />
+          <entry key="cs" value="32325" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="32281" />
+          <entry key="C#" value="32325" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -106,7 +109,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/ObjectPooler.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
@@ -163,20 +166,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/BulletHalo.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="822">
-              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+            <state relative-caret-position="54">
+              <caret line="5" column="34" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
               <folding>
-                <marker date="1537299629278" expanded="false" signature="6:97" ph="..." />
-                <marker date="1537299629278" expanded="true" signature="138:1202" ph="{...}" />
-                <marker date="1537299629278" expanded="true" signature="342:581" ph="{...}" />
-                <marker date="1537299629278" expanded="true" signature="644:774" ph="{...}" />
-                <marker date="1537299629278" expanded="true" signature="700:771" ph="{...}" />
-                <marker date="1537299629278" expanded="true" signature="838:968" ph="{...}" />
-                <marker date="1537299629278" expanded="true" signature="894:965" ph="{...}" />
-                <marker date="1537299629278" expanded="true" signature="995:1200" ph="{...}" />
+                <marker date="1537352340023" expanded="false" signature="6:97" ph="..." />
+                <marker date="1537352340023" expanded="true" signature="149:1213" ph="{...}" />
+                <marker date="1537352340023" expanded="true" signature="353:592" ph="{...}" />
+                <marker date="1537352340023" expanded="true" signature="655:785" ph="{...}" />
+                <marker date="1537352340023" expanded="true" signature="711:782" ph="{...}" />
+                <marker date="1537352340023" expanded="true" signature="849:979" ph="{...}" />
+                <marker date="1537352340023" expanded="true" signature="905:976" ph="{...}" />
+                <marker date="1537352340023" expanded="true" signature="1006:1211" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -472,7 +475,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171293000" />
+    <option name="totallyTimeSpent" value="171498000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -556,7 +559,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/IScrolablle.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/HudScripts/WordScroll.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
@@ -1107,19 +1109,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/ObjectPooler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="58" column="45" selection-start-line="58" selection-start-column="45" selection-end-line="58" selection-end-column="45" />
+          <folding>
+            <marker date="1537350633721" expanded="false" signature="6:116" ph="..." />
+            <marker date="1537350633721" expanded="true" signature="159:1966" ph="{...}" />
+            <marker date="1537350633721" expanded="true" signature="210:308" ph="{...}" />
+            <marker date="1537350633721" expanded="true" signature="494:585" ph="{...}" />
+            <marker date="1537350633721" expanded="true" signature="530:579" ph="{...}" />
+            <marker date="1537350633721" expanded="true" signature="638:1137" ph="{...}" />
+            <marker date="1537350633721" expanded="true" signature="752:1131" ph="{...}" />
+            <marker date="1537350633721" expanded="true" signature="879:1066" ph="{...}" />
+            <marker date="1537350633721" expanded="true" signature="1218:1657" ph="{...}" />
+            <marker date="1537350633721" expanded="true" signature="1728:1963" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/BulletHalo.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="822">
-          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        <state relative-caret-position="54">
+          <caret line="5" column="34" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="34" />
           <folding>
-            <marker date="1537299629278" expanded="false" signature="6:97" ph="..." />
-            <marker date="1537299629278" expanded="true" signature="138:1202" ph="{...}" />
-            <marker date="1537299629278" expanded="true" signature="342:581" ph="{...}" />
-            <marker date="1537299629278" expanded="true" signature="644:774" ph="{...}" />
-            <marker date="1537299629278" expanded="true" signature="700:771" ph="{...}" />
-            <marker date="1537299629278" expanded="true" signature="838:968" ph="{...}" />
-            <marker date="1537299629278" expanded="true" signature="894:965" ph="{...}" />
-            <marker date="1537299629278" expanded="true" signature="995:1200" ph="{...}" />
+            <marker date="1537352340023" expanded="false" signature="6:97" ph="..." />
+            <marker date="1537352340023" expanded="true" signature="149:1213" ph="{...}" />
+            <marker date="1537352340023" expanded="true" signature="353:592" ph="{...}" />
+            <marker date="1537352340023" expanded="true" signature="655:785" ph="{...}" />
+            <marker date="1537352340023" expanded="true" signature="711:782" ph="{...}" />
+            <marker date="1537352340023" expanded="true" signature="849:979" ph="{...}" />
+            <marker date="1537352340023" expanded="true" signature="905:976" ph="{...}" />
+            <marker date="1537352340023" expanded="true" signature="1006:1211" ph="{...}" />
           </folding>
         </state>
       </provider>
