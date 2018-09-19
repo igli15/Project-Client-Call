@@ -26,7 +26,7 @@ public class BulletHalo : MonoBehaviour
 
 	private void IncreaseIntensity(PlayerSlowMotionState sender)
 	{
-		decreaseTween.Kill();
+		increaseTween = null;
 		if (increaseTween == null)
 		{
 			increaseTween = light.DOIntensity(1, timeTillMaxIntensity);
@@ -35,7 +35,7 @@ public class BulletHalo : MonoBehaviour
 	
 	private void DecreaseIntensity(PlayerSlowMotionState sender)
 	{
-		increaseTween.Kill();
+		decreaseTween = null;
 		if (decreaseTween == null)
 		{
 			decreaseTween = light.DOIntensity(0, timeTillMaxIntensity);
