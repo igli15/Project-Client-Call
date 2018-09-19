@@ -26,8 +26,30 @@ public class PlayerCollisions : MonoBehaviour
 		{
 			health.InflictDamage(100);
 		}
+		
 	}
-	
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.transform.CompareTag("DeathFall"))
+		{
+			health.InflictDamage(100);
+		}
+		
+		if (other.CompareTag("ExplorerRoom"))
+		{
+			other.GetComponent<ExplorerRooms>().ExploreRoom();
+		}
+
+		if (other.CompareTag("EndTrigger"))
+		{
+			GetComponentInParent<PlayerMovement>().enabled = false;
+			GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
+			resolutionScreen.SetActive(true);
+			
+		}
+	}
+
 	private void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.CompareTag("ArenaExitTrigger"))
@@ -48,18 +70,6 @@ public class PlayerCollisions : MonoBehaviour
 			}
 		}
 
-		if (other.CompareTag("ExplorerRoom"))
-		{
-			other.GetComponent<ExplorerRooms>().ExploreRoom();
-		}
-
-		if (other.CompareTag("EndTrigger"))
-		{
-			GetComponentInParent<PlayerMovement>().enabled = false;
-			GetComponentInParent<Rigidbody2D>().velocity = Vector2.zero;
-			resolutionScreen.SetActive(true);
-			
-		}
 	}
 
 }

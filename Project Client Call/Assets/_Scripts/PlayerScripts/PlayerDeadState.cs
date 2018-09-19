@@ -25,12 +25,13 @@ public class PlayerDeadState : AbstractState<PlayerFsmController>
         GetComponent<PlayerAnimations>().SetJumpingToFalse();
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<PlayerMeleeAttack>().enabled = false;
-
+		endScreenCanvas.SetActive(true);
 	    DOVirtual.DelayedCall(timeTillEndScreenActivation, () => endScreenCanvas.SetActive(true));
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update ()
+    {
 		
 	}
 }

@@ -78,7 +78,7 @@ public class HighScoreManager : MonoBehaviour
 		}
 		catch (Exception e)
 		{
-			Debug.Log("Not level scene");
+
 		}
 	
 	}

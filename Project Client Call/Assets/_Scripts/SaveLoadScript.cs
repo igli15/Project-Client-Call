@@ -13,7 +13,6 @@ public static class SaveLoadScript
 	{
 		var data = JsonUtility.ToJson(objToSave, true);
 		File.WriteAllText(Application.persistentDataPath + "/"+ saveFileName + ".json", Encryption.Encrypt(data));
-		Debug.Log(Encryption.Encrypt(data));
 		
 	}
     
@@ -24,8 +23,7 @@ public static class SaveLoadScript
 			var loadedData = Encryption.Decrypt(File.ReadAllText(Application.persistentDataPath + "/"+ fileNameToLoadFrom + ".json"));
 
 			JsonUtility.FromJsonOverwrite(loadedData, objToLoad);
-			
-			Debug.Log(loadedData);
+
 		}
 	}
 }
