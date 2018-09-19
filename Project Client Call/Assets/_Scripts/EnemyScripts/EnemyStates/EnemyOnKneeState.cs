@@ -22,7 +22,7 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
         base.Enter(pAgent);
         enemyAnimations.TrigerOnKneeAnimation();
         HighScoreManager.instance.IncreaseSocializerScore();
-        Debug.Log("TEST");
+        
         rb.velocity = Vector3.zero;
         collider.isTrigger = true;
         rb.isKinematic = true;

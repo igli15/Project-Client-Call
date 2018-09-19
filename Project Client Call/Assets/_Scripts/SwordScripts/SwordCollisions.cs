@@ -15,7 +15,6 @@ public class SwordCollisions : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    private int deflectionCount;
 
     private void Start()
     {
@@ -27,20 +26,11 @@ public class SwordCollisions : MonoBehaviour
         if (other.CompareTag("Projectile"))
         {
             AudioManagerScript.instance.PlaySound("Deflect");
-            deflectionCount += 1;
             swoosh.SetActive(true);
             swoshParticleSystem.Play();
             DisableSwordHud();
             swoosh.transform.parent = null;
            
-        }
-    }
-
-    private void Update()
-    {
-        if (deflectionCount >= 20)
-        {
-            AchievementPopUp.QueueAchievement("Deflection Master");
         }
     }
 

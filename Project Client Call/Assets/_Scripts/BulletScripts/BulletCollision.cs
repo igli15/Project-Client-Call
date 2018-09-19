@@ -18,6 +18,8 @@ public class BulletCollision : MonoBehaviour
     public bool isReflected;
 	private EnemyRangedAttack enemyRangedAttack;
 	
+	private int deflectionCount;
+	
 	private void Start()
 	{
         isReflected = false;
@@ -25,13 +27,27 @@ public class BulletCollision : MonoBehaviour
 		enemyRangedAttack = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyRangedAttack>();
 	}
 
+	private void Update()
+	{
+		if (deflectionCount >= 20)
+		{
+			AchievementPopUp.QueueAchievement("Deflection Master");
+		}
+	}
+
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("Sword Collider")&& isReflectable)
+		if (other.CompareTag("Sword Collider") && isReflectable && !isReflected)
 		{
-			if(rb != null)
-			rb.velocity = other.transform.parent.right *reflectedSpeed * damageMultiplier*TimeManager.timeSlowScale ;
-            isReflected = true;
+			deflectionCount += 1;
+			
+			if (rb != null)
+			{
+				rb.velocity = other.transform.parent.right * reflectedSpeed * damageMultiplier *
+				              TimeManager.timeSlowScale;
+			}
+
+			isReflected = true;
 		}
 
         if (other.transform.CompareTag("Ground"))
