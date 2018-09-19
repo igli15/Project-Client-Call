@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-public class BulletHalo : MonoBehaviour
+[RequireComponent(typeof(Light))]
+public class LightIntensityManager : MonoBehaviour
 {
 	[SerializeField] 
 	private float timeTillMaxIntensity = 0.2f;
+
+	[SerializeField] 
+	[Range(0,1)]
+	private float maxItensity = 1;
+
+	[SerializeField] 
+	[Range(0,1)]
+	private float minIntensity = 0;
 
 	private Light light;
 
@@ -26,19 +35,19 @@ public class BulletHalo : MonoBehaviour
 
 	private void IncreaseIntensity(PlayerSlowMotionState sender)
 	{
-		decreaseTween.Kill();
+		increaseTween = null;
 		if (increaseTween == null)
 		{
-			increaseTween = light.DOIntensity(1, timeTillMaxIntensity);
+			increaseTween = light.DOIntensity(maxItensity, timeTillMaxIntensity);
 		}
 	}
 	
 	private void DecreaseIntensity(PlayerSlowMotionState sender)
 	{
-		increaseTween.Kill();
+		decreaseTween = null;
 		if (decreaseTween == null)
 		{
-			decreaseTween = light.DOIntensity(0, timeTillMaxIntensity);
+			decreaseTween = light.DOIntensity(minIntensity, timeTillMaxIntensity);
 		}
 	}
 
