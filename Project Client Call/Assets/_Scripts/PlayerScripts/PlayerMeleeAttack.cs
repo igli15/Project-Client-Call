@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMeleeAttack : MonoBehaviour {
 
     // Use this for initialization
@@ -13,12 +14,15 @@ public class PlayerMeleeAttack : MonoBehaviour {
     
     [HideInInspector]
     public float finishCount = 0;
+    [HideInInspector]
+    public int killCount = 0;
 
     float lastTimeOfMelee;
     Rigidbody2D rb;
     PlayerAnimations playerAnimations;
     PlayerMovement movement;
  
+
     void Start () 
     {
         lastTimeOfMelee = 0;
@@ -82,18 +86,49 @@ public class PlayerMeleeAttack : MonoBehaviour {
             playerAnimations.SetAttack();
         }
 
-	    if (meleeCount >= 20)
+        if (meleeCount >= 1 && !movement.IsGrounded)
+        {
+            AchievementPopUp.QueueAchievement("Flying Sword Master");
+        }
+
+
+        if (meleeCount >= 20)
 	    {
 	        AchievementPopUp.QueueAchievement("Melee Attack");
 	        meleeCount = 0;
 	    }
 
-	    if (finishCount >= 20)
+        if (EnemyOnKneeState.killCount >= 10)
+        {
+            AchievementPopUp.QueueAchievement("The Beginner");
+        }
+        if (EnemyOnKneeState.killCount >= 20)
+        {
+           AchievementPopUp.QueueAchievement("The Warrior");
+        }
+
+        if (EnemyOnKneeState.killCount >= 30)
+        {
+            AchievementPopUp.QueueAchievement("The Master");
+        }
+
+        if (finishCount >= 20)
 	    {
-	        AchievementPopUp.QueueAchievement("Finish Him");
-	        finishCount = 0;
+	        AchievementPopUp.QueueAchievement("The Killer");
+	       // finishCount = 0;
 	    }
-	}
+
+        if (finishCount >= 30)
+        {
+            AchievementPopUp.QueueAchievement("The Executer");
+           // finishCount = 0;
+        }
+        if (finishCount >= 40)
+        {
+            AchievementPopUp.QueueAchievement("The Inquisitor");
+            finishCount = 0;
+        }
+    }
 
     IEnumerator WaitTillMeleeFinishes(float timeToWait)
     {

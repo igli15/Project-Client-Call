@@ -13,7 +13,7 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
     private EnemyRangedAttack rangedAttack;
     private EnemyFsmController fsmController;
     private EnemyAnimations animations;
-    float timeMovementStarted;
+    float timePassed;
     public void Start()
     {
         
@@ -23,8 +23,9 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
     {
         if (currentLocalFsmState == localFsmState.Movement)
         {
+            timePassed += Time.deltaTime;
             fsmController.stateReferences.enemyMovement.Move(transform.right);
-            if (Time.time > timeMovementStarted + timeBeforeShoot || (fsmController.stateReferences.enemyData.Player.transform.position - transform.position).magnitude < 1)
+            if (timeBeforeShoot > timePassed  || (fsmController.stateReferences.enemyData.Player.transform.position - transform.position).magnitude < 1)
             {
                 Debug.Log("LOCAL_FSM ==> SWITCH TO ATTACK STATE");
                 currentLocalFsmState = localFsmState.Attack;
@@ -46,7 +47,7 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
         if (!fsmController) fsmController = GetComponent<EnemyFsmController>();
         fsmController.stateReferences.enemyRangedAttack.SeetReloadZero();
         currentLocalFsmState = localFsmState.Movement;
-        timeMovementStarted = Time.time;
+        timePassed = 0;
 
         fsmController.stateReferences.enemyRangedAttack.ResetReloadTime();
 

@@ -10,6 +10,8 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     BoxCollider2D collider;
     EnemyFsmController fsmController;
 
+    public static int killCount = 0;
+
     public void Start()
     {
 
@@ -22,6 +24,7 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
         collider.isTrigger = true;
         rb.isKinematic = true;
         collider.offset -= new Vector2(-4, 0);
+        killCount += 1;
     }
 
     public void SetEverything()
