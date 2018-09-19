@@ -23,7 +23,7 @@ public class menuScript : MonoBehaviour {
 		
 		if(scrollAmount < 0)
 		{
-			if(Input.GetAxisRaw("VerticalJoy") > 0 | Input.GetAxisRaw("Vertical") > 0)
+			if(Input.GetAxisRaw("VerticalMenu") > 0 | Input.GetAxisRaw("Vertical") > 0)
 			{
 				clipSource.PlayOneShot(_strokeSound);
 				if(selectedButton > 0)
