@@ -3,10 +3,19 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
+[RequireComponent(typeof(Light))]
 public class LightIntensityManager : MonoBehaviour
 {
 	[SerializeField] 
 	private float timeTillMaxIntensity = 0.2f;
+
+	[SerializeField] 
+	[Range(0,1)]
+	private float maxItensity = 1;
+
+	[SerializeField] 
+	[Range(0,1)]
+	private float minIntensity = 0;
 
 	private Light light;
 
@@ -29,7 +38,7 @@ public class LightIntensityManager : MonoBehaviour
 		increaseTween = null;
 		if (increaseTween == null)
 		{
-			increaseTween = light.DOIntensity(1, timeTillMaxIntensity);
+			increaseTween = light.DOIntensity(maxItensity, timeTillMaxIntensity);
 		}
 	}
 	
@@ -38,7 +47,7 @@ public class LightIntensityManager : MonoBehaviour
 		decreaseTween = null;
 		if (decreaseTween == null)
 		{
-			decreaseTween = light.DOIntensity(0, timeTillMaxIntensity);
+			decreaseTween = light.DOIntensity(minIntensity, timeTillMaxIntensity);
 		}
 	}
 

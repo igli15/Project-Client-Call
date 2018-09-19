@@ -71,6 +71,7 @@
             <e p="WordScrollManager.cs" t="Include" />
           </e>
           <e p="IPooleableObject.cs" t="Include" />
+          <e p="LightIntensityManager.cs" t="Include" />
           <e p="LoadLevelAfterVideo.cs" t="Include" />
           <e p="MenuScript" t="Include">
             <e p="backToMain.cs" t="Include" />
@@ -97,6 +98,7 @@
             <e p="PlayerNormalState.cs" t="Include" />
             <e p="PlayerSlowMotionState.cs" t="Include" />
           </e>
+          <e p="PostProccesingManager.cs" t="Include" />
           <e p="SaveLoadScript.cs" t="Include" />
           <e p="SwordScripts" t="Include">
             <e p="DisableSwosh.cs" t="Include" />
@@ -106,7 +108,6 @@
           <e p="TimeManager.cs" t="Include" />
           <e p="Utils.cs" t="Include" />
         </e>
-        <e p="BulletHalo.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
             <e p="DOTween43.xml" t="Include" />
@@ -115,7 +116,6 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
-        <e p="PostProccesingManager.cs" t="Include" />
         <e p="PostProcessing" t="Include">
           <e p="Editor" t="Include">
             <e p="Attributes" t="Include">

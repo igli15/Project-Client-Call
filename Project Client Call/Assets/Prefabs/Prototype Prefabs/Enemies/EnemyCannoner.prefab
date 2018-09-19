@@ -63,6 +63,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1545861010444236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4809051555296762}
+  - component: {fileID: 108382852111428718}
+  - component: {fileID: 114350753716349820}
+  m_Layer: 10
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1689547672186628
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,10 +145,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747281027610544}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 19.710022, y: 21.442001, z: 0}
+  m_LocalPosition: {x: 4.5, y: 7.6, z: 0}
   m_LocalScale: {x: 0.219, y: 0.77, z: 1}
   m_Children:
   - {fileID: 4045942251628420}
+  - {fileID: 4809051555296762}
   - {fileID: 4857568425117610}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -149,6 +167,19 @@ Transform:
   m_Father: {fileID: 4876911022719282}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!4 &4809051555296762
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1545861010444236}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 5.7077622, y: 1.6233766, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4369928439763302}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4857568425117610
 Transform:
   m_ObjectHideFlags: 1
@@ -161,7 +192,7 @@ Transform:
   m_Children:
   - {fileID: 4876911022719282}
   m_Father: {fileID: 4369928439763302}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -16.967001, y: -90.00001, z: 90.00001}
 --- !u!4 &4876911022719282
 Transform:
@@ -255,6 +286,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!108 &108382852111428718
+Light:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1545861010444236}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 3
+  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Intensity: 0
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 2}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!114 &114021048699177188
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -297,6 +365,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114350753716349820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1545861010444236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78275665b66f642f499ba0282dfc9ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTillMaxIntensity: 0.2
+  maxItensity: 0.6
+  minIntensity: 0
 --- !u!114 &114550816275780746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,10 +391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectPoolTag: BigProjectile
-  bulletPerShot: 1
-  reloadTime: 2
   randomizeMultiplier: 0
-  bulletSpeed: 10
   horizontalOffsetOfShooting: 1
   verticalOffsetOfShooting: 0
 --- !u!114 &114589336067655878
@@ -402,6 +481,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0
+  hardBulletSpeed: 10
+  hardReloadTime: 1
+  hardBulletPerShot: 1
+  normalBulletSpeed: 7
+  nomralReloadTime: 1.5
+  normalBulletPerShot: 1
   animHandler: {fileID: 114741086079536548}
 --- !u!198 &198452382366020944
 ParticleSystem:

@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 95592262073305902}
   - component: {fileID: 114149947391675656}
   - component: {fileID: 114266590145314690}
+  - component: {fileID: 70623109881970812}
   m_Layer: 10
   m_Name: Avatar
   m_TagString: Player
@@ -133,6 +134,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1578125709532260
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4315442758025322}
+  - component: {fileID: 108402537539655106}
+  - component: {fileID: 114775617503543590}
+  m_Layer: 10
+  m_Name: Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1605634668172560
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1664043145904872
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,10 +290,24 @@ Transform:
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: -0.00000023842, y: -0.000000059605, z: 0}
   m_LocalScale: {x: 0.044060204, y: 0.052045267, z: 0.05049433}
-  m_Children: []
+  m_Children:
+  - {fileID: 4315442758025322}
   m_Father: {fileID: 4739859151197600}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!4 &4315442758025322
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578125709532260}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -1.3617785, y: 0, z: 0}
+  m_LocalScale: {x: 22.696218, y: 19.214043, z: 19.804205}
+  m_Children: []
+  m_Father: {fileID: 4197419959140656}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4368673513171454
 Transform:
   m_ObjectHideFlags: 1
@@ -336,8 +368,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1664043145904872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.93, y: 1.06, z: 0}
-  m_LocalScale: {x: 1.25, y: 1.25, z: 0}
+  m_LocalPosition: {x: 0, y: 2.68, z: 0}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children:
   - {fileID: 4197419959140656}
   - {fileID: 4541075305813766}
@@ -986,7 +1018,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1300862674151170}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1005,6 +1037,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.208229, y: 30.61}
   m_EdgeRadius: 0
+--- !u!70 &70623109881970812
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300862674151170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -2.749913, y: 0}
+  m_Size: {x: 10.2, y: 31.3}
+  m_Direction: 0
 --- !u!95 &95256408112208890
 Animator:
   serializedVersion: 3
@@ -1041,6 +1088,43 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!108 &108402537539655106
+Light:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578125709532260}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 3
+  m_Color: {r: 0.9843137, g: 0.007843138, b: 0.02745098, a: 1}
+  m_Intensity: 0
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 1
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 2}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!114 &114060324664719480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1083,6 +1167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meleeAttackDistance: 1.49
+  reloadTime: 1
   finishCount: 0
 --- !u!114 &114145294179860426
 MonoBehaviour:
@@ -1130,12 +1215,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37ed6354934a34b3eb21a3f5c7d17695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airborneSmoothedVelocity: 15
+  airborneSmoothedVelocity: 5
   groundedSmoothedVelocity: 21
-  movementSpeed: 400
+  movementSpeed: 500
   firstJumpValues:
-    jumpHeight: 0.09
-    jumpCompletionTime: 0.3
+    jumpHeight: 0.009
+    jumpCompletionTime: 0.24
   secondJumpValues:
     jumpHeight: 0.7
     jumpCompletionTime: 0.3
@@ -1165,6 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e46f88d08f214c72b90bfcdf19e6342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resolutionScreen: {fileID: 0}
 --- !u!114 &114591353225596906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1202,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05053d2b07bc04d138e5968185ae5b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeHeightRatio: 4.4
+  TimeHeightRatio: 5
   fallMultiplier: 3
   lowJumpMultiplier: 1
   feetPos: {fileID: 4368673513171454}
@@ -1212,6 +1298,7 @@ MonoBehaviour:
   checkGroundRadius: 0.3
   jumpCount: 2
   swordSprite: 0
+  canMoveHorizontally: 0
 --- !u!114 &114685993903421844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1224,6 +1311,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!114 &114775617503543590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1578125709532260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78275665b66f642f499ba0282dfc9ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTillMaxIntensity: 0.2
+  maxItensity: 0.6
+  minIntensity: 0
 --- !u!114 &114888910230473332
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1235,8 +1336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861b4ec7f6b46c54bbc3e9b289636cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 1
+  maxHealth: 1
   shouldBeDestroyed: 0
 --- !u!198 &198487762990921060
 ParticleSystem:
