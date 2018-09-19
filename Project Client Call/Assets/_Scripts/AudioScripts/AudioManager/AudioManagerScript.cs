@@ -42,6 +42,7 @@ public class AudioManagerScript : MonoBehaviour
 			sound.audioSource.playOnAwake = false;
 		}
 		
+		DontDestroyOnLoad(gameObject);
 	}
 
 

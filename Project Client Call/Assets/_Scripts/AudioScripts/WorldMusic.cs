@@ -10,9 +10,7 @@ public class WorldMusic : MonoBehaviour {
 	public AudioMixerSnapshot arenaIntroSS;
 	public AudioMixerSnapshot arenaLoopSS;
 	public AudioMixerSnapshot resolutionScreenMusicSS;
-
-
-
+	
 	void Start () {
 	}
 	

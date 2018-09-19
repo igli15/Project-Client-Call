@@ -39,8 +39,8 @@ public class EnemyRangedAttack : MonoBehaviour
 
     public void ShootTo(Vector3 targetPosition)
     {
-        //  if (Time.time <= lastTimeShot + enemyData.ReloadSpeed) return; //Checking how much time passed since last shot
-        //  lastTimeShot = Time.time;
+        if (Time.time <= lastTimeShot + enemyData.ReloadSpeed) return; //Checking how much time passed since last shot
+        lastTimeShot = Time.time;
 
         if (enemyFsmController.GetEnemyType == EnemyFsmController.EnemyType.Cannoneer)
         {
