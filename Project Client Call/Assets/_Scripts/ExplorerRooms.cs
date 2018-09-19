@@ -12,7 +12,6 @@ public class ExplorerRooms : MonoBehaviour
 	{
 		if (!isVisited)
 		{
-			Debug.Log("HI");
 			HighScoreManager.instance.IncreaseExplorerScore();
 			isVisited = true;
 		}

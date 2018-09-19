@@ -60,6 +60,11 @@ public class PlayerCollisions : MonoBehaviour
 			resolutionScreen.SetActive(true);
 			
 		}
+
+		if (other.CompareTag("FallDeath"))
+		{
+			health.InflictDamage(100);
+		}
 	}
 
 }
