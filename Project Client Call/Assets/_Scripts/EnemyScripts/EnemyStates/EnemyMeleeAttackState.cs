@@ -19,8 +19,6 @@ public class EnemyMeleeAttackState : AbstractState<EnemyFsmController>
     {
         base.Enter(pAgent);
         if (!fsmController) fsmController = GetComponent<EnemyFsmController>();
-        Debug.Log("Enter of MeleeAttackSTate");
-        if (null == fsmController) Debug.Log("SUKA BLYAT");
         fsmController.stateReferences.enemyMeleeAttack.MeleeAttack();
     }
 

@@ -27,15 +27,12 @@ public class EnemyRangedAttackState : AbstractState<EnemyFsmController>
             fsmController.stateReferences.enemyMovement.Move(transform.right);
             if (timeBeforeShoot > timePassed  || (fsmController.stateReferences.enemyData.Player.transform.position - transform.position).magnitude < 1)
             {
-                Debug.Log("LOCAL_FSM ==> SWITCH TO ATTACK STATE");
                 currentLocalFsmState = localFsmState.Attack;
             }
         }
 
         if (currentLocalFsmState == localFsmState.Attack)
         {
-            //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            Debug.Log("LOCAL_FSM ==> START ATTACK STATE");
             fsmController.stateReferences.enemyMovement.FaceToPlayer();
             ShootToPlayer();
         }
