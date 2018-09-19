@@ -23,7 +23,6 @@ public class AnimationHandler : MonoBehaviour
 
     public void CallOnDeath()
     {
-        Debug.Log("ENEMY: I AM DEAD");
         HighScoreManager.instance.InreaseKillScore();
         playerMeleeAttack.finishCount += 1;
         Destroy(transform.parent.gameObject);

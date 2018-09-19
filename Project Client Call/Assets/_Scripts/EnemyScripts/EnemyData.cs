@@ -42,14 +42,12 @@ public class EnemyData : MonoBehaviour
         int levelOfDificulties = PlayerPrefs.GetInt("levelOfDifficulty");
         if (levelOfDificulties == 0)
         {
-            Debug.Log("NORMAL");
             bulletSpeed = normalBulletSpeed;
             bulletsPerShot = normalBulletPerShot;
             reloadTime = nomralReloadTime;
         }
         else
         {
-            Debug.Log("HARD");
             bulletSpeed = hardBulletSpeed;
             bulletsPerShot = hardBulletPerShot;
             reloadTime = hardReloadTime;

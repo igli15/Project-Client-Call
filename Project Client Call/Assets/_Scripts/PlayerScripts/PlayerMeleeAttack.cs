@@ -55,6 +55,10 @@ public class PlayerMeleeAttack : MonoBehaviour {
                 }
                 else
                 {
+                    if ( !movement.IsGrounded)
+                    {
+                        AchievementPopUp.QueueAchievement("Flying Sword Master");
+                    }
                     HighScoreManager.instance.IncreaseSocializerScore();
                     
                     meleeCount += 1;
@@ -84,11 +88,6 @@ public class PlayerMeleeAttack : MonoBehaviour {
                 StartCoroutine(WaitTillMeleeFinishes(0.5f));
             }
             playerAnimations.SetAttack();
-        }
-
-        if (meleeCount >= 1 && !movement.IsGrounded)
-        {
-            AchievementPopUp.QueueAchievement("Flying Sword Master");
         }
 
 
