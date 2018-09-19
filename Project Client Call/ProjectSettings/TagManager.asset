@@ -15,7 +15,6 @@ TagManager:
   - EndTrigger
   - HighscoreManager
   - Spikes
-  - FallDeath
   layers:
   - Default
   - TransparentFX
