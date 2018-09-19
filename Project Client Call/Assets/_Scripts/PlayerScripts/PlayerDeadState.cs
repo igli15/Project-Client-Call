@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerDeadState : AbstractState<PlayerFsmController>
 {
@@ -11,6 +12,8 @@ public class PlayerDeadState : AbstractState<PlayerFsmController>
 
 	[SerializeField] 
 	private float timeTillEndScreenActivation = 2f;
+
+	[SerializeField] private AudioMixerSnapshot endMusic;
 	
     // Use this for initialization
     void Start () 
@@ -20,6 +23,7 @@ public class PlayerDeadState : AbstractState<PlayerFsmController>
 
     public override void Enter(IAgent pAgent)
     {
+	    endMusic.TransitionTo(0f);
         base.Enter(pAgent);
         GetComponent<PlayerAnimations>().SetIsDead();
         GetComponent<PlayerAnimations>().SetJumpingToFalse();

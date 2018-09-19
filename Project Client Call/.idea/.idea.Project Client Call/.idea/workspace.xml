@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/PartOne.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/PartOne.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/ExplorerRooms.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/ExplorerRooms.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerDeadState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerDeadState.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,12 +22,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="32413" />
+          <entry key="cs" value="32473" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="32413" />
+          <entry key="C#" value="32473" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,17 +74,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerDeadState.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+            <state relative-caret-position="434">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
-                <marker date="1537380994781" expanded="false" signature="6:97" ph="..." />
-                <marker date="1537380994781" expanded="true" signature="164:887" ph="{...}" />
-                <marker date="1537380994781" expanded="true" signature="348:360" ph="{...}" />
-                <marker date="1537380994781" expanded="true" signature="407:814" ph="{...}" />
-                <marker date="1537380994781" expanded="true" signature="873:885" ph="{...}" />
+                <marker date="1537382237237" expanded="true" signature="6:122" ph="..." />
+                <marker date="1537382237237" expanded="true" signature="189:1000" ph="{...}" />
+                <marker date="1537382237237" expanded="true" signature="429:441" ph="{...}" />
+                <marker date="1537382237237" expanded="true" signature="488:927" ph="{...}" />
+                <marker date="1537382237237" expanded="true" signature="986:998" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -224,7 +223,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/ExplorerRooms.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="297">
@@ -377,12 +376,12 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/LightIntensityManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/EnemyScripts/EnemyRangedAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerCollisions.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerDeadState.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/SaveLoadScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/MenuScript/HighScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/MenuScript/MainMenuScript.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/MenuScript/LevelLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/ExplorerRooms.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerDeadState.cs" />
       </list>
     </option>
   </component>
@@ -481,12 +480,12 @@
       <workItem from="1537097033550" duration="5431000" />
       <workItem from="1537175238250" duration="1752000" />
       <workItem from="1537262350663" duration="2837000" />
-      <workItem from="1537380005919" duration="856000" />
+      <workItem from="1537380005919" duration="1029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172859000" />
+    <option name="totallyTimeSpent" value="173032000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -934,20 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerDeadState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-          <folding>
-            <marker date="1537380994781" expanded="false" signature="6:97" ph="..." />
-            <marker date="1537380994781" expanded="true" signature="164:887" ph="{...}" />
-            <marker date="1537380994781" expanded="true" signature="348:360" ph="{...}" />
-            <marker date="1537380994781" expanded="true" signature="407:814" ph="{...}" />
-            <marker date="1537380994781" expanded="true" signature="873:885" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/SaveLoadScript.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -1048,6 +1033,20 @@
             <marker date="1537381956565" expanded="true" signature="122:297" ph="{...}" />
             <marker date="1537381956565" expanded="true" signature="188:295" ph="{...}" />
             <marker date="1537381956565" expanded="true" signature="209:292" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerDeadState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <marker date="1537382237237" expanded="true" signature="6:122" ph="..." />
+            <marker date="1537382237237" expanded="true" signature="189:1000" ph="{...}" />
+            <marker date="1537382237237" expanded="true" signature="429:441" ph="{...}" />
+            <marker date="1537382237237" expanded="true" signature="488:927" ph="{...}" />
+            <marker date="1537382237237" expanded="true" signature="986:998" ph="{...}" />
           </folding>
         </state>
       </provider>
