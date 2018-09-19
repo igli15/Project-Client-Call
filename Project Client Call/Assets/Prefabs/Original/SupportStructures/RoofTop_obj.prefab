@@ -21,7 +21,8 @@ GameObject:
   - component: {fileID: 4784953091613004}
   - component: {fileID: 33122575011554562}
   - component: {fileID: 23064573511840398}
-  m_Layer: 0
+  - component: {fileID: 61039789375967734}
+  m_Layer: 9
   m_Name: RoofTop_obj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,9 +35,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1617630518688506}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.8567505, y: 1.8, z: -46.832645}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.0000014603138, z: -0, w: 1}
+  m_LocalPosition: {x: -2.07, y: 16.79, z: 9.05}
+  m_LocalScale: {x: -1.2323472, y: 1.1953193, z: 1.4977624}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,3 +84,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1617630518688506}
   m_Mesh: {fileID: 4300000, guid: 2b4a4f48c52c1ae48a4b85a09a5bea34, type: 3}
+--- !u!61 &61039789375967734
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1617630518688506}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: f47ade9c973f44e72b33d5ac7efa1236, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.120723, y: 1.005688}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.1666288, y: 3.541747}
+  m_EdgeRadius: 0
