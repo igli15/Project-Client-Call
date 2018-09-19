@@ -44,7 +44,7 @@ public class menuScript : MonoBehaviour {
 				}
 			}
 
-			if(Input.GetAxisRaw("VerticalJoy") < 0 | Input.GetAxis("Vertical") < 0)
+			if(Input.GetAxisRaw("VerticalMenu") < 0 | Input.GetAxis("Vertical") < 0)
 			{
 				clipSource.PlayOneShot(_strokeSound);
 					if(selectedButton < button.Length - 1)
