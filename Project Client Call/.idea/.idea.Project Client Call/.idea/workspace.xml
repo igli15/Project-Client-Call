@@ -2,8 +2,473 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8953c4b1-d41a-46e9-87cc-306899a207b3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/BulletScripts/BulletCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/BulletScripts/BulletCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/SwordScripts/SwordCollisions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/SwordScripts/SwordCollisions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project Client Call/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BG 1.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BG 1.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BG.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BG.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BloodDrop3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BloodDrop3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Floor.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Floor.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD/achievmentBrushstroke (1).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUD/achievmentBrushstroke (1).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD/achievmentBrushstroke (4).png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUD/achievmentBrushstroke (4).png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD/achievmentBrushstroke.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUD/achievmentBrushstroke.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD/barFullStamina.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUD/barFullStamina.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD/barStamina.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUD/barStamina.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD/iconFullStamina.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUD/iconFullStamina.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD/iconLowStamina.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUD/iconLowStamina.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUD/pressL1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUD/pressL1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyAttackIdleAnimation/Armature_AttackIdle_20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_31.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_31.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_32.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_33.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_33.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_34.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_34.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_35.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_35.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_36.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_36.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_37.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_37.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_38.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_38.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_39.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_39.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_40.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_40.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_41.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_41.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_42.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_42.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_43.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_43.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_44.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_44.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_45.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_45.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_46.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_46.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_47.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_47.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_48.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_48.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_49.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_49.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_50.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyDeathAnimation/Armature_AttackDeath_50.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_000.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_000.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_001.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_002.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_003.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_004.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_005.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_006.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_007.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_007.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_008.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_008.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_009.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_009.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_010.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_010.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_011.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_011.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_012.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_012.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_013.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_013.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_014.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_014.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_015.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_015.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_016.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_016.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_017.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_017.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_018.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_018.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_019.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_019.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_020.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_020.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_021.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_021.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_022.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_022.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_023.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_023.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_024.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_024.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_025.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_025.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_026.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_026.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_027.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_027.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_028.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_028.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_029.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_029.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_030.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_030.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_031.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_031.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_032.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_032.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_033.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_033.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_034.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_034.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_035.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_035.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_036.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_036.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_037.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_037.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_038.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_038.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_039.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_039.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_040.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_040.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_041.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_041.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_042.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_042.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_043.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_043.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_044.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_044.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_045.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_045.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_046.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_046.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_047.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_047.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_048.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_048.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_049.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_049.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_050.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_050.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_051.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_051.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_052.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_052.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_053.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_053.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_054.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_054.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_055.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_055.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_056.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_056.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_057.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_057.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_058.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_058.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_059.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_059.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_060.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_060.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_061.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_061.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_062.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_062.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_063.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_063.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_064.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_064.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_065.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_065.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_066.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_066.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_067.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_067.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_068.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_068.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_069.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_069.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_070.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_070.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_071.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_071.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_072.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_072.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_073.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_073.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_074.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_074.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_075.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_075.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_076.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_076.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_077.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_077.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_078.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_078.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_079.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_079.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_080.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_080.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_081.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_081.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_082.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_082.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_083.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_083.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_084.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_084.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_085.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_085.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_086.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_086.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_087.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_087.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_088.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_088.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_089.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_089.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_090.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_090.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_091.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_091.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_092.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_092.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_093.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_093.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_094.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_094.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_095.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_095.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_096.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_096.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_097.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_097.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_098.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_098.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_099.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_099.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_100.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_100.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_101.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_101.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_102.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_102.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_103.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_103.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_104.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_104.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_105.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_105.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_106.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_106.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_107.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_107.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_108.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_108.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_109.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_109.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_110.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_110.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_111.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_111.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_112.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_112.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_113.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_113.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_114.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_114.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_115.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_115.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_116.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_116.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_117.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_117.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_118.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_118.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_119.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_119.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_120.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_120.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_121.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_121.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_122.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_122.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_123.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_123.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_124.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_124.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_125.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_125.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_126.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_126.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_127.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_127.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_128.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_128.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_129.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_129.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_130.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_130.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_131.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_131.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_132.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_132.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_133.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_133.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_134.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_134.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_135.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_135.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_136.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_136.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_137.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_137.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_138.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_138.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_139.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_139.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_140.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_140.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_141.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_141.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_142.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_142.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_143.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_143.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_144.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_144.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_145.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_145.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_146.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_146.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_147.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_147.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_148.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_148.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_149.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_149.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_150.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyIdleAnimation/Armature_newAnimation_150.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyOnKneeAnimation/Armature_AttackDeath_24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRangedAttackAnimation/Armature_AttackThrow_20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_00.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_07.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_08.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_09.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/Armature_Run_12.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/EnemyRunningAnimation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyRunning/EnemyRunningAnimation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/EnemyAnimations/EnemyWallkingAnimation/Armature_Walk_24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerDeathAnimation/Armature_Death_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_62.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_62.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_63.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_63.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_64.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_64.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_65.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_65.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_66.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_66.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_67.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_67.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_68.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_68.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_69.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_69.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_70.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_70.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_71.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_71.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_72.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_72.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_73.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_73.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_74.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_74.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_75.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_75.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_76.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_76.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_77.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_77.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_78.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_78.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_79.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_79.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_80.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_80.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_81.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_81.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_82.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_82.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_83.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_83.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_84.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_84.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_85.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_85.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_86.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_86.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_87.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_87.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_88.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_88.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_89.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_89.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_90.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_90.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_91.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_91.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_92.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerIdleAnimation/Samurai_Idle_Final/Armature_Run_92.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_40.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_40.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_41.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_41.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_42.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_42.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_43.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_43.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_44.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_44.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_45.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_45.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_46.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_46.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_47.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_47.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_48.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_48.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_49.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_49.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_50.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_50.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_51.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_51.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_52.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_52.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_53.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_53.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_54.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerJumpAnimation/Armature_Jump_54.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_0.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_0.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerMeleeAttackAnimation/Armature_Deflect_6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_00.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_00.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_01.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_02.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_03.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_04.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_06.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_06.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_07.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_07.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_08.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_08.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_09.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_09.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Main/PlayerWalkingAnimations/Samurai_RUN_final_2/Armature_Jump_24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Archway_2_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Archway_2_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Bamboo_1.1_Tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Bamboo_1.1_Tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Bamboo_1.2_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Bamboo_1.2_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Bush_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Bush_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/FireBowl_1_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/FireBowl_1_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Flag_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Flag_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/House_1_Obj_1001_AlbedoTransparency.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/House_1_Obj_1001_AlbedoTransparency.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/House_2_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/House_2_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Pagoda_1_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Pagoda_1_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Rock_1_Tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Rock_1_Tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Rock_2_Tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Rock_2_Tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Rock_3_Tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Rock_3_Tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Rock_4_Tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Rock_4_Tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Tree_1-2_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Tree_1-2_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Tree_2_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Tree_2_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Tree_3-4_tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Tree_3-4_tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Environment/Tree_3_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Environment/Tree_3_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Items/ArmorStand_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Items/ArmorStand_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Items/CanonBallStack_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Items/CanonBallStack_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Items/Chest_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Items/Chest_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Items/Scroll_1.1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Items/Scroll_1.1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Items/Scroll_1.2_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Items/Scroll_1.2_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Items/Torch_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Items/Torch_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Items/WaponStand_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Items/WaponStand_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Archway_1_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Archway_1_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Bridge_1_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Bridge_1_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_Support_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_Support_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_ceiling_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_ceiling_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_corner_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_corner_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_cutoff_front_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_cutoff_front_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_cutoff_left_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_cutoff_left_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_cutoff_right_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_cutoff_right_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_end_front_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_end_front_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_end_left_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_end_left_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_end_right_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_end_right_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_support_front_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_support_front_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_support_front_2_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_support_front_2_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_support_left_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_support_left_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_support_right_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Ceiling_support_right_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Cornersupportbeam_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Cornersupportbeam_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/FenceEnd_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/FenceEnd_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/FencePart_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/FencePart_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Lantern_1_Tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Lantern_1_Tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Lantern_1_TexEmission.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Lantern_1_TexEmission.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Path_1_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Path_1_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Path_2_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Path_2_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Path_3_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Path_3_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Path_4_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Path_4_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Pavillion_1.1_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Pavillion_1.1_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Pavillion_1.2_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Pavillion_1.2_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Pillar_1_Tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Pillar_1_Tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/PlatformStone_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/PlatformStone_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/PlatformStone_2_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/PlatformStone_2_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/PlatformStone_3_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/PlatformStone_3_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/RoofTop_Tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/RoofTop_Tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Wall_1_Tex.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Wall_1_Tex.tga.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Wall_1_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Wall_1_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Wall_2_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Wall_2_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Wall_3_tex.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Wall_3_tex.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Wall_plain_Obj_1001_AlbedoTransparency.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Wall_plain_Obj_1001_AlbedoTransparency.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Wall_rack_Obj_1001_AlbedoTransparency.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Wall_rack_Obj_1001_AlbedoTransparency.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/Main/Wall_windows_Obj_1001_AlbedoTransparency.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/Main/Wall_windows_Obj_1001_AlbedoTransparency.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,12 +488,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="32664" />
+          <entry key="cs" value="32669" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="32664" />
+          <entry key="C#" value="32669" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -55,13 +520,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="567">
               <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <marker date="1537383371680" expanded="false" signature="6:92" ph="..." />
-                <marker date="1537383371680" expanded="true" signature="169:677" ph="{...}" />
-                <marker date="1537383371680" expanded="true" signature="301:427" ph="{...}" />
-                <marker date="1537383371680" expanded="true" signature="467:541" ph="{...}" />
-                <marker date="1537383371680" expanded="true" signature="572:674" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -71,22 +529,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="365">
               <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-              <folding>
-                <marker date="1537380961476" expanded="false" signature="6:123" ph="..." />
-                <marker date="1537380961476" expanded="true" signature="170:1516" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="306:380" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="433:524" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="480:518" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="574:981" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="624:662" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="705:767" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="806:978" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="1030:1513" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="1077:1273" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="1145:1265" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="1318:1509" ph="{...}" />
-                <marker date="1537380961476" expanded="true" signature="1386:1505" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -96,37 +538,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="241">
               <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="39" />
-              <folding>
-                <marker date="1537383594501" expanded="false" signature="6:146" ph="..." />
-                <marker date="1537383594501" expanded="true" signature="208:4355" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="290:338" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="954:1365" ph="{...}" />
-                <marker date="1537383594501" expanded="false" signature="960:1097" ph="SINGELTON" />
-                <marker date="1537383594501" expanded="true" signature="1014:1042" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="1049:1081" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="1252:1362" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="1421:1773" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="1430:1737" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="1759:1768" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="1816:1932" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="1972:2088" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="2122:2160" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="2198:2241" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="2279:2322" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="2352:2460" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="2595:2904" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="2647:2766" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="2795:2901" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="2935:3045" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="3181:3592" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="3322:3498" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="3724:3965" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="3856:3933" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="3992:4059" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="4088:4159" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="4188:4259" ph="{...}" />
-                <marker date="1537383594501" expanded="true" signature="4286:4353" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -134,17 +545,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/EnemyScripts/EnemyStates/EnemyOnKneeState.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-              <folding>
-                <marker date="1537384108819" expanded="false" signature="6:78" ph="..." />
-                <marker date="1537384108819" expanded="true" signature="179:1447" ph="{...}" />
-                <marker date="1537384108819" expanded="true" signature="389:402" ph="{...}" />
-                <marker date="1537384108819" expanded="true" signature="448:807" ph="{...}" />
-                <marker date="1537384108819" expanded="true" signature="840:1093" ph="{...}" />
-                <marker date="1537384108819" expanded="true" signature="1113:1125" ph="{...}" />
-                <marker date="1537384108819" expanded="true" signature="1154:1444" ph="{...}" />
-              </folding>
+            <state relative-caret-position="412">
+              <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -154,29 +556,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="383">
               <caret line="52" column="73" selection-start-line="52" selection-start-column="55" selection-end-line="52" selection-end-column="73" />
-              <folding>
-                <marker date="1537383821830" expanded="false" signature="6:78" ph="..." />
-                <marker date="1537383821830" expanded="true" signature="128:4461" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="551:824" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="880:2568" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="1161:2552" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="1275:2542" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="1373:1746" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="1767:2527" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="1857:1983" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="2621:4107" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="2709:3162" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="2923:3110" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="3194:3293" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="3340:3423" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="3469:3550" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="3597:3678" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="3710:3810" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="3842:3956" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="3987:4101" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="4164:4275" ph="{...}" />
-                <marker date="1537383821830" expanded="true" signature="4308:4459" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -186,39 +565,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="682">
               <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
-              <folding>
-                <marker date="1537384251466" expanded="false" signature="6:78" ph="..." />
-                <marker date="1537384251466" expanded="true" signature="135:5095" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="678:787" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="814:902" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="929:1383" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="947:1377" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="1404:1572" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="1423:1566" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="1618:2197" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="1649:1722" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="2224:3125" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="2263:2609" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="2666:3118" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="3158:3287" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="3185:3281" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="3332:3610" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="3443:3518" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="3531:3604" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="3653:4198" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="3750:3868" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="3983:4106" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="4119:4192" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="4238:4440" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="4352:4434" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="4483:4760" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="4594:4668" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="4681:4754" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="4816:5007" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="5047:5093" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="5127:5649" ph="{...}" />
-                <marker date="1537384251466" expanded="true" signature="5453:5647" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -228,39 +574,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
               <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-              <folding>
-                <marker date="1537361100832" expanded="false" signature="6:100" ph="..." />
-                <marker date="1537361100832" expanded="true" signature="157:933" ph="{...}" />
-                <marker date="1537361100832" expanded="true" signature="287:440" ph="{...}" />
-                <marker date="1537361100832" expanded="true" signature="309:362" ph="{...}" />
-                <marker date="1537361100832" expanded="true" signature="473:609" ph="{...}" />
-                <marker date="1537361100832" expanded="true" signature="633:931" ph="{...}" />
-                <marker date="1537361100832" expanded="true" signature="748:927" ph="{...}" />
-                <marker date="1537361100832" expanded="true" signature="807:859" ph="{...}" />
-                <marker date="1537361100832" expanded="true" signature="867:923" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/BulletScripts/BulletCollision.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-              <folding>
-                <marker date="1537384849884" expanded="false" signature="6:78" ph="..." />
-                <marker date="1537384849884" expanded="true" signature="124:2489" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="507:677" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="701:803" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="733:800" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="853:2487" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="931:1182" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="1014:1154" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="1233:1472" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="1516:1819" ph="{...}" />
-                <marker date="1537384849884" expanded="true" signature="1883:2475" ph="{...}" />
-              </folding>
+            <state relative-caret-position="532">
+              <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -270,54 +592,37 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="653">
               <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-              <folding>
-                <marker date="1537384766544" expanded="true" signature="6:78" ph="..." />
-                <marker date="1537384766544" expanded="true" signature="124:2198" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="435:504" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="557:858" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="607:852" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="944:2002" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="1111:1210" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="1253:1354" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="1399:1453" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="1499:1562" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="1608:1669" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="1715:1780" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="1826:1887" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="1933:1996" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="2037:2098" ph="{...}" />
-                <marker date="1537384766544" expanded="true" signature="2131:2191" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerMovement.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2181">
+            <state relative-caret-position="394">
+              <caret line="136" column="80" lean-forward="true" selection-start-line="136" selection-start-column="80" selection-end-line="136" selection-end-column="80" />
               <folding>
-                <marker date="1537269000365" expanded="false" signature="6:97" ph="..." />
-                <marker date="1537269000365" expanded="true" signature="220:5858" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="1105:1423" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="1456:1509" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="1533:1680" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="1702:3999" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="1893:1941" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="2056:2405" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="2493:2685" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="2784:3324" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="2873:3262" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="3512:3705" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="3865:3996" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="4036:4094" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="4128:4728" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="4895:5280" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="5318:5636" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="5451:5498" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="5586:5633" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="5674:5856" ph="{...}" />
-                <marker date="1537269000365" expanded="true" signature="5808:5853" ph="{...}" />
+                <marker date="1537390520882" expanded="false" signature="6:97" ph="..." />
+                <marker date="1537390520882" expanded="true" signature="220:5858" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="1105:1423" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="1456:1509" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="1533:1680" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="1702:3999" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="1893:1941" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="2056:2405" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="2493:2685" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="2784:3324" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="2873:3262" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="3512:3705" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="3865:3996" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="4036:4094" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="4128:4728" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="4895:5280" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="5318:5636" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="5451:5498" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="5586:5633" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="5674:5856" ph="{...}" />
+                <marker date="1537390520882" expanded="true" signature="5808:5853" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -424,7 +729,6 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/MenuScript/ScoreBoardManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/AudioScripts/audioTransition.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/MenuScript/difficultyScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/SwordScripts/SwordRotation.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/HudScripts/SlowMotionSlider.cs" />
         <option value="$PROJECT_DIR$/Assets/PostProccesingManager.cs" />
@@ -444,10 +748,11 @@
         <option value="$PROJECT_DIR$/Assets/_Scripts/MenuScript/HighScoreManager.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerMeleeAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerDeadState.cs" />
-        <option value="$PROJECT_DIR$/Assets/_Scripts/EnemyScripts/EnemyStates/EnemyOnKneeState.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/EnemyScripts/EnemyFsmController.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/SwordScripts/SwordCollisions.cs" />
         <option value="$PROJECT_DIR$/Assets/_Scripts/BulletScripts/BulletCollision.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/EnemyScripts/EnemyStates/EnemyOnKneeState.cs" />
+        <option value="$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerMovement.cs" />
       </list>
     </option>
   </component>
@@ -546,12 +851,12 @@
       <workItem from="1537097033550" duration="5431000" />
       <workItem from="1537175238250" duration="1752000" />
       <workItem from="1537262350663" duration="2837000" />
-      <workItem from="1537380005919" duration="2887000" />
+      <workItem from="1537380005919" duration="3374000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174890000" />
+    <option name="totallyTimeSpent" value="175377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1038,53 +1343,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="39" />
-          <folding>
-            <marker date="1537383594501" expanded="false" signature="6:146" ph="..." />
-            <marker date="1537383594501" expanded="true" signature="208:4355" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="290:338" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="954:1365" ph="{...}" />
-            <marker date="1537383594501" expanded="false" signature="960:1097" ph="SINGELTON" />
-            <marker date="1537383594501" expanded="true" signature="1014:1042" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="1049:1081" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="1252:1362" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="1421:1773" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="1430:1737" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="1759:1768" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="1816:1932" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="1972:2088" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="2122:2160" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="2198:2241" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="2279:2322" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="2352:2460" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="2595:2904" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="2647:2766" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="2795:2901" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="2935:3045" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="3181:3592" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="3322:3498" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="3724:3965" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="3856:3933" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="3992:4059" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="4088:4159" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="4188:4259" ph="{...}" />
-            <marker date="1537383594501" expanded="true" signature="4286:4353" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/EnemyScripts/EnemyStates/EnemyOnKneeState.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <marker date="1537384108819" expanded="false" signature="6:78" ph="..." />
-            <marker date="1537384108819" expanded="true" signature="179:1447" ph="{...}" />
-            <marker date="1537384108819" expanded="true" signature="389:402" ph="{...}" />
-            <marker date="1537384108819" expanded="true" signature="448:807" ph="{...}" />
-            <marker date="1537384108819" expanded="true" signature="840:1093" ph="{...}" />
-            <marker date="1537384108819" expanded="true" signature="1113:1125" ph="{...}" />
-            <marker date="1537384108819" expanded="true" signature="1154:1444" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1092,13 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
           <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <marker date="1537383371680" expanded="false" signature="6:92" ph="..." />
-            <marker date="1537383371680" expanded="true" signature="169:677" ph="{...}" />
-            <marker date="1537383371680" expanded="true" signature="301:427" ph="{...}" />
-            <marker date="1537383371680" expanded="true" signature="467:541" ph="{...}" />
-            <marker date="1537383371680" expanded="true" signature="572:674" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1106,29 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="52" column="73" selection-start-line="52" selection-start-column="55" selection-end-line="52" selection-end-column="73" />
-          <folding>
-            <marker date="1537383821830" expanded="false" signature="6:78" ph="..." />
-            <marker date="1537383821830" expanded="true" signature="128:4461" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="551:824" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="880:2568" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="1161:2552" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="1275:2542" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="1373:1746" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="1767:2527" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="1857:1983" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="2621:4107" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="2709:3162" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="2923:3110" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="3194:3293" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="3340:3423" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="3469:3550" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="3597:3678" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="3710:3810" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="3842:3956" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="3987:4101" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="4164:4275" ph="{...}" />
-            <marker date="1537383821830" expanded="true" signature="4308:4459" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1136,39 +1364,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="108" column="9" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
-          <folding>
-            <marker date="1537384251466" expanded="false" signature="6:78" ph="..." />
-            <marker date="1537384251466" expanded="true" signature="135:5095" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="678:787" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="814:902" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="929:1383" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="947:1377" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="1404:1572" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="1423:1566" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="1618:2197" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="1649:1722" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="2224:3125" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="2263:2609" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="2666:3118" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="3158:3287" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="3185:3281" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="3332:3610" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="3443:3518" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="3531:3604" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="3653:4198" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="3750:3868" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="3983:4106" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="4119:4192" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="4238:4440" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="4352:4434" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="4483:4760" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="4594:4668" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="4681:4754" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="4816:5007" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="5047:5093" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="5127:5649" ph="{...}" />
-            <marker date="1537384251466" expanded="true" signature="5453:5647" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1176,46 +1371,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <marker date="1537361100832" expanded="false" signature="6:100" ph="..." />
-            <marker date="1537361100832" expanded="true" signature="157:933" ph="{...}" />
-            <marker date="1537361100832" expanded="true" signature="287:440" ph="{...}" />
-            <marker date="1537361100832" expanded="true" signature="309:362" ph="{...}" />
-            <marker date="1537361100832" expanded="true" signature="473:609" ph="{...}" />
-            <marker date="1537361100832" expanded="true" signature="633:931" ph="{...}" />
-            <marker date="1537361100832" expanded="true" signature="748:927" ph="{...}" />
-            <marker date="1537361100832" expanded="true" signature="807:859" ph="{...}" />
-            <marker date="1537361100832" expanded="true" signature="867:923" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerMovement.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2181">
-          <folding>
-            <marker date="1537269000365" expanded="false" signature="6:97" ph="..." />
-            <marker date="1537269000365" expanded="true" signature="220:5858" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="1105:1423" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="1456:1509" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="1533:1680" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="1702:3999" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="1893:1941" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="2056:2405" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="2493:2685" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="2784:3324" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="2873:3262" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="3512:3705" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="3865:3996" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="4036:4094" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="4128:4728" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="4895:5280" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="5318:5636" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="5451:5498" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="5586:5633" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="5674:5856" ph="{...}" />
-            <marker date="1537269000365" expanded="true" signature="5808:5853" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1223,22 +1378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-          <folding>
-            <marker date="1537380961476" expanded="false" signature="6:123" ph="..." />
-            <marker date="1537380961476" expanded="true" signature="170:1516" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="306:380" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="433:524" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="480:518" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="574:981" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="624:662" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="705:767" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="806:978" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="1030:1513" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="1077:1273" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="1145:1265" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="1318:1509" ph="{...}" />
-            <marker date="1537380961476" expanded="true" signature="1386:1505" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1246,43 +1385,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="653">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <marker date="1537384766544" expanded="true" signature="6:78" ph="..." />
-            <marker date="1537384766544" expanded="true" signature="124:2198" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="435:504" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="557:858" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="607:852" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="944:2002" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="1111:1210" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="1253:1354" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="1399:1453" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="1499:1562" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="1608:1669" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="1715:1780" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="1826:1887" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="1933:1996" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="2037:2098" ph="{...}" />
-            <marker date="1537384766544" expanded="true" signature="2131:2191" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/BulletScripts/BulletCollision.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="532">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/EnemyScripts/EnemyStates/EnemyOnKneeState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/_Scripts/PlayerScripts/PlayerMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="136" column="80" lean-forward="true" selection-start-line="136" selection-start-column="80" selection-end-line="136" selection-end-column="80" />
           <folding>
-            <marker date="1537384849884" expanded="false" signature="6:78" ph="..." />
-            <marker date="1537384849884" expanded="true" signature="124:2489" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="507:677" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="701:803" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="733:800" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="853:2487" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="931:1182" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="1014:1154" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="1233:1472" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="1516:1819" ph="{...}" />
-            <marker date="1537384849884" expanded="true" signature="1883:2475" ph="{...}" />
+            <marker date="1537390520882" expanded="false" signature="6:97" ph="..." />
+            <marker date="1537390520882" expanded="true" signature="220:5858" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="1105:1423" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="1456:1509" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="1533:1680" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="1702:3999" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="1893:1941" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="2056:2405" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="2493:2685" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="2784:3324" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="2873:3262" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="3512:3705" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="3865:3996" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="4036:4094" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="4128:4728" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="4895:5280" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="5318:5636" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="5451:5498" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="5586:5633" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="5674:5856" ph="{...}" />
+            <marker date="1537390520882" expanded="true" signature="5808:5853" ph="{...}" />
           </folding>
         </state>
       </provider>
