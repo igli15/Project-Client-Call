@@ -102,8 +102,11 @@ public class EnemyFsmController : MonoBehaviour, IAgent
 
     void OnDeath(Health health)
     {
-        isDead = true;
-        fsm.ChangeState<EnemyOnKneeState>();
+        if (!isDead)
+        {
+            isDead = true;
+            fsm.ChangeState<EnemyOnKneeState>();
+        }
     }
 
     void CheckConditionsForCannoneerEnemy()

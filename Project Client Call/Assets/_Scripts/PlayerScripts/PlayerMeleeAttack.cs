@@ -48,18 +48,18 @@ public class PlayerMeleeAttack : MonoBehaviour {
                 {
                     AudioManagerScript.instance.PlaySound("SwordKill");
                     
-                    HighScoreManager.instance.InreaseKillScore();
-                    HighScoreManager.instance.DecreaseSocializerScore();
+                    
                     raycast2d[i].collider.GetComponent<EnemyOnKneeState>().FinishHim();
                     raycast2d[i].collider.GetComponent<EnemyFsmController>().PlayBloodParticleSystem(raycast2d[i].collider.transform);
                 }
                 else
-                {
+                {    
+                    
                     if ( !movement.IsGrounded)
                     {
                         AchievementPopUp.QueueAchievement("Flying Sword Master");
                     }
-                    HighScoreManager.instance.IncreaseSocializerScore();
+                   
                     
                     meleeCount += 1;
                     

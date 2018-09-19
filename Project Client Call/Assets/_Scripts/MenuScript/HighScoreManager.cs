@@ -99,6 +99,7 @@ public class HighScoreManager : MonoBehaviour
 	{
 		killerScore +=killerScoreAdd;
 	}
+
 	public void IncreaseAchieverScore()
 	{
 		achieverScore += achieverScoreAdd;

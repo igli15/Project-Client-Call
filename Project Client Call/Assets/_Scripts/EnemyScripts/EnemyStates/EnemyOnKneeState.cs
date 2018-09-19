@@ -18,8 +18,11 @@ public class EnemyOnKneeState : AbstractState<EnemyFsmController>
     }
     public override void Enter(IAgent pAgent)
     {
+        
         base.Enter(pAgent);
         enemyAnimations.TrigerOnKneeAnimation();
+        HighScoreManager.instance.IncreaseSocializerScore();
+        Debug.Log("TEST");
         rb.velocity = Vector3.zero;
         collider.isTrigger = true;
         rb.isKinematic = true;
