@@ -19,8 +19,10 @@ public class MainMenuScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		selection = _menuScript.selectedButton;
+			Debug.Log(selection);
 		if(Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Joystick1Button1) || Input.GetKeyDown(KeyCode.Space))
 		{
+			Debug.Log("doing it again");
 			switch (selection)
 			{
 				case 0:

@@ -28,11 +28,7 @@ public class Sound
 
 	public AudioRolloffMode RollOffMode;
 
-	public AudioMixerGroup audioMixerGroup;
-
 	[HideInInspector] 
 	public AudioSource audioSource;
-	
-	
 
 }

@@ -20,7 +20,7 @@ public class PlayerDeadState : AbstractState<PlayerFsmController>
     void Start () 
     {
         AudioManagerScript.instance.PauseAllSounds();
-       // audioSS.TransitionTo(0f);
+        audioSS.TransitionTo(0f);
 	}
 
     public override void Enter(IAgent pAgent)
@@ -30,7 +30,7 @@ public class PlayerDeadState : AbstractState<PlayerFsmController>
         GetComponent<PlayerAnimations>().SetJumpingToFalse();
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<PlayerMeleeAttack>().enabled = false;
-	    audioSS.TransitionTo(0f);
+
 	    DOVirtual.DelayedCall(timeTillEndScreenActivation, () => endScreenCanvas.SetActive(true));
     }
 

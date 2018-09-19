@@ -57,6 +57,7 @@ public class LevelLoader : MonoBehaviour
 		{
 			if (sceneLoadingData.progress >= maxTimeNeededToCompleteLoad) //If we are completed check If specified buttons are pressed and then go to next scene
 			{
+				Debug.Log("press any key to continue");
 				OnLoadFinished.Invoke();
 				if (Input.anyKeyDown)
 				{
