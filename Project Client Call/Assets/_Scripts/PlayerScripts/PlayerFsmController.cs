@@ -9,7 +9,8 @@ public class PlayerFsmController : MonoBehaviour,IAgent
 	[HideInInspector] 
 	public Fsm<PlayerFsmController> fsm;
 
-	public Slider slowMoSlider;
+	//public Slider slowMoSlider;
+	
     bool isDead;
 	
 	void Start () 
@@ -39,7 +40,7 @@ public class PlayerFsmController : MonoBehaviour,IAgent
 			{
 				fsm.ChangeState<PlayerNormalState>();
 			}
-			else if(slowMoSlider.value >= 1)
+			else
 			{
 				fsm.ChangeState<PlayerSlowMotionState>();
 			}
