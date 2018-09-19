@@ -9,23 +9,16 @@ public class EnemyDeadState : AbstractState<EnemyFsmController>
     EnemyAnimations animations;
     public void Start()
     {
-        animations = GetComponent<EnemyAnimations>();
-        Debug.Log("START COROUTINE");
-        StartCoroutine(DOEST());
+        
     }
 
     public override void Enter(IAgent pAgent)
     {
         base.Enter(pAgent);
+        if(!animations) animations = GetComponent<EnemyAnimations>();
         animations.TrigerDeathAnimation();
 
     }
 
-    IEnumerator DOEST()
-    {
-        Debug.Log("START: " + Time.time);
-        yield return new WaitForSeconds(.1f);
-        Debug.Log("FINISH: " + Time.time);
-    }
 }
 
