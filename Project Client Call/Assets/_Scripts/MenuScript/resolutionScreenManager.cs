@@ -18,7 +18,9 @@ public class ResolutionScreenManager : MonoBehaviour {
 	
 	void Start () {
 		sequence = DOTween.Sequence();
-
+		
+		HighScoreManager.instance.CalcTotalScore();
+		
 		sequence.Append(_killer.DOText(HighScoreManager.instance.KillerScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
 		sequence.Append(_achiever.DOText(HighScoreManager.instance.AchieverScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));
 		sequence.Append(_socialiser.DOText(HighScoreManager.instance.SocialScore.ToString(),countDown,true,ScrambleMode.Numerals,"0123456789"));

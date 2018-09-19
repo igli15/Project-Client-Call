@@ -84,22 +84,6 @@ public class HighScoreManager : MonoBehaviour
 	}
 	
 
-	// Update is called once per frame
-	void Update () 
-	{
-		if (Input.GetKeyDown(KeyCode.K))
-		{
-			foreach (KeyValuePair<string,int> pair in highscoreDictionary)
-			{
-				Debug.Log(pair.Key + " " + pair.Value);
-			}
-		}
-		if (Input.GetKeyDown(KeyCode.D))
-		{
-			CalcTotalScore();
-			Debug.Log(totalScore);
-		}
-	}
 
 	public void IncreaseSocializerScore()
 	{
