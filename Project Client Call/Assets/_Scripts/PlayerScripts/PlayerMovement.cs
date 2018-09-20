@@ -145,8 +145,12 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 	private void MoveHorizontally()
-	{
-		float horizontal = Input.GetAxis("Horizontal");
+	{ 
+		
+		float horizontal = 0;
+		if (Input.GetKey(KeyCode.A)) horizontal = -1;
+		if (Input.GetKey(KeyCode.D)) horizontal = 1;
+		//float horizontal = Input.GetAxis("Horizontal");
 		playerAnimations.SetWalkingSpeedAnim(Mathf.Abs(horizontal));
 		//rb.velocity = new Vector2(horizontal * playerData.MovementSpeed * Time.fixedDeltaTime, rb.velocity.y);  //Move horizontally
 
@@ -171,11 +175,11 @@ public class PlayerMovement : MonoBehaviour
 
 	public void CheckFlipHorizontally()
 	{
-		if (Input.GetAxisRaw("Horizontal") <0  && transform.right.Equals(initForwardVec))  //flip only if we haven't already flipped :P
+		if (Input.GetKeyDown(KeyCode.A) && transform.right.Equals(initForwardVec))  //flip only if we haven't already flipped :P
 		{
 			transform.right = -transform.right;
 		}
-		else if(Input.GetAxisRaw("Horizontal") >0 && !transform.right.Equals(initForwardVec))
+		else if(Input.GetKeyDown(KeyCode.D)&& !transform.right.Equals(initForwardVec))
 		{
 			transform.right = -transform.right;
 		}

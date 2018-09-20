@@ -76,7 +76,7 @@ public class PlayerMeleeAttack : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.M) || Input.GetKeyDown(KeyCode.Joystick1Button0))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             if (Time.time < lastTimeOfMelee + reloadTime) return;
             AudioManagerScript.instance.PlaySound("Melee");
