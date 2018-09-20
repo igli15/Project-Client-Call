@@ -14,11 +14,15 @@ public class SelectableManager : MonoBehaviour
 
 	[SerializeField] private KeyCode KeyToMoveNext;
 	[SerializeField] private KeyCode KeyToMoveBack;
-	
+
+	private float scrollAmount;
+
+	private float scrollSpeed = 0.05f;
 	// Use this for initialization
 
 	private void Awake()
 	{
+		scrollAmount = 1;
 		Selectables = new ISelectable[MaxNumberOfSelectables];
 	}
 
@@ -30,8 +34,24 @@ public class SelectableManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		
 		if(Input.GetKeyDown(KeyToMoveBack)) ShiftSelect(false);
 		else if(Input.GetKeyDown(KeyToMoveNext)) ShiftSelect(true);
+
+		if (scrollAmount < 0)
+		{
+			if (Input.GetAxisRaw("Horizontal") > 0f)
+			{
+				ShiftSelect(true);
+				scrollAmount = 1;
+			}
+			else if (Input.GetAxisRaw("Horizontal") < 0f)
+			{
+				ShiftSelect(false);
+				scrollAmount = 1;
+			}
+		}
+		scrollAmount -= scrollSpeed;
 	}
 
 	public void ShiftSelect(bool right)

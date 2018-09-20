@@ -26,6 +26,9 @@ public class WordScroll : MonoBehaviour
 	public int scrollIndex;
 
 	private Text text;
+
+	private float scrollAmount = 1;
+	private float scrollSpeed = 0.08f;
 	
 	// Use this for initialization
 	void Start ()
@@ -48,14 +51,21 @@ public class WordScroll : MonoBehaviour
 		
 		if (selectable.IsSelected)
 		{
-			if (Input.GetKeyDown(KeyCode.UpArrow))
+			if (scrollAmount < 0)
 			{
-				ScrollUp();
+				if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetAxisRaw("VerticalMenu") > 0)
+				{
+					ScrollUp();
+					scrollAmount = 1;
+				}
+				else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetAxisRaw("VerticalMenu") < 0)
+				{
+					ScrollDown();
+					scrollAmount = 1;
+				}
 			}
-			else if (Input.GetKeyDown(KeyCode.DownArrow))
-			{
-				ScrollDown();
-			}
+
+			scrollAmount -= scrollSpeed;
 		}
 
 		if(letters.Length > 0)
