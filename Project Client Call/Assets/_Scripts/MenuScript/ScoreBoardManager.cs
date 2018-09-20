@@ -28,8 +28,13 @@ public class ScoreBoardManager : MonoBehaviour
         if (HighScoreManager.instance.highscoreArray != null)
         {
             HighScoreManager.instance.highscoreArray = HighScoreManager.instance.highscoreArray.OrderByDescending(x => x.score).ToArray();
-            HighScoreManager.instance.highscoreArray = CutArray(HighScoreManager.instance.highscoreArray, 6);
-            for (int i = 0; i < HighScoreManager.instance.highscoreArray.Length; i++)
+	        
+	        if (HighScoreManager.instance.highscoreArray.Length > 6)
+	        {
+		        HighScoreManager.instance.highscoreArray = CutArray(HighScoreManager.instance.highscoreArray, 6);
+	        }
+
+	        for (int i = 0; i < HighScoreManager.instance.highscoreArray.Length; i++)
             {
                 if (HighScoreManager.instance.highscoreArray[i] != null)
                 {
