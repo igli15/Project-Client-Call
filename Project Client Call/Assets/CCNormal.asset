@@ -25,7 +25,7 @@ MonoBehaviour:
         motionVectorsResolution: 24
         motionVectorsAmplitude: 64
   fog:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       excludeSkybox: 1
   antialiasing:
@@ -42,8 +42,8 @@ MonoBehaviour:
   ambientOcclusion:
     m_Enabled: 1
     m_Settings:
-      intensity: 1
-      radius: 0.3
+      intensity: 4
+      radius: 0.33
       sampleCount: 10
       downsampling: 1
       forceForwardCompatibility: 0
@@ -97,10 +97,10 @@ MonoBehaviour:
       logMin: -8
       logMax: 4
   bloom:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
       bloom:
-        intensity: 0.5
+        intensity: 0.1
         threshold: 1.1
         softKnee: 0.5
         radius: 4
@@ -113,12 +113,12 @@ MonoBehaviour:
     m_Settings:
       tonemapping:
         tonemapper: 2
-        neutralBlackIn: 0.02
-        neutralWhiteIn: 10
-        neutralBlackOut: 0
-        neutralWhiteOut: 10
-        neutralWhiteLevel: 5.3
-        neutralWhiteClip: 10
+        neutralBlackIn: 0.025
+        neutralWhiteIn: 4.1
+        neutralBlackOut: -0.015
+        neutralWhiteOut: 16.1
+        neutralWhiteLevel: 1.5
+        neutralWhiteClip: 7.49
       basic:
         postExposure: 0
         temperature: 0
@@ -149,6 +149,24 @@ MonoBehaviour:
             - serializedVersion: 3
               time: 0
               value: 0
+              inSlope: 0.5099745
+              outSlope: 0.5099745
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.30337077
+              value: 0.40322578
+              inSlope: 1.129463
+              outSlope: 1.129463
+              tangentMode: 0
+              weightedMode: 0
+              inWeight: 0
+              outWeight: 0
+            - serializedVersion: 3
+              time: 0.72284645
+              value: 0.7903226
               inSlope: 1
               outSlope: 1
               tangentMode: 0
@@ -322,7 +340,7 @@ MonoBehaviour:
       mode: 0
       color: {r: 0, g: 0, b: 0, a: 0}
       center: {x: 0.5, y: 0.5}
-      intensity: 0.23500001
+      intensity: 0.17
       smoothness: 1
       roundness: 1
       mask: {fileID: 0}
