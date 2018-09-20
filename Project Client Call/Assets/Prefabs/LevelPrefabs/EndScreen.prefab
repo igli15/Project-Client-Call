@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 114433603150533068}
   - component: {fileID: 114096028775657106}
   - component: {fileID: 114448789330824996}
-  - component: {fileID: 114312277596198340}
+  - component: {fileID: 114776782265221170}
   m_Layer: 5
   m_Name: ResolutionScreen
   m_TagString: Untagged
@@ -1323,23 +1323,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charactersToScorll: 'ABCDEFGHIJKLMNOPQRSTUWXYZABCDEFGHIJKLMNOPQRSTUWXYZ '
   scrollIndex: 0
---- !u!114 &114312277596198340
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1672155444628352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0af8cc8f24308749839a7fa94a95b3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countDown: 1.2
-  _killer: {fileID: 114969479722068340}
-  _achiever: {fileID: 114720440109491376}
-  _socialiser: {fileID: 114698641570982196}
-  _explorer: {fileID: 114331616937462102}
-  _totalScore: {fileID: 114294912395053518}
 --- !u!114 &114319167658889976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2071,6 +2054,23 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114776782265221170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1672155444628352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0af8cc8f24308749839a7fa94a95b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDown: 1.2
+  _killer: {fileID: 114969479722068340}
+  _achiever: {fileID: 114720440109491376}
+  _socialiser: {fileID: 114698641570982196}
+  _explorer: {fileID: 114331616937462102}
+  _totalScore: {fileID: 114294912395053518}
 --- !u!114 &114789128723159900
 MonoBehaviour:
   m_ObjectHideFlags: 1
