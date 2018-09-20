@@ -18,7 +18,7 @@ public class BulletCollision : MonoBehaviour
     public bool isReflected;
 	private EnemyRangedAttack enemyRangedAttack;
 	
-	private int deflectionCount;
+	private static int deflectionCount = 0;
 	
 	private void Start()
 	{
@@ -29,7 +29,7 @@ public class BulletCollision : MonoBehaviour
 
 	private void Update()
 	{
-		if (deflectionCount >= 20)
+		if (deflectionCount >= 200)
 		{
 			AchievementPopUp.QueueAchievement("Deflection Master");
 		}
@@ -37,10 +37,10 @@ public class BulletCollision : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("Sword Collider") && isReflectable && !isReflected)
+		if (other.CompareTag("Sword Collider") && isReflectable )
 		{
-			deflectionCount += 1;
-			
+            if(!isReflected) deflectionCount += 1;
+
 			if (rb != null)
 			{
 				rb.velocity = other.transform.parent.right * reflectedSpeed * damageMultiplier *
