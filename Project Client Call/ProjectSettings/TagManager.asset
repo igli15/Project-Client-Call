@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Sword Collider
+  - Enemy
+  - ArenaEnterTrigger
+  - ArenaExitTrigger
+  - Projectile
+  - BigProjectile
+  - Ground
+  - ExplorerRoom
+  - EndTrigger
+  - HighscoreManager
+  - Spikes
+  - DeathFall
   layers:
   - Default
   - TransparentFX
@@ -14,10 +26,10 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemy
+  - ArenaTrigger
   - 
   - 
   - 
